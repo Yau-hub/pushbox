@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "mainLogo",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 7.5,
+  "sample": 2,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "scale": [
+        {
+          "frame": 0,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 1.8,
+            "y": 1.8
+          }
+        },
+        {
+          "frame": 2.5,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 2,
+            "y": 2
+          }
+        },
+        {
+          "frame": 5,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 1.6,
+            "y": 1.6
+          }
+        },
+        {
+          "frame": 7.5,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 1.8,
+            "y": 1.8
+          }
+        }
+      ]
+    }
+  },
+  "events": []
+}
