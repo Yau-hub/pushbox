@@ -500,13 +500,13 @@
     "relativePath": "model\\primitives.fbx"
   },
   "934c9fd4-104e-4d2e-9673-45ba9ed69dd7": {
-    "asset": 1627957743678,
-    "meta": 1627970398321,
+    "asset": 1627978449795,
+    "meta": 1627978633827,
     "relativePath": "scenes"
   },
   "db164588-eb1d-4e07-860f-0375a28d4d89": {
-    "asset": 1627971131584,
-    "meta": 1627971131600,
+    "asset": 1627979362098,
+    "meta": 1627979362112,
     "relativePath": "scenes\\main.fire"
   },
   "d2b0b8ad-928a-4378-8807-252582712574": {
@@ -520,8 +520,8 @@
     "relativePath": "scripts\\main.js"
   },
   "9949f6e0-117b-4771-9e32-f62732b7e6b3": {
-    "asset": 1627957872995,
-    "meta": 1627970398321,
+    "asset": 1627978449803,
+    "meta": 1627978633830,
     "relativePath": "scripts"
   },
   "e4686e13-8925-40b7-9b9d-07fc8464b016": {
@@ -530,8 +530,8 @@
     "relativePath": "resources"
   },
   "bba42ae9-17cb-404f-bf9b-14a0926d21e0": {
-    "asset": 1627962330120,
-    "meta": 1627970398321,
+    "asset": 1627978449782,
+    "meta": 1627978633809,
     "relativePath": "images"
   },
   "ba4656df-ea40-46a1-8c8b-7e92e1e17019": {
@@ -569,11 +569,6 @@
     "meta": 1627960575428,
     "relativePath": "images\\right.png"
   },
-  "b25abc6e-fe80-483b-a986-7609360d6b3c": {
-    "asset": 1627960154263,
-    "meta": 1627960575543,
-    "relativePath": "images\\logo.png"
-  },
   "5974a0e8-83f4-40f7-ac6f-2fdde3f7148c": {
     "asset": 1626656962346,
     "meta": 1627960575589,
@@ -593,5 +588,40 @@
     "asset": 1627962307217,
     "meta": 1627962330243,
     "relativePath": "images\\plays.png"
+  },
+  "b25abc6e-fe80-483b-a986-7609360d6b3c": {
+    "asset": 1627979154301,
+    "meta": 1627979159496,
+    "relativePath": "images\\logo.png"
+  },
+  "8f7e40c5-83e2-4e03-929f-fc29a00a7c3e": {
+    "asset": 1627979916295,
+    "meta": 1627979922846,
+    "relativePath": "images\\rank.png"
+  },
+  "359a9cb7-f5db-447c-9a3a-eb1ca6d7cae8": {
+    "asset": 1627982440932,
+    "meta": 1627982763546,
+    "relativePath": "images\\menu.png"
+  },
+  "994d748d-bba4-48cf-b3ec-7cf89f16151b": {
+    "asset": 1627981910190,
+    "meta": 1627982763556,
+    "relativePath": "images\\help.png"
+  },
+  "7a12bcab-c974-41ea-8737-644c2f4a81f8": {
+    "asset": 1627982445362,
+    "meta": 1627982763573,
+    "relativePath": "images\\menuPress.png"
+  },
+  "8e17cd11-87df-4820-93ef-85be965a8664": {
+    "asset": 1627981113772,
+    "meta": 1627982763579,
+    "relativePath": "images\\musicOff.png"
+  },
+  "3cc11a41-d24c-41e0-a015-9c6a00b3080a": {
+    "asset": 1627981118730,
+    "meta": 1627982763595,
+    "relativePath": "images\\musicOn.png"
   }
 }
