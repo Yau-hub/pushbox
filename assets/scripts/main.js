@@ -12,7 +12,10 @@ cc.Class({
         oneSayLabel: {
             default: null,
             type: cc.Label
-        }
+        },
+        loginplay: cc.Button,
+        visitorplay: cc.Button,
+        levelLayout: cc.Prefab
     },
 
 
@@ -21,16 +24,19 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
      onLoad () {
+        //加载一言
          this.oneSay();
+         //开始游戏按钮
+         if(this.loginplay == null) this.loginplay = cc.find('Canvas/mainBg/loginplay').getComponent(cc.Button)
+         this.loginplay.node.on('click', this.loginLevelList, this)
+         if(this.visitorplay == null) this.visitorplay = cc.find('Canvas/mainBg/visitorplay').getComponent(cc.Button)
+         this.visitorplay.node.on('click', this.visitorLevelList, this)
      },
 
     start () {
         let that = this;
 
         this.loadImg();
-
-
-
 
         setInterval(function () {
             that.oneSay();
@@ -50,6 +56,7 @@ cc.Class({
             if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 400)) {
                 var response =  JSON.parse(xhr.responseText);
                 imgUrl = 'https://cn.bing.com' + response.images[0].urlbase + '_720x1280.jpg'
+                window.bgUrlBase = 'https://cn.bing.com' + response.images[0].urlbase;
 
                 cc.assetManager.loadRemote(imgUrl, function (err, texture) {
                     var sprite  = new cc.SpriteFrame(texture);
@@ -85,5 +92,39 @@ cc.Class({
         };
         xhr.open("get", url, true);
         xhr.send();
+    },
+    //授权登录显示关卡列表
+    loginLevelList(){
+        window.loginType = 'wechat';
+        var CanvasNode = cc.find('Canvas');
+        if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+        var onResourceLoaded = function(errorMessage, loadedResource )
+        {
+            if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+            if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+            var newMyPrefab = cc.instantiate( loadedResource );
+            CanvasNode.addChild( newMyPrefab );
+        };
+        cc.loader.loadRes('levelLayout', onResourceLoaded );
+
+        // let levelList = cc.instantiate(this.levelLayout);
+        // this.node.addChild(levelList);
+    },
+    //不登录登录显示关卡列表
+    visitorLevelList(){
+        window.loginType = 'visitor';
+        var CanvasNode = cc.find('Canvas');
+        if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+        var onResourceLoaded = function(errorMessage, loadedResource )
+        {
+            if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+            if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+            var newMyPrefab = cc.instantiate( loadedResource );
+            CanvasNode.addChild( newMyPrefab );
+        };
+        cc.loader.loadRes('levelLayout', onResourceLoaded );
+
+        // let levelList = cc.instantiate(this.levelLayout);
+        // this.node.addChild(levelList);
     }
 });

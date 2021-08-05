@@ -1,74 +1,231 @@
-2021-08-04T09:41:35.702Z - success: protocol editor-framework registered
-2021-08-04T09:41:35.703Z - success: protocol app registered
-2021-08-04T09:41:35.703Z - success: protocol theme registered
-2021-08-04T09:41:35.703Z - success: protocol packages registered
-2021-08-04T09:41:35.732Z - normal: Load ~/.CocosCreator/settings.json
-2021-08-04T09:41:35.785Z - success: protocol uuid registerred
-2021-08-04T09:41:35.785Z - success: protocol db registerred
-2021-08-04T09:41:35.785Z - success: protocol thumbnail registerred
-2021-08-04T09:41:35.962Z - normal: Initializing Asset Database
-2021-08-04T09:41:35.965Z - normal: checking language setting...
-2021-08-04T09:41:35.965Z - normal: Language: zh
-2021-08-04T09:41:35.969Z - success: protocol unpack registerred
-2021-08-04T09:41:35.969Z - success: protocol disable-commonjs registerred
-2021-08-04T09:41:36.682Z - normal: connected!
-2021-08-04T09:41:36.963Z - normal: Check project E:\yau-work\personal\pushbox
-2021-08-04T09:41:36.964Z - normal: Initializing project E:\yau-work\personal\pushbox
-2021-08-04T09:41:37.511Z - success: adapters loaded
-2021-08-04T09:41:37.513Z - success: asset-db-debugger loaded
-2021-08-04T09:41:37.596Z - success: fb-audience-network loaded
-2021-08-04T09:41:37.652Z - success: fb-live-stream loaded
-2021-08-04T09:41:37.655Z - success: google-play-instant loaded
-2021-08-04T09:41:37.656Z - success: jsb-adapter loaded
-2021-08-04T09:41:37.658Z - success: package-manager loaded
-2021-08-04T09:41:37.659Z - success: runtime-adapters loaded
-2021-08-04T09:41:37.661Z - success: runtime-dev-tools loaded
-2021-08-04T09:41:37.678Z - success: ui-kit-preview-extra loaded
-2021-08-04T09:41:37.689Z - success: ui-kit-preview loaded
-2021-08-04T09:41:38.595Z - success: alipay-minigame loaded
-2021-08-04T09:41:38.605Z - success: assets loaded
-2021-08-04T09:41:38.609Z - success: baidugame-opendata loaded
-2021-08-04T09:41:38.611Z - success: baidugame loaded
-2021-08-04T09:41:38.614Z - success: builder loaded
-2021-08-04T09:41:38.617Z - success: bytedance-opendata loaded
-2021-08-04T09:41:38.619Z - success: bytedance loaded
-2021-08-04T09:41:38.625Z - success: channel-upload-tools loaded
-2021-08-04T09:41:38.788Z - success: cloud-function loaded
-2021-08-04T09:41:39.031Z - success: cocos-services loaded
-2021-08-04T09:41:39.034Z - success: console loaded
-2021-08-04T09:41:39.037Z - success: curve-editor loaded
-2021-08-04T09:41:39.048Z - success: fb-instant-games loaded
-2021-08-04T09:41:39.051Z - success: game-window loaded
-2021-08-04T09:41:39.052Z - success: google-instant-games loaded
-2021-08-04T09:41:39.057Z - success: hierarchy loaded
-2021-08-04T09:41:39.061Z - success: huawei-agc loaded
-2021-08-04T09:41:39.066Z - success: huawei-runtime loaded
-2021-08-04T09:41:39.069Z - success: inspector loaded
-2021-08-04T09:41:39.090Z - success: cpk-publish loaded
-2021-08-04T09:41:39.091Z - success: keystore loaded
-2021-08-04T09:41:39.122Z - success: link-sure-runtime loaded
-2021-08-04T09:41:39.152Z - success: node-library loaded
-2021-08-04T09:41:39.154Z - success: open-recent-items loaded
-2021-08-04T09:41:39.159Z - success: oppo-runtime loaded
-2021-08-04T09:41:39.161Z - success: package-asset loaded
-2021-08-04T09:41:39.162Z - success: preferences loaded
-2021-08-04T09:41:39.164Z - success: project-importer loaded
-2021-08-04T09:41:39.168Z - success: project-settings loaded
-2021-08-04T09:41:39.185Z - success: qtt-runtime loaded
-2021-08-04T09:41:39.188Z - success: scene loaded
-2021-08-04T09:41:39.189Z - success: simulator-debugger loaded
-2021-08-04T09:41:39.191Z - success: sprite-editor loaded
-2021-08-04T09:41:39.274Z - success: store loaded
-2021-08-04T09:41:39.277Z - success: taobao-creativeapp loaded
-2021-08-04T09:41:39.280Z - success: timeline loaded
-2021-08-04T09:41:39.288Z - success: vivo-runtime loaded
-2021-08-04T09:41:39.292Z - success: wechatgame-opendata loaded
-2021-08-04T09:41:39.298Z - success: wechatgame loaded
-2021-08-04T09:41:39.304Z - success: xiaomi-runtime loaded
-2021-08-04T09:41:39.305Z - success: preview server running at http://localhost:7456
-2021-08-04T09:41:40.807Z - normal: Initializing Cocos2d
-2021-08-04T09:41:41.706Z - normal: Initializing engine extends
-2021-08-04T09:41:43.948Z - normal: Loading packages
-2021-08-04T09:41:43.955Z - normal: Watching packages
-2021-08-04T09:41:44.003Z - normal: Run Application
-2021-08-04T09:41:44.338Z - info: Cocos Service load base data!
+2021-08-05T08:21:37.531Z - success: protocol editor-framework registered
+2021-08-05T08:21:37.534Z - success: protocol app registered
+2021-08-05T08:21:37.534Z - success: protocol theme registered
+2021-08-05T08:21:37.534Z - success: protocol packages registered
+2021-08-05T08:21:37.563Z - normal: Load ~/.CocosCreator/settings.json
+2021-08-05T08:21:37.601Z - success: protocol uuid registerred
+2021-08-05T08:21:37.601Z - success: protocol db registerred
+2021-08-05T08:21:37.601Z - success: protocol thumbnail registerred
+2021-08-05T08:21:37.765Z - normal: Initializing Asset Database
+2021-08-05T08:21:37.771Z - normal: checking language setting...
+2021-08-05T08:21:37.772Z - normal: Language: zh
+2021-08-05T08:21:37.778Z - success: protocol unpack registerred
+2021-08-05T08:21:37.778Z - success: protocol disable-commonjs registerred
+2021-08-05T08:21:38.656Z - normal: connected!
+2021-08-05T08:21:39.431Z - normal: Check project E:\yau-work\personal\pushbox
+2021-08-05T08:21:39.433Z - normal: Initializing project E:\yau-work\personal\pushbox
+2021-08-05T08:21:39.885Z - success: adapters loaded
+2021-08-05T08:21:39.887Z - success: asset-db-debugger loaded
+2021-08-05T08:21:39.988Z - success: fb-audience-network loaded
+2021-08-05T08:21:40.051Z - success: fb-live-stream loaded
+2021-08-05T08:21:40.056Z - success: google-play-instant loaded
+2021-08-05T08:21:40.056Z - success: jsb-adapter loaded
+2021-08-05T08:21:40.058Z - success: package-manager loaded
+2021-08-05T08:21:40.060Z - success: runtime-adapters loaded
+2021-08-05T08:21:40.063Z - success: runtime-dev-tools loaded
+2021-08-05T08:21:40.086Z - success: ui-kit-preview-extra loaded
+2021-08-05T08:21:40.088Z - success: ui-kit-preview loaded
+2021-08-05T08:21:41.177Z - success: alipay-minigame loaded
+2021-08-05T08:21:41.189Z - success: assets loaded
+2021-08-05T08:21:41.196Z - success: baidugame-opendata loaded
+2021-08-05T08:21:41.200Z - success: baidugame loaded
+2021-08-05T08:21:41.203Z - success: builder loaded
+2021-08-05T08:21:41.208Z - success: bytedance-opendata loaded
+2021-08-05T08:21:41.211Z - success: bytedance loaded
+2021-08-05T08:21:41.217Z - success: channel-upload-tools loaded
+2021-08-05T08:21:41.426Z - success: cloud-function loaded
+2021-08-05T08:21:41.748Z - success: cocos-services loaded
+2021-08-05T08:21:41.753Z - success: console loaded
+2021-08-05T08:21:41.758Z - success: curve-editor loaded
+2021-08-05T08:21:41.772Z - success: fb-instant-games loaded
+2021-08-05T08:21:41.774Z - success: game-window loaded
+2021-08-05T08:21:41.776Z - success: google-instant-games loaded
+2021-08-05T08:21:41.781Z - success: hierarchy loaded
+2021-08-05T08:21:41.785Z - success: huawei-agc loaded
+2021-08-05T08:21:41.792Z - success: huawei-runtime loaded
+2021-08-05T08:21:41.796Z - success: inspector loaded
+2021-08-05T08:21:41.819Z - success: cpk-publish loaded
+2021-08-05T08:21:41.821Z - success: keystore loaded
+2021-08-05T08:21:41.848Z - success: link-sure-runtime loaded
+2021-08-05T08:21:41.878Z - success: node-library loaded
+2021-08-05T08:21:41.880Z - success: open-recent-items loaded
+2021-08-05T08:21:41.884Z - success: oppo-runtime loaded
+2021-08-05T08:21:41.887Z - success: package-asset loaded
+2021-08-05T08:21:41.889Z - success: preferences loaded
+2021-08-05T08:21:41.890Z - success: project-importer loaded
+2021-08-05T08:21:41.893Z - success: project-settings loaded
+2021-08-05T08:21:41.915Z - success: qtt-runtime loaded
+2021-08-05T08:21:41.919Z - success: scene loaded
+2021-08-05T08:21:41.921Z - success: simulator-debugger loaded
+2021-08-05T08:21:41.922Z - success: sprite-editor loaded
+2021-08-05T08:21:42.030Z - success: store loaded
+2021-08-05T08:21:42.032Z - success: taobao-creativeapp loaded
+2021-08-05T08:21:42.036Z - success: timeline loaded
+2021-08-05T08:21:42.046Z - success: vivo-runtime loaded
+2021-08-05T08:21:42.053Z - success: wechatgame-opendata loaded
+2021-08-05T08:21:42.061Z - success: wechatgame loaded
+2021-08-05T08:21:42.067Z - success: xiaomi-runtime loaded
+2021-08-05T08:21:42.068Z - success: preview server running at http://localhost:7456
+2021-08-05T08:21:43.523Z - normal: Initializing Cocos2d
+2021-08-05T08:21:44.698Z - normal: Initializing engine extends
+2021-08-05T08:21:46.787Z - warn: [db-task][init] Backup unused meta file: db://assets/scripts/levelLayout.js~.meta
+2021-08-05T08:21:54.146Z - normal: Loading packages
+2021-08-05T08:21:54.156Z - normal: Watching packages
+2021-08-05T08:21:54.309Z - normal: Run Application
+2021-08-05T08:21:54.617Z - info: Cocos Service load base data!
+2021-08-05T08:23:05.415Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-05T08:23:05.415Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-05T08:23:05.415Z - normal: Destination E:\yau-work\personal\pushbox\build\wechatgame
+2021-08-05T08:23:05.618Z - normal: Start spawn build-worker
+2021-08-05T08:23:07.845Z - normal: Finish spawn build-worker
+2021-08-05T08:23:07.845Z - normal: Delete E:/yau-work/personal/pushbox/build/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/wechatgame/project.config.json
+2021-08-05T08:23:07.857Z - normal: Building 3D physics modules...
+2021-08-05T08:23:16.336Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-05T08:23:16.862Z - normal: Start init build-worker
+2021-08-05T08:23:18.565Z - normal: Finish init build-worker
+2021-08-05T08:23:18.565Z - normal: Start build-assets in worker
+2021-08-05T08:23:18.566Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-05T08:23:18.797Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-05T08:23:19.053Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-05T08:23:19.183Z - normal: Finish build-assets in worker
+2021-08-05T08:23:19.198Z - normal: Start building plugin scripts
+2021-08-05T08:23:23.261Z - normal: Built wechatgame successfully
+2021-08-05T08:23:41.697Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2021-08-05T08:23:41.698Z - normal: Simulator: WORKAREA WIDTH 1912.00, HEIGHT 989.00
+2021-08-05T08:23:41.698Z - normal: Simulator: FRAME SCALE = 0.50
+2021-08-05T08:23:41.910Z - normal: Simulator: Ready for GLSL
+2021-08-05T08:23:41.911Z - normal: Simulator: Ready for OpenGL 2.0
+2021-08-05T08:23:41.989Z - normal: Simulator: Project Config:
+2021-08-05T08:23:41.991Z - normal: Simulator:     project dir: D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\cocos2d-x\simulator\win32\
+2021-08-05T08:23:41.992Z - normal: Simulator:     writable path: $(PROJDIR)\
+2021-08-05T08:23:41.992Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2021-08-05T08:23:41.993Z - normal: Simulator:     frame size: 750 x 1334
+2021-08-05T08:23:41.993Z - normal: Simulator:     frame scale: 0.50
+2021-08-05T08:23:41.994Z - normal: Simulator:     show console: NO
+2021-08-05T08:23:41.994Z - normal: Simulator:     write debug log: NO ()
+2021-08-05T08:23:41.995Z - normal: Simulator:     listen: 
+2021-08-05T08:23:41.995Z - normal: Simulator:     debugger: none
+2021-08-05T08:23:41.996Z - normal: Simulator:     add searching path:
+2021-08-05T08:23:41.996Z - normal: Simulator: 
+2021-08-05T08:23:41.997Z - normal: Simulator: 
+2021-08-05T08:23:41.999Z - normal: Simulator: 
+2021-08-05T08:23:42.000Z - normal: Simulator: resetDesignResolution request
+2021-08-05T08:23:42.001Z - normal: Simulator: ------------------------------------------------
+2021-08-05T08:23:42.001Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2021-08-05T08:23:42.002Z - normal: Simulator: ------------------------------------------------
+2021-08-05T08:23:42.003Z - normal: Simulator: D/jswrapper (485): Initializing V8, version: 8.0.426.16
+2021-08-05T08:23:42.028Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2021-08-05T08:23:42.031Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ devtools://devtools/bundled/js_app.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2021-08-05T08:23:42.032Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2021-08-05T08:23:42.077Z - normal: Simulator: D/jswrapper (143): JS: Enable batch GL commands optimization!
+2021-08-05T08:23:42.079Z - normal: Simulator: resetDesignResolution request
+2021-08-05T08:23:42.079Z - normal: Simulator: ------------------------------------------------
+2021-08-05T08:23:42.080Z - normal: Simulator: LOAD Js FILE: main.js
+2021-08-05T08:23:42.080Z - normal: Simulator: ------------------------------------------------
+2021-08-05T08:23:42.341Z - normal: Simulator: D/jswrapper (143): JS: Read json failed: path: D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\cocos2d-x\simulator\win32/gamecaches/cacheList.json message: Unexpected end of JSON input
+2021-08-05T08:23:42.367Z - normal: Simulator: iShow!
+2021-08-05T08:23:42.541Z - normal: Simulator: D/jswrapper (143): JS: load __quick_compile_project__: 8.473000000000013ms
+2021-08-05T08:23:42.757Z - normal: Simulator: D/renderer (626): Device caps: maxVextexTextures: 32, maxFragUniforms: 1024, maxTextureUints: 32, maxVertexAttributes: 16, maxDrawBuffers: 8, maxColorAttatchments: 8
+2021-08-05T08:23:42.757Z - normal: Simulator: D/jswrapper (143): JS: Cocos Creator v2.4.6
+2021-08-05T08:23:42.830Z - normal: Simulator: In the constructor of HttpClient!
+2021-08-05T08:23:47.986Z - normal: Simulator: D/jswrapper (143): JS: cc.loader is deprecated, use cc.assetManager instead please. See https://docs.cocos.com/creator/manual/zh/release-notes/asset-manager-upgrade-guide.html
+2021-08-05T08:23:48.039Z - normal: Simulator: D/jswrapper (143): JS: null
+2021-08-05T08:23:48.039Z - normal: Simulator: D/jswrapper (143): JS: [object Object]
+2021-08-05T08:24:02.595Z - normal: Simulator: D/jswrapper (579): ScriptEngine::cleanup begin ...
+2021-08-05T08:24:02.595Z - normal: Simulator: D/jswrapper (719): GC begin ..., (js->native map) size: 250, all objects: 601
+2021-08-05T08:24:02.610Z - normal: Simulator: D/jswrapper (645): XMLHttpRequest_finalize, 1133F2F8 ... 
+2021-08-05T08:24:02.610Z - normal: Simulator: D/jswrapper (645): XMLHttpRequest_finalize, 0C8703C0 ... 
+2021-08-05T08:24:02.611Z - normal: Simulator: D/jswrapper (645): XMLHttpRequest_finalize, 0C7611C8 ... 
+2021-08-05T08:24:02.611Z - normal: Simulator: D/jswrapper (737): GC end ..., (js->native map) size: 247, all objects: 601
+2021-08-05T08:24:02.611Z - normal: Simulator: D/jswrapper (719): GC begin ..., (js->native map) size: 247, all objects: 598
+2021-08-05T08:24:02.621Z - normal: Simulator: D/jswrapper (737): GC end ..., (js->native map) size: 247, all objects: 598
+2021-08-05T08:24:02.643Z - normal: Simulator: D/jswrapper (719): GC begin ..., (js->native map) size: 0, all objects: -1
+2021-08-05T08:24:02.644Z - normal: Simulator: D/jswrapper (532): Function object is released!
+2021-08-05T08:24:02.644Z - normal: Simulator: D/jswrapper (737): GC end ..., (js->native map) size: 0, all objects: -1
+2021-08-05T08:24:02.651Z - normal: Simulator: D/jswrapper (640): ScriptEngine::cleanup end ...
+2021-08-05T08:24:02.985Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile

@@ -9,53 +9,120 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
-        levelItem: cc.Prefab
+
+        levelItem: cc.Prefab,
+        levelList:null,
+        levelListConten:null,
+        levelSrollView:null,
+        classicsLevelBtn:cc.Button,
+        netLevelBtn:cc.Button,
+        closeLevelBtn:cc.Button,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad () {
+
+    },
 
     start () {
-        let levelList = cc.find('levelList/levelScrollView/view/content/itemList',this.node)
-        var node = cc.instantiate(this.levelItem);
-        node.getChildByName('levelNum').getComponent(cc.Label).string = 1;
-        node.getChildByName('levelLock').opacity = 0;
-        levelList.addChild(node);
-        
-
-        node.on('touchstart',
-            function(t){
-            console.log("cc.Node.EventType.TOUCH_START ")
-            },this)
+        this.levelList = cc.find('levelList/levelScrollView/view/content/itemList',this.node)
+        this.levelListConten = cc.find('levelList/levelScrollView/view/content',this.node)
+        this.levelSrollView = cc.find('levelList/levelScrollView',this.node)
 
 
-        var node1 = cc.instantiate(this.levelItem);
-        // node1.getChildByName('levelNum').getComponent(cc.Label).string = 1;
-        // node1.getChildByName('levelLock').opacity = 0;
-        levelList.addChild(node1);
+        if(this.classicsLevelBtn == null) this.classicsLevelBtn = cc.find('levelList/classify/classicsLevel',this.node).getComponent(cc.Button)
+        if(this.netLevelBtn == null) this.netLevelBtn = cc.find('levelList/classify/netLevel',this.node).getComponent(cc.Button)
+        if(this.closeLevelBtn == null) this.closeLevelBtn = cc.find('closeLevel',this.node).getComponent(cc.Button)
+        this.classicsLevelBtn.node.on('click', this.loadClassicsLevelList, this)
+        this.netLevelBtn.node.on('click', this.loadNetLevelList, this)
+        this.closeLevelBtn.node.on('click',this.closeLevelLayout, this)
 
-        // setTimeout(function () {
-        //     levelList.destroyAllChildren()
-        // },3000)
+        this.loadClassicsLevelList();
+
+
+
 
 
     },
+    loadClassicsLevelList(){
+        // 设置切换关卡类型按钮选中
+        let classiceBtnLabel = cc.find('Background/Label',this.classicsLevelBtn.node);
+        classiceBtnLabel.color = cc.color(202,122,0);
+        let netBtnLabel = cc.find('Background/Label',this.netLevelBtn.node);
+        netBtnLabel.color = cc.color(255,255,255);
+        netBtnLabel.opacity = 125;
+
+        //清空关卡裂变
+        this.levelList.destroyAllChildren();
+        let that = this;
+        let levelH = 0;
+        let levelRow = 10;
+        let levelTotal = 100;
+
+        for(let i=0; i<levelTotal ; i++){
+            let node = cc.instantiate(this.levelItem);
+            let indexLevel = i+1;
+            if(indexLevel == 1){
+                node.getChildByName('levelNum').getComponent(cc.Label).string = indexLevel;
+                node.getChildByName('levelLock').opacity = 0;
+            }
+            this.levelList.addChild(node);
+
+            node.on('touchend',
+                function(t){
+                    cc.log('level:' + indexLevel);
+                },this)
+            if(indexLevel <= levelRow){
+                levelRow = Math.floor(levelTotal / Math.floor(this.levelListConten.width / node.width) -1);
+                levelH += node.height + 70;
+            }
+        }
+        this.levelListConten.height = levelH;
+
+    },
+
+    loadNetLevelList(){
+        // 设置切换关卡类型按钮选中
+        let classiceBtnLabel = cc.find('Background/Label',this.classicsLevelBtn.node);
+        classiceBtnLabel.color = cc.color(255,255,255);
+        classiceBtnLabel.opacity = 125;
+        let netBtnLabel = cc.find('Background/Label',this.netLevelBtn.node);
+        netBtnLabel.color = cc.color(202,122,0);
+
+
+
+        //清空关卡裂变
+        this.levelList.destroyAllChildren();
+        let that = this;
+        let levelH = 0;
+        let levelRow = 10;
+        let levelTotal = 10;
+
+        for(let i=0; i<levelTotal ; i++){
+            let node = cc.instantiate(this.levelItem);
+            let indexLevel = i+1;
+            if(indexLevel == 1){
+                node.getChildByName('levelNum').getComponent(cc.Label).string = indexLevel;
+                node.getChildByName('levelLock').opacity = 0;
+            }
+            this.levelList.addChild(node);
+
+            node.on('touchend',
+                function(t){
+                    cc.log('level:' + indexLevel);
+                },this)
+            if(indexLevel <= levelRow){
+                levelRow = Math.floor(levelTotal / Math.floor(this.levelListConten.width / node.width) -1);
+                levelH += node.height + 70;
+            }
+        }
+        this.levelListConten.height = levelH;
+    },
+    closeLevelLayout(){
+        this.node.removeFromParent();
+        this.node.destroy();
+    }
 
     // update (dt) {},
 });
