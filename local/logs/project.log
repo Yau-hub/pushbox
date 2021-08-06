@@ -1,0 +1,1879 @@
+2021-08-06T02:31:46.984Z - success: protocol editor-framework registered
+2021-08-06T02:31:46.986Z - success: protocol app registered
+2021-08-06T02:31:46.986Z - success: protocol theme registered
+2021-08-06T02:31:46.986Z - success: protocol packages registered
+2021-08-06T02:31:47.241Z - normal: Load ~/.CocosCreator/settings.json
+2021-08-06T02:31:47.662Z - success: protocol uuid registerred
+2021-08-06T02:31:47.662Z - success: protocol db registerred
+2021-08-06T02:31:47.662Z - success: protocol thumbnail registerred
+2021-08-06T02:31:48.681Z - normal: Initializing Asset Database
+2021-08-06T02:31:48.710Z - normal: checking language setting...
+2021-08-06T02:31:48.710Z - normal: Language: zh
+2021-08-06T02:31:48.734Z - success: protocol unpack registerred
+2021-08-06T02:31:48.734Z - success: protocol disable-commonjs registerred
+2021-08-06T02:31:50.650Z - normal: connected!
+2021-08-06T02:31:50.931Z - normal: Check project E:\yau-work\personal\pushbox
+2021-08-06T02:31:50.933Z - normal: Initializing project E:\yau-work\personal\pushbox
+2021-08-06T02:31:52.425Z - success: adapters loaded
+2021-08-06T02:31:52.428Z - success: asset-db-debugger loaded
+2021-08-06T02:31:52.615Z - success: fb-audience-network loaded
+2021-08-06T02:31:52.714Z - success: fb-live-stream loaded
+2021-08-06T02:31:52.719Z - success: google-play-instant loaded
+2021-08-06T02:31:52.719Z - success: jsb-adapter loaded
+2021-08-06T02:31:52.730Z - success: package-manager loaded
+2021-08-06T02:31:52.730Z - success: runtime-adapters loaded
+2021-08-06T02:31:52.739Z - success: runtime-dev-tools loaded
+2021-08-06T02:31:52.742Z - success: ui-kit-preview-extra loaded
+2021-08-06T02:31:52.744Z - success: ui-kit-preview loaded
+2021-08-06T02:31:55.003Z - success: alipay-minigame loaded
+2021-08-06T02:31:55.014Z - success: assets loaded
+2021-08-06T02:31:55.036Z - success: baidugame-opendata loaded
+2021-08-06T02:31:55.038Z - success: baidugame loaded
+2021-08-06T02:31:55.056Z - success: builder loaded
+2021-08-06T02:31:55.073Z - success: bytedance-opendata loaded
+2021-08-06T02:31:55.075Z - success: bytedance loaded
+2021-08-06T02:31:55.080Z - success: channel-upload-tools loaded
+2021-08-06T02:31:55.955Z - success: cloud-function loaded
+2021-08-06T02:31:57.130Z - success: cocos-services loaded
+2021-08-06T02:31:57.134Z - success: console loaded
+2021-08-06T02:31:57.138Z - success: curve-editor loaded
+2021-08-06T02:31:57.159Z - success: fb-instant-games loaded
+2021-08-06T02:31:57.161Z - success: game-window loaded
+2021-08-06T02:31:57.162Z - success: google-instant-games loaded
+2021-08-06T02:31:57.174Z - success: hierarchy loaded
+2021-08-06T02:31:57.183Z - success: huawei-agc loaded
+2021-08-06T02:31:57.187Z - success: huawei-runtime loaded
+2021-08-06T02:31:57.205Z - success: inspector loaded
+2021-08-06T02:31:57.236Z - success: cpk-publish loaded
+2021-08-06T02:31:57.237Z - success: keystore loaded
+2021-08-06T02:31:57.268Z - success: link-sure-runtime loaded
+2021-08-06T02:31:57.302Z - success: node-library loaded
+2021-08-06T02:31:57.303Z - success: open-recent-items loaded
+2021-08-06T02:31:57.308Z - success: oppo-runtime loaded
+2021-08-06T02:31:57.318Z - success: package-asset loaded
+2021-08-06T02:31:57.319Z - success: preferences loaded
+2021-08-06T02:31:57.321Z - success: project-importer loaded
+2021-08-06T02:31:57.325Z - success: project-settings loaded
+2021-08-06T02:31:57.348Z - success: qtt-runtime loaded
+2021-08-06T02:31:57.352Z - success: scene loaded
+2021-08-06T02:31:57.371Z - success: simulator-debugger loaded
+2021-08-06T02:31:57.372Z - success: sprite-editor loaded
+2021-08-06T02:31:57.542Z - success: store loaded
+2021-08-06T02:31:57.546Z - success: taobao-creativeapp loaded
+2021-08-06T02:31:57.564Z - success: timeline loaded
+2021-08-06T02:31:57.592Z - success: vivo-runtime loaded
+2021-08-06T02:31:57.600Z - success: wechatgame-opendata loaded
+2021-08-06T02:31:57.627Z - success: wechatgame loaded
+2021-08-06T02:31:57.643Z - success: xiaomi-runtime loaded
+2021-08-06T02:31:57.644Z - success: preview server running at http://localhost:7456
+2021-08-06T02:31:59.937Z - info: Cocos Service load base data!
+2021-08-06T02:32:01.416Z - normal: Initializing Cocos2d
+2021-08-06T02:32:06.303Z - normal: Initializing engine extends
+2021-08-06T02:32:14.048Z - normal: Loading packages
+2021-08-06T02:32:14.059Z - normal: Watching packages
+2021-08-06T02:32:14.130Z - normal: Run Application
+2021-08-06T02:33:30.773Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T02:33:31.224Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T02:33:31.224Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T02:33:31.740Z - normal: Start spawn build-worker
+2021-08-06T02:33:37.796Z - normal: Finish spawn build-worker
+2021-08-06T02:33:37.797Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T02:33:37.802Z - normal: Building 3D physics modules...
+2021-08-06T02:33:51.526Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T02:33:53.120Z - normal: Start init build-worker
+2021-08-06T02:33:59.006Z - normal: Finish init build-worker
+2021-08-06T02:33:59.007Z - normal: Start build-assets in worker
+2021-08-06T02:33:59.007Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T02:34:00.866Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T02:34:01.773Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T02:34:02.266Z - normal: Finish build-assets in worker
+2021-08-06T02:34:02.285Z - normal: Start building plugin scripts
+2021-08-06T02:34:09.755Z - normal: Built wechatgame successfully
+2021-08-06T03:33:36.713Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
+2021-08-06T03:33:36.733Z - normal: Simulator: WORKAREA WIDTH 1912.00, HEIGHT 989.00
+2021-08-06T03:33:36.734Z - normal: Simulator: FRAME SCALE = 0.50
+2021-08-06T03:33:36.734Z - normal: Simulator: Ready for GLSL
+2021-08-06T03:33:36.735Z - normal: Simulator: Ready for OpenGL 2.0
+2021-08-06T03:33:36.828Z - normal: Simulator: Project Config:
+2021-08-06T03:33:36.828Z - normal: Simulator:     project dir: D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\cocos2d-x\simulator\win32\
+2021-08-06T03:33:36.828Z - normal: Simulator:     writable path: $(PROJDIR)\
+2021-08-06T03:33:36.828Z - normal: Simulator:     script file: $(PROJDIR)\main.js
+2021-08-06T03:33:36.829Z - normal: Simulator:     frame size: 750 x 1334
+2021-08-06T03:33:36.829Z - normal: Simulator:     frame scale: 0.50
+2021-08-06T03:33:36.829Z - normal: Simulator:     show console: NO
+2021-08-06T03:33:36.829Z - normal: Simulator:     write debug log: NO ()
+2021-08-06T03:33:36.829Z - normal: Simulator:     listen: 
+2021-08-06T03:33:36.829Z - normal: Simulator:     debugger: none
+2021-08-06T03:33:36.830Z - normal: Simulator:     add searching path:
+2021-08-06T03:33:36.851Z - normal: Simulator: 
+2021-08-06T03:33:36.852Z - normal: Simulator: 
+2021-08-06T03:33:36.852Z - normal: Simulator: 
+2021-08-06T03:33:36.853Z - normal: Simulator: resetDesignResolution request
+2021-08-06T03:33:36.854Z - normal: Simulator: ------------------------------------------------
+2021-08-06T03:33:36.854Z - normal: Simulator: LOAD Js FILE: jsb-adapter/jsb-builtin.js
+2021-08-06T03:33:36.854Z - normal: Simulator: ------------------------------------------------
+2021-08-06T03:33:36.855Z - normal: Simulator: D/jswrapper (485): Initializing V8, version: 8.0.426.16
+2021-08-06T03:33:36.885Z - normal: Simulator: D/jswrapper (813): libuv version: 1.13.1
+2021-08-06T03:33:36.911Z - normal: Simulator: D/jswrapper (112): Debugger listening..., visit [ devtools://devtools/bundled/js_app.html?v8only=true&ws=0.0.0.0:5086/00010002-0003-4004-8005-000600070008 ] in chrome browser to debug!
+2021-08-06T03:33:36.912Z - normal: Simulator: D/jswrapper (115): For help see https://nodejs.org/en/docs/inspector
+2021-08-06T03:33:36.947Z - normal: Simulator: D/jswrapper (143): JS: Enable batch GL commands optimization!
+2021-08-06T03:33:36.949Z - normal: Simulator: resetDesignResolution request
+2021-08-06T03:33:36.949Z - normal: Simulator: ------------------------------------------------
+2021-08-06T03:33:36.950Z - normal: Simulator: LOAD Js FILE: main.js
+2021-08-06T03:33:36.950Z - normal: Simulator: ------------------------------------------------
+2021-08-06T03:33:37.231Z - normal: Simulator: D/jswrapper (143): JS: Read json failed: path: D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\cocos2d-x\simulator\win32/gamecaches/cacheList.json message: Unexpected end of JSON input
+2021-08-06T03:33:37.253Z - normal: Simulator: iShow!
+2021-08-06T03:33:37.402Z - normal: Simulator: D/jswrapper (143): JS: load __quick_compile_project__: 11.242999999999995ms
+2021-08-06T03:33:37.605Z - normal: Simulator: D/renderer (626): Device caps: maxVextexTextures: 32, maxFragUniforms: 1024, maxTextureUints: 32, maxVertexAttributes: 16, maxDrawBuffers: 8, maxColorAttatchments: 8
+2021-08-06T03:33:37.605Z - normal: Simulator: D/jswrapper (143): JS: Cocos Creator v2.4.6
+2021-08-06T03:33:37.736Z - normal: Simulator: In the constructor of HttpClient!
+2021-08-06T03:33:58.084Z - normal: Simulator: D/jswrapper (645): XMLHttpRequest_finalize, 115F9DC8 ... 
+2021-08-06T03:33:58.085Z - normal: Simulator: D/jswrapper (645): XMLHttpRequest_finalize, 116A5C38 ... 
+2021-08-06T03:33:58.085Z - normal: Simulator: D/jswrapper (645): XMLHttpRequest_finalize, 162B5C50 ... 
+2021-08-06T03:34:02.592Z - normal: Simulator: D/jswrapper (143): JS: cc.loader is deprecated, use cc.assetManager instead please. See https://docs.cocos.com/creator/manual/zh/release-notes/asset-manager-upgrade-guide.html
+2021-08-06T03:34:03.217Z - normal: Simulator: D/jswrapper (143): JS: level:28
+2021-08-06T03:34:24.115Z - normal: Simulator: D/jswrapper (579): ScriptEngine::cleanup begin ...
+2021-08-06T03:34:24.116Z - normal: Simulator: D/jswrapper (719): GC begin ..., (js->native map) size: 2667, all objects: 5570
+2021-08-06T03:34:24.119Z - normal: Simulator: D/jswrapper (645): XMLHttpRequest_finalize, 160F4D08 ... 
+2021-08-06T03:34:24.140Z - normal: Simulator: D/jswrapper (645): XMLHttpRequest_finalize, 11488928 ... 
+2021-08-06T03:34:24.172Z - normal: Simulator: D/jswrapper (645): XMLHttpRequest_finalize, 162B5C50 ... 
+2021-08-06T03:34:24.172Z - normal: Simulator: D/jswrapper (737): GC end ..., (js->native map) size: 265, all objects: 628
+2021-08-06T03:34:24.173Z - normal: Simulator: D/jswrapper (719): GC begin ..., (js->native map) size: 265, all objects: 625
+2021-08-06T03:34:24.181Z - normal: Simulator: D/jswrapper (737): GC end ..., (js->native map) size: 265, all objects: 625
+2021-08-06T03:34:24.228Z - normal: Simulator: D/jswrapper (719): GC begin ..., (js->native map) size: 0, all objects: -1
+2021-08-06T03:34:24.228Z - normal: Simulator: D/jswrapper (532): Function object is released!
+2021-08-06T03:34:24.229Z - normal: Simulator: D/jswrapper (737): GC end ..., (js->native map) size: 0, all objects: -1
+2021-08-06T03:34:24.285Z - normal: Simulator: D/jswrapper (640): ScriptEngine::cleanup end ...
+2021-08-06T03:34:24.657Z - warn: Simulator: libpng warning: iCCP: known incorrect sRGB profile
+2021-08-06T03:38:37.058Z - error: scene 没有保存，请先保存相关信息再进行构建。
+    at D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\builder\panel\builder.ccc:1:10805
+    at EventEmitter.<anonymous> (D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\app.asar\editor-framework\lib\renderer\ipc.ccc:1:3633)
+    at EventEmitter.emit (events.js:315:20)
+    at Object.onMessage (electron/js2c/renderer_init.js:91:925)
+2021-08-06T03:38:51.096Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T03:38:51.138Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T03:38:51.138Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T03:38:51.148Z - normal: Start spawn build-worker
+2021-08-06T03:38:51.148Z - normal: Finish spawn build-worker
+2021-08-06T03:38:51.149Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T03:38:51.373Z - normal: Building 3D physics modules...
+2021-08-06T03:39:01.813Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T03:39:02.387Z - normal: Start build-assets in worker
+2021-08-06T03:39:02.387Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T03:39:02.696Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T03:39:02.912Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T03:39:03.074Z - normal: Finish build-assets in worker
+2021-08-06T03:39:03.090Z - normal: Start building plugin scripts
+2021-08-06T03:39:09.009Z - normal: Built wechatgame successfully
+2021-08-06T03:58:41.453Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T03:58:41.454Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T03:58:41.454Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T03:58:41.455Z - normal: Start spawn build-worker
+2021-08-06T03:58:41.455Z - normal: Finish spawn build-worker
+2021-08-06T03:58:41.455Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T03:58:41.601Z - normal: Building 3D physics modules...
+2021-08-06T03:58:54.937Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T03:58:55.541Z - normal: Start build-assets in worker
+2021-08-06T03:58:55.541Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T03:58:55.764Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T03:58:56.063Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T03:58:56.291Z - normal: Finish build-assets in worker
+2021-08-06T03:58:56.308Z - normal: Start building plugin scripts
+2021-08-06T03:59:00.948Z - normal: Built wechatgame successfully
+2021-08-06T06:05:27.852Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T06:05:27.853Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T06:05:27.853Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T06:05:27.855Z - normal: Start spawn build-worker
+2021-08-06T06:05:27.855Z - normal: Finish spawn build-worker
+2021-08-06T06:05:27.856Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T06:05:28.032Z - normal: Building 3D physics modules...
+2021-08-06T06:05:40.735Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T06:05:41.529Z - normal: Start build-assets in worker
+2021-08-06T06:05:41.530Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T06:05:41.767Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T06:05:42.018Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T06:05:42.202Z - normal: Finish build-assets in worker
+2021-08-06T06:05:42.219Z - normal: Start building plugin scripts
+2021-08-06T06:05:46.688Z - normal: Built wechatgame successfully
+2021-08-06T06:17:07.749Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T06:17:07.750Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T06:17:07.750Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T06:17:07.751Z - normal: Start spawn build-worker
+2021-08-06T06:17:07.751Z - normal: Finish spawn build-worker
+2021-08-06T06:17:07.751Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T06:17:07.869Z - normal: Building 3D physics modules...
+2021-08-06T06:17:16.316Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T06:17:17.106Z - normal: Start build-assets in worker
+2021-08-06T06:17:17.107Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T06:17:17.290Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T06:17:17.554Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T06:17:17.723Z - normal: Finish build-assets in worker
+2021-08-06T06:17:17.743Z - normal: Start building plugin scripts
+2021-08-06T06:17:22.215Z - normal: Built wechatgame successfully
+2021-08-06T06:38:26.586Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T06:38:26.588Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T06:38:26.588Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T06:38:26.589Z - normal: Start spawn build-worker
+2021-08-06T06:38:26.590Z - normal: Finish spawn build-worker
+2021-08-06T06:38:26.590Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T06:38:26.595Z - normal: Building 3D physics modules...
+2021-08-06T06:38:37.532Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T06:38:38.102Z - normal: Start build-assets in worker
+2021-08-06T06:38:38.103Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T06:38:38.499Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T06:38:38.891Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T06:38:39.150Z - normal: Finish build-assets in worker
+2021-08-06T06:38:39.170Z - normal: Start building plugin scripts
+2021-08-06T06:38:45.617Z - normal: Built wechatgame successfully
+2021-08-06T06:58:46.189Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T06:58:46.190Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T06:58:46.190Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T06:58:46.192Z - normal: Start spawn build-worker
+2021-08-06T06:58:46.192Z - normal: Finish spawn build-worker
+2021-08-06T06:58:46.192Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T06:58:46.309Z - normal: Building 3D physics modules...
+2021-08-06T06:58:57.236Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T06:58:57.644Z - normal: Start build-assets in worker
+2021-08-06T06:58:57.645Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T06:58:57.859Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T06:58:58.115Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T06:58:58.290Z - normal: Finish build-assets in worker
+2021-08-06T06:58:58.308Z - normal: Start building plugin scripts
+2021-08-06T06:59:02.979Z - normal: Built wechatgame successfully
+2021-08-06T07:04:10.397Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T07:04:10.398Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T07:04:10.398Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T07:04:10.399Z - normal: Start spawn build-worker
+2021-08-06T07:04:10.399Z - normal: Finish spawn build-worker
+2021-08-06T07:04:10.399Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T07:04:10.538Z - normal: Building 3D physics modules...
+2021-08-06T07:04:20.967Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T07:04:21.875Z - normal: Start build-assets in worker
+2021-08-06T07:04:21.876Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T07:04:22.105Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T07:04:22.442Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T07:04:22.714Z - normal: Finish build-assets in worker
+2021-08-06T07:04:22.739Z - normal: Start building plugin scripts
+2021-08-06T07:04:27.790Z - normal: Built wechatgame successfully
+2021-08-06T07:10:17.139Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T07:10:17.140Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T07:10:17.140Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T07:10:17.141Z - normal: Start spawn build-worker
+2021-08-06T07:10:17.142Z - normal: Finish spawn build-worker
+2021-08-06T07:10:17.142Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T07:10:17.265Z - normal: Building 3D physics modules...
+2021-08-06T07:10:25.917Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T07:10:26.721Z - normal: Start build-assets in worker
+2021-08-06T07:10:26.721Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T07:10:26.939Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T07:10:27.266Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T07:10:27.489Z - normal: Finish build-assets in worker
+2021-08-06T07:10:27.514Z - normal: Start building plugin scripts
+2021-08-06T07:10:32.507Z - normal: Built wechatgame successfully
+2021-08-06T07:57:02.268Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T07:57:02.269Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T07:57:02.269Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T07:57:02.271Z - normal: Start spawn build-worker
+2021-08-06T07:57:02.271Z - normal: Finish spawn build-worker
+2021-08-06T07:57:02.271Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T07:57:02.386Z - normal: Building 3D physics modules...
+2021-08-06T07:57:14.840Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T07:57:15.458Z - normal: Start build-assets in worker
+2021-08-06T07:57:15.460Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T07:57:15.827Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T07:57:16.174Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T07:57:16.401Z - normal: Finish build-assets in worker
+2021-08-06T07:57:16.423Z - normal: Start building plugin scripts
+2021-08-06T07:57:21.720Z - normal: Built wechatgame successfully
+2021-08-06T08:12:40.821Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T08:12:40.822Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T08:12:40.822Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T08:12:40.823Z - normal: Start spawn build-worker
+2021-08-06T08:12:40.823Z - normal: Finish spawn build-worker
+2021-08-06T08:12:40.823Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T08:12:40.938Z - normal: Building 3D physics modules...
+2021-08-06T08:12:49.353Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T08:12:50.150Z - normal: Start build-assets in worker
+2021-08-06T08:12:50.150Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T08:12:50.363Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T08:12:50.651Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T08:12:50.851Z - normal: Finish build-assets in worker
+2021-08-06T08:12:50.877Z - normal: Start building plugin scripts
+2021-08-06T08:12:57.070Z - normal: Built wechatgame successfully
+2021-08-06T08:16:22.944Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T08:16:22.945Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T08:16:22.945Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T08:16:22.946Z - normal: Start spawn build-worker
+2021-08-06T08:16:22.946Z - normal: Finish spawn build-worker
+2021-08-06T08:16:22.946Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T08:16:23.055Z - normal: Building 3D physics modules...
+2021-08-06T08:16:33.969Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T08:16:35.123Z - normal: Start build-assets in worker
+2021-08-06T08:16:35.124Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T08:16:35.435Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T08:16:35.883Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T08:16:36.155Z - normal: Finish build-assets in worker
+2021-08-06T08:16:36.179Z - normal: Start building plugin scripts
+2021-08-06T08:16:42.581Z - normal: Built wechatgame successfully
+2021-08-06T08:19:07.587Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T08:19:07.587Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T08:19:07.587Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T08:19:07.588Z - normal: Start spawn build-worker
+2021-08-06T08:19:07.588Z - normal: Finish spawn build-worker
+2021-08-06T08:19:07.588Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T08:19:07.693Z - normal: Building 3D physics modules...
+2021-08-06T08:19:16.113Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T08:19:16.945Z - normal: Start build-assets in worker
+2021-08-06T08:19:16.946Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T08:19:17.161Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T08:19:17.386Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T08:19:17.547Z - normal: Finish build-assets in worker
+2021-08-06T08:19:17.563Z - normal: Start building plugin scripts
+2021-08-06T08:19:22.372Z - normal: Built wechatgame successfully
+2021-08-06T08:20:44.669Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T08:20:44.669Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T08:20:44.669Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T08:20:44.670Z - normal: Start spawn build-worker
+2021-08-06T08:20:44.670Z - normal: Finish spawn build-worker
+2021-08-06T08:20:44.671Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T08:20:44.785Z - normal: Building 3D physics modules...
+2021-08-06T08:20:54.633Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T08:20:55.512Z - normal: Start build-assets in worker
+2021-08-06T08:20:55.513Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T08:20:55.692Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T08:20:55.962Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T08:20:56.154Z - normal: Finish build-assets in worker
+2021-08-06T08:20:56.177Z - normal: Start building plugin scripts
+2021-08-06T08:21:01.020Z - normal: Built wechatgame successfully
+2021-08-06T08:24:32.845Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T08:24:32.846Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T08:24:32.846Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T08:24:32.847Z - normal: Start spawn build-worker
+2021-08-06T08:24:32.847Z - normal: Finish spawn build-worker
+2021-08-06T08:24:32.847Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T08:24:32.953Z - normal: Building 3D physics modules...
+2021-08-06T08:24:42.719Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T08:24:43.606Z - normal: Start build-assets in worker
+2021-08-06T08:24:43.606Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T08:24:44.079Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T08:24:44.558Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T08:24:44.837Z - normal: Finish build-assets in worker
+2021-08-06T08:24:44.865Z - normal: Start building plugin scripts
+2021-08-06T08:24:50.370Z - normal: Built wechatgame successfully
+2021-08-06T08:27:38.093Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T08:27:38.094Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T08:27:38.094Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T08:27:38.095Z - normal: Start spawn build-worker
+2021-08-06T08:27:38.095Z - normal: Finish spawn build-worker
+2021-08-06T08:27:38.095Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T08:27:38.204Z - normal: Building 3D physics modules...
+2021-08-06T08:27:48.081Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T08:27:48.653Z - normal: Start build-assets in worker
+2021-08-06T08:27:48.654Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T08:27:48.887Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T08:27:49.229Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T08:27:49.443Z - normal: Finish build-assets in worker
+2021-08-06T08:27:49.470Z - normal: Start building plugin scripts
+2021-08-06T08:27:56.207Z - normal: Built wechatgame successfully
+2021-08-06T09:07:08.046Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": false,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "d2b0b8ad-928a-4378-8807-252582712574"
+  ],
+  "excludedModules": [
+    "3D Physics/Builtin"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-06T09:07:08.047Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-06T09:07:08.047Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-06T09:07:08.048Z - normal: Start spawn build-worker
+2021-08-06T09:07:08.048Z - normal: Finish spawn build-worker
+2021-08-06T09:07:08.049Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2021-08-06T09:07:08.161Z - normal: Building 3D physics modules...
+2021-08-06T09:07:17.596Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-06T09:07:18.043Z - normal: Start build-assets in worker
+2021-08-06T09:07:18.044Z - normal: 
+--- build-asset: {"root":"db://internal/resources","name":"internal","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
+
+2021-08-06T09:07:18.214Z - normal: 
+--- build-asset: {"root":"db://assets/resources","name":"resources","dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
+
+2021-08-06T09:07:18.456Z - normal: 
+--- build-asset: {"root":null,"priority":7,"dest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["d2b0b8ad-928a-4378-8807-252582712574","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
+
+2021-08-06T09:07:18.610Z - normal: Finish build-assets in worker
+2021-08-06T09:07:18.627Z - normal: Start building plugin scripts
+2021-08-06T09:07:22.693Z - normal: Built wechatgame successfully
+2021-08-06T09:07:46.060Z - error: - initialize
+
+
+    at Socket.<anonymous> (D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2021-08-06T09:07:46.206Z - error: √ IDE server has started, listening on http://127.0.0.1:33161
+
+    at Socket.<anonymous> (D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2021-08-06T09:07:46.207Z - error: - open IDE
+
+
+    at Socket.<anonymous> (D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2021-08-06T09:07:47.399Z - error: √ open IDE
+
+    at Socket.<anonymous> (D:\software\CocosDashboard\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)

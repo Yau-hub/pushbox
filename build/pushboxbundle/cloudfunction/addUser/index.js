@@ -6,8 +6,7 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   //插入数据
-  return await db.collection('user').doc(event.appId).update({
-    // data 为 users 集合内我要修改的内容 lover 为字段名 event.lover 为要修改成的内容
+  return await db.collection('user').add ({
     data: {
       appId: event.appId, 
       openId: event.openId,
@@ -18,7 +17,23 @@ exports.main = async (event, context) => {
       unionId: null,
       nickName: null,
       portrait: null,
+      createTime: Date.now()
     }
-  })
-
+  })  
 }
+/*
+    openid: wxContext.OPENID,
+    appid: wxContext.APPID,
+    unionid: wxContext.UNIONID,
+
+    nickname: 微信名
+    portrait: 头像
+
+    levelfinishnum: 关卡完成数
+    levelfinishtime: 关卡完成用时
+
+    classicslevelnum: 经典关卡完成数
+    netlevelnum: 网友自制关卡完成数
+
+
+*/

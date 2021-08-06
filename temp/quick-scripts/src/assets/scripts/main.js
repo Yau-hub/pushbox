@@ -10,6 +10,15 @@ cc._RF.push(module, '2276c+jCHZBGYX+JxzXyKDF', 'main');
 //  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
+window.env = "cloud1-5gvbuiy3dd99f63c";
+
+if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+  wx.cloud.init({
+    env: window.env
+  });
+}
+
+window.userInfo = {};
 cc.Class({
   "extends": cc.Component,
   properties: {
@@ -24,19 +33,21 @@ cc.Class({
   // LIFE-CYCLE CALLBACKS:
   onLoad: function onLoad() {
     //加载一言
-    this.oneSay(); //开始游戏按钮
-
+    //  this.oneSay();
+    //开始游戏按钮
     if (this.loginplay == null) this.loginplay = cc.find('Canvas/mainBg/loginplay').getComponent(cc.Button);
     this.loginplay.node.on('click', this.loginLevelList, this);
     if (this.visitorplay == null) this.visitorplay = cc.find('Canvas/mainBg/visitorplay').getComponent(cc.Button);
     this.visitorplay.node.on('click', this.visitorLevelList, this);
   },
   start: function start() {
-    var that = this;
-    this.loadImg();
-    setInterval(function () {
-      that.oneSay();
-    }, 10000);
+    var that = this; // this.loadImg();
+    //
+    // setInterval(function () {
+    //     that.oneSay();
+    // },10000)
+
+    this.getUserInfo(); // this.login();
   },
   // update (dt) {},
   loadImg: function loadImg() {
@@ -146,6 +157,115 @@ cc.Class({
 
     cc.loader.loadRes('levelLayout', onResourceLoaded); // let levelList = cc.instantiate(this.levelLayout);
     // this.node.addChild(levelList);
+  },
+  getUserInfo: function getUserInfo() {
+    if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+      //获取缓存appId判断是否第一次进入游戏
+      wx.getStorage({
+        key: 'appId',
+        success: function success(res) {
+          window.userInfo.appId = res.data;
+        },
+        fail: function fail(err) {
+          wx.cloud.callFunction({
+            name: 'login'
+          }).then(function (res) {
+            if (res && res.result) {
+              wx.setStorage({
+                key: "appId",
+                data: res.result.appid
+              });
+              wx.setStorage({
+                key: "openId",
+                data: res.result.openid
+              });
+              window.userInfo.appId = res.result.appid;
+              window.userInfo.classicsLevelNum = 0;
+              window.userInfo.netLevelNum = 0; //注册用户信息
+
+              wx.cloud.callFunction({
+                name: 'addUser',
+                data: {
+                  appId: res.result.appid,
+                  openId: res.result.openid
+                }
+              }).then(function (res) {
+                console.log(res);
+              })["catch"](function (err) {
+                console.error(err);
+              });
+            }
+          })["catch"](function (err) {
+            console.error(err);
+          });
+        }
+      });
+    }
+  },
+  login: function login(_success, _fail) {
+    if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+      //微信登陆
+      var _wx = window['wx']; //避开ts语法检测
+
+      var info = systemInfo = _wx.getSystemInfoSync(); //立即获取系统信息
+
+
+      var w = screenWidth = info.screenWidth; //屏幕宽
+
+      var h = screenHeight = info.screenHeight; //屏幕高
+      //获取用户的当前设置。返回值中只会出现小程序已经向用户请求过的权限。
+
+      _wx.getSetting({
+        success: function success(res) {
+          console.log(res.authSetting);
+
+          if (res.authSetting["scope.userInfo"]) {
+            console.log("用户已授权");
+
+            _wx.getUserInfo({
+              success: function success(res) {
+                //登陆操作
+                userInfo = res.userInfo;
+                _success && _success(res.userInfo);
+              }
+            });
+          } else {
+            console.log("用户未授权"); //创建全屏透明登陆按钮
+
+            var button = _wx.createUserInfoButton({
+              type: 'text',
+              text: '',
+              style: {
+                left: 0,
+                top: 0,
+                width: w,
+                height: h,
+                backgroundColor: '#00000000',
+                //最后两位为透明度
+                color: '#ffffff',
+                fontSize: 20,
+                textAlign: "center",
+                lineHeight: h
+              }
+            });
+
+            button.onTap(function (res) {
+              if (res.userInfo) {
+                console.log("用户授权:", res.userInfo);
+                userInfo = res.userInfo;
+                _success && _success(res.userInfo);
+                button.destroy();
+              } else {
+                console.log("用户拒绝授权:");
+                _fail && _fail();
+              }
+            });
+          }
+        }
+      });
+
+      return;
+    }
   }
 });
 

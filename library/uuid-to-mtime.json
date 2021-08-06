@@ -505,8 +505,8 @@
     "relativePath": "scenes"
   },
   "db164588-eb1d-4e07-860f-0375a28d4d89": {
-    "asset": 1628157562783,
-    "meta": 1628157562796,
+    "asset": 1628240825147,
+    "meta": 1628240825159,
     "relativePath": "scenes\\main.fire"
   },
   "d2b0b8ad-928a-4378-8807-252582712574": {
@@ -609,11 +609,6 @@
     "meta": 1628152937271,
     "relativePath": "scripts\\levelLayout.js"
   },
-  "2276cfa3-0876-4119-85fe-271cd7c8a0c5": {
-    "asset": 1628153140538,
-    "meta": 1628153144700,
-    "relativePath": "scripts\\main.js"
-  },
   "471164bd-c04f-496f-9382-d742bca6cafe": {
     "asset": 1628156195887,
     "meta": 1628156307768,
@@ -633,5 +628,10 @@
     "asset": 1628156009106,
     "meta": 1628157128287,
     "relativePath": "images\\alerContentBg.png"
+  },
+  "2276cfa3-0876-4119-85fe-271cd7c8a0c5": {
+    "asset": 1628239397475,
+    "meta": 1628240820135,
+    "relativePath": "scripts\\main.js"
   }
 }

@@ -19,7 +19,7 @@
             "children": [
               {
                 "width": 389,
-                "height": 249,
+                "height": 295,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -28,7 +28,7 @@
               },
               {
                 "width": 389,
-                "height": 472,
+                "height": 426,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -106,8 +106,9 @@
         "game-window"
       ]
     },
-    "window-1628217154792": {},
-    " build-worker-worker": {}
+    " build-worker-worker": {},
+    "window-1628231881931": {},
+    " compile-worker-worker": {}
   },
   "panels": {
     "project-settings": {
