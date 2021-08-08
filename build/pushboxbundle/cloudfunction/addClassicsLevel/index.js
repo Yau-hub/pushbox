@@ -9,6 +9,7 @@ exports.main = async (event, context) => {
   return await db.collection('classicsLevel').add ({
     data: {
       content: event.content, 
+      levelIndex: event.levelIndex, 
       createTime: Date.now()
     }
   })  

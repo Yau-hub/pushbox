@@ -9,6 +9,14 @@ if (cc.sys.platform === cc.sys.WECHAT_GAME) {
     wx.cloud.init({env: window.env})
 }
 window.userInfo = {};
+window.classicsLevelNum = 0;
+window.netLevelNum = 0;
+window.levelIndex = 0;
+window.bgUrlBase = '';
+
+
+
+import levels from './level'
 
 cc.Class({
     extends: cc.Component,
@@ -20,13 +28,14 @@ cc.Class({
         },
         loginplay: cc.Button,
         visitorplay: cc.Button,
-        levelLayout: cc.Prefab
+        levelLayout: cc.Prefab,
+
     },
 
 
 
 
-    // LIFE-CYCLE CALLBACKS:
+    // LIFE-CYCL:E CALLBACKS:
 
      onLoad () {
         //加载一言
@@ -46,7 +55,28 @@ cc.Class({
         let that = this;
 
 
+        if (cc.sys.platform === cc.sys.WECHAT_GAME){
+            // wx.cloud.callFunction({
+            //     name: 'addClassicsLevel',
+            //     data:{
+            //         content: levels[0],
+            //         levelIndex: 1
+            //     }
+            // }).then(res => {
+            //     console.log(res)
+            // }).catch(err => {
+            //     console.error(err)
+            // })
 
+
+            wx.cloud.callFunction({
+                name: 'getClassicsLevelNum'
+            }).then(res => {
+                window.classicsLevelNum = res.result.total;
+            }).catch(err => {
+                console.error(err)
+            })
+        }
 
 
 
@@ -65,6 +95,8 @@ cc.Class({
 
 
     // update (dt) {},
+
+
 
     loadImg: function(){
         var that = this;
@@ -158,6 +190,20 @@ cc.Class({
                 key: 'appId',
                 success (res) {
                     window.userInfo.appId = res.data;
+                    wx.cloud.callFunction({
+                        name: 'queryUser',
+                        data:{
+                            appId: window.userInfo.appId
+                        }
+                    }).then(res => {
+                        if(res && res.result.data.length>0){
+                            window.userInfo.classicsLevelNum = res.result.data[0].classicsLevelNum;
+                            window.userInfo.netLevelNum = res.result.data[0].netLevelNum;
+                        }
+
+                    }).catch(err => {
+                        console.error(err)
+                    })
                 },
                 fail(err){
 

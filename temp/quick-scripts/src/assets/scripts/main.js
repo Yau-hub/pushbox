@@ -4,6 +4,10 @@ cc._RF.push(module, '2276c+jCHZBGYX+JxzXyKDF', 'main');
 
 "use strict";
 
+var _level = _interopRequireDefault(require("./level"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 // Learn cc.Class:
 //  - https://docs.cocos.com/creator/manual/en/scripting/class.html
 // Learn Attribute:
@@ -19,6 +23,10 @@ if (cc.sys.platform === cc.sys.WECHAT_GAME) {
 }
 
 window.userInfo = {};
+window.classicsLevelNum = 0;
+window.netLevelNum = 0;
+window.levelIndex = 0;
+window.bgUrlBase = '';
 cc.Class({
   "extends": cc.Component,
   properties: {
@@ -30,7 +38,7 @@ cc.Class({
     visitorplay: cc.Button,
     levelLayout: cc.Prefab
   },
-  // LIFE-CYCLE CALLBACKS:
+  // LIFE-CYCL:E CALLBACKS:
   onLoad: function onLoad() {
     //加载一言
     //  this.oneSay();
@@ -41,11 +49,33 @@ cc.Class({
     this.visitorplay.node.on('click', this.visitorLevelList, this);
   },
   start: function start() {
-    var that = this; // this.loadImg();
+    var that = this;
+
+    if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+      // wx.cloud.callFunction({
+      //     name: 'addClassicsLevel',
+      //     data:{
+      //         content: levels[0],
+      //         levelIndex: 1
+      //     }
+      // }).then(res => {
+      //     console.log(res)
+      // }).catch(err => {
+      //     console.error(err)
+      // })
+      wx.cloud.callFunction({
+        name: 'getClassicsLevelNum'
+      }).then(function (res) {
+        window.classicsLevelNum = res.result.total;
+      })["catch"](function (err) {
+        console.error(err);
+      });
+    } // this.loadImg();
     //
     // setInterval(function () {
     //     that.oneSay();
     // },10000)
+
 
     this.getUserInfo(); // this.login();
   },
@@ -165,6 +195,19 @@ cc.Class({
         key: 'appId',
         success: function success(res) {
           window.userInfo.appId = res.data;
+          wx.cloud.callFunction({
+            name: 'queryUser',
+            data: {
+              appId: window.userInfo.appId
+            }
+          }).then(function (res) {
+            if (res && res.result.data.length > 0) {
+              window.userInfo.classicsLevelNum = res.result.data[0].classicsLevelNum;
+              window.userInfo.netLevelNum = res.result.data[0].netLevelNum;
+            }
+          })["catch"](function (err) {
+            console.error(err);
+          });
         },
         fail: function fail(err) {
           wx.cloud.callFunction({

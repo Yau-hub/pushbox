@@ -23,6 +23,7 @@ cc.Class({
 
     onLoad () {
 
+
     },
 
     start () {
@@ -53,12 +54,14 @@ cc.Class({
         netBtnLabel.color = cc.color(255,255,255);
         netBtnLabel.opacity = 125;
 
+        window.levelClassify = 'classicsLevel';
+
         //清空关卡裂变
         this.levelList.destroyAllChildren();
         let that = this;
         let levelH = 0;
         let levelRow = 10;
-        let levelTotal = 100;
+        let levelTotal = window.classicsLevelNum;
 
         for(let i=0; i<levelTotal ; i++){
             let node = cc.instantiate(this.levelItem);
@@ -71,7 +74,8 @@ cc.Class({
 
             node.on('touchend',
                 function(t){
-                    cc.log('level:' + indexLevel);
+                    window.levelIndex = indexLevel;
+                    cc.director.loadScene("game");
                 },this)
             if(indexLevel <= levelRow){
                 levelRow = Math.floor(levelTotal / Math.floor(this.levelListConten.width / node.width) -1);
@@ -90,19 +94,19 @@ cc.Class({
         let netBtnLabel = cc.find('Background/Label',this.netLevelBtn.node);
         netBtnLabel.color = cc.color(202,122,0);
 
-
+        window.levelClassify = 'netLevel';
 
         //清空关卡裂变
         this.levelList.destroyAllChildren();
         let that = this;
         let levelH = 0;
         let levelRow = 10;
-        let levelTotal = 10;
+        let levelTotal = window.netLevelNum;
 
         for(let i=0; i<levelTotal ; i++){
             let node = cc.instantiate(this.levelItem);
             let indexLevel = i+1;
-            if(indexLevel == 1){
+            if(indexLevel <= window.userInfo.classicsLevelNum){
                 node.getChildByName('levelNum').getComponent(cc.Label).string = indexLevel;
                 node.getChildByName('levelLock').opacity = 0;
             }

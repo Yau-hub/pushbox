@@ -1,46 +1,33 @@
 {
     "description": "项目配置文件。",
+    "miniprogramRoot": "./",
     "setting": {
         "urlCheck": true,
-        "scopeDataCheck": false,
-        "coverView": true,
-        "es6": false,
+        "es6": true,
         "postcss": true,
-        "compileHotReLoad": false,
-        "lazyloadPlaceholderEnable": false,
-        "preloadBackgroundData": false,
-        "minified": true,
-        "autoAudits": false,
-        "newFeature": false,
-        "uglifyFileName": false,
-        "uploadWithSourceMap": true,
-        "useIsolateContext": true,
-        "nodeModules": false,
-        "enhance": true,
-        "useMultiFrameRuntime": true,
-        "useApiHook": true,
-        "useApiHostProcess": true,
-        "showShadowRootInWxmlPanel": true,
-        "packNpmManually": false,
-        "packNpmRelationList": [],
-        "minifyWXSS": true
+        "minified": false,
+        "newFeature": false
     },
     "compileType": "game",
     "libVersion": "game",
-    "appid": "wx336937482e824d4d",
+    "appid": "wx74d39137a3046bd3",
     "projectname": "PushBox",
     "condition": {
         "search": {
+            "current": -1,
             "list": []
         },
         "conversation": {
+            "current": -1,
             "list": []
         },
         "game": {
             "currentL": -1,
-            "list": []
+            "list": [],
+            "current": -1
         },
         "miniprogram": {
+            "current": -1,
             "list": []
         }
     }
