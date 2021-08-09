@@ -3397,6 +3397,7 @@
     "timeCounterValue": 0,
     "timeCounterTimer": null,
     "levelCounter": null,
+    "moveHistoryList": [],
     "_id": "6bm3soR09Adrelq48zFQ+5"
   },
   {

@@ -5,21 +5,21 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 0,
-      "y": 0,
+      "x": 48,
+      "y": 116,
       "width": 1536,
       "height": 824,
       "layout": {
         "type": "dock-h",
         "children": [
           {
-            "width": 204.0500030517578,
-            "height": 710.2000122070312,
+            "width": 204,
+            "height": 708,
             "type": "dock-v",
             "children": [
               {
-                "width": 204.0500030517578,
-                "height": 281.6875,
+                "width": 204,
+                "height": 281,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -27,8 +27,8 @@
                 ]
               },
               {
-                "width": 204.0500030517578,
-                "height": 425.51251220703125,
+                "width": 204,
+                "height": 424,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -38,8 +38,8 @@
             ]
           },
           {
-            "width": 398.1000061035156,
-            "height": 710.2000122070312,
+            "width": 397,
+            "height": 708,
             "type": "panel",
             "active": 0,
             "children": [
@@ -48,18 +48,18 @@
             ]
           },
           {
-            "width": 914.2374877929688,
-            "height": 710.2000122070312,
+            "width": 913,
+            "height": 708,
             "type": "dock-v",
             "children": [
               {
-                "width": 914.2374877929688,
-                "height": 441.20001220703125,
+                "width": 913,
+                "height": 439,
                 "type": "dock-h",
                 "children": [
                   {
-                    "width": 553.1500244140625,
-                    "height": 441.20001220703125,
+                    "width": 552,
+                    "height": 439,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -67,8 +67,8 @@
                     ]
                   },
                   {
-                    "width": 358.0874938964844,
-                    "height": 441.20001220703125,
+                    "width": 358,
+                    "height": 439,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -78,7 +78,7 @@
                 ]
               },
               {
-                "width": 914.2374877929688,
+                "width": 913,
                 "height": 266,
                 "type": "panel",
                 "active": 0,
@@ -104,9 +104,8 @@
         "game-window"
       ]
     },
-    "window-1628417986777": {},
-    " build-worker-worker": {},
-    " compile-worker-worker": {}
+    "window-1628502361564": {},
+    " build-worker-worker": {}
   },
   "panels": {
     "project-settings": {

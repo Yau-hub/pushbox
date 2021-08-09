@@ -69,6 +69,7 @@ cc.Class({
         timeCounterValue:0,
         timeCounterTimer:null,
         levelCounter: null,
+        moveHistoryList:[]
 
     },
 
@@ -468,6 +469,7 @@ cc.Class({
     },
 
     resetPosition(direction){
+        let that = this;
         switch(direction){
             case 'up':
                 this.position.y -= 1;
@@ -484,6 +486,22 @@ cc.Class({
                 this.position.x -= 1;
                 break;
         }
+
+        if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+            wx.setStorage({
+                key: "lastLayout",
+                data: window.currentLevel,
+                success(result) {
+                    wx.getStorage({
+                        key: "lastLayout",
+                        success(res) {
+                            that.moveHistoryList.push(res.data)
+                        }
+                    })
+                }
+            })
+        }
+
         this.stepCounterValue ++;
         // this.gameOver = true;
         this.stepCounter.string = "步数：" + this.stepCounterValue;
@@ -550,6 +568,9 @@ cc.Class({
 
             cc.find('contentBg/useTime',newMyPrefab).getComponent(cc.Label).string = "步数："+ that.stepCounterValue+'步';
             cc.find('contentBg/useStep',newMyPrefab).getComponent(cc.Label).string = "用时："+ that.timeCounterValue+'秒';
+            if(window.levelIndex < window.classicsLevelNum){
+                cc.find('contentBg/next',newMyPrefab).opacity = 0;
+            }
             cc.find('contentBg/next',newMyPrefab).on('click',function () {
                if(window.levelClassify == 'classicsLevel'){
                    if(window.levelIndex < window.classicsLevelNum){
@@ -584,7 +605,7 @@ cc.Class({
                         // imageUrl: data.url,
                         query: '分享',
                     })
-                    
+
                 }
             },this)
             CanvasNode.addChild( newMyPrefab );
@@ -686,6 +707,30 @@ cc.Class({
         cc.find('gameBtns/left',this.node).on("click",function () {
             that.moveLeft(window.currentLevel)
         },this)
+        cc.find('gameBtns/backStep',this.node).on('click',function () {
+            if(that.moveHistoryList.length > 1 && that.stepCounterValue >= 1){
+                that.moveHistoryList.pop();
+                if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+                    wx.setStorage({
+                        key: "lastLayout",
+                        data: that.moveHistoryList[that.moveHistoryList.length-1],
+                        success(result) {
+                            wx.getStorage({
+                                key: "lastLayout",
+                                success(res) {
+                                    that.stepCounterValue --;
+                                    that.stepCounter.string = "步数：" + that.stepCounterValue;
+                                    window.currentLevel = res.data;
+                                    that.renderLayout(window.currentLevel);
+                                    that.initPosition(window.currentLevel)
+                                }
+                            })
+                        }
+                    })
+                }
+            }
+
+        },this)
 
         cc.find('gameBtns/menu',this.node).on("click",function () {
             clearInterval(that.timeCounterTimer);
@@ -758,12 +803,21 @@ cc.Class({
                         window.currentLevel = res.result.data[0].content;
                         that.renderLayout(window.currentLevel);
                         that.initPosition(window.currentLevel);
+
                         // 初始化挂件
                         that.initPendant();
 
                         wx.setStorage({
                             key: "initLevel",
-                            data:window.currentLevel
+                            data:window.currentLevel,
+                            success(result){
+                              wx.getStorage({
+                                  key:"initLevel",
+                                  success(res){
+                                      that.moveHistoryList.push(res.data)
+                                  }
+                              })
+                            }
                         })
                     }
                 }).catch(err => {

@@ -6,6 +6,8 @@ cc._RF.push(module, '2276c+jCHZBGYX+JxzXyKDF', 'main');
 
 var _level = _interopRequireDefault(require("./level"));
 
+var _common = require("./common");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // Learn cc.Class:
@@ -36,17 +38,16 @@ cc.Class({
     },
     loginplay: cc.Button,
     visitorplay: cc.Button,
-    levelLayout: cc.Prefab
+    levelLayout: cc.Prefab,
+    buildLevel: cc.Button,
+    setting: cc.Button,
+    mainShare: cc.Button
   },
   // LIFE-CYCL:E CALLBACKS:
   onLoad: function onLoad() {
     //加载一言
     //  this.oneSay();
-    //开始游戏按钮
-    if (this.loginplay == null) this.loginplay = cc.find('Canvas/mainBg/loginplay').getComponent(cc.Button);
-    this.loginplay.node.on('click', this.loginLevelList, this);
-    if (this.visitorplay == null) this.visitorplay = cc.find('Canvas/mainBg/visitorplay').getComponent(cc.Button);
-    this.visitorplay.node.on('click', this.visitorLevelList, this);
+    this.mainBindEvent();
   },
   start: function start() {
     var that = this;
@@ -77,7 +78,8 @@ cc.Class({
     // },10000)
 
 
-    this.getUserInfo(); // this.login();
+    this.getUserInfo();
+    this.initSetting();
   },
   // update (dt) {},
   loadImg: function loadImg() {
@@ -245,70 +247,137 @@ cc.Class({
       });
     }
   },
-  login: function login(_success, _fail) {
-    if (cc.sys.platform === cc.sys.WECHAT_GAME) {
-      //微信登陆
-      var _wx = window['wx']; //避开ts语法检测
+  mainBindEvent: function mainBindEvent() {
+    var that = this; //添加授权按钮
 
-      var info = systemInfo = _wx.getSystemInfoSync(); //立即获取系统信息
+    (0, _common.wxLogin)(function (res) {
+      window.loginInfo = {
+        avatarUrl: res.avatarUrl,
+        nickName: res.nickName
+      };
+    }, function () {
+      console.log('授权失败');
+    }, this.loginplay.node); //开始游戏按钮
 
+    if (this.loginplay == null) this.loginplay = cc.find('Canvas/mainBg/loginplay').getComponent(cc.Button);
+    this.loginplay.node.on('click', this.loginLevelList, this);
+    if (this.visitorplay == null) this.visitorplay = cc.find('Canvas/mainBg/visitorplay').getComponent(cc.Button);
+    this.visitorplay.node.on('click', this.visitorLevelList, this);
+    if (this.mainShare == null) this.mainShare = cc.find('Canvas/mainBg/mainShare').getComponent(cc.Button);
+    this.mainShare.node.on('click', function () {
+      if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+        var titString = '快来挑战“益智推箱”小游戏吧！';
+        wx.shareAppMessage({
+          title: titString,
+          // imageUrl: data.url,
+          query: '分享'
+        });
+      }
+    }, this);
+    if (this.setting == null) this.setting = cc.find('Canvas/mainBg/setting').getComponent(cc.Button);
+    this.setting.node.on('click', function () {
+      var CanvasNode = cc.find('Canvas');
 
-      var w = screenWidth = info.screenWidth; //屏幕宽
+      if (!CanvasNode) {
+        cc.console('find Canvas error');
+        return;
+      }
 
-      var h = screenHeight = info.screenHeight; //屏幕高
-      //获取用户的当前设置。返回值中只会出现小程序已经向用户请求过的权限。
+      var onResourceLoaded = function onResourceLoaded(errorMessage, loadedResource) {
+        if (errorMessage) {
+          console.log('Prefab error:' + errorMessage);
+          return;
+        }
 
-      _wx.getSetting({
-        success: function success(res) {
-          console.log(res.authSetting);
+        if (!(loadedResource instanceof cc.Prefab)) {
+          console.log('Prefab error');
+          return;
+        }
 
-          if (res.authSetting["scope.userInfo"]) {
-            console.log("用户已授权");
-
-            _wx.getUserInfo({
+        var newMyPrefab = cc.instantiate(loadedResource);
+        cc.find('settingContain/closeSetting', newMyPrefab).on('click', function () {
+          newMyPrefab.removeFromParent();
+          newMyPrefab.destroy();
+        }, this);
+        var touchMove = cc.find('settingContain/touchMove/Background/Label', newMyPrefab).getComponent(cc.Label);
+        var clickMove = cc.find('settingContain/clickMove/Background/Label', newMyPrefab).getComponent(cc.Label);
+        if (window.setting.touchMove) touchMove.string = '关闭触摸移动';else touchMove.string = '开启触摸移动';
+        if (window.setting.clickMove) clickMove.string = '关闭按键移动';else clickMove.string = '开启按键移动';
+        cc.find('settingContain/touchMove', newMyPrefab).on('click', function () {
+          if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+            wx.getStorage({
+              key: 'setting',
               success: function success(res) {
-                //登陆操作
-                userInfo = res.userInfo;
-                _success && _success(res.userInfo);
-              }
-            });
-          } else {
-            console.log("用户未授权"); //创建全屏透明登陆按钮
+                //触摸&点击开启
+                if (res.data.touchMove && res.data.clickMove) {
+                  window.setting.touchMove = false;
+                  touchMove.string = '开启触摸移动';
+                } //触摸关闭 点击开启
+                else if (!res.data.touchMove && res.data.clickMove) {
+                    window.setting.touchMove = true;
+                    touchMove.string = '关闭触摸移动';
+                  } else {
+                    //提示至少开启一种移动方式
+                    console.log('至少开启一种移动方式');
+                  }
 
-            var button = _wx.createUserInfoButton({
-              type: 'text',
-              text: '',
-              style: {
-                left: 0,
-                top: 0,
-                width: w,
-                height: h,
-                backgroundColor: '#00000000',
-                //最后两位为透明度
-                color: '#ffffff',
-                fontSize: 20,
-                textAlign: "center",
-                lineHeight: h
-              }
-            });
-
-            button.onTap(function (res) {
-              if (res.userInfo) {
-                console.log("用户授权:", res.userInfo);
-                userInfo = res.userInfo;
-                _success && _success(res.userInfo);
-                button.destroy();
-              } else {
-                console.log("用户拒绝授权:");
-                _fail && _fail();
+                wx.setStorage({
+                  key: 'setting',
+                  data: window.setting
+                });
               }
             });
           }
-        }
-      });
+        }, this);
+        cc.find('settingContain/clickMove', newMyPrefab).on('click', function () {
+          if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+            wx.getStorage({
+              key: 'setting',
+              success: function success(res) {
+                //触摸&点击开启
+                if (res.data.touchMove && res.data.clickMove) {
+                  window.setting.clickMove = false;
+                  clickMove.string = '开启按键移动';
+                } //触摸关闭 点击开启
+                else if (res.data.touchMove && !res.data.clickMove) {
+                    window.setting.clickMove = true;
+                    clickMove.string = '关闭按键移动';
+                  } else {
+                    //提示至少开启一种移动方式
+                    console.log('至少开启一种移动方式');
+                  }
 
-      return;
-    }
+                wx.setStorage({
+                  key: 'setting',
+                  data: window.setting
+                });
+              }
+            });
+          }
+        }, this);
+        CanvasNode.addChild(newMyPrefab);
+      };
+
+      cc.loader.loadRes('settingDialog', onResourceLoaded);
+    }, this);
+  },
+  initSetting: function initSetting() {
+    wx.getStorage({
+      key: 'setting',
+      success: function success(res) {
+        window.setting = res.data;
+      },
+      fail: function fail(err) {
+        window.setting = {
+          touchMove: true,
+          clickMove: true
+        };
+        wx.setStorage({
+          key: 'setting',
+          data: window.setting
+        });
+      }
+    });
   }
 });
 
