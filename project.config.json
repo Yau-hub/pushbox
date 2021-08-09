@@ -1,10 +1,15 @@
 {
-  "description": "项目配置文件。",
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
   "setting": {
+    "bundle": false,
+    "userConfirmedBundleSwitch": false,
     "urlCheck": true,
     "scopeDataCheck": false,
     "coverView": true,
-    "es6": false,
+    "es6": true,
     "postcss": true,
     "compileHotReLoad": false,
     "lazyloadPlaceholderEnable": false,
@@ -22,21 +27,24 @@
     "useApiHostProcess": true,
     "showShadowRootInWxmlPanel": true,
     "packNpmManually": false,
+    "enableEngineNative": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "showES6CompileOption": false
   },
   "compileType": "game",
-  "libVersion": "2.2.5",
+  "libVersion": "2.17.0",
   "appid": "wx74d39137a3046bd3",
-  "projectname": "pushboxbundle",
-  "miniprogramRoot": "wechatgame/",
-  "cloudfunctionRoot": "cloudfunction/",
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-  "scripts": {
-    "beforePreview": ""
+  "projectname": "minigame-1",
+  "debugOptions": {
+    "hidedInDevtools": []
   },
+  "scripts": {},
+  "staticServerOptions": {
+    "baseURL": "",
+    "servePath": ""
+  },
+  "isGameTourist": false,
   "condition": {
     "search": {
       "list": []
@@ -45,7 +53,12 @@
       "list": []
     },
     "game": {
-      "currentL": -1,
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {

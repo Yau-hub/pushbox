@@ -17,7 +17,7 @@ window.bgUrlBase = '';
 
 
 import levels from './level'
-import {wxLogin} from "./common";
+import {wxLogin,Toast} from "./common";
 
 cc.Class({
     extends: cc.Component,
@@ -89,6 +89,7 @@ cc.Class({
 
         this.getUserInfo();
         this.initSetting();
+
 
     },
 
@@ -314,8 +315,7 @@ cc.Class({
                                 }
                                 else{
                                     //提示至少开启一种移动方式
-                                    console.log('至少开启一种移动方式')
-
+                                    Toast('至少开启一种移动方式!',1500)
                                 }
                                 wx.setStorage({
                                     key:'setting',
@@ -344,14 +344,12 @@ cc.Class({
                                 }
                                 else{
                                     //提示至少开启一种移动方式
-                                    console.log('至少开启一种移动方式')
-
+                                    Toast('至少开启一种移动方式!',1500)
                                 }
                                 wx.setStorage({
                                     key:'setting',
                                     data:window.setting
                                 })
-
                             }
                         })
                     }
@@ -366,21 +364,23 @@ cc.Class({
 
     },
     initSetting(){
-        wx.getStorage({
-            key:'setting',
-            success(res){
-                window.setting = res.data;
-            },
-            fail(err){
-                window.setting = {
-                    touchMove: true,
-                    clickMove: true
-                };
-                wx.setStorage({
-                    key:'setting',
-                    data:window.setting
-                })
-            }
-        })
+        if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+            wx.getStorage({
+                key: 'setting',
+                success(res) {
+                    window.setting = res.data;
+                },
+                fail(err) {
+                    window.setting = {
+                        touchMove: true,
+                        clickMove: true
+                    };
+                    wx.setStorage({
+                        key: 'setting',
+                        data: window.setting
+                    })
+                }
+            })
+        }
     }
 });

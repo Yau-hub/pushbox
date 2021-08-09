@@ -318,7 +318,7 @@ cc.Class({
                     touchMove.string = '关闭触摸移动';
                   } else {
                     //提示至少开启一种移动方式
-                    console.log('至少开启一种移动方式');
+                    (0, _common.Toast)('至少开启一种移动方式!', 1500);
                   }
 
                 wx.setStorage({
@@ -344,7 +344,7 @@ cc.Class({
                     clickMove.string = '关闭按键移动';
                   } else {
                     //提示至少开启一种移动方式
-                    console.log('至少开启一种移动方式');
+                    (0, _common.Toast)('至少开启一种移动方式!', 1500);
                   }
 
                 wx.setStorage({
@@ -362,22 +362,24 @@ cc.Class({
     }, this);
   },
   initSetting: function initSetting() {
-    wx.getStorage({
-      key: 'setting',
-      success: function success(res) {
-        window.setting = res.data;
-      },
-      fail: function fail(err) {
-        window.setting = {
-          touchMove: true,
-          clickMove: true
-        };
-        wx.setStorage({
-          key: 'setting',
-          data: window.setting
-        });
-      }
-    });
+    if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+      wx.getStorage({
+        key: 'setting',
+        success: function success(res) {
+          window.setting = res.data;
+        },
+        fail: function fail(err) {
+          window.setting = {
+            touchMove: true,
+            clickMove: true
+          };
+          wx.setStorage({
+            key: 'setting',
+            data: window.setting
+          });
+        }
+      });
+    }
   }
 });
 

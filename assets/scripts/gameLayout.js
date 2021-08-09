@@ -239,8 +239,6 @@ cc.Class({
 
     },
 
-
-
     moveUp(layout){
         var that = this;
         var x = this.position.x;
@@ -296,8 +294,6 @@ cc.Class({
             clearTimeout(movetimer);
         })
     },
-
-
     moveDown(layout){
         var that = this;
         var x = this.position.x;
@@ -354,8 +350,6 @@ cc.Class({
             clearTimeout(movetimer);
         })
     },
-
-
     moveLeft(layout){
         var that = this;
         var x = this.position.x;
@@ -411,7 +405,6 @@ cc.Class({
             clearTimeout(movetimer);
         })
     },
-
     moveRight(layout){
         var that = this;
         var x = this.position.x;
@@ -467,7 +460,6 @@ cc.Class({
             clearTimeout(movetimer);
         })
     },
-
     resetPosition(direction){
         let that = this;
         switch(direction){
@@ -524,6 +516,8 @@ cc.Class({
     },
 
     addTouchMove(){
+        if(!window.setting.touchMove) return;
+
         let that = this;
         let figureLocation = null;
 
@@ -568,7 +562,7 @@ cc.Class({
 
             cc.find('contentBg/useTime',newMyPrefab).getComponent(cc.Label).string = "步数："+ that.stepCounterValue+'步';
             cc.find('contentBg/useStep',newMyPrefab).getComponent(cc.Label).string = "用时："+ that.timeCounterValue+'秒';
-            if(window.levelIndex < window.classicsLevelNum){
+            if(window.levelIndex >= window.classicsLevelNum){
                 cc.find('contentBg/next',newMyPrefab).opacity = 0;
             }
             cc.find('contentBg/next',newMyPrefab).on('click',function () {
@@ -622,15 +616,20 @@ cc.Class({
                 window.currentLevel = res.data
                 that.renderLayout(window.currentLevel);
                 that.initPosition(window.currentLevel);
+                // that.moveHistoryList = [];
+                // that.moveHistoryList.push(res.data)
+                // console.log(that.moveHistoryList)
+
             },
             fail(){
 
             }
         })
 
+
+
     },
     initPendant(){
-
         //关卡
         if(this.levelCounter == null){
             var levelNode = new cc.Node('levelCounter');
@@ -690,23 +689,32 @@ cc.Class({
                 }.bind(this),1000)
             }
         }
+        this.moveHistoryList = [];
 
     },
     pendantAddEvent(){
         let that = this;
         cc.find('back',this.node).on('click',this.back, this)
-        cc.find('gameBtns/up',this.node).on("click",function () {
-            that.moveUp(window.currentLevel)
-        },this)
-        cc.find('gameBtns/right',this.node).on("click",function () {
-            that.moveRight(window.currentLevel)
-        },this)
-        cc.find('gameBtns/down',this.node).on("click",function () {
-            that.moveDown(window.currentLevel)
-        },this)
-        cc.find('gameBtns/left',this.node).on("click",function () {
-            that.moveLeft(window.currentLevel)
-        },this)
+        //开启点击移动
+        if(window.setting.clickMove) {
+            cc.find('gameBtns/up',this.node).on("click",function () {
+                that.moveUp(window.currentLevel)
+            },this)
+            cc.find('gameBtns/right',this.node).on("click",function () {
+                that.moveRight(window.currentLevel)
+            },this)
+            cc.find('gameBtns/down',this.node).on("click",function () {
+                that.moveDown(window.currentLevel)
+            },this)
+            cc.find('gameBtns/left',this.node).on("click",function () {
+                that.moveLeft(window.currentLevel)
+            },this)
+        }else{
+            cc.find('gameBtns/up',this.node).opacity = 0;
+            cc.find('gameBtns/right',this.node).opacity = 0;
+            cc.find('gameBtns/down',this.node).opacity = 0;
+            cc.find('gameBtns/left',this.node).opacity = 0;
+        }
         cc.find('gameBtns/backStep',this.node).on('click',function () {
             if(that.moveHistoryList.length > 1 && that.stepCounterValue >= 1){
                 that.moveHistoryList.pop();

@@ -67,3 +67,41 @@ export function wxLogin(_success, _fail,node) {
         }
     );
 }
+
+export function Toast(text,time) {
+    var CanvasNode = cc.find('Canvas');
+    if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+    const wx = window['wx'];//避开ts语法检测
+    const info  = wx.getSystemInfoSync();//立即获取系统信息
+    const w  = info.screenWidth;//屏幕宽
+    const h  = info.screenHeight;//屏幕高
+    var onResourceLoaded = function(errorMessage, loadedResource )
+    {
+        if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+        if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+        var newMyPrefab = cc.instantiate( loadedResource );
+        let toastBg = cc.find('background',newMyPrefab).getComponent(cc.Graphics);
+        let toastText =  cc.find("text",newMyPrefab);
+
+
+
+        toastText.getComponent(cc.Label).string = text;
+        CanvasNode.addChild( newMyPrefab );
+        toastBg.roundRect(
+            -( toastText.width + 80)/2,
+            -(toastText.height+40)/2,
+            toastText.width + 80,
+            toastText.height+40,
+            (toastText.height+40)/2
+        );
+        toastBg.fillColor = cc.Color.BLACK;
+        toastBg.fill()
+        let timer = setTimeout(function () {
+            newMyPrefab.removeFromParent();
+            newMyPrefab.destroy();
+            clearTimeout(timer);
+            timer = null;
+        },time)
+    };
+    cc.loader.loadRes('toast', onResourceLoaded );
+}
