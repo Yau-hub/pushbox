@@ -9,7 +9,6 @@ exports.main = async (event, context) => {
   return await db.collection('user').add ({
     data: {
       appId: event.appId, 
-      openId: event.openId,
       levelFinishNum: 0,
       levelFinishTime: 0,
       classicsLevelNum: 0,

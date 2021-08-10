@@ -25,7 +25,7 @@ export function wxLogin(_success, _fail,node) {
                     wx.getUserInfo({
                         success(res) {
                             //登陆操作
-                            userInfo = res.userInfo;
+                            // userInfo = res.userInfo;
                             _success && _success(res.userInfo);
                         }
                     });
@@ -52,7 +52,7 @@ export function wxLogin(_success, _fail,node) {
                     button.onTap((res) => {
                         if (res.userInfo) {
                             console.log("用户授权:", res.userInfo);
-                            userInfo = res.userInfo;
+                            // userInfo = res.userInfo;
                             _success && _success(res.userInfo);
                             button.destroy();
                         } else {
@@ -105,3 +105,37 @@ export function Toast(text,time) {
     };
     cc.loader.loadRes('toast', onResourceLoaded );
 }
+let Loading ={
+    ele:null,
+    hideFlage:false,
+    show(){
+        Loading.hideFlage = false;
+        var CanvasNode = cc.find('Canvas');
+        if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+        var onResourceLoaded = function(errorMessage, loadedResource )
+        {
+            if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+            if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+            var newMyPrefab = cc.instantiate( loadedResource );
+
+            if(!Loading.hideFlage){
+                CanvasNode.addChild( newMyPrefab );
+                Loading.ele = newMyPrefab;
+            }else{
+                newMyPrefab.destroy();
+            }
+
+
+        };
+        cc.loader.loadRes('loading', onResourceLoaded );
+    },
+    hide(){
+        if(Loading.ele){
+            Loading.ele.removeFromParent();
+            Loading.ele.destroy();
+            Loading.ele = null;
+        }
+        Loading.hideFlage = true;
+    }
+}
+export {Loading};

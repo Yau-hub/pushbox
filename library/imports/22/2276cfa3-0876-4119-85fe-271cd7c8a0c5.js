@@ -24,11 +24,12 @@ if (cc.sys.platform === cc.sys.WECHAT_GAME) {
   });
 }
 
-window.userInfo = {};
+window.user = {};
 window.classicsLevelNum = 0;
 window.netLevelNum = 0;
 window.levelIndex = 0;
 window.bgUrlBase = '';
+window.user.levelFinishNum = 0;
 cc.Class({
   "extends": cc.Component,
   properties: {
@@ -61,15 +62,32 @@ cc.Class({
       //     }
       // }).then(res => {
       //     console.log(res)
+      //     wx.cloud.callFunction({
+      //         name: 'addClassicsLevel',
+      //         data:{
+      //             content: levels[1],
+      //             levelIndex: 2
+      //         }
+      //     }).then(res => {
+      //         console.log(res)
+      //     }).catch(err => {
+      //         console.error(err)
+      //     })
       // }).catch(err => {
       //     console.error(err)
       // })
+      _common.Loading.show();
+
       wx.cloud.callFunction({
         name: 'getClassicsLevelNum'
       }).then(function (res) {
+        console.log('load err');
         window.classicsLevelNum = res.result.total;
+
+        _common.Loading.hide();
       })["catch"](function (err) {
         console.error(err);
+        console.log('load err1');
       });
     } // this.loadImg();
     //
@@ -159,8 +177,7 @@ cc.Class({
       CanvasNode.addChild(newMyPrefab);
     };
 
-    cc.loader.loadRes('levelLayout', onResourceLoaded); // let levelList = cc.instantiate(this.levelLayout);
-    // this.node.addChild(levelList);
+    cc.loader.loadRes('levelLayout', onResourceLoaded);
   },
   //不登录登录显示关卡列表
   visitorLevelList: function visitorLevelList() {
@@ -196,16 +213,17 @@ cc.Class({
       wx.getStorage({
         key: 'appId',
         success: function success(res) {
-          window.userInfo.appId = res.data;
+          window.user.appId = res.data;
           wx.cloud.callFunction({
             name: 'queryUser',
             data: {
-              appId: window.userInfo.appId
+              appId: window.user.appId
             }
           }).then(function (res) {
             if (res && res.result.data.length > 0) {
-              window.userInfo.classicsLevelNum = res.result.data[0].classicsLevelNum;
-              window.userInfo.netLevelNum = res.result.data[0].netLevelNum;
+              window.user.levelFinishNum = res.result.data[0].levelFinishNum;
+              window.user.classicsLevelNum = res.result.data[0].classicsLevelNum;
+              window.user.netLevelNum = res.result.data[0].netLevelNum;
             }
           })["catch"](function (err) {
             console.error(err);
@@ -218,24 +236,31 @@ cc.Class({
             if (res && res.result) {
               wx.setStorage({
                 key: "appId",
-                data: res.result.appid
-              });
-              wx.setStorage({
-                key: "openId",
                 data: res.result.openid
               });
-              window.userInfo.appId = res.result.appid;
-              window.userInfo.classicsLevelNum = 0;
-              window.userInfo.netLevelNum = 0; //注册用户信息
-
+              window.user.appId = res.result.openid;
+              window.user.classicsLevelNum = 0;
+              window.user.netLevelNum = 0;
+              window.user.levelFinishNum = 0;
               wx.cloud.callFunction({
-                name: 'addUser',
+                name: 'queryUser',
                 data: {
-                  appId: res.result.appid,
-                  openId: res.result.openid
+                  appId: window.user.appId
                 }
               }).then(function (res) {
-                console.log(res);
+                if (res && res.result.data.length <= 0) {
+                  //注册用户信息
+                  wx.cloud.callFunction({
+                    name: 'addUser',
+                    data: {
+                      appId: window.user.appId
+                    }
+                  }).then(function (res) {
+                    console.log(res);
+                  })["catch"](function (err) {
+                    console.error(err);
+                  });
+                }
               })["catch"](function (err) {
                 console.error(err);
               });

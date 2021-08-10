@@ -5,6 +5,7 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+
 cc.Class({
     extends: cc.Component,
 
@@ -42,9 +43,6 @@ cc.Class({
         this.loadClassicsLevelList();
 
 
-
-
-
     },
     loadClassicsLevelList(){
         // 设置切换关卡类型按钮选中
@@ -66,17 +64,18 @@ cc.Class({
         for(let i=0; i<levelTotal ; i++){
             let node = cc.instantiate(this.levelItem);
             let indexLevel = i+1;
-            if(indexLevel == 1){
+            if(indexLevel <=  window.user.levelFinishNum+1){
                 node.getChildByName('levelNum').getComponent(cc.Label).string = indexLevel;
                 node.getChildByName('levelLock').opacity = 0;
+                node.on('touchend',
+                    function(t){
+                        window.levelIndex = indexLevel;
+                        cc.director.loadScene("game");
+                    },this)
             }
             this.levelList.addChild(node);
 
-            node.on('touchend',
-                function(t){
-                    window.levelIndex = indexLevel;
-                    cc.director.loadScene("game");
-                },this)
+
             if(indexLevel <= levelRow){
                 levelRow = Math.floor(levelTotal / Math.floor(this.levelListConten.width / node.width) -1);
                 levelH += node.height + 70;

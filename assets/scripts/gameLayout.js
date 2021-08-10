@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import levels from './level'
+import {Loading} from "./common";
 window.currentLevel = [];
 
 window.eleSize = 35;
@@ -69,7 +70,10 @@ cc.Class({
         timeCounterValue:0,
         timeCounterTimer:null,
         levelCounter: null,
-        moveHistoryList:[]
+        moveHistoryList:[],
+        lastScore: null,
+        lastStepNode: null,
+        lastTimenode: null
 
     },
 
@@ -90,7 +94,7 @@ cc.Class({
 
     start () {
 
-
+        console.log(window.user)
         // var newBlock = cc.instantiate(this.block);
         // // 为设置位置
         // newBlock.setPosition(-375,50);
@@ -606,7 +610,88 @@ cc.Class({
         };
         setTimeout(function () {
             cc.loader.loadRes('gameOverAlert', onResourceLoaded );
-        },5)
+        },0)
+
+        //上传分数
+        if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+            if (that.lastScore == null) {
+                wx.cloud.callFunction({
+                    name: 'addClassicsLevelScore',
+                    data: {
+                        levelIndex: window.levelIndex,
+                        appId: window.user.appId,
+                        useStep: that.stepCounterValue,
+                        useTime: that.timeCounterValue
+                    }
+                }).then(res => {
+                }).catch(err => {
+                    console.error(err)
+                })
+                that.lastScore = {
+                    levelIndex: window.levelIndex,
+                    appId: window.user.appId,
+                    useStep: that.stepCounterValue,
+                    useTime: that.timeCounterValue
+                }
+                that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
+            } else {
+                if (that.stepCounterValue < that.lastScore.useStep || that.timeCounterValue < that.lastScore.useTime) {
+                    that.lastScore = {
+                        levelIndex: window.levelIndex,
+                        appId: window.user.appId,
+                        useStep: that.stepCounterValue,
+                        useTime: that.timeCounterValue
+                    }
+                    that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
+                    wx.cloud.callFunction({
+                        name: 'updateClassicsLevelScore',
+                        data: {
+                            levelIndex: window.levelIndex,
+                            appId: window.user.appId,
+                            useStep: that.stepCounterValue,
+                            useTime: that.timeCounterValue
+                        }
+                    }).then(res => {
+
+
+                    }).catch(err => {
+                        console.error(err)
+                    })
+                }
+            }
+
+            let curLevelNum = window.levelIndex;
+            wx.cloud.callFunction({
+                name: 'queryUser',
+                data: {
+                    appId: window.user.appId,
+                }
+            }).then(res => {
+                console.log('queryUser')
+                console.log(res)
+                if(res && res.result.data.length>0 && res.result.data[0].levelFinishNum < curLevelNum){
+                    window.user.levelFinishNum = curLevelNum;
+                    let data = {};
+                    data.appId = window.user.appId;
+                    data.levelFinishNum = curLevelNum;
+                    if(window.loginInfo.nickName) data.nickName = window.loginInfo.nickName;
+                    if(window.loginInfo.avatarUrl) data.avatarUrl = window.loginInfo.nickName;
+                    wx.cloud.callFunction({
+                        name: 'updateUser',
+                        data: data
+                    }).then(res => {
+
+                    }).catch(err => {
+                        console.error(err)
+                    })
+
+                }
+            }).catch(err => {
+                console.error(err)
+            })
+
+
+        }
     },
     replayLayout(){
         var that = this;
@@ -655,7 +740,7 @@ cc.Class({
             var node = new cc.Node('stepCounter');
             node.setAnchorPoint(0, 1);
             var stepCounter = node.addComponent(cc.Label);
-            stepCounter.node.setPosition(-(cc.winSize.width/2) + (cc.winSize.width*0.05),  (cc.winSize.width/2) + 80)
+            stepCounter.node.setPosition(-(cc.winSize.width/2) + (cc.winSize.width*0.05),  (cc.winSize.width/2) + 80);
             stepCounter.string = '步数： 0';
             this.stepCounter = node.getComponent(cc.Label)
             this.node.addChild(node);
@@ -689,7 +774,11 @@ cc.Class({
                 }.bind(this),1000)
             }
         }
+
+
+
         this.moveHistoryList = [];
+
 
     },
     pendantAddEvent(){
@@ -798,7 +887,7 @@ cc.Class({
     initLevel(){
         let that = this;
         if (cc.sys.platform === cc.sys.WECHAT_GAME) {
-
+            Loading.show();
             //经典关卡
             if(window.levelClassify == 'classicsLevel'){
                 wx.cloud.callFunction({
@@ -811,10 +900,8 @@ cc.Class({
                         window.currentLevel = res.result.data[0].content;
                         that.renderLayout(window.currentLevel);
                         that.initPosition(window.currentLevel);
-
                         // 初始化挂件
                         that.initPendant();
-
                         wx.setStorage({
                             key: "initLevel",
                             data:window.currentLevel,
@@ -828,9 +915,32 @@ cc.Class({
                             }
                         })
                     }
+                    Loading.hide();
                 }).catch(err => {
                     console.error(err)
                 })
+
+                wx.cloud.callFunction({
+                    name: 'queryClassicsLevelScore',
+                    data: {
+                        levelIndex: window.levelIndex,
+                        appId:window.user.appId
+                    }
+                }).then(res => {
+                    console.log(res);
+
+                    if(res && res.result.data.length>0){
+                        that.lastScore = res.result.data[0];
+                        that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
+                    }else{
+                        that.lastScore = null;
+                        that.renderLastScore('无','无')
+                    }
+                }).catch(err => {
+                    console.error(err)
+                })
+
+
             }
             //网络关卡
             else{
@@ -845,6 +955,23 @@ cc.Class({
         clearInterval(this.timeCounterTimer)
         this.timeCounterTimer = null;
         cc.director.loadScene("main");
+    },
+    renderLastScore(step,time){
+        let that = this;
+        //最佳步数
+        if(that.lastStepNode == null){
+            var lastStepNode = new cc.Node('lastStepNode');
+            lastStepNode.setAnchorPoint(0, 1);
+            var stepCounter = lastStepNode.addComponent(cc.Label);
+            stepCounter.node.setPosition(-(cc.winSize.width/2) + (cc.winSize.width*0.05),  (cc.winSize.width/2) + 160)
+            stepCounter.string = '最佳成绩：步数 '+ step+" - 用时 "+time;
+            that.lastStepNode = lastStepNode.getComponent(cc.Label)
+            that.node.addChild(lastStepNode);
+        }else{
+            that.lastStepNode.string = '最佳成绩：步数 '+ step+" - 用时 "+time;
+        }
+
+
     }
 
 

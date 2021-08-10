@@ -8,16 +8,16 @@ window.env = "cloud1-5gvbuiy3dd99f63c"
 if (cc.sys.platform === cc.sys.WECHAT_GAME) {
     wx.cloud.init({env: window.env})
 }
-window.userInfo = {};
+window.user = {};
 window.classicsLevelNum = 0;
 window.netLevelNum = 0;
 window.levelIndex = 0;
 window.bgUrlBase = '';
-
+window.user.levelFinishNum = 0;
 
 
 import levels from './level'
-import {wxLogin,Toast} from "./common";
+import {wxLogin,Toast,Loading} from "./common";
 
 cc.Class({
     extends: cc.Component,
@@ -44,7 +44,6 @@ cc.Class({
      onLoad () {
         //加载一言
         //  this.oneSay();
-
          this.mainBindEvent();
 
 
@@ -63,17 +62,32 @@ cc.Class({
             //     }
             // }).then(res => {
             //     console.log(res)
+            //     wx.cloud.callFunction({
+            //         name: 'addClassicsLevel',
+            //         data:{
+            //             content: levels[1],
+            //             levelIndex: 2
+            //         }
+            //     }).then(res => {
+            //         console.log(res)
+            //     }).catch(err => {
+            //         console.error(err)
+            //     })
             // }).catch(err => {
             //     console.error(err)
             // })
 
-
+            Loading.show();
             wx.cloud.callFunction({
                 name: 'getClassicsLevelNum'
             }).then(res => {
+                console.log('load err')
                 window.classicsLevelNum = res.result.total;
+                Loading.hide();
+
             }).catch(err => {
                 console.error(err)
+                console.log('load err1')
             })
         }
 
@@ -148,7 +162,6 @@ cc.Class({
     //授权登录显示关卡列表
     loginLevelList(){
 
-
         window.loginType = 'wechat';
         var CanvasNode = cc.find('Canvas');
         if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
@@ -160,13 +173,9 @@ cc.Class({
             CanvasNode.addChild( newMyPrefab );
         };
         cc.loader.loadRes('levelLayout', onResourceLoaded );
-
-        // let levelList = cc.instantiate(this.levelLayout);
-        // this.node.addChild(levelList);
     },
     //不登录登录显示关卡列表
     visitorLevelList(){
-
 
         window.loginType = 'visitor';
         var CanvasNode = cc.find('Canvas');
@@ -189,16 +198,17 @@ cc.Class({
             wx.getStorage({
                 key: 'appId',
                 success (res) {
-                    window.userInfo.appId = res.data;
+                    window.user.appId = res.data;
                     wx.cloud.callFunction({
                         name: 'queryUser',
                         data:{
-                            appId: window.userInfo.appId
+                            appId: window.user.appId
                         }
                     }).then(res => {
                         if(res && res.result.data.length>0){
-                            window.userInfo.classicsLevelNum = res.result.data[0].classicsLevelNum;
-                            window.userInfo.netLevelNum = res.result.data[0].netLevelNum;
+                            window.user.levelFinishNum = res.result.data[0].levelFinishNum;
+                            window.user.classicsLevelNum = res.result.data[0].classicsLevelNum;
+                            window.user.netLevelNum = res.result.data[0].netLevelNum;
                         }
 
                     }).catch(err => {
@@ -207,34 +217,45 @@ cc.Class({
                 },
                 fail(err){
 
+
                     wx.cloud.callFunction({
                         name: 'login'
                     }).then(res => {
                         if(res && res.result){
                             wx.setStorage({
                                 key: "appId",
-                                data:res.result.appid
-                            })
-                            wx.setStorage({
-                                key: "openId",
                                 data:res.result.openid
                             })
-                            window.userInfo.appId = res.result.appid;
-                            window.userInfo.classicsLevelNum = 0
-                            window.userInfo.netLevelNum = 0
+                            window.user.appId = res.result.openid;
+                            window.user.classicsLevelNum = 0;
+                            window.user.netLevelNum = 0;
+                            window.user.levelFinishNum = 0;
 
-                            //注册用户信息
                             wx.cloud.callFunction({
-                                name: 'addUser',
-                                data: {
-                                    appId: res.result.appid,
-                                    openId: res.result.openid
+                                name: 'queryUser',
+                                data:{
+                                    appId: window.user.appId
                                 }
                             }).then(res => {
-                                console.log(res)
+                                if(res && res.result.data.length<=0){
+                                    //注册用户信息
+                                    wx.cloud.callFunction({
+                                        name: 'addUser',
+                                        data: {
+                                            appId: window.user.appId
+                                        }
+
+                                    }).then(res => {
+                                        console.log(res)
+                                    }).catch(err => {
+                                        console.error(err)
+                                    })
+                                }
+
                             }).catch(err => {
                                 console.error(err)
                             })
+
                         }
                     }).catch(err => {
                         console.error(err)
@@ -254,7 +275,7 @@ cc.Class({
             }
         },function () {
             console.log('授权失败')
-        },this.loginplay.node)
+        },this.loginplay.node);
         //开始游戏按钮
         if(this.loginplay == null) this.loginplay = cc.find('Canvas/mainBg/loginplay').getComponent(cc.Button)
         this.loginplay.node.on('click', this.loginLevelList, this)
