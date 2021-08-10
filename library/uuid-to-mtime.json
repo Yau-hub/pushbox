@@ -10,13 +10,13 @@
     "relativePath": "scenes\\main.fire"
   },
   "9949f6e0-117b-4771-9e32-f62732b7e6b3": {
-    "asset": 1628579020873,
-    "meta": 1628579072576,
+    "asset": 1628588201175,
+    "meta": 1628588763310,
     "relativePath": "scripts"
   },
   "bba42ae9-17cb-404f-bf9b-14a0926d21e0": {
-    "asset": 1628576021319,
-    "meta": 1628579072572,
+    "asset": 1628584563394,
+    "meta": 1628588763305,
     "relativePath": "images"
   },
   "b01e9c67-7049-4351-a2d0-3f777579632b": {
@@ -35,8 +35,8 @@
     "relativePath": "mainLogo.anim"
   },
   "97c8ff53-a4dc-4e99-8b9d-16cf06b85330": {
-    "asset": 1628557313453,
-    "meta": 1628558021104,
+    "asset": 1628583145132,
+    "meta": 1628588763307,
     "relativePath": "resources"
   },
   "8ec5b81e-c6f9-41ea-a62d-bfad77359c13": {

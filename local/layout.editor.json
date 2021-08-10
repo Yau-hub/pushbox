@@ -13,12 +13,12 @@
         "type": "dock-h",
         "children": [
           {
-            "width": 241,
+            "width": 236,
             "height": 724,
             "type": "dock-v",
             "children": [
               {
-                "width": 241,
+                "width": 236,
                 "height": 288,
                 "type": "panel",
                 "active": 0,
@@ -27,7 +27,7 @@
                 ]
               },
               {
-                "width": 241,
+                "width": 236,
                 "height": 432.984375,
                 "type": "panel",
                 "active": 0,
@@ -38,7 +38,7 @@
             ]
           },
           {
-            "width": 367,
+            "width": 327,
             "height": 724,
             "type": "panel",
             "active": 0,
@@ -48,17 +48,17 @@
             ]
           },
           {
-            "width": 922,
+            "width": 967,
             "height": 724,
             "type": "dock-v",
             "children": [
               {
-                "width": 922,
+                "width": 967,
                 "height": 448.984375,
                 "type": "dock-h",
                 "children": [
                   {
-                    "width": 558,
+                    "width": 456,
                     "height": 448.984375,
                     "type": "panel",
                     "active": 0,
@@ -67,7 +67,7 @@
                     ]
                   },
                   {
-                    "width": 361,
+                    "width": 508,
                     "height": 448.984375,
                     "type": "panel",
                     "active": 0,
@@ -78,7 +78,7 @@
                 ]
               },
               {
-                "width": 922,
+                "width": 967,
                 "height": 272,
                 "type": "panel",
                 "active": 1,
@@ -103,9 +103,7 @@
         "timeline",
         "game-window"
       ]
-    },
-    "window-1628579108963": {},
-    " build-worker-worker": {}
+    }
   },
   "panels": {
     "project-settings": {
