@@ -6,7 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import levels from './level'
-import {Loading} from "./common";
+import {formateRankTime, Loading, Toast} from "./common";
 window.currentLevel = [];
 
 window.eleSize = 35;
@@ -73,7 +73,8 @@ cc.Class({
         moveHistoryList:[],
         lastScore: null,
         lastStepNode: null,
-        lastTimenode: null
+        lastTimenode: null,
+        rankItem:cc.Prefab
 
     },
 
@@ -588,6 +589,8 @@ cc.Class({
                 that.replayLayout();
                 that.initPendant();
             },this)
+
+
             cc.find('contentBg/share',newMyPrefab).on('click',function () {
                 if (cc.sys.platform === cc.sys.WECHAT_GAME) {
                     var titString =  '益智推箱';
@@ -621,7 +624,9 @@ cc.Class({
                         levelIndex: window.levelIndex,
                         appId: window.user.appId,
                         useStep: that.stepCounterValue,
-                        useTime: that.timeCounterValue
+                        useTime: that.timeCounterValue,
+                        portrait: window.loginInfo.avatarUrl,
+                        nickName: window.loginInfo.nickName
                     }
                 }).then(res => {
                 }).catch(err => {
@@ -649,7 +654,9 @@ cc.Class({
                             levelIndex: window.levelIndex,
                             appId: window.user.appId,
                             useStep: that.stepCounterValue,
-                            useTime: that.timeCounterValue
+                            useTime: that.timeCounterValue,
+                            portrait: window.loginInfo.avatarUrl,
+                            nickName: window.loginInfo.nickName
                         }
                     }).then(res => {
 
@@ -667,15 +674,13 @@ cc.Class({
                     appId: window.user.appId,
                 }
             }).then(res => {
-                console.log('queryUser')
-                console.log(res)
                 if(res && res.result.data.length>0 && res.result.data[0].levelFinishNum < curLevelNum){
                     window.user.levelFinishNum = curLevelNum;
                     let data = {};
                     data.appId = window.user.appId;
                     data.levelFinishNum = curLevelNum;
                     if(window.loginInfo.nickName) data.nickName = window.loginInfo.nickName;
-                    if(window.loginInfo.avatarUrl) data.avatarUrl = window.loginInfo.nickName;
+                    if(window.loginInfo.avatarUrl) data.portrait = window.loginInfo.avatarUrl;
                     wx.cloud.callFunction({
                         name: 'updateUser',
                         data: data
@@ -858,6 +863,11 @@ cc.Class({
                     that.initPendant();
                 },this)
 
+
+                cc.find('contain/rank',newMyPrefab).on('click',function () {
+                    that.showLevelRank();
+                },this)
+
                 cc.find('contain/share',newMyPrefab).on('click',function () {
                     if (cc.sys.platform === cc.sys.WECHAT_GAME) {
                         var titString =  '益智推箱';
@@ -972,7 +982,86 @@ cc.Class({
         }
 
 
-    }
+    },
+    showLevelRank(){
+        let that = this;
+        var CanvasNode = cc.find('Canvas');
+        var rankPage = 1,rankPageSize = 50;
+        if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+        var onResourceLoaded = function(errorMessage, loadedResource )
+        {
+            if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+            if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+            var newMyPrefab = cc.instantiate( loadedResource );
+            var content = cc.find('rankList/view/content',newMyPrefab);
+
+            cc.find('close',newMyPrefab).on("click",function () {
+                newMyPrefab.removeFromParent();
+                newMyPrefab.destroy();
+            },this)
+            if(that.rankItem == null){
+                cc.loader.loadRes('rankItem', function (err,resource) {
+                    that.rankItem = cc.instantiate(resource);
+                    that.renderLevelRankList(content,rankPage,rankPageSize);
+                } );
+            }else{
+                that.renderLevelRankList(content,rankPage,rankPageSize);
+            }
+            cc.find('rankList',newMyPrefab).on('bounce-bottom', function(){
+                rankPage++;
+                that.renderLevelRankList(content,rankPage,rankPageSize);
+            }, this);
+            cc.find('thLevel',newMyPrefab).getComponent(cc.Label).string = '步 数'
+            CanvasNode.addChild( newMyPrefab );
+        };
+        cc.loader.loadRes('rankLayout', onResourceLoaded );
+    },
+    renderLevelRankList(content,page,pageSize){
+        let that = this;
+        let currentItemNum = content.childrenCount;
+        if (cc.sys.platform === cc.sys.WECHAT_GAME){
+            Loading.show();
+            wx.cloud.callFunction({
+                name: 'queryClassicsLevelScore',
+                data:{
+                    page,
+                    pageSize
+                }
+            }).then(res => {
+                Loading.hide();
+                let rankItem = null;
+                if(res && res.result.data.length>0){
+                    for(var i = 1; i<= res.result.data.length; i++){
+                        var data =  res.result.data[i-1];
+                        let node = cc.instantiate(that.rankItem);
+                        if(rankItem == null) rankItem = node;
+                        node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
+                        node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
+                        node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStep;
+                        if(data.portrait){
+                            cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
+                                var sprite  = new cc.SpriteFrame(texture);
+                                cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+                            });
+                        }
+                        if(data.nickName){
+                            node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
+                        }
+                        content.addChild(node);
+                    }
+                    content.height = content.childrenCount * rankItem.height;
+                }else{
+                    Toast("没有更多数据了",1500)
+                }
+
+
+            }).catch(err => {
+                console.error(err)
+                Loading.hide();
+            })
+        }
+
+    },
 
 
 });

@@ -14,10 +14,14 @@ window.netLevelNum = 0;
 window.levelIndex = 0;
 window.bgUrlBase = '';
 window.user.levelFinishNum = 0;
+window.loginInfo = {
+    avatarUrl: null,
+    nickName: null
+}
 
 
 import levels from './level'
-import {wxLogin,Toast,Loading} from "./common";
+import {wxLogin,Toast,Loading,formateRankTime} from "./common";
 
 cc.Class({
     extends: cc.Component,
@@ -29,10 +33,12 @@ cc.Class({
         },
         loginplay: cc.Button,
         visitorplay: cc.Button,
+        mainRank: cc.Button,
         levelLayout: cc.Prefab,
         buildLevel: cc.Button,
         setting: cc.Button,
         mainShare: cc.Button,
+        rankItem:cc.Prefab
 
     },
 
@@ -81,18 +87,14 @@ cc.Class({
             wx.cloud.callFunction({
                 name: 'getClassicsLevelNum'
             }).then(res => {
-                console.log('load err')
                 window.classicsLevelNum = res.result.total;
                 Loading.hide();
 
             }).catch(err => {
                 console.error(err)
-                console.log('load err1')
             })
+
         }
-
-
-
 
 
         // this.loadImg();
@@ -192,6 +194,85 @@ cc.Class({
         // let levelList = cc.instantiate(this.levelLayout);
         // this.node.addChild(levelList);
     },
+    showMainRank(){
+        let that = this;
+        var CanvasNode = cc.find('Canvas');
+        var rankPage = 1,rankPageSize = 50;
+        if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+        var onResourceLoaded = function(errorMessage, loadedResource )
+        {
+            if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+            if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+            var newMyPrefab = cc.instantiate( loadedResource );
+            var content = cc.find('rankList/view/content',newMyPrefab);
+
+            cc.find('close',newMyPrefab).on("click",function () {
+                newMyPrefab.removeFromParent();
+                newMyPrefab.destroy();
+            },this)
+            if(that.rankItem == null){
+                cc.loader.loadRes('rankItem', function (err,resource) {
+                    that.rankItem = cc.instantiate(resource);
+                    that.renderMainRankList(content,rankPage,rankPageSize);
+                } );
+            }else{
+                that.renderMainRankList(content,rankPage,rankPageSize);
+            }
+           cc.find('rankList',newMyPrefab).on('bounce-bottom', function(){
+               rankPage++;
+               that.renderMainRankList(content,rankPage,rankPageSize);
+           }, this);
+            CanvasNode.addChild( newMyPrefab );
+        };
+        cc.loader.loadRes('rankLayout', onResourceLoaded );
+    },
+    renderMainRankList(content,page,pageSize){
+        let that = this;
+        let currentItemNum = content.childrenCount;
+        if (cc.sys.platform === cc.sys.WECHAT_GAME){
+            Loading.show();
+            wx.cloud.callFunction({
+                name: 'queryUser',
+                data:{
+                    page,
+                    pageSize
+                }
+            }).then(res => {
+                Loading.hide();
+                let rankItem = null;
+                if(res && res.result.data.length>0){
+                    for(var i = 1; i<= res.result.data.length; i++){
+                        var data =  res.result.data[i-1];
+                        let node = cc.instantiate(that.rankItem);
+                        if(rankItem == null) rankItem = node;
+                        node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
+                        node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
+                        node.getChildByName('tdLevel').getComponent(cc.Label).string = data.levelFinishNum;
+                        if(data.portrait){
+                            cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
+                                var sprite  = new cc.SpriteFrame(texture);
+                                cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+                            });
+                        }
+                        if(data.nickName){
+                            node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
+                        }
+                        content.addChild(node);
+                    }
+                    content.height = content.childrenCount * rankItem.height;
+                }else{
+                    Toast("没有更多数据了",1500)
+                }
+
+
+            }).catch(err => {
+                console.error(err)
+                Loading.hide();
+            })
+        }
+
+    },
+
     getUserInfo(){
         if (cc.sys.platform === cc.sys.WECHAT_GAME) {
             //获取缓存appId判断是否第一次进入游戏
@@ -237,12 +318,15 @@ cc.Class({
                                     appId: window.user.appId
                                 }
                             }).then(res => {
+
                                 if(res && res.result.data.length<=0){
                                     //注册用户信息
                                     wx.cloud.callFunction({
                                         name: 'addUser',
                                         data: {
-                                            appId: window.user.appId
+                                            appId: window.user.appId,
+                                            nickName: window.loginInfo.nickName,
+                                            portrait: window.loginInfo.avatarUrl
                                         }
 
                                     }).then(res => {
@@ -281,6 +365,9 @@ cc.Class({
         this.loginplay.node.on('click', this.loginLevelList, this)
         if(this.visitorplay == null) this.visitorplay = cc.find('Canvas/mainBg/visitorplay').getComponent(cc.Button)
         this.visitorplay.node.on('click', this.visitorLevelList, this)
+        if(this.mainRank == null) this.mainRank = cc.find('Canvas/mainBg/mainRank').getComponent(cc.Button)
+        this.mainRank.node.on('click', this.showMainRank, this)
+
 
         if(this.mainShare == null) this.mainShare = cc.find('Canvas/mainBg/mainShare').getComponent(cc.Button);
         this.mainShare.node.on('click', function () {

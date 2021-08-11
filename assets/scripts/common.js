@@ -139,3 +139,17 @@ let Loading ={
     }
 }
 export {Loading};
+export function formateRankTime(timestamp){
+    var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+    var Y = date.getFullYear() + '-';
+    var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+    var D = date.getDate() + '\n';
+    var h = date.getHours() + ':';
+    var m = date.getMinutes() + ':';
+    var s = date.getSeconds();
+    if(h.length<=1) h = '0'+h;
+    if(m.length<=1) m = '0'+m;
+    if(s.length<=1) s = '0'+s;
+
+    return Y+M+D+h+m+s;
+}

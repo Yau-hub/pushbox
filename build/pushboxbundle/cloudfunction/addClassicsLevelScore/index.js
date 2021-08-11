@@ -6,12 +6,14 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   //插入数据
-  return await db.collection('classicsLevelScore').add ({
+  return await db.collection('classicsLevelScore').add({
     data: {
       appId: event.appId, 
       levelIndex: event.levelIndex,
       useStep: event.useStep,
       useTime: event.useTime,
+      portrait:event.portrait,
+      nickName:event.nickName,
       createTime: Date.now()
     }
   })  

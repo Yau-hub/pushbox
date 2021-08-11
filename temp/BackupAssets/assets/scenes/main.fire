@@ -3484,6 +3484,7 @@
     "visitorplay": {
       "__id__": 37
     },
+    "mainRank": null,
     "levelLayout": {
       "__uuid__": "3df48eec-c825-4399-95a1-c75ffbdaae69"
     },

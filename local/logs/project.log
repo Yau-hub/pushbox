@@ -1,75 +1,291 @@
-2021-08-10T09:45:53.112Z - success: protocol editor-framework registered
-2021-08-10T09:45:53.113Z - success: protocol app registered
-2021-08-10T09:45:53.113Z - success: protocol theme registered
-2021-08-10T09:45:53.113Z - success: protocol packages registered
-2021-08-10T09:45:53.159Z - normal: Load ~/.CocosCreator/settings.json
-2021-08-10T09:45:53.211Z - success: protocol uuid registerred
-2021-08-10T09:45:53.211Z - success: protocol db registerred
-2021-08-10T09:45:53.211Z - success: protocol thumbnail registerred
-2021-08-10T09:45:53.470Z - normal: Initializing Asset Database
-2021-08-10T09:45:53.491Z - normal: checking language setting...
-2021-08-10T09:45:53.491Z - normal: Language: zh
-2021-08-10T09:45:53.496Z - success: protocol unpack registerred
-2021-08-10T09:45:53.496Z - success: protocol disable-commonjs registerred
-2021-08-10T09:45:54.647Z - normal: connected!
-2021-08-10T09:45:54.970Z - normal: Check project E:\yau-work\personal\pushbox
-2021-08-10T09:45:54.971Z - normal: Initializing project E:\yau-work\personal\pushbox
-2021-08-10T09:45:56.065Z - success: adapters loaded
-2021-08-10T09:45:56.067Z - success: asset-db-debugger loaded
-2021-08-10T09:45:56.194Z - success: fb-audience-network loaded
-2021-08-10T09:45:56.323Z - success: fb-live-stream loaded
-2021-08-10T09:45:56.326Z - success: google-play-instant loaded
-2021-08-10T09:45:56.327Z - success: jsb-adapter loaded
-2021-08-10T09:45:56.329Z - success: package-manager loaded
-2021-08-10T09:45:56.330Z - success: runtime-adapters loaded
-2021-08-10T09:45:56.343Z - success: runtime-dev-tools loaded
-2021-08-10T09:45:56.346Z - success: ui-kit-preview-extra loaded
-2021-08-10T09:45:56.349Z - success: ui-kit-preview loaded
-2021-08-10T09:45:57.781Z - success: alipay-minigame loaded
-2021-08-10T09:45:57.813Z - success: assets loaded
-2021-08-10T09:45:57.817Z - success: baidugame-opendata loaded
-2021-08-10T09:45:57.819Z - success: baidugame loaded
-2021-08-10T09:45:57.853Z - success: builder loaded
-2021-08-10T09:45:57.857Z - success: bytedance-opendata loaded
-2021-08-10T09:45:57.859Z - success: bytedance loaded
-2021-08-10T09:45:57.864Z - success: channel-upload-tools loaded
-2021-08-10T09:45:58.097Z - success: cloud-function loaded
-2021-08-10T09:45:58.474Z - success: cocos-services loaded
-2021-08-10T09:45:58.477Z - success: console loaded
-2021-08-10T09:45:58.480Z - success: curve-editor loaded
-2021-08-10T09:45:58.491Z - success: fb-instant-games loaded
-2021-08-10T09:45:58.493Z - success: game-window loaded
-2021-08-10T09:45:58.494Z - success: google-instant-games loaded
-2021-08-10T09:45:58.499Z - success: hierarchy loaded
-2021-08-10T09:45:58.503Z - success: huawei-agc loaded
-2021-08-10T09:45:58.507Z - success: huawei-runtime loaded
-2021-08-10T09:45:58.529Z - success: inspector loaded
-2021-08-10T09:45:58.548Z - success: cpk-publish loaded
-2021-08-10T09:45:58.549Z - success: keystore loaded
-2021-08-10T09:45:58.623Z - success: link-sure-runtime loaded
-2021-08-10T09:45:58.682Z - success: node-library loaded
-2021-08-10T09:45:58.685Z - success: open-recent-items loaded
-2021-08-10T09:45:58.715Z - success: oppo-runtime loaded
-2021-08-10T09:45:58.734Z - success: package-asset loaded
-2021-08-10T09:45:58.735Z - success: preferences loaded
-2021-08-10T09:45:58.764Z - success: project-importer loaded
-2021-08-10T09:45:58.767Z - success: project-settings loaded
-2021-08-10T09:45:58.902Z - success: qtt-runtime loaded
-2021-08-10T09:45:58.905Z - success: scene loaded
-2021-08-10T09:45:58.918Z - success: simulator-debugger loaded
-2021-08-10T09:45:58.919Z - success: sprite-editor loaded
-2021-08-10T09:45:59.059Z - success: store loaded
-2021-08-10T09:45:59.061Z - success: taobao-creativeapp loaded
-2021-08-10T09:45:59.068Z - success: timeline loaded
-2021-08-10T09:45:59.078Z - success: vivo-runtime loaded
-2021-08-10T09:45:59.082Z - success: wechatgame-opendata loaded
-2021-08-10T09:45:59.088Z - success: wechatgame loaded
-2021-08-10T09:45:59.094Z - success: xiaomi-runtime loaded
-2021-08-10T09:45:59.095Z - success: preview server running at http://localhost:7456
-2021-08-10T09:46:00.627Z - normal: Initializing Cocos2d
-2021-08-10T09:46:01.402Z - normal: Initializing engine extends
-2021-08-10T09:46:04.166Z - normal: Loading packages
-2021-08-10T09:46:04.171Z - normal: Watching packages
-2021-08-10T09:46:04.279Z - normal: Run Application
-2021-08-10T09:46:04.510Z - info: Cocos Service load base data!
-2021-08-10T09:47:52.969Z - info: shutdown preview server
+2021-08-11T09:38:32.286Z - success: protocol editor-framework registered
+2021-08-11T09:38:32.288Z - success: protocol app registered
+2021-08-11T09:38:32.288Z - success: protocol theme registered
+2021-08-11T09:38:32.288Z - success: protocol packages registered
+2021-08-11T09:38:32.309Z - normal: Load ~/.CocosCreator/settings.json
+2021-08-11T09:38:32.343Z - success: protocol uuid registerred
+2021-08-11T09:38:32.343Z - success: protocol db registerred
+2021-08-11T09:38:32.343Z - success: protocol thumbnail registerred
+2021-08-11T09:38:32.461Z - normal: Initializing Asset Database
+2021-08-11T09:38:32.463Z - normal: checking language setting...
+2021-08-11T09:38:32.463Z - normal: Language: zh
+2021-08-11T09:38:32.470Z - success: protocol unpack registerred
+2021-08-11T09:38:32.470Z - success: protocol disable-commonjs registerred
+2021-08-11T09:38:33.165Z - normal: connected!
+2021-08-11T09:38:33.414Z - normal: Check project E:\yau-work\personal\pushbox
+2021-08-11T09:38:33.414Z - normal: Initializing project E:\yau-work\personal\pushbox
+2021-08-11T09:38:33.872Z - success: adapters loaded
+2021-08-11T09:38:33.874Z - success: asset-db-debugger loaded
+2021-08-11T09:38:33.972Z - success: fb-audience-network loaded
+2021-08-11T09:38:34.033Z - success: fb-live-stream loaded
+2021-08-11T09:38:34.037Z - success: google-play-instant loaded
+2021-08-11T09:38:34.037Z - success: jsb-adapter loaded
+2021-08-11T09:38:34.040Z - success: package-manager loaded
+2021-08-11T09:38:34.041Z - success: runtime-adapters loaded
+2021-08-11T09:38:34.044Z - success: runtime-dev-tools loaded
+2021-08-11T09:38:34.080Z - success: ui-kit-preview-extra loaded
+2021-08-11T09:38:34.123Z - success: ui-kit-preview loaded
+2021-08-11T09:38:34.997Z - success: alipay-minigame loaded
+2021-08-11T09:38:35.005Z - success: assets loaded
+2021-08-11T09:38:35.010Z - success: baidugame-opendata loaded
+2021-08-11T09:38:35.012Z - success: baidugame loaded
+2021-08-11T09:38:35.015Z - success: builder loaded
+2021-08-11T09:38:35.018Z - success: bytedance-opendata loaded
+2021-08-11T09:38:35.021Z - success: bytedance loaded
+2021-08-11T09:38:35.025Z - success: channel-upload-tools loaded
+2021-08-11T09:38:35.182Z - success: cloud-function loaded
+2021-08-11T09:38:35.430Z - success: cocos-services loaded
+2021-08-11T09:38:35.435Z - success: console loaded
+2021-08-11T09:38:35.440Z - success: curve-editor loaded
+2021-08-11T09:38:35.454Z - success: fb-instant-games loaded
+2021-08-11T09:38:35.456Z - success: game-window loaded
+2021-08-11T09:38:35.457Z - success: google-instant-games loaded
+2021-08-11T09:38:35.462Z - success: hierarchy loaded
+2021-08-11T09:38:35.465Z - success: huawei-agc loaded
+2021-08-11T09:38:35.469Z - success: huawei-runtime loaded
+2021-08-11T09:38:35.472Z - success: inspector loaded
+2021-08-11T09:38:35.491Z - success: cpk-publish loaded
+2021-08-11T09:38:35.491Z - success: keystore loaded
+2021-08-11T09:38:35.512Z - success: link-sure-runtime loaded
+2021-08-11T09:38:35.522Z - success: node-library loaded
+2021-08-11T09:38:35.523Z - success: open-recent-items loaded
+2021-08-11T09:38:35.527Z - success: oppo-runtime loaded
+2021-08-11T09:38:35.529Z - success: package-asset loaded
+2021-08-11T09:38:35.530Z - success: preferences loaded
+2021-08-11T09:38:35.532Z - success: project-importer loaded
+2021-08-11T09:38:35.534Z - success: project-settings loaded
+2021-08-11T09:38:35.550Z - success: qtt-runtime loaded
+2021-08-11T09:38:35.554Z - success: scene loaded
+2021-08-11T09:38:35.555Z - success: simulator-debugger loaded
+2021-08-11T09:38:35.556Z - success: sprite-editor loaded
+2021-08-11T09:38:35.652Z - success: store loaded
+2021-08-11T09:38:35.654Z - success: taobao-creativeapp loaded
+2021-08-11T09:38:35.657Z - success: timeline loaded
+2021-08-11T09:38:35.665Z - success: vivo-runtime loaded
+2021-08-11T09:38:35.668Z - success: wechatgame-opendata loaded
+2021-08-11T09:38:35.675Z - success: wechatgame loaded
+2021-08-11T09:38:35.679Z - success: xiaomi-runtime loaded
+2021-08-11T09:38:35.679Z - success: preview server running at http://localhost:7456
+2021-08-11T09:38:38.698Z - info: Cocos Service load base data!
+2021-08-11T09:38:38.760Z - normal: Initializing Cocos2d
+2021-08-11T09:38:40.251Z - normal: Initializing engine extends
+2021-08-11T09:38:47.418Z - normal: Loading packages
+2021-08-11T09:38:47.423Z - normal: Watching packages
+2021-08-11T09:38:47.481Z - normal: Run Application
+2021-08-11T09:43:05.545Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": true,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a"
+  ],
+  "excludedModules": [
+    "Audio",
+    "AudioSource",
+    "Action",
+    "Dynamic Atlas",
+    "Geom Utils",
+    "MotionStreak",
+    "Native Socket",
+    "PageView",
+    "PageViewIndicator",
+    "ProgressBar",
+    "ParticleSystem",
+    "RichText",
+    "Renderer Texture",
+    "Slider",
+    "VideoPlayer",
+    "3D",
+    "3D Primitive",
+    "3D Physics/cannon.js",
+    "3D Physics/Builtin",
+    "3D Particle"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-11T09:43:06.263Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-11T09:43:06.263Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-11T09:43:06.776Z - normal: Start spawn build-worker
+2021-08-11T09:43:17.795Z - normal: Finish spawn build-worker
+2021-08-11T09:43:17.795Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
+2021-08-11T09:43:17.803Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/remote,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/subpackages,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/src,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
+2021-08-11T09:43:24.569Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-11T09:43:27.281Z - normal: Start building plugin scripts
+2021-08-11T09:43:34.628Z - normal: Built wechatgame successfully
+2021-08-11T09:44:15.906Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": true,
+  "dest": "E:\\yau-work\\personal\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a"
+  ],
+  "excludedModules": [
+    "Audio",
+    "AudioSource",
+    "Action",
+    "Dynamic Atlas",
+    "Geom Utils",
+    "MotionStreak",
+    "Native Socket",
+    "PageView",
+    "PageViewIndicator",
+    "ProgressBar",
+    "ParticleSystem",
+    "RichText",
+    "Renderer Texture",
+    "Slider",
+    "VideoPlayer",
+    "3D",
+    "3D Primitive",
+    "3D Physics/cannon.js",
+    "3D Physics/Builtin",
+    "3D Particle"
+  ],
+  "project": "E:\\yau-work\\personal\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2021-08-11T09:44:15.907Z - normal: Building E:\yau-work\personal\pushbox
+2021-08-11T09:44:15.907Z - normal: Destination E:\yau-work\personal\pushbox\build\pushboxbundle\wechatgame
+2021-08-11T09:44:15.909Z - normal: Start spawn build-worker
+2021-08-11T09:44:15.909Z - normal: Finish spawn build-worker
+2021-08-11T09:44:15.909Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
+2021-08-11T09:44:15.915Z - normal: Delete E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/game.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/project.config.json,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/remote,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/subpackages,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/src,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!E:/yau-work/personal/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
+2021-08-11T09:44:19.672Z - normal: Compiling E:\yau-work\personal\pushbox
+2021-08-11T09:44:21.009Z - normal: Start building plugin scripts
+2021-08-11T09:44:25.804Z - normal: Built wechatgame successfully
+2021-08-11T09:52:28.376Z - info: shutdown preview server

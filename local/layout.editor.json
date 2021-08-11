@@ -81,7 +81,7 @@
                 "width": 967,
                 "height": 272,
                 "type": "panel",
-                "active": 1,
+                "active": 0,
                 "children": [
                   "console",
                   "timeline",
@@ -103,7 +103,8 @@
         "timeline",
         "game-window"
       ]
-    }
+    },
+    " build-worker-worker": {}
   },
   "panels": {
     "project-settings": {
@@ -119,7 +120,7 @@
       "height": 567
     },
     "builder": {
-      "x": 92,
+      "x": 4,
       "y": 40,
       "width": 528,
       "height": 752

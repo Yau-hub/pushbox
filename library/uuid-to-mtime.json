@@ -5,18 +5,18 @@
     "relativePath": "scenes"
   },
   "db164588-eb1d-4e07-860f-0375a28d4d89": {
-    "asset": 1628583156835,
-    "meta": 1628583156851,
+    "asset": 1628661040065,
+    "meta": 1628661040087,
     "relativePath": "scenes\\main.fire"
   },
   "9949f6e0-117b-4771-9e32-f62732b7e6b3": {
-    "asset": 1628588201175,
-    "meta": 1628588763310,
+    "asset": 1628674662279,
+    "meta": 1628674725173,
     "relativePath": "scripts"
   },
   "bba42ae9-17cb-404f-bf9b-14a0926d21e0": {
-    "asset": 1628584563394,
-    "meta": 1628588763305,
+    "asset": 1628654357782,
+    "meta": 1628663416561,
     "relativePath": "images"
   },
   "b01e9c67-7049-4351-a2d0-3f777579632b": {
@@ -35,13 +35,13 @@
     "relativePath": "mainLogo.anim"
   },
   "97c8ff53-a4dc-4e99-8b9d-16cf06b85330": {
-    "asset": 1628583145132,
-    "meta": 1628588763307,
+    "asset": 1628660685084,
+    "meta": 1628663416564,
     "relativePath": "resources"
   },
   "8ec5b81e-c6f9-41ea-a62d-bfad77359c13": {
     "asset": 1628557313422,
-    "meta": 1628558023098,
+    "meta": 1628649765449,
     "relativePath": "resources\\common.plist"
   },
   "18176de4-7fee-4435-8cc1-a4a4590b4d8b": {
@@ -724,19 +724,34 @@
     "meta": 1628584578148,
     "relativePath": "images\\load.png"
   },
-  "2276cfa3-0876-4119-85fe-271cd7c8a0c5": {
-    "asset": 1628585000662,
-    "meta": 1628585006832,
-    "relativePath": "scripts\\main.js"
+  "0843bd70-ab06-41c4-8c2f-fc35eff5a9c5": {
+    "asset": 1628654341373,
+    "meta": 1628654357820,
+    "relativePath": "images\\portrait.png"
+  },
+  "f976bc9f-ab3d-4990-b12d-32f6843647e0": {
+    "asset": 1628672472376,
+    "meta": 1628672472390,
+    "relativePath": "resources\\rankItem.prefab"
+  },
+  "436bfe06-36cb-47b3-9ce7-bf4366c153b1": {
+    "asset": 1628673399763,
+    "meta": 1628673399780,
+    "relativePath": "resources\\rankLayout.prefab"
   },
   "db8b3d57-0698-42e3-8a67-24874b1eb10e": {
-    "asset": 1628585756119,
-    "meta": 1628585761192,
+    "asset": 1628666717526,
+    "meta": 1628666722911,
     "relativePath": "scripts\\common.js"
   },
+  "2276cfa3-0876-4119-85fe-271cd7c8a0c5": {
+    "asset": 1628673383302,
+    "meta": 1628673387162,
+    "relativePath": "scripts\\main.js"
+  },
   "8bc72039-aafa-48d5-99e1-33d01b27113a": {
-    "asset": 1628588201174,
-    "meta": 1628588204875,
+    "asset": 1628675051286,
+    "meta": 1628675054545,
     "relativePath": "scripts\\gameLayout.js"
   }
 }
