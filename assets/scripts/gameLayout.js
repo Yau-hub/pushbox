@@ -95,42 +95,12 @@ cc.Class({
 
     start () {
 
-        console.log(window.user)
-        // var newBlock = cc.instantiate(this.block);
-        // // 为设置位置
-        // newBlock.setPosition(-375,50);
-        // // 将新增的节点添加到 Canvas 节点下面
-        // this.node.addChild(newBlock);
-        // cc.log(window.eleSize)
-
-
-        // this.renderLayout(levels[0])
-        // this.init(levels[0]);
-
-        // setTimeout(function () {
-        //     that.moveLeft(levels[0]);
-        // },1000)
-        // setTimeout(function () {
-        //     that.moveLeft(levels[0]);
-        // },2000)
-        // setTimeout(function () {
-        //     that.moveLeft(levels[0]);
-        // },3000)
-        // setTimeout(function () {
-        //     that.moveRight(levels[0]);
-        //     cc.log(levels[0])
-        //
-        // },4000)
-        // setTimeout(function () {
-        //     that.moveDown(levels[0]);
-        // },5000)
         this.addTouchMove();
         this.pendantAddEvent();
     },
     // update (dt) {},
 
     initWinEle(){
-
         let realSiz = cc.winSize.width/window.blockNum;
         window.eleSize = realSiz;
 
@@ -518,6 +488,8 @@ cc.Class({
             }
         }
 
+
+
     },
 
     addTouchMove(){
@@ -640,7 +612,8 @@ cc.Class({
                 }
                 that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
             } else {
-                if (that.stepCounterValue < that.lastScore.useStep || that.timeCounterValue < that.lastScore.useTime) {
+            // || that.timeCounterValue < that.lastScore.useTime
+                if (that.stepCounterValue < that.lastScore.useStep) {
                     that.lastScore = {
                         levelIndex: window.levelIndex,
                         appId: window.user.appId,
@@ -903,6 +876,7 @@ cc.Class({
                 wx.cloud.callFunction({
                     name: 'queryClassicsLevel',
                     data: {
+                        appId:window.user.appId,
                         levelIndex: window.levelIndex
                     }
                 }).then(res => {
@@ -1024,6 +998,7 @@ cc.Class({
             wx.cloud.callFunction({
                 name: 'queryClassicsLevelScore',
                 data:{
+                    levelIndex:window.levelIndex,
                     page,
                     pageSize
                 }

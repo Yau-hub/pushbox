@@ -1,17 +1,17 @@
 {
   "934c9fd4-104e-4d2e-9673-45ba9ed69dd7": {
-    "asset": 1628557313469,
-    "meta": 1628558021107,
+    "asset": 1628734172065,
+    "meta": 1628740891080,
     "relativePath": "scenes"
   },
   "db164588-eb1d-4e07-860f-0375a28d4d89": {
-    "asset": 1628661040065,
-    "meta": 1628661040087,
+    "asset": 1628737987345,
+    "meta": 1628737987374,
     "relativePath": "scenes\\main.fire"
   },
   "9949f6e0-117b-4771-9e32-f62732b7e6b3": {
-    "asset": 1628674662279,
-    "meta": 1628674725173,
+    "asset": 1628752138245,
+    "meta": 1628753777751,
     "relativePath": "scripts"
   },
   "bba42ae9-17cb-404f-bf9b-14a0926d21e0": {
@@ -655,14 +655,9 @@
     "relativePath": "model\\primitives.fbx"
   },
   "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a": {
-    "asset": 1628557313453,
-    "meta": 1628558022152,
+    "asset": 1628736613571,
+    "meta": 1628736613583,
     "relativePath": "scenes\\game.fire"
-  },
-  "83032efa-84d5-4acd-adab-7364e6cc1453": {
-    "asset": 1628557313484,
-    "meta": 1628558022283,
-    "relativePath": "scripts\\level.js"
   },
   "8b47c8c8-5c07-4856-9187-d1e1c2cc3fac": {
     "asset": 1628557313125,
@@ -744,14 +739,29 @@
     "meta": 1628666722911,
     "relativePath": "scripts\\common.js"
   },
-  "2276cfa3-0876-4119-85fe-271cd7c8a0c5": {
-    "asset": 1628673383302,
-    "meta": 1628673387162,
-    "relativePath": "scripts\\main.js"
+  "83032efa-84d5-4acd-adab-7364e6cc1453": {
+    "asset": 1628733734069,
+    "meta": 1628733773916,
+    "relativePath": "scripts\\level.js"
+  },
+  "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1": {
+    "asset": 1628749579268,
+    "meta": 1628749579287,
+    "relativePath": "scenes\\build.fire"
   },
   "8bc72039-aafa-48d5-99e1-33d01b27113a": {
-    "asset": 1628675051286,
-    "meta": 1628675054545,
+    "asset": 1628737977507,
+    "meta": 1628737985531,
     "relativePath": "scripts\\gameLayout.js"
+  },
+  "2276cfa3-0876-4119-85fe-271cd7c8a0c5": {
+    "asset": 1628748817822,
+    "meta": 1628748845426,
+    "relativePath": "scripts\\main.js"
+  },
+  "e870bf15-b9ff-4bec-8014-d8fc0b4db247": {
+    "asset": 1628762243863,
+    "meta": 1628762289820,
+    "relativePath": "scripts\\build.js"
   }
 }

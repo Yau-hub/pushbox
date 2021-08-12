@@ -2560,9 +2560,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 0,
+      "g": 0,
+      "b": 0,
       "a": 255
     },
     "_contentSize": {
@@ -2961,9 +2961,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 0,
+      "g": 0,
+      "b": 0,
       "a": 255
     },
     "_contentSize": {
@@ -3398,6 +3398,10 @@
     "timeCounterTimer": null,
     "levelCounter": null,
     "moveHistoryList": [],
+    "lastScore": null,
+    "lastStepNode": null,
+    "lastTimenode": null,
+    "rankItem": null,
     "_id": "6bm3soR09Adrelq48zFQ+5"
   },
   {

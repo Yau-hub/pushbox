@@ -1,4 +1,5 @@
 
+require('./assets/scripts/build');
 require('./assets/scripts/common');
 require('./assets/scripts/eleSize');
 require('./assets/scripts/gameLayout');

@@ -368,6 +368,12 @@ cc.Class({
         if(this.mainRank == null) this.mainRank = cc.find('Canvas/mainBg/mainRank').getComponent(cc.Button)
         this.mainRank.node.on('click', this.showMainRank, this)
 
+        if(this.buildLevel == null) this.buildLevel = cc.find('Canvas/mainBg/buildLevel').getComponent(cc.Button)
+        this.buildLevel.node.on('click', function () {
+            window.buildLevel = new Array();
+            cc.director.loadScene("build");
+        }, this)
+
 
         if(this.mainShare == null) this.mainShare = cc.find('Canvas/mainBg/mainShare').getComponent(cc.Button);
         this.mainShare.node.on('click', function () {

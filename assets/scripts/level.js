@@ -17,8 +17,8 @@ for(var n = 0; n<blockRow; n++){
     level1[n] = new Array();
     level2[n] = new Array();
     for(var i = 0; i<blockNum ; i++){
-        level1[n][i] = {sign:0}
-        level2[n][i] = {sign:0}
+        level1[n][i] = {x:null,y:null,sign:0,cover:null}
+        level2[n][i] = {x:null,y:null,sign:0,cover:null}
     }
 }
 level1[1][3].sign = 1;
