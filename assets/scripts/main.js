@@ -51,6 +51,7 @@ cc.Class({
         //加载一言
         //  this.oneSay();
          this.mainBindEvent();
+         window.from = 'main';
 
 
      },
@@ -60,28 +61,6 @@ cc.Class({
 
 
         if (cc.sys.platform === cc.sys.WECHAT_GAME){
-            // wx.cloud.callFunction({
-            //     name: 'addClassicsLevel',
-            //     data:{
-            //         content: levels[0],
-            //         levelIndex: 1
-            //     }
-            // }).then(res => {
-            //     console.log(res)
-            //     wx.cloud.callFunction({
-            //         name: 'addClassicsLevel',
-            //         data:{
-            //             content: levels[1],
-            //             levelIndex: 2
-            //         }
-            //     }).then(res => {
-            //         console.log(res)
-            //     }).catch(err => {
-            //         console.error(err)
-            //     })
-            // }).catch(err => {
-            //     console.error(err)
-            // })
 
             Loading.show();
             wx.cloud.callFunction({
@@ -97,22 +76,15 @@ cc.Class({
         }
 
 
-        // this.loadImg();
-        //
-        // setInterval(function () {
-        //     that.oneSay();
-        // },10000)
+        this.loadImg();
+        this.oneSay();
 
         this.getUserInfo();
         this.initSetting();
 
 
     },
-
-
     // update (dt) {},
-
-
 
     loadImg: function(){
         var that = this;
@@ -138,7 +110,17 @@ cc.Class({
                     starSprite.sizeMode = 'CUSTOM';
                     starSprite.node.width = cc.winSize.width
                     starSprite.node.height = cc.winSize.height
+                    starNode.opacity = 0;
                     container.addChild(starNode); //场景中增加新节点
+                    var opacity = 0;
+                    var opacityTimer = setInterval(function () {
+                        opacity += 1;
+                        starNode.opacity = opacity;
+                        if(opacity>=255){
+                            clearInterval(opacityTimer)
+                            opacityTimer = null;
+                        }
+                    },5)
                 });
             }
         };

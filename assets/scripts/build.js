@@ -73,9 +73,19 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
+        let that = this;
         this.initWinEle();
         this.renderBg();
         // this.renderBn();
+        if(window.from == 'game'){
+            wx.getStorage({
+                key:'buildLevel',
+                success(res){
+                    window.buildLevel = res.data
+                    that.renderLayout(window.buildLevel);
+                }
+            })
+        }
 
         cc.find('btns',this.node).height =  (cc.winSize.height - cc.winSize.width)/2;
     },
@@ -160,26 +170,74 @@ cc.Class({
         if(this.leftEle == null) this.leftEle =  cc.find('btns/leftWrap',this.node)
 
         cc.find('back',this.node).on('click',this.back, this)
+        cc.find('btns/clear',this.node).on('click',function(){
+            that.initWinEle();
+            that.renderBg();
+        }, this)
+
+        cc.find('btns/play',this.node).on('click',function(){
+            if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+                var boxNum =0,ballNum = 0,roleNum = 0;
+
+                for(var i = 0; i < window.blockNum; i++) {
+                    for (var n = 0; n < window.blockNum; n++) {
+                        if(window.buildLevel[i][n].sign == 2){
+                            boxNum ++;
+                        }
+                        if(window.buildLevel[i][n].sign == 3 || window.buildLevel[i][n].cover != null){
+                            ballNum ++;
+                        }
+                        if(window.buildLevel[i][n].sign >= 4){
+                            roleNum ++;
+                        }
+                        if(i == window.blockNum-1 && n == window.blockNum-1){
+                            if(roleNum<=0){
+                                Toast('未添加人物',1500)
+                                return;
+                            }
+                            if(boxNum != ballNum){
+                                Toast('箱子和球体数量不一致',1500)
+                                return;
+                            }
+                        }
+                    }
+                }
+
+                wx.setStorage({
+                    key: 'buildLevel',
+                    data: window.buildLevel,
+                    success(){
+                        window.from = 'build';
+                        cc.director.loadScene("game");
+                    }
+                })
+            }
+        }, this)
 
         this.node.on('touchend',function (event) {
-
             //世界坐标
             let location = event.getLocation()
-
             //本地坐标
             let touchPoint = cc.find('Canvas').convertToNodeSpaceAR(location);
-
             //点击放置区域
             for(var i = 0; i < window.blockNum; i++){
                 for(var n = 0; n < window.blockNum; n++){
+                    //删除前面添加的人物
+                    if(window.layout[0][0].x <= touchPoint.x && touchPoint.x <= window.layout[0][window.blockNum-1].x + window.eleSize &&
+                        window.layout[0][0].y >= touchPoint.y && touchPoint.y >= window.layout[window.blockNum-1][window.blockNum-1].y - window.eleSize
+                    ) {
+                        if (that.selectEle >= 4 && window.buildLevel[i][n].sign >= 4) {
+                            window.buildLevel[i][n].sign = 0;
+                            window.buildLevel[i][n].cover = null;
+                        }
+                    }
+                    //放置元素
                  if(window.layout[i][n].x <= touchPoint.x && touchPoint.x <= window.layout[i][n].x + window.eleSize &&
                      window.layout[i][n].y >= touchPoint.y && touchPoint.y >= window.layout[i][n].y - window.eleSize
                  ){
-                     console.log(i,n)
-
                      if(!window.buildLevel[i][n].sign || window.buildLevel[i][n].sign == 0){
                          window.buildLevel[i][n].sign = that.selectEle;
-                     }else if(window.buildLevel[i][n].sign == 3 && !window.buildLevel[i][n].cover){
+                     }else if(window.buildLevel[i][n].sign == 3 && window.buildLevel[i][n].cover == null && (that.selectEle != 1 && that.selectEle != 3)){
                          window.buildLevel[i][n].sign = that.selectEle;
                          window.buildLevel[i][n].cover = that.selectEle;
                      }else{
@@ -187,20 +245,11 @@ cc.Class({
                          window.buildLevel[i][n].cover = null;
                      }
 
-
                  }
                 }
             }
 
             that.renderLayout(window.buildLevel)
-
-
-
-
-
-
-
-
 
             //点击放置元素
             if(that.wallEle.getBoundingBoxToWorld().x <= location.x
@@ -271,7 +320,6 @@ cc.Class({
 
     },
     renderSelectEle(){
-        console.log(this.selectEle)
         this.wallEle.color = new cc.Color().fromHEX("#95D52F");
         this.boxEle.color = new cc.Color().fromHEX("#95D52F");
         this.ballEle.color = new cc.Color().fromHEX("#95D52F");
@@ -305,6 +353,7 @@ cc.Class({
         }
     },
     back(){
+        window.from = 'build'
         cc.director.loadScene("main");
     },
     renderLayout(layout){

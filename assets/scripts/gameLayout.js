@@ -12,6 +12,7 @@ window.currentLevel = [];
 window.eleSize = 35;
 window.layout = new Array();
 window.blockNum = 12;
+window.uploadLevel = null;
 
 cc.Class({
     extends: cc.Component,
@@ -539,11 +540,14 @@ cc.Class({
 
             cc.find('contentBg/useTime',newMyPrefab).getComponent(cc.Label).string = "步数："+ that.stepCounterValue+'步';
             cc.find('contentBg/useStep',newMyPrefab).getComponent(cc.Label).string = "用时："+ that.timeCounterValue+'秒';
-            if(window.levelIndex >= window.classicsLevelNum){
+            if(window.from != 'build' && window.levelIndex >= window.classicsLevelNum){
                 cc.find('contentBg/next',newMyPrefab).opacity = 0;
             }
+            if(window.from == 'build'){
+                cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '上传关卡'
+            }
             cc.find('contentBg/next',newMyPrefab).on('click',function () {
-               if(window.levelClassify == 'classicsLevel'){
+               if(window.from != 'build'){
                    if(window.levelIndex < window.classicsLevelNum){
 
                        newMyPrefab.removeFromParent();
@@ -552,6 +556,41 @@ cc.Class({
                        window.levelIndex++;
                        that.initLevel()
                    }
+               }else{
+
+                   Loading.show();
+                   wx.cloud.callFunction({
+                       name: 'getClassicsLevelNum'
+                   }).then(res => {
+
+                       wx.cloud.callFunction({
+                           name: 'addClassicsLevel',
+                           data:{
+                               content: window.uploadLevel,
+                               levelIndex: res.result.total+1,
+                               appId: window.user.appId,
+                               nickName: window.loginInfo.nickName,
+                               portrait: window.loginInfo.avatarUrl,
+                           }
+                       }).then(res => {
+
+                           Toast('上传成功，即将跳回主界面',1500);
+                           setTimeout(function () {
+                               Loading.hide();
+                               cc.director.loadScene('main');
+                           },1500)
+                       }).catch(err => {
+                           Loading.hide();
+                           Toast('上传失败',1500);
+                           console.error(err)
+                       })
+
+                   }).catch(err => {
+                       console.error(err)
+                   })
+
+
+
                }
 
             },this)
@@ -561,18 +600,21 @@ cc.Class({
                 that.replayLayout();
                 that.initPendant();
             },this)
-
-
             cc.find('contentBg/share',newMyPrefab).on('click',function () {
                 if (cc.sys.platform === cc.sys.WECHAT_GAME) {
                     var titString =  '益智推箱';
-                    if(window.levelClassify == 'classicsLevel'){
-                        titString = titString + '-经典关卡'
+                    if(window.from != 'build'){
+                        if(window.levelClassify == 'classicsLevel'){
+                            titString = titString + '-经典关卡'
+                        }
+                        else if(window.levelClassify == 'netLevel'){
+                            titString = titString + '-网友自制关卡'
+                        }
+                        titString = titString + '第'+window.levelIndex+'关'+'-使用步数：'+ that.stepCounterValue +'-挑战成功！';
                     }
-                    else if(window.levelClassify == 'netLevel'){
-                        titString = titString + '-网友自制关卡'
+                    else{
+                        titString = titString+'小游戏，快来挑战吧！'
                     }
-                    titString = titString + '第'+window.levelIndex+'关'+'-使用步数：'+ that.stepCounterValue +'-挑战成功！';
                     wx.shareAppMessage({
                         title: titString,
                         // imageUrl: data.url,
@@ -586,6 +628,8 @@ cc.Class({
         setTimeout(function () {
             cc.loader.loadRes('gameOverAlert', onResourceLoaded );
         },0)
+
+        if(window.from == "build") return;
 
         //上传分数
         if (cc.sys.platform === cc.sys.WECHAT_GAME) {
@@ -679,9 +723,7 @@ cc.Class({
                 window.currentLevel = res.data
                 that.renderLayout(window.currentLevel);
                 that.initPosition(window.currentLevel);
-                // that.moveHistoryList = [];
-                // that.moveHistoryList.push(res.data)
-                // console.log(that.moveHistoryList)
+
 
             },
             fail(){
@@ -693,24 +735,41 @@ cc.Class({
 
     },
     initPendant(){
+        let that = this;
         //关卡
         if(this.levelCounter == null){
             var levelNode = new cc.Node('levelCounter');
             levelNode.setAnchorPoint(0.5, 0.5);
-            levelNode.width =  300;
-            levelNode.height = 100;
+            levelNode.width =  756;
+            levelNode.height = 240;
+            levelNode.horizontalAlign = 'center'
             var levelCounter = levelNode.addComponent(cc.Label);
-            levelCounter.node.setPosition(55,  (cc.winSize.height/2) - (cc.winSize.height*0.05))
-            levelCounter.string = '第 '+ window.levelIndex + ' 关';
+            levelCounter.node.setPosition(0,  (cc.winSize.height/2) - (cc.winSize.height*0.05))
+            if(window.levelBy){
+                levelCounter.string = '第 '+ window.levelIndex + ' 关 - '+window.levelBy;
+            }
+            else{
+                levelCounter.string = '第 '+ window.levelIndex + ' 关';
+            }
             levelCounter.fontSize = 60;
             levelCounter.enableBold = true;
-            levelCounter.overflow = cc.Label.Overflow.RESIZE_HEIGHT;
+            // levelCounter.overflow = cc.Label.Overflow.RESIZE_HEIGHT;
             levelCounter.lineHeight = 60;
             levelCounter.horizontalAlign = 'center';
             this.levelCounter = levelNode.getComponent(cc.Label)
             this.node.addChild(levelNode);
         }else{
-            this.levelCounter.string = '第 '+ window.levelIndex + ' 关';
+
+
+            if(window.levelBy){
+                this.levelCounter.string = '第 '+ window.levelIndex + ' 关 - '+window.levelBy;
+            }
+            else{
+                this.levelCounter.string = '第 '+ window.levelIndex + ' 关';
+            }
+        }
+        if(window.from == 'build'){
+            this.levelCounter.string = '测试关卡';
         }
 
         //步数
@@ -755,7 +814,15 @@ cc.Class({
 
 
 
-        this.moveHistoryList = [];
+        // this.moveHistoryList = [];
+
+        this.moveHistoryList.splice(0,this.moveHistoryList.length)
+        wx.getStorage({
+            key:"initLevel",
+            success(res){
+                that.moveHistoryList.push(res.data)
+            }
+        })
 
 
     },
@@ -838,19 +905,28 @@ cc.Class({
 
 
                 cc.find('contain/rank',newMyPrefab).on('click',function () {
+                    if(window.from == 'build'){
+                        Toast('测试关卡没有排行榜',1500);
+                        return ;
+                    }
                     that.showLevelRank();
                 },this)
 
                 cc.find('contain/share',newMyPrefab).on('click',function () {
                     if (cc.sys.platform === cc.sys.WECHAT_GAME) {
                         var titString =  '益智推箱';
-                        if(window.levelClassify == 'classicsLevel'){
-                            titString = titString + '-经典关卡'
+                        if(window.from != 'build'){
+                            if(window.levelClassify == 'classicsLevel'){
+                                titString = titString + '-经典关卡'
+                            }
+                            else if(window.levelClassify == 'netLevel'){
+                                titString = titString + '-网友自制关卡'
+                            }
+                            titString = titString + '第'+window.levelIndex+'关-快来挑战吧!'
                         }
-                        else if(window.levelClassify == 'netLevel'){
-                            titString = titString + '-网友自制关卡'
+                        else{
+                            titString = titString + '小游戏，快来挑战吧！'
                         }
-                        titString = titString + '第'+window.levelIndex+'关-快来挑战吧!'
                         // titString = titString + '-使用步数：'
                         wx.shareAppMessage({
                             title: titString,
@@ -871,6 +947,45 @@ cc.Class({
         let that = this;
         if (cc.sys.platform === cc.sys.WECHAT_GAME) {
             Loading.show();
+            if(window.from == 'build'){
+                that.lastScore = null;
+                that.renderLastScore('无','无')
+
+                wx.getStorage({
+                    key:'buildLevel',
+                    success(res){
+                        window.currentLevel = res.data;
+                        window.uploadLevel = res.data;
+                        that.renderLayout(window.currentLevel);
+                        that.initPosition(window.currentLevel);
+                        // 初始化挂件
+                        that.initPendant();
+                        wx.setStorage({
+                            key: "initLevel",
+                            data:window.currentLevel,
+                            success(result){
+                                wx.getStorage({
+                                    key:"initLevel",
+                                    success(res){
+                                        that.moveHistoryList.push(res.data)
+                                    }
+                                })
+                            }
+                        })
+                        Loading.hide();
+                    }
+                })
+
+                wx.getStorage({
+                    key:'buildLevel',
+                    success(res){
+                        window.uploadLevel = res.data;
+                    }
+                })
+
+                return ;
+            }
+
             //经典关卡
             if(window.levelClassify == 'classicsLevel'){
                 wx.cloud.callFunction({
@@ -884,6 +999,7 @@ cc.Class({
                         window.currentLevel = res.result.data[0].content;
                         that.renderLayout(window.currentLevel);
                         that.initPosition(window.currentLevel);
+                        window.levelBy = res.result.data[0].nickName;
                         // 初始化挂件
                         that.initPendant();
                         wx.setStorage({
@@ -911,8 +1027,6 @@ cc.Class({
                         appId:window.user.appId
                     }
                 }).then(res => {
-                    console.log(res);
-
                     if(res && res.result.data.length>0){
                         that.lastScore = res.result.data[0];
                         that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
@@ -938,9 +1052,17 @@ cc.Class({
         this.initPendant();
         clearInterval(this.timeCounterTimer)
         this.timeCounterTimer = null;
-        cc.director.loadScene("main");
+        if(window.from){
+            cc.director.loadScene(window.from);
+        }else{
+            cc.director.loadScene("main");
+        }
+        window.from = 'game'
     },
     renderLastScore(step,time){
+        if(window.from == 'build'){
+            return ;
+        }
         let that = this;
         //最佳步数
         if(that.lastStepNode == null){
@@ -1036,7 +1158,7 @@ cc.Class({
             })
         }
 
-    },
+    }
 
 
 });

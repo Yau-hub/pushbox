@@ -10,7 +10,9 @@ exports.main = async (event, context) => {
     data: {
       content: event.content, 
       levelIndex: event.levelIndex, 
-      // levelIndex:db.command.inc(1),
+      appId: event.appId, 
+      nickName: event.nickName,
+      portrait: event.portrait,
       createTime: Date.now()
     }
   })  
