@@ -5,7 +5,6 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import levels from './level'
 import {formateRankTime, Loading, Toast} from "./common";
 window.currentLevel = [];
 
@@ -569,7 +568,7 @@ cc.Class({
                                content: window.uploadLevel,
                                levelIndex: res.result.total+1,
                                appId: window.user.appId,
-                               nickName: window.loginInfo.nickName,
+                               nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
                                portrait: window.loginInfo.avatarUrl,
                            }
                        }).then(res => {
@@ -642,7 +641,7 @@ cc.Class({
                         useStep: that.stepCounterValue,
                         useTime: that.timeCounterValue,
                         portrait: window.loginInfo.avatarUrl,
-                        nickName: window.loginInfo.nickName
+                        nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5)
                     }
                 }).then(res => {
                 }).catch(err => {
@@ -812,8 +811,6 @@ cc.Class({
             }
         }
 
-
-
         // this.moveHistoryList = [];
 
         this.moveHistoryList.splice(0,this.moveHistoryList.length)
@@ -955,7 +952,6 @@ cc.Class({
                     key:'buildLevel',
                     success(res){
                         window.currentLevel = res.data;
-                        window.uploadLevel = res.data;
                         that.renderLayout(window.currentLevel);
                         that.initPosition(window.currentLevel);
                         // 初始化挂件
@@ -1033,6 +1029,7 @@ cc.Class({
                     }else{
                         that.lastScore = null;
                         that.renderLastScore('无','无')
+                        if(window.levelIndex == 1) Toast('Tip: 可滑动屏幕控制人物',3000);
                     }
                 }).catch(err => {
                     console.error(err)

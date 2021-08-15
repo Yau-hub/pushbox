@@ -4,11 +4,7 @@ cc._RF.push(module, '2276c+jCHZBGYX+JxzXyKDF', 'main');
 
 "use strict";
 
-var _level = _interopRequireDefault(require("./level"));
-
 var _common = require("./common");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // Learn cc.Class:
 //  - https://docs.cocos.com/creator/manual/en/scripting/class.html
@@ -351,7 +347,7 @@ cc.Class({
                     name: 'addUser',
                     data: {
                       appId: window.user.appId,
-                      nickName: window.loginInfo.nickName,
+                      nickName: window.loginInfo.nickName ? window.loginInfo.nickName : '游客' + window.user.appId.substring(window.user.appId.length - 5),
                       portrait: window.loginInfo.avatarUrl
                     }
                   }).then(function (res) {
@@ -392,6 +388,7 @@ cc.Class({
     if (this.buildLevel == null) this.buildLevel = cc.find('Canvas/mainBg/buildLevel').getComponent(cc.Button);
     this.buildLevel.node.on('click', function () {
       window.buildLevel = new Array();
+      if (window.wxLoginBtn) window.wxLoginBtn.destroy();
       cc.director.loadScene("build");
     }, this);
     if (this.mainShare == null) this.mainShare = cc.find('Canvas/mainBg/mainShare').getComponent(cc.Button);

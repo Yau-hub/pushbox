@@ -20,7 +20,6 @@ window.loginInfo = {
 }
 
 
-import levels from './level'
 import {wxLogin,Toast,Loading,formateRankTime} from "./common";
 
 cc.Class({
@@ -307,7 +306,7 @@ cc.Class({
                                         name: 'addUser',
                                         data: {
                                             appId: window.user.appId,
-                                            nickName: window.loginInfo.nickName,
+                                            nickName: window.loginInfo.nickName? window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
                                             portrait: window.loginInfo.avatarUrl
                                         }
 
@@ -353,7 +352,9 @@ cc.Class({
         if(this.buildLevel == null) this.buildLevel = cc.find('Canvas/mainBg/buildLevel').getComponent(cc.Button)
         this.buildLevel.node.on('click', function () {
             window.buildLevel = new Array();
+            if(window.wxLoginBtn ) window.wxLoginBtn.destroy();
             cc.director.loadScene("build");
+
         }, this)
 
 

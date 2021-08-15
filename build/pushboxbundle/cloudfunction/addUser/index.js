@@ -14,8 +14,8 @@ exports.main = async (event, context) => {
       classicsLevelNum: 0,
       netLevelNum: 0,
       unionId: null,
-      nickName: null,
-      portrait: null,
+      nickName: event.nickName,
+      portrait: event.portrait,
       createTime: Date.now()
     }
   })  

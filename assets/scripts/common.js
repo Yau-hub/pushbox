@@ -19,9 +19,7 @@ export function wxLogin(_success, _fail,node) {
     wx.getSetting(
         {
             success(res) {
-                console.log(res.authSetting);
                 if (res.authSetting["scope.userInfo"]) {
-                    console.log("用户已授权");
                     wx.getUserInfo({
                         success(res) {
                             //登陆操作
@@ -29,8 +27,8 @@ export function wxLogin(_success, _fail,node) {
                             _success && _success(res.userInfo);
                         }
                     });
+                    return false;
                 } else {
-                    console.log("用户未授权");
 
                     //创建全屏透明登陆按钮
                     let button = wx.createUserInfoButton({
@@ -51,15 +49,13 @@ export function wxLogin(_success, _fail,node) {
 
                     button.onTap((res) => {
                         if (res.userInfo) {
-                            console.log("用户授权:", res.userInfo);
-                            // userInfo = res.userInfo;
                             _success && _success(res.userInfo);
                             button.destroy();
                         } else {
-                            console.log("用户拒绝授权:");
                             _fail && _fail();
                         }
                     });
+                    window.wxLoginBtn = button;
                 }
 
             }

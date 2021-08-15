@@ -199,6 +199,11 @@ cc.Class({
                                 Toast('箱子和球体数量不一致',1500)
                                 return;
                             }
+
+                            if(boxNum < 3){
+                                Toast('箱子数量不能少于三个',1500)
+                                return;
+                            }
                         }
                     }
                 }

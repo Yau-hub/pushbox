@@ -70,6 +70,7 @@ cc.Class({
                 node.on('touchend',
                     function(t){
                         window.levelIndex = indexLevel;
+                        if(window.wxLoginBtn ) window.wxLoginBtn.destroy();
                         cc.director.loadScene("game");
                     },this)
             }
