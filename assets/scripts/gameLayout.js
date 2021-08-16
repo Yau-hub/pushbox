@@ -587,9 +587,6 @@ cc.Class({
                    }).catch(err => {
                        console.error(err)
                    })
-
-
-
                }
 
             },this)
@@ -599,16 +596,17 @@ cc.Class({
                 that.replayLayout();
                 that.initPendant();
             },this)
+            cc.find('contentBg/rank',newMyPrefab).on('click',function () {
+                if(window.from == 'build'){
+                    Toast('测试关卡没有排行榜',1500);
+                    return ;
+                }
+                that.showLevelRank();
+            },this)
             cc.find('contentBg/share',newMyPrefab).on('click',function () {
                 if (cc.sys.platform === cc.sys.WECHAT_GAME) {
                     var titString =  '益智推箱';
                     if(window.from != 'build'){
-                        if(window.levelClassify == 'classicsLevel'){
-                            titString = titString + '-经典关卡'
-                        }
-                        else if(window.levelClassify == 'netLevel'){
-                            titString = titString + '-网友自制关卡'
-                        }
                         titString = titString + '第'+window.levelIndex+'关'+'-使用步数：'+ that.stepCounterValue +'-挑战成功！';
                     }
                     else{
@@ -633,6 +631,8 @@ cc.Class({
         //上传分数
         if (cc.sys.platform === cc.sys.WECHAT_GAME) {
             if (that.lastScore == null) {
+                Loading.show();
+                Toast('上传分数中...',1500);
                 wx.cloud.callFunction({
                     name: 'addClassicsLevelScore',
                     data: {
@@ -644,7 +644,9 @@ cc.Class({
                         nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5)
                     }
                 }).then(res => {
+                    Loading.hide();
                 }).catch(err => {
+                    Loading.hide();
                     console.error(err)
                 })
                 that.lastScore = {
@@ -663,7 +665,9 @@ cc.Class({
                         useStep: that.stepCounterValue,
                         useTime: that.timeCounterValue
                     }
-                    that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
+                    that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime);
+                    Loading.show();
+                    Toast('上传分数中...',1500);
                     wx.cloud.callFunction({
                         name: 'updateClassicsLevelScore',
                         data: {
@@ -675,9 +679,9 @@ cc.Class({
                             nickName: window.loginInfo.nickName
                         }
                     }).then(res => {
-
-
+                        Loading.hide();
                     }).catch(err => {
+                        Loading.hide();
                         console.error(err)
                     })
                 }
@@ -913,12 +917,6 @@ cc.Class({
                     if (cc.sys.platform === cc.sys.WECHAT_GAME) {
                         var titString =  '益智推箱';
                         if(window.from != 'build'){
-                            if(window.levelClassify == 'classicsLevel'){
-                                titString = titString + '-经典关卡'
-                            }
-                            else if(window.levelClassify == 'netLevel'){
-                                titString = titString + '-网友自制关卡'
-                            }
                             titString = titString + '第'+window.levelIndex+'关-快来挑战吧!'
                         }
                         else{
