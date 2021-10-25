@@ -453,8 +453,8 @@ cc.Class({
                 this.position.x -= 1;
                 break;
         }
-
-        if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+        //是否开启回退功能
+        if (window.setting.relast && cc.sys.platform === cc.sys.WECHAT_GAME) {
             wx.setStorage({
                 key: "lastLayout",
                 data: window.currentLevel,
@@ -571,9 +571,9 @@ cc.Class({
                                nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
                                portrait: window.loginInfo.avatarUrl,
                            }
-                       }).then(res => {
-
-                           Toast('上传成功，即将跳回主界面',1500);
+                       }).then(result => {
+                            let levelUploadNum = parseInt(res.result.total)+1;
+                           Toast('关卡'+levelUploadNum+'上传成功，即将跳回主界面',1500);
                            setTimeout(function () {
                                Loading.hide();
                                cc.director.loadScene('main');
@@ -850,27 +850,39 @@ cc.Class({
             cc.find('gameBtns/down',this.node).opacity = 0;
             cc.find('gameBtns/left',this.node).opacity = 0;
         }
+
+
+
+        if(!window.setting.relast) cc.find('gameBtns/backStep/Background/Label',this.node).getComponent(cc.Label).string = '重玩'
         cc.find('gameBtns/backStep',this.node).on('click',function () {
-            if(that.moveHistoryList.length > 1 && that.stepCounterValue >= 1){
-                that.moveHistoryList.pop();
-                if (cc.sys.platform === cc.sys.WECHAT_GAME) {
-                    wx.setStorage({
-                        key: "lastLayout",
-                        data: that.moveHistoryList[that.moveHistoryList.length-1],
-                        success(result) {
-                            wx.getStorage({
-                                key: "lastLayout",
-                                success(res) {
-                                    that.stepCounterValue --;
-                                    that.stepCounter.string = "步数：" + that.stepCounterValue;
-                                    window.currentLevel = res.data;
-                                    that.renderLayout(window.currentLevel);
-                                    that.initPosition(window.currentLevel)
-                                }
-                            })
-                        }
-                    })
+            console.log()
+            if(window.setting.relast){
+                if(that.moveHistoryList.length > 1 && that.stepCounterValue >= 1){
+                    that.moveHistoryList.pop();
+                    if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+                        wx.setStorage({
+                            key: "lastLayout",
+                            data: that.moveHistoryList[that.moveHistoryList.length-1],
+                            success(result) {
+                                wx.getStorage({
+                                    key: "lastLayout",
+                                    success(res) {
+                                        that.stepCounterValue --;
+                                        that.stepCounter.string = "步数：" + that.stepCounterValue;
+                                        window.currentLevel = res.data;
+                                        that.renderLayout(window.currentLevel);
+                                        that.initPosition(window.currentLevel)
+                                    }
+                                })
+                            }
+                        })
+                    }
                 }
+            }
+            else{
+
+                that.replayLayout();
+                that.initPendant();
             }
 
         },this)

@@ -429,8 +429,10 @@ cc.Class({
         }, this);
         var touchMove = cc.find('settingContain/touchMove/Background/Label', newMyPrefab).getComponent(cc.Label);
         var clickMove = cc.find('settingContain/clickMove/Background/Label', newMyPrefab).getComponent(cc.Label);
+        var relast = cc.find('settingContain/relast/Background/Label', newMyPrefab).getComponent(cc.Label);
         if (window.setting.touchMove) touchMove.string = '关闭触摸移动';else touchMove.string = '开启触摸移动';
         if (window.setting.clickMove) clickMove.string = '关闭按键移动';else clickMove.string = '开启按键移动';
+        if (window.setting.relast) relast.string = '关闭回退功能';else relast.string = '开启回退功能';
         cc.find('settingContain/touchMove', newMyPrefab).on('click', function () {
           if (cc.sys.platform === cc.sys.WECHAT_GAME) {
             wx.getStorage({
@@ -483,6 +485,28 @@ cc.Class({
             });
           }
         }, this);
+        cc.find('settingContain/relast', newMyPrefab).on('click', function () {
+          if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+            wx.getStorage({
+              key: 'setting',
+              success: function success(res) {
+                //回退功能
+                if (res.data.relast) {
+                  window.setting.relast = false;
+                  relast.string = '开启回退功能';
+                } else {
+                  window.setting.relast = true;
+                  relast.string = '关闭回退功能';
+                }
+
+                wx.setStorage({
+                  key: 'setting',
+                  data: window.setting
+                });
+              }
+            });
+          }
+        }, this);
         CanvasNode.addChild(newMyPrefab);
       };
 
@@ -499,7 +523,8 @@ cc.Class({
         fail: function fail(err) {
           window.setting = {
             touchMove: true,
-            clickMove: true
+            clickMove: true,
+            relast: false
           };
           wx.setStorage({
             key: 'setting',
