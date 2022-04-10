@@ -6,12 +6,12 @@
   },
   "db164588-eb1d-4e07-860f-0375a28d4d89": {
     "asset": 1635173473903,
-    "meta": 1635173473916,
+    "meta": 1649018927459,
     "relativePath": "scenes\\main.fire"
   },
   "9949f6e0-117b-4771-9e32-f62732b7e6b3": {
-    "asset": 1629121955362,
-    "meta": 1635164017079,
+    "asset": 1649019019936,
+    "meta": 1649057694432,
     "relativePath": "scripts"
   },
   "bba42ae9-17cb-404f-bf9b-14a0926d21e0": {
@@ -71,7 +71,7 @@
   },
   "2af30800-61e8-4632-8855-c0f8eb7450f9": {
     "asset": 1629008036536,
-    "meta": 1629009131428,
+    "meta": 1649018949289,
     "relativePath": "prefabs\\levelItem.prefab"
   },
   "c468313c-3ca4-45e9-9eb7-ecbcf80ce429": {
@@ -86,7 +86,7 @@
   },
   "3df48eec-c825-4399-95a1-c75ffbdaae69": {
     "asset": 1629008036540,
-    "meta": 1629009131442,
+    "meta": 1649018952314,
     "relativePath": "prefabs\\levelLayout.prefab"
   },
   "2084ab85-755c-4dd5-b59b-644878b0bd46": {
@@ -116,42 +116,42 @@
   },
   "e6369bbf-d294-4bdd-8644-28063b2cd0b3": {
     "asset": 1629008036528,
-    "meta": 1629009131301,
+    "meta": 1649018942387,
     "relativePath": "prefabs\\block.prefab"
   },
   "fa8101e0-8617-4f64-a1f3-65aefb555eb7": {
     "asset": 1629008036559,
-    "meta": 1629009131498,
+    "meta": 1649018969648,
     "relativePath": "prefabs\\wall.prefab"
   },
   "d6677a48-467c-4e21-8e59-f373d2be12e8": {
     "asset": 1629008036531,
-    "meta": 1629009131394,
+    "meta": 1649018945296,
     "relativePath": "prefabs\\box.prefab"
   },
   "2231fba8-c869-4203-a99a-4dfda8cc1da6": {
     "asset": 1629008036524,
-    "meta": 1629009131242,
+    "meta": 1649018937089,
     "relativePath": "prefabs\\ball.prefab"
   },
   "e4665b3b-b31e-4dc0-b3f2-b5cc05935e8a": {
     "asset": 1629008036555,
-    "meta": 1629009131489,
+    "meta": 1649018966044,
     "relativePath": "prefabs\\roleUp.prefab"
   },
   "a25ef25b-0f15-4515-94ae-1812b92b2c00": {
     "asset": 1629008036551,
-    "meta": 1629009131461,
+    "meta": 1649018962745,
     "relativePath": "prefabs\\roleRight.prefab"
   },
   "011fa924-d532-48b6-8767-8456128e6595": {
     "asset": 1629008036544,
-    "meta": 1629009131470,
+    "meta": 1649018955532,
     "relativePath": "prefabs\\roleDown.prefab"
   },
   "1dc559f2-cff4-4ca7-800e-7e4b4fc62901": {
     "asset": 1629008036548,
-    "meta": 1629009131478,
+    "meta": 1649018958797,
     "relativePath": "prefabs\\roleLeft.prefab"
   },
   "d8afc78c-4eac-4a9f-83dd-67bc70344d33": {
@@ -655,8 +655,8 @@
     "relativePath": "model\\primitives.fbx"
   },
   "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a": {
-    "asset": 1629011934822,
-    "meta": 1629011934837,
+    "asset": 1649018427325,
+    "meta": 1649018919509,
     "relativePath": "scenes\\game.fire"
   },
   "8b47c8c8-5c07-4856-9187-d1e1c2cc3fac": {
@@ -736,7 +736,7 @@
   },
   "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1": {
     "asset": 1629121145680,
-    "meta": 1629121145692,
+    "meta": 1649018924085,
     "relativePath": "scenes\\build.fire"
   },
   "db8b3d57-0698-42e3-8a67-24874b1eb10e": {
@@ -760,8 +760,8 @@
     "relativePath": "scripts\\main.js"
   },
   "8bc72039-aafa-48d5-99e1-33d01b27113a": {
-    "asset": 1635177228342,
-    "meta": 1635177232124,
+    "asset": 1649019019918,
+    "meta": 1649019042908,
     "relativePath": "scripts\\gameLayout.js"
   }
 }

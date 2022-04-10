@@ -74,7 +74,8 @@ cc.Class({
         lastScore: null,
         lastStepNode: null,
         lastTimenode: null,
-        rankItem:cc.Prefab
+        rankItem:cc.Prefab,
+        buildArea:null
 
     },
 
@@ -87,8 +88,6 @@ cc.Class({
 
         //初始化当前关卡
         this.initLevel();
-
-
         cc.find('gameBtns',this.node).height =  (cc.winSize.height - cc.winSize.width)/2;
 
     },
@@ -101,9 +100,9 @@ cc.Class({
     // update (dt) {},
 
     initWinEle(){
+        this.buildArea = cc.find('Canvas/mainBg/buildArea');
         let realSiz = cc.winSize.width/window.blockNum;
         window.eleSize = realSiz;
-
         for(var i = 0; i < window.blockNum; i++){
             window.layout[i] = new Array();
             for(var n = 0; n < window.blockNum; n++){
@@ -146,7 +145,7 @@ cc.Class({
                 // 为设置位置
                 newBlock.setPosition(x,y);
                 // 将新增的节点添加到 Canvas 节点下面
-                this.node.addChild(newBlock);
+                this.buildArea.addChild(newBlock);
             }
         }
 
@@ -162,6 +161,7 @@ cc.Class({
     },
 
     renderLayout(layout){
+        this.buildArea.destroyAllChildren()
         this.renderBg();
         for(var i = 0; i < window.blockNum; i++){
             for(var n = 0; n < window.blockNum; n++){
@@ -171,47 +171,46 @@ cc.Class({
                     case 0:
                         var newBlock = cc.instantiate(this.block);
                         newBlock.setPosition(x,y);
-                        this.node.addChild(newBlock);
+                        this.buildArea.addChild(newBlock);
                         break;
                     case 1:
                         var newWall = cc.instantiate(this.wall);
                         newWall.setPosition(x,y);
-                        this.node.addChild(newWall);
+                        this.buildArea.addChild(newWall);
                         break;
                     case 2:
                         var newBox = cc.instantiate(this.box);
                         newBox.setPosition(x,y);
-                        this.node.addChild(newBox);
+                        this.buildArea.addChild(newBox);
                         break;
                     case 3:
                         var newBall = cc.instantiate(this.ball);
                         newBall.setPosition(x,y);
-                        this.node.addChild(newBall);
+                        this.buildArea.addChild(newBall);
                         break;
                     case 4:
                         var newRoleUp = cc.instantiate(this.roleUp);
                         newRoleUp.setPosition(x,y);
-                        this.node.addChild(newRoleUp);
+                        this.buildArea.addChild(newRoleUp);
                         break;
                     case 5:
                         var newRoleRight = cc.instantiate(this.roleRight);
                         newRoleRight.setPosition(x,y);
-                        this.node.addChild(newRoleRight);
+                        this.buildArea.addChild(newRoleRight);
                         break;
                     case 6:
                         var newRoleDown = cc.instantiate(this.roleDown);
                         newRoleDown.setPosition(x,y);
-                        this.node.addChild(newRoleDown);
+                        this.buildArea.addChild(newRoleDown);
                         break;
                     case 7:
                         var newRoleLeft = cc.instantiate(this.roleLeft);
                         newRoleLeft.setPosition(x,y);
-                        this.node.addChild(newRoleLeft);
+                        this.buildArea.addChild(newRoleLeft);
                         break;
                 }
             }
         }
-
     },
 
     moveUp(layout){
@@ -264,10 +263,8 @@ cc.Class({
             layout[y][x].sign = 3;
             layout[y][x].cover = null;
         }
-        var movetimer = setTimeout(function () {
-            that.renderLayout(layout)
-            clearTimeout(movetimer);
-        })
+        that.renderLayout(layout)
+
     },
     moveDown(layout){
         var that = this;
@@ -319,11 +316,8 @@ cc.Class({
             layout[y][x].sign = 3;
             layout[y][x].cover = null;
         }
+        that.renderLayout(layout)
 
-        var movetimer = setTimeout(function () {
-            that.renderLayout(layout)
-            clearTimeout(movetimer);
-        })
     },
     moveLeft(layout){
         var that = this;
@@ -375,10 +369,7 @@ cc.Class({
             layout[y][x].cover = null;
 
         }
-        var movetimer = setTimeout(function () {
-            that.renderLayout(layout)
-            clearTimeout(movetimer);
-        })
+        that.renderLayout(layout)
     },
     moveRight(layout){
         var that = this;
@@ -430,10 +421,7 @@ cc.Class({
             layout[y][x].cover = null;
 
         }
-        var movetimer = setTimeout(function () {
-            that.renderLayout(layout)
-            clearTimeout(movetimer);
-        })
+        that.renderLayout(layout)
     },
     resetPosition(direction){
         let that = this;
@@ -723,11 +711,9 @@ cc.Class({
         wx.getStorage({
             key: 'initLevel',
             success (res) {
-                window.currentLevel = res.data
+                window.currentLevel = res.data;
                 that.renderLayout(window.currentLevel);
                 that.initPosition(window.currentLevel);
-
-
             },
             fail(){
 
@@ -855,7 +841,6 @@ cc.Class({
 
         if(!window.setting.relast) cc.find('gameBtns/backStep/Background/Label',this.node).getComponent(cc.Label).string = '重玩'
         cc.find('gameBtns/backStep',this.node).on('click',function () {
-            console.log()
             if(window.setting.relast){
                 if(that.moveHistoryList.length > 1 && that.stepCounterValue >= 1){
                     that.moveHistoryList.pop();
@@ -880,7 +865,6 @@ cc.Class({
                 }
             }
             else{
-
                 that.replayLayout();
                 that.initPendant();
             }
