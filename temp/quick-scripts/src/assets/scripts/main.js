@@ -13,6 +13,8 @@ var _common = require("./common");
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 window.env = "cloud1-5gvbuiy3dd99f63c";
+window.bgMusic = null;
+window.moveMusic = null;
 
 if (cc.sys.platform === cc.sys.WECHAT_GAME) {
   wx.cloud.init({
@@ -52,6 +54,11 @@ cc.Class({
     //  this.oneSay();
     this.mainBindEvent();
     window.from = 'main';
+    cc.game.on(cc.game.EVENT_SHOW, function () {
+      // console.log("重新返回游戏");
+      if (window.bgMusic && !window.bgMusic.paused) window.bgMusic.pause();
+      if (window.bgMusic && window.bgMusic.paused) window.bgMusic.play();
+    }, this);
   },
   start: function start() {
     var that = this;
@@ -128,7 +135,7 @@ cc.Class({
     var that = this;
     var url = "https://v1.hitokoto.cn/";
     var xhr = new XMLHttpRequest();
-    var oneSayLabel = cc.find("Canvas/mainBg/oneSay").getComponent(cc.Component);
+    var oneSayLabel = cc.find("Canvas/mainBg/oneSay").getComponent(cc.Label);
 
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 400) {
@@ -139,6 +146,19 @@ cc.Class({
 
     xhr.open("get", url, true);
     xhr.send();
+    this.oneSayLabel.node.on('touchend', function () {
+      var newXHR = new XMLHttpRequest();
+
+      newXHR.onreadystatechange = function () {
+        if (newXHR.readyState == 4 && newXHR.status >= 200 && newXHR.status < 400) {
+          var response = JSON.parse(newXHR.responseText);
+          if (that.oneSayLabel && that.oneSayLabel.string != null) that.oneSayLabel.string = response.hitokoto + ' -- ' + response.from;else if (oneSayLabel && oneSayLabel.string != null) oneSayLabel.string = response.hitokoto + ' -- ' + response.from;
+        }
+      };
+
+      newXHR.open("get", url, true);
+      newXHR.send();
+    }, this);
   },
   //授权登录显示关卡列表
   loginLevelList: function loginLevelList() {
@@ -430,9 +450,11 @@ cc.Class({
         var touchMove = cc.find('settingContain/touchMove/Background/Label', newMyPrefab).getComponent(cc.Label);
         var clickMove = cc.find('settingContain/clickMove/Background/Label', newMyPrefab).getComponent(cc.Label);
         var relast = cc.find('settingContain/relast/Background/Label', newMyPrefab).getComponent(cc.Label);
+        var music = cc.find('settingContain/music/Background/Label', newMyPrefab).getComponent(cc.Label);
         if (window.setting.touchMove) touchMove.string = '关闭触摸移动';else touchMove.string = '开启触摸移动';
         if (window.setting.clickMove) clickMove.string = '关闭按键移动';else clickMove.string = '开启按键移动';
         if (window.setting.relast) relast.string = '关闭回退功能';else relast.string = '开启回退功能';
+        if (window.setting.music) music.string = '关闭音效';else music.string = '开启音效';
         cc.find('settingContain/touchMove', newMyPrefab).on('click', function () {
           if (cc.sys.platform === cc.sys.WECHAT_GAME) {
             wx.getStorage({
@@ -507,6 +529,31 @@ cc.Class({
             });
           }
         }, this);
+        cc.find('settingContain/music', newMyPrefab).on('click', function () {
+          if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+            wx.getStorage({
+              key: 'setting',
+              success: function success(res) {
+                //回退功能
+                if (res.data.music) {
+                  window.setting.music = false;
+                  music.string = '开启音效';
+                } else {
+                  window.setting.music = true;
+                  music.string = '关闭音效';
+                }
+
+                wx.setStorage({
+                  key: 'setting',
+                  data: window.setting,
+                  complete: function complete() {
+                    that.setMusic();
+                  }
+                });
+              }
+            });
+          }
+        }, this);
         CanvasNode.addChild(newMyPrefab);
       };
 
@@ -514,6 +561,8 @@ cc.Class({
     }, this);
   },
   initSetting: function initSetting() {
+    var that = this;
+
     if (cc.sys.platform === cc.sys.WECHAT_GAME) {
       wx.getStorage({
         key: 'setting',
@@ -524,14 +573,54 @@ cc.Class({
           window.setting = {
             touchMove: true,
             clickMove: true,
-            relast: false
+            relast: false,
+            music: false
           };
           wx.setStorage({
             key: 'setting',
             data: window.setting
           });
+        },
+        complete: function complete() {
+          that.setMusic();
         }
       });
+    }
+  },
+  setMusic: function setMusic() {
+    if (cc.sys.platform !== cc.sys.WECHAT_GAME) return;
+
+    if (window.setting.music) {
+      if (!window.bgMusic || !window.moveMusic) {
+        window.bgMusic = wx.createInnerAudioContext();
+        window.moveMusic = wx.createInnerAudioContext({
+          useWebAudioImplement: true
+        });
+        cc.resources.load("music/bg_music", cc.AudioClip, null, function (err, clip) {
+          window.bgMusic.src = clip.url;
+          window.bgMusic.loop = true;
+          if (window.bgMusic && !window.bgMusic.paused) window.bgMusic.pause();
+          if (window.bgMusic && window.bgMusic.paused) window.bgMusic.play();
+        });
+        cc.resources.load("music/move_music", cc.AudioClip, null, function (err, clip) {
+          window.moveMusic.src = clip.url;
+          window.moveMusic.loop = false;
+          window.moveMusic.playbackRate = 2;
+        });
+      }
+    } else {
+      if (window.bgMusic) {
+        window.bgMusic.stop();
+        window.bgMusic.destroy();
+      }
+
+      if (window.moveMusic) {
+        window.moveMusic.stop();
+        window.moveMusic.destroy();
+      }
+
+      window.bgMusic = null;
+      window.moveMusic = null;
     }
   }
 });

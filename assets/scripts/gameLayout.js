@@ -476,8 +476,9 @@ cc.Class({
             }
         }
 
-
-
+        if(window.moveMusic && !window.moveMusic.paused) window.moveMusic.stop();
+        if(window.moveMusic && !window.moveMusic.paused) window.moveMusic.pause();
+        if(window.moveMusic) window.moveMusic.play();
     },
 
     addTouchMove(){
