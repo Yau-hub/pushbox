@@ -43,6 +43,8 @@ cc.Class({
     visitorplay: cc.Button,
     mainRank: cc.Button,
     levelLayout: cc.Prefab,
+    reviewLayout: cc.Prefab,
+    reviewLevel: cc.Button,
     buildLevel: cc.Button,
     setting: cc.Button,
     mainShare: cc.Button,
@@ -215,6 +217,125 @@ cc.Class({
     cc.loader.loadRes('levelLayout', onResourceLoaded); // let levelList = cc.instantiate(this.levelLayout);
     // this.node.addChild(levelList);
   },
+  showReviewLevel: function showReviewLevel() {
+    var that = this;
+    var CanvasNode = cc.find('Canvas');
+    var reviewPage = 1,
+        reviewPageSize = 50;
+
+    if (!CanvasNode) {
+      cc.console('find Canvas error');
+      return;
+    }
+
+    var onResourceLoaded = function onResourceLoaded(errorMessage, loadedResource) {
+      if (errorMessage) {
+        console.log('Prefab error:' + errorMessage);
+        return;
+      }
+
+      if (!(loadedResource instanceof cc.Prefab)) {
+        console.log('Prefab error');
+        return;
+      }
+
+      var newMyPrefab = cc.instantiate(loadedResource);
+      var content = cc.find('reviewLevelList/view/content', newMyPrefab);
+      cc.find('close', newMyPrefab).on("click", function () {
+        newMyPrefab.removeFromParent();
+        newMyPrefab.destroy();
+      }, this);
+
+      if (that.rankItem == null) {
+        cc.loader.loadRes('rankItem', function (err, resource) {
+          that.rankItem = cc.instantiate(resource);
+          that.renderReviewLevelList(content, reviewPage, reviewPageSize);
+        });
+      } else {
+        that.renderReviewLevelList(content, reviewPage, reviewPageSize);
+      }
+
+      cc.find('reviewLevelList', newMyPrefab).on('bounce-bottom', function () {
+        reviewPage++;
+        that.renderReviewLevelList(content, reviewPage, reviewPageSize);
+      }, this);
+      CanvasNode.addChild(newMyPrefab);
+    };
+
+    cc.loader.loadRes('reviewLayout', onResourceLoaded);
+  },
+  renderReviewLevelList: function renderReviewLevelList(content, page, pageSize) {
+    var _this = this;
+
+    var that = this;
+    var currentItemNum = content.childrenCount;
+
+    if (cc.sys.platform === cc.sys.WECHAT_GAME) {
+      _common.Loading.show();
+
+      wx.cloud.callFunction({
+        name: 'queryReviewLevel',
+        data: {
+          page: page,
+          pageSize: pageSize
+        }
+      }).then(function (res) {
+        _common.Loading.hide();
+
+        var rankItem = null;
+
+        if (res && res.result.data.length > 0) {
+          var _loop = function _loop() {
+            data = res.result.data[i - 1];
+            var node = cc.instantiate(that.rankItem);
+            if (rankItem == null) rankItem = node;
+            node.getChildByName('tdRank').getComponent(cc.Label).string = i + currentItemNum;
+            node.getChildByName('tdDate').getComponent(cc.Label).string = (0, _common.formateRankTime)(data.createTime);
+            node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStepNum;
+
+            if (data.portrait) {
+              cc.assetManager.loadRemote(data.portrait + '?aaa=aa.jpg', function (err, texture) {
+                var sprite = new cc.SpriteFrame(texture);
+                cc.find('mask/Image', node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+              });
+            }
+
+            if (data.nickName) {
+              node.getChildByName('tdName').getComponent(cc.Label).string = " " + data.nickName + " ";
+            }
+
+            node.on('touchend', function (t) {
+              if (window.wxLoginBtn) window.wxLoginBtn.destroy();
+              wx.setStorage({
+                key: 'reviewLevel',
+                data: data.content,
+                success: function success() {
+                  window.from = 'review';
+                  window.reviewId = data._id;
+                  cc.director.loadScene("game");
+                }
+              });
+            }, _this);
+            content.addChild(node);
+          };
+
+          for (var i = 1; i <= res.result.data.length; i++) {
+            var data;
+
+            _loop();
+          }
+
+          content.height = content.childrenCount * rankItem.height;
+        } else {
+          (0, _common.Toast)("没有更多数据了", 1500);
+        }
+      })["catch"](function (err) {
+        console.error(err);
+
+        _common.Loading.hide();
+      });
+    }
+  },
   showMainRank: function showMainRank() {
     var that = this;
     var CanvasNode = cc.find('Canvas');
@@ -281,7 +402,7 @@ cc.Class({
         var rankItem = null;
 
         if (res && res.result.data.length > 0) {
-          var _loop = function _loop() {
+          var _loop2 = function _loop2() {
             data = res.result.data[i - 1];
             var node = cc.instantiate(that.rankItem);
             if (rankItem == null) rankItem = node;
@@ -306,7 +427,7 @@ cc.Class({
           for (var i = 1; i <= res.result.data.length; i++) {
             var data;
 
-            _loop();
+            _loop2();
           }
 
           content.height = content.childrenCount * rankItem.height;
@@ -405,6 +526,8 @@ cc.Class({
     this.visitorplay.node.on('click', this.visitorLevelList, this);
     if (this.mainRank == null) this.mainRank = cc.find('Canvas/mainBg/mainRank').getComponent(cc.Button);
     this.mainRank.node.on('click', this.showMainRank, this);
+    if (this.reviewLevel == null) this.reviewLevel = cc.find('Canvas/mainBg/reviewLevel').getComponent(cc.Button);
+    this.reviewLevel.node.on('click', this.showReviewLevel, this);
     if (this.buildLevel == null) this.buildLevel = cc.find('Canvas/mainBg/buildLevel').getComponent(cc.Button);
     this.buildLevel.node.on('click', function () {
       window.buildLevel = new Array();

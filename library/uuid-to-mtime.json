@@ -5,13 +5,13 @@
     "relativePath": "scenes"
   },
   "db164588-eb1d-4e07-860f-0375a28d4d89": {
-    "asset": 1649596537565,
-    "meta": 1649596537579,
+    "asset": 1650181470271,
+    "meta": 1650181470285,
     "relativePath": "scenes\\main.fire"
   },
   "9949f6e0-117b-4771-9e32-f62732b7e6b3": {
-    "asset": 1649586864831,
-    "meta": 1649587132992,
+    "asset": 1649775964425,
+    "meta": 1650177258707,
     "relativePath": "scripts"
   },
   "bba42ae9-17cb-404f-bf9b-14a0926d21e0": {
@@ -35,8 +35,8 @@
     "relativePath": "mainLogo.anim"
   },
   "97c8ff53-a4dc-4e99-8b9d-16cf06b85330": {
-    "asset": 1629008036603,
-    "meta": 1629009131083,
+    "asset": 1649596482977,
+    "meta": 1650177258703,
     "relativePath": "resources"
   },
   "8ec5b81e-c6f9-41ea-a62d-bfad77359c13": {
@@ -185,8 +185,8 @@
     "relativePath": "resources\\gameMenu.prefab"
   },
   "08e62187-3f2b-4096-a06a-d34262e3935b": {
-    "asset": 1649773372313,
-    "meta": 1649773372325,
+    "asset": 1650189359774,
+    "meta": 1650189359786,
     "relativePath": "resources\\settingDialog.prefab"
   },
   "42e05439-2d8b-46c0-9220-faa4cb072114": {
@@ -755,8 +755,8 @@
     "relativePath": "model\\primitives.fbx"
   },
   "0410ea9f-ba8b-42b1-b17e-af900fe5edd0": {
-    "asset": 1649582658138,
-    "meta": 1649596483176,
+    "asset": 1649771186247,
+    "meta": 1650177258711,
     "relativePath": "resources\\music"
   },
   "b05b9224-efaa-4654-9af9-c0593aa2a26c": {
@@ -769,14 +769,24 @@
     "meta": 1649771190751,
     "relativePath": "resources\\music\\move_music.mp3"
   },
-  "8bc72039-aafa-48d5-99e1-33d01b27113a": {
-    "asset": 1649772335360,
-    "meta": 1649772337890,
-    "relativePath": "scripts\\gameLayout.js"
+  "0ce6c13a-f928-4ba5-aa4e-944ae03ba3fc": {
+    "asset": 1650183585432,
+    "meta": 1650183585445,
+    "relativePath": "resources\\reviewLayout.prefab"
   },
   "2276cfa3-0876-4119-85fe-271cd7c8a0c5": {
-    "asset": 1649775964419,
-    "meta": 1649775967498,
+    "asset": 1650187543097,
+    "meta": 1650187561576,
     "relativePath": "scripts\\main.js"
+  },
+  "4a70f76b-7511-4534-b13f-aa9b5b70bb3a": {
+    "asset": 1650191116059,
+    "meta": 1650191116072,
+    "relativePath": "resources\\verifyAdmin.prefab"
+  },
+  "8bc72039-aafa-48d5-99e1-33d01b27113a": {
+    "asset": 1650191718583,
+    "meta": 1650191736469,
+    "relativePath": "scripts\\gameLayout.js"
   }
 }

@@ -517,6 +517,13 @@ cc.Class({
     },
     showResult(){
         let that = this;
+
+
+        if(window.from == "review"){
+            Toast('挑战成功！',1500);
+            return;
+        }
+
         var CanvasNode = this.node;
         if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
         var onResourceLoaded = function(errorMessage, loadedResource )
@@ -548,13 +555,14 @@ cc.Class({
 
                    Loading.show();
                    wx.cloud.callFunction({
-                       name: 'getClassicsLevelNum'
+                       name: 'getReviewLevelNum'
                    }).then(res => {
 
                        wx.cloud.callFunction({
-                           name: 'addClassicsLevel',
+                           name: 'addReviewLevel',
                            data:{
                                content: window.uploadLevel,
+                               useStepNum: that.stepCounterValue,
                                levelIndex: res.result.total+1,
                                appId: window.user.appId,
                                nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
@@ -562,9 +570,10 @@ cc.Class({
                            }
                        }).then(result => {
                             let levelUploadNum = parseInt(res.result.total)+1;
-                           Toast('关卡'+levelUploadNum+'上传成功，即将跳回主界面',1500);
+                           Toast('关卡上传成功待管理员审核，即将跳回主界面',1500);
                            setTimeout(function () {
                                Loading.hide();
+                               window.from = 'game';
                                cc.director.loadScene('main');
                            },1500)
                        }).catch(err => {
@@ -761,6 +770,9 @@ cc.Class({
         if(window.from == 'build'){
             this.levelCounter.string = '测试关卡';
         }
+        if(window.from == 'review'){
+            this.levelCounter.string = '审核关卡';
+        }
 
         //步数
         if(this.stepCounter == null){
@@ -839,9 +851,84 @@ cc.Class({
         }
 
 
+        if(window.from == 'review') cc.find('gameBtns/backStep/Background/Label',this.node).getComponent(cc.Label).string = '通过';
+        else if(!window.setting.relast) cc.find('gameBtns/backStep/Background/Label',this.node).getComponent(cc.Label).string = '重玩';
 
-        if(!window.setting.relast) cc.find('gameBtns/backStep/Background/Label',this.node).getComponent(cc.Label).string = '重玩'
         cc.find('gameBtns/backStep',this.node).on('click',function () {
+            //审核关卡通过
+            if(window.from == 'review'){
+
+                var CanvasNode = cc.find('Canvas');
+                if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+                var onResourceLoaded = function(errorMessage, loadedResource )
+                {
+                    if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+                    if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+                    var newMyPrefab = cc.instantiate( loadedResource );
+                    cc.find('verifyContain/close',newMyPrefab).on('click',function () {
+                        newMyPrefab.removeFromParent();
+                        newMyPrefab.destroy();
+                    },this)
+
+                    var password =  cc.find('verifyContain/editbox',newMyPrefab).getComponent(cc.EditBox);
+
+                    cc.find('verifyContain/confirm',newMyPrefab).on('click',function () {
+                        if(password.textLabel.string == '19970720'){
+                            Loading.show();
+                            wx.cloud.callFunction({
+                                name: 'getClassicsLevelNum'
+                            }).then(res => {
+
+                                wx.cloud.callFunction({
+                                    name: 'addClassicsLevel',
+                                    data:{
+                                        content: window.uploadLevel,
+                                        levelIndex: res.result.total+1,
+                                        appId: window.user.appId,
+                                        nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
+                                        portrait: window.loginInfo.avatarUrl,
+                                    }
+                                }).then(result => {
+
+                                    wx.cloud.callFunction({
+                                        name: 'removeReviewLevel',
+                                        data:{
+                                            _id:window.reviewId
+                                        }
+                                    }).then(result => {
+                                        let levelUploadNum = parseInt(res.result.total)+1;
+                                        Toast('关卡'+levelUploadNum+'上传成功，即将跳回主界面',1500);
+                                        setTimeout(function () {
+                                            clearInterval(that.timeCounterTimer);
+                                            that.timeCounterTimer = null;
+                                            Loading.hide();
+                                            window.from = 'game';
+                                            cc.director.loadScene('main');
+                                        },1500)
+                                    });
+
+                                }).catch(err => {
+                                    Loading.hide();
+                                    Toast('上传失败',1500);
+                                    console.error(err)
+                                })
+
+                            }).catch(err => {
+                                console.error(err)
+                            })
+                        }else{
+                            Toast('密码错误！',1500);
+                        }
+                    },this)
+
+                    CanvasNode.addChild( newMyPrefab );
+                };
+                cc.loader.loadRes('verifyAdmin', onResourceLoaded );
+
+
+
+                return;
+            }
             if(window.setting.relast){
                 if(that.moveHistoryList.length > 1 && that.stepCounterValue >= 1){
                     that.moveHistoryList.pop();
@@ -870,11 +957,55 @@ cc.Class({
                 that.initPendant();
             }
 
-        },this)
+        },this);
 
+        if(window.from == 'review') cc.find('gameBtns/menu/Background/Label',this.node).getComponent(cc.Label).string = '驳回'
         cc.find('gameBtns/menu',this.node).on("click",function () {
             clearInterval(that.timeCounterTimer);
             that.timeCounterTimer = null;
+            //审核关卡驳回
+            if(window.from == 'review'){
+                var CanvasNode = cc.find('Canvas');
+                if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+                var onResourceLoaded = function(errorMessage, loadedResource )
+                {
+                    if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+                    if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+                    var newMyPrefab = cc.instantiate( loadedResource );
+                    cc.find('verifyContain/close',newMyPrefab).on('click',function () {
+                        newMyPrefab.removeFromParent();
+                        newMyPrefab.destroy();
+                    },this)
+
+                    var password =  cc.find('verifyContain/editbox',newMyPrefab).getComponent(cc.EditBox);
+
+                    cc.find('verifyContain/confirm',newMyPrefab).on('click',function () {
+                        if(password.textLabel.string == '19970720'){
+                            Loading.show();
+                            wx.cloud.callFunction({
+                                name: 'removeReviewLevel',
+                                data:{
+                                    _id:window.reviewId
+                                }
+                            }).then(result => {
+                                Toast('关卡已驳回，即将跳回主界面',1500);
+                                setTimeout(function () {
+                                    Loading.hide();
+                                    window.from = 'game';
+                                    cc.director.loadScene('main');
+                                },1500)
+                            });
+                        }else{
+                            Toast('密码错误！',1500);
+                        }
+                    },this)
+
+                    CanvasNode.addChild( newMyPrefab );
+                };
+                cc.loader.loadRes('verifyAdmin', onResourceLoaded );
+
+                return;
+            }
             var CanvasNode = that.node;
             if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
             var onResourceLoaded = function(errorMessage, loadedResource )
@@ -976,7 +1107,38 @@ cc.Class({
 
                 return ;
             }
+            if(window.from == 'review'){
+                that.lastScore = null;
+                that.renderLastScore('无','无')
 
+                wx.getStorage({
+                    key:'reviewLevel',
+                    success(res){
+                        window.uploadLevel = res.data;
+                        window.currentLevel = res.data;
+                        that.renderLayout(window.currentLevel);
+                        that.initPosition(window.currentLevel);
+                        // 初始化挂件
+                        that.initPendant();
+                        wx.setStorage({
+                            key: "initLevel",
+                            data:window.currentLevel,
+                            success(result){
+                                wx.getStorage({
+                                    key:"initLevel",
+                                    success(res){
+                                        that.moveHistoryList.push(res.data)
+                                    }
+                                })
+                            }
+                        })
+                        Loading.hide();
+                    }
+                })
+
+
+                return ;
+            }
             //经典关卡
             if(window.levelClassify == 'classicsLevel'){
                 wx.cloud.callFunction({
@@ -1044,7 +1206,9 @@ cc.Class({
         this.initPendant();
         clearInterval(this.timeCounterTimer)
         this.timeCounterTimer = null;
-        if(window.from){
+        if(window.from == 'review'){
+            cc.director.loadScene("main");
+        }else if(window.from){
             cc.director.loadScene(window.from);
         }else{
             cc.director.loadScene("main");
@@ -1052,7 +1216,7 @@ cc.Class({
         window.from = 'game'
     },
     renderLastScore(step,time){
-        if(window.from == 'build'){
+        if(window.from == 'build' || window.from == "review"){
             return ;
         }
         let that = this;
