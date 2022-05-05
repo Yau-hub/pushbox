@@ -8,18 +8,18 @@
       "x": 0,
       "y": 0,
       "width": 1536,
-      "height": 784,
+      "height": 744,
       "layout": {
         "type": "dock-h",
         "children": [
           {
             "width": 233.90000915527344,
-            "height": 667.7000122070312,
+            "height": 628.6000366210938,
             "type": "dock-v",
             "children": [
               {
                 "width": 233.90000915527344,
-                "height": 263.875,
+                "height": 248.5500030517578,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -28,7 +28,7 @@
               },
               {
                 "width": 233.90000915527344,
-                "height": 400.8125,
+                "height": 377.0375061035156,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -39,7 +39,7 @@
           },
           {
             "width": 305.875,
-            "height": 667.7000122070312,
+            "height": 628.6000366210938,
             "type": "panel",
             "active": 0,
             "children": [
@@ -49,17 +49,17 @@
           },
           {
             "width": 976.6000366210938,
-            "height": 667.7000122070312,
+            "height": 628.6000366210938,
             "type": "dock-v",
             "children": [
               {
                 "width": 976.6000366210938,
-                "height": 383.25,
+                "height": 359.6000061035156,
                 "type": "dock-h",
                 "children": [
                   {
                     "width": 459.8125,
-                    "height": 383.25,
+                    "height": 359.6000061035156,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -68,7 +68,7 @@
                   },
                   {
                     "width": 513.7875366210938,
-                    "height": 383.25,
+                    "height": 359.6000061035156,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -79,7 +79,7 @@
               },
               {
                 "width": 976.6000366210938,
-                "height": 281.45001220703125,
+                "height": 266,
                 "type": "panel",
                 "active": 1,
                 "children": [
@@ -122,8 +122,8 @@
     "builder": {
       "x": 492,
       "y": 40,
-      "width": 539,
-      "height": 663
+      "width": 540,
+      "height": 664
     },
     "sprite-editor": {
       "x": 388,

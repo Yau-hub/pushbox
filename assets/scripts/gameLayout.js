@@ -535,59 +535,67 @@ cc.Class({
 
             cc.find('contentBg/useTime',newMyPrefab).getComponent(cc.Label).string = "步数："+ that.stepCounterValue+'步';
             cc.find('contentBg/useStep',newMyPrefab).getComponent(cc.Label).string = "用时："+ that.timeCounterValue+'秒';
-            if(window.from != 'build' && window.levelIndex >= window.classicsLevelNum){
-                cc.find('contentBg/next',newMyPrefab).opacity = 0;
+            if(window.from != 'build'){
+                if(window.levelIndex >= window.classicsLevelNum){
+                    cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '回主界面'
+                    cc.find('contentBg/next',newMyPrefab).on('click',function(){
+                        clearInterval(that.timeCounterTimer)
+                        that.timeCounterTimer = null;
+                        cc.director.loadScene("main");
+                        window.from = 'game'
+                    },this)
+                }else{
+                    //下一关
+                    cc.find('contentBg/next',newMyPrefab).on('click',function () {
+                        newMyPrefab.removeFromParent();
+                        newMyPrefab.destroy();
+                        that.initPendant();
+                        window.levelIndex++;
+                        that.initLevel()
+                    },this)
+                }
+                // cc.find('contentBg/next',newMyPrefab).opacity = 0;
+
+
             }
+
+
             if(window.from == 'build'){
                 cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '上传关卡'
+                Loading.show();
+                wx.cloud.callFunction({
+                    name: 'getReviewLevelNum'
+                }).then(res => {
+
+                    wx.cloud.callFunction({
+                        name: 'addReviewLevel',
+                        data:{
+                            content: window.uploadLevel,
+                            useStepNum: that.stepCounterValue,
+                            levelIndex: res.result.total+1,
+                            appId: window.user.appId,
+                            nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
+                            portrait: window.loginInfo.avatarUrl,
+                        }
+                    }).then(result => {
+                        let levelUploadNum = parseInt(res.result.total)+1;
+                        Toast('关卡上传成功待管理员审核，即将跳回主界面',1500);
+                        setTimeout(function () {
+                            Loading.hide();
+                            window.from = 'game';
+                            cc.director.loadScene('main');
+                        },1500)
+                    }).catch(err => {
+                        Loading.hide();
+                        Toast('上传失败',1500);
+                        console.error(err)
+                    })
+
+                }).catch(err => {
+                    console.error(err)
+                })
             }
-            cc.find('contentBg/next',newMyPrefab).on('click',function () {
-               if(window.from != 'build'){
-                   if(window.levelIndex < window.classicsLevelNum){
 
-                       newMyPrefab.removeFromParent();
-                       newMyPrefab.destroy();
-                       that.initPendant();
-                       window.levelIndex++;
-                       that.initLevel()
-                   }
-               }else{
-
-                   Loading.show();
-                   wx.cloud.callFunction({
-                       name: 'getReviewLevelNum'
-                   }).then(res => {
-
-                       wx.cloud.callFunction({
-                           name: 'addReviewLevel',
-                           data:{
-                               content: window.uploadLevel,
-                               useStepNum: that.stepCounterValue,
-                               levelIndex: res.result.total+1,
-                               appId: window.user.appId,
-                               nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
-                               portrait: window.loginInfo.avatarUrl,
-                           }
-                       }).then(result => {
-                            let levelUploadNum = parseInt(res.result.total)+1;
-                           Toast('关卡上传成功待管理员审核，即将跳回主界面',1500);
-                           setTimeout(function () {
-                               Loading.hide();
-                               window.from = 'game';
-                               cc.director.loadScene('main');
-                           },1500)
-                       }).catch(err => {
-                           Loading.hide();
-                           Toast('上传失败',1500);
-                           console.error(err)
-                       })
-
-                   }).catch(err => {
-                       console.error(err)
-                   })
-               }
-
-            },this)
             cc.find('contentBg/replay',newMyPrefab).on('click',function () {
                 newMyPrefab.removeFromParent();
                 newMyPrefab.destroy();
@@ -884,9 +892,9 @@ cc.Class({
                                     data:{
                                         content: window.uploadLevel,
                                         levelIndex: res.result.total+1,
-                                        appId: window.user.appId,
-                                        nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
-                                        portrait: window.loginInfo.avatarUrl,
+                                        appId: window.uploadInfo.appId,
+                                        nickName: window.uploadInfo.nickName?window.uploadInfo.nickName:'游客'+window.uploadInfo.appId.substring(window.uploadInfo.appId.length-5),
+                                        portrait: window.uploadInfo.avatarUrl,
                                     }
                                 }).then(result => {
 
@@ -1031,6 +1039,21 @@ cc.Class({
                     that.replayLayout();
                     that.initPendant();
                 },this)
+
+                cc.find('contain/levels',newMyPrefab).on('click',function () {
+                    var CanvasNode = cc.find('Canvas');
+                    if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+                    var onResourceLoaded = function(errorMessage, loadedResource )
+                    {
+                        if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+                        if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+                        var newMyPrefab = cc.instantiate( loadedResource );
+                        CanvasNode.addChild( newMyPrefab );
+                    };
+                    cc.loader.loadRes('levelLayout', onResourceLoaded );
+                },this)
+
+
 
 
                 cc.find('contain/rank',newMyPrefab).on('click',function () {

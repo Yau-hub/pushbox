@@ -1,80 +1,80 @@
-2022-04-17T06:34:09.480Z - success: protocol editor-framework registered
-2022-04-17T06:34:09.482Z - success: protocol app registered
-2022-04-17T06:34:09.482Z - success: protocol theme registered
-2022-04-17T06:34:09.482Z - success: protocol packages registered
-2022-04-17T06:34:09.515Z - normal: Load ~/.CocosCreator/settings.json
-2022-04-17T06:34:09.554Z - success: protocol uuid registerred
-2022-04-17T06:34:09.555Z - success: protocol db registerred
-2022-04-17T06:34:09.555Z - success: protocol thumbnail registerred
-2022-04-17T06:34:09.729Z - normal: Initializing Asset Database
-2022-04-17T06:34:09.735Z - normal: checking language setting...
-2022-04-17T06:34:09.735Z - normal: Language: zh
-2022-04-17T06:34:09.742Z - success: protocol unpack registerred
-2022-04-17T06:34:09.742Z - success: protocol disable-commonjs registerred
-2022-04-17T06:34:11.913Z - normal: connected!
-2022-04-17T06:34:12.170Z - normal: Check project D:\project\wxProject\pushbox
-2022-04-17T06:34:12.172Z - normal: Initializing project D:\project\wxProject\pushbox
-2022-04-17T06:34:12.564Z - success: adapters loaded
-2022-04-17T06:34:12.566Z - success: asset-db-debugger loaded
-2022-04-17T06:34:12.683Z - success: fb-audience-network loaded
-2022-04-17T06:34:12.751Z - success: fb-live-stream loaded
-2022-04-17T06:34:12.755Z - success: google-play-instant loaded
-2022-04-17T06:34:12.756Z - success: jsb-adapter loaded
-2022-04-17T06:34:12.759Z - success: package-manager loaded
-2022-04-17T06:34:12.759Z - success: runtime-adapters loaded
-2022-04-17T06:34:12.763Z - success: runtime-dev-tools loaded
-2022-04-17T06:34:12.765Z - success: ui-kit-preview-extra loaded
-2022-04-17T06:34:12.767Z - success: ui-kit-preview loaded
-2022-04-17T06:34:14.023Z - success: alipay-minigame loaded
-2022-04-17T06:34:14.034Z - success: assets loaded
-2022-04-17T06:34:14.040Z - success: baidugame-opendata loaded
-2022-04-17T06:34:14.042Z - success: baidugame loaded
-2022-04-17T06:34:14.046Z - success: builder loaded
-2022-04-17T06:34:14.051Z - success: bytedance-opendata loaded
-2022-04-17T06:34:14.054Z - success: bytedance loaded
-2022-04-17T06:34:14.060Z - success: channel-upload-tools loaded
-2022-04-17T06:34:14.297Z - success: cloud-function loaded
-2022-04-17T06:34:14.657Z - success: cocos-services loaded
-2022-04-17T06:34:14.662Z - success: console loaded
-2022-04-17T06:34:14.668Z - success: curve-editor loaded
-2022-04-17T06:34:14.695Z - success: fb-instant-games loaded
-2022-04-17T06:34:14.702Z - success: game-window loaded
-2022-04-17T06:34:14.704Z - success: google-instant-games loaded
-2022-04-17T06:34:14.710Z - success: hierarchy loaded
-2022-04-17T06:34:14.714Z - success: huawei-agc loaded
-2022-04-17T06:34:14.719Z - success: huawei-runtime loaded
-2022-04-17T06:34:14.724Z - success: inspector loaded
-2022-04-17T06:34:14.752Z - success: cpk-publish loaded
-2022-04-17T06:34:14.753Z - success: keystore loaded
-2022-04-17T06:34:14.778Z - success: link-sure-runtime loaded
-2022-04-17T06:34:14.790Z - success: node-library loaded
-2022-04-17T06:34:14.791Z - success: open-recent-items loaded
-2022-04-17T06:34:14.796Z - success: oppo-runtime loaded
-2022-04-17T06:34:14.799Z - success: package-asset loaded
-2022-04-17T06:34:14.800Z - success: preferences loaded
-2022-04-17T06:34:14.802Z - success: project-importer loaded
-2022-04-17T06:34:14.804Z - success: project-settings loaded
-2022-04-17T06:34:14.828Z - success: qtt-runtime loaded
-2022-04-17T06:34:14.832Z - success: scene loaded
-2022-04-17T06:34:14.834Z - success: simulator-debugger loaded
-2022-04-17T06:34:14.835Z - success: sprite-editor loaded
-2022-04-17T06:34:14.932Z - success: store loaded
-2022-04-17T06:34:14.935Z - success: taobao-creativeapp loaded
-2022-04-17T06:34:14.939Z - success: timeline loaded
-2022-04-17T06:34:14.949Z - success: vivo-runtime loaded
-2022-04-17T06:34:14.953Z - success: wechatgame-opendata loaded
-2022-04-17T06:34:14.961Z - success: wechatgame loaded
-2022-04-17T06:34:14.967Z - success: xiaomi-runtime loaded
-2022-04-17T06:34:15.046Z - success: im-plugin loaded
-2022-04-17T06:34:15.047Z - success: preview server running at http://localhost:7456
-2022-04-17T06:34:16.701Z - info: Cocos Service load base data!
-2022-04-17T06:34:16.844Z - normal: Initializing Cocos2d
-2022-04-17T06:34:17.475Z - normal: Initializing engine extends
-2022-04-17T06:34:19.695Z - normal: Loading packages
-2022-04-17T06:34:19.702Z - normal: Watching packages
-2022-04-17T06:34:19.775Z - normal: Run Application
-2022-04-17T06:34:27.690Z - success: cloud-function unloaded
-2022-04-17T06:39:00.666Z - normal: Start building with options : {
+2022-05-05T11:52:11.126Z - success: protocol editor-framework registered
+2022-05-05T11:52:11.127Z - success: protocol app registered
+2022-05-05T11:52:11.127Z - success: protocol theme registered
+2022-05-05T11:52:11.127Z - success: protocol packages registered
+2022-05-05T11:52:11.147Z - normal: Load ~/.CocosCreator/settings.json
+2022-05-05T11:52:11.172Z - success: protocol uuid registerred
+2022-05-05T11:52:11.172Z - success: protocol db registerred
+2022-05-05T11:52:11.172Z - success: protocol thumbnail registerred
+2022-05-05T11:52:11.302Z - normal: Initializing Asset Database
+2022-05-05T11:52:11.306Z - normal: checking language setting...
+2022-05-05T11:52:11.306Z - normal: Language: zh
+2022-05-05T11:52:11.310Z - success: protocol unpack registerred
+2022-05-05T11:52:11.310Z - success: protocol disable-commonjs registerred
+2022-05-05T11:52:12.893Z - normal: connected!
+2022-05-05T11:52:13.126Z - normal: Check project D:\project\wxProject\pushbox
+2022-05-05T11:52:13.127Z - normal: Initializing project D:\project\wxProject\pushbox
+2022-05-05T11:52:13.520Z - success: adapters loaded
+2022-05-05T11:52:13.523Z - success: asset-db-debugger loaded
+2022-05-05T11:52:13.637Z - success: fb-audience-network loaded
+2022-05-05T11:52:13.709Z - success: fb-live-stream loaded
+2022-05-05T11:52:13.715Z - success: google-play-instant loaded
+2022-05-05T11:52:13.715Z - success: jsb-adapter loaded
+2022-05-05T11:52:13.718Z - success: package-manager loaded
+2022-05-05T11:52:13.719Z - success: runtime-adapters loaded
+2022-05-05T11:52:13.722Z - success: runtime-dev-tools loaded
+2022-05-05T11:52:13.725Z - success: ui-kit-preview-extra loaded
+2022-05-05T11:52:13.727Z - success: ui-kit-preview loaded
+2022-05-05T11:52:15.211Z - success: alipay-minigame loaded
+2022-05-05T11:52:15.222Z - success: assets loaded
+2022-05-05T11:52:15.227Z - success: baidugame-opendata loaded
+2022-05-05T11:52:15.230Z - success: baidugame loaded
+2022-05-05T11:52:15.233Z - success: builder loaded
+2022-05-05T11:52:15.238Z - success: bytedance-opendata loaded
+2022-05-05T11:52:15.241Z - success: bytedance loaded
+2022-05-05T11:52:15.247Z - success: channel-upload-tools loaded
+2022-05-05T11:52:15.494Z - success: cloud-function loaded
+2022-05-05T11:52:15.826Z - success: cocos-services loaded
+2022-05-05T11:52:15.832Z - success: console loaded
+2022-05-05T11:52:15.837Z - success: curve-editor loaded
+2022-05-05T11:52:15.854Z - success: fb-instant-games loaded
+2022-05-05T11:52:15.856Z - success: game-window loaded
+2022-05-05T11:52:15.857Z - success: google-instant-games loaded
+2022-05-05T11:52:15.864Z - success: hierarchy loaded
+2022-05-05T11:52:15.868Z - success: huawei-agc loaded
+2022-05-05T11:52:15.873Z - success: huawei-runtime loaded
+2022-05-05T11:52:15.878Z - success: inspector loaded
+2022-05-05T11:52:15.911Z - success: cpk-publish loaded
+2022-05-05T11:52:15.912Z - success: keystore loaded
+2022-05-05T11:52:15.938Z - success: link-sure-runtime loaded
+2022-05-05T11:52:15.950Z - success: node-library loaded
+2022-05-05T11:52:15.951Z - success: open-recent-items loaded
+2022-05-05T11:52:15.956Z - success: oppo-runtime loaded
+2022-05-05T11:52:15.958Z - success: package-asset loaded
+2022-05-05T11:52:15.960Z - success: preferences loaded
+2022-05-05T11:52:15.962Z - success: project-importer loaded
+2022-05-05T11:52:15.964Z - success: project-settings loaded
+2022-05-05T11:52:15.987Z - success: qtt-runtime loaded
+2022-05-05T11:52:15.991Z - success: scene loaded
+2022-05-05T11:52:15.993Z - success: simulator-debugger loaded
+2022-05-05T11:52:15.994Z - success: sprite-editor loaded
+2022-05-05T11:52:16.113Z - success: store loaded
+2022-05-05T11:52:16.116Z - success: taobao-creativeapp loaded
+2022-05-05T11:52:16.121Z - success: timeline loaded
+2022-05-05T11:52:16.133Z - success: vivo-runtime loaded
+2022-05-05T11:52:16.136Z - success: wechatgame-opendata loaded
+2022-05-05T11:52:16.144Z - success: wechatgame loaded
+2022-05-05T11:52:16.152Z - success: xiaomi-runtime loaded
+2022-05-05T11:52:16.234Z - success: im-plugin loaded
+2022-05-05T11:52:16.235Z - success: preview server running at http://localhost:7456
+2022-05-05T11:52:17.929Z - info: Cocos Service load base data!
+2022-05-05T11:52:18.120Z - normal: Initializing Cocos2d
+2022-05-05T11:52:18.990Z - normal: Initializing engine extends
+2022-05-05T11:52:21.211Z - normal: Loading packages
+2022-05-05T11:52:21.217Z - normal: Watching packages
+2022-05-05T11:52:21.277Z - normal: Run Application
+2022-05-05T11:52:29.366Z - success: cloud-function unloaded
+2022-05-05T12:00:17.089Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -174,28 +174,28 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T06:39:00.903Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T06:39:00.903Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T06:39:01.059Z - normal: Start spawn build-worker
-2022-04-17T06:39:03.867Z - normal: Finish spawn build-worker
-2022-04-17T06:39:03.867Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T06:39:06.554Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T06:39:08.120Z - normal: Start init build-worker
-2022-04-17T06:39:10.580Z - normal: Finish init build-worker
-2022-04-17T06:39:10.580Z - normal: Start build-assets in worker
-2022-04-17T06:39:10.581Z - normal: 
+2022-05-05T12:00:17.301Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T12:00:17.301Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T12:00:17.429Z - normal: Start spawn build-worker
+2022-05-05T12:00:19.618Z - normal: Finish spawn build-worker
+2022-05-05T12:00:19.618Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2022-05-05T12:00:21.749Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T12:00:23.423Z - normal: Start init build-worker
+2022-05-05T12:00:26.017Z - normal: Finish init build-worker
+2022-05-05T12:00:26.017Z - normal: Start build-assets in worker
+2022-05-05T12:00:26.017Z - normal: 
 --- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
 
-2022-04-17T06:39:10.810Z - normal: 
+2022-05-05T12:00:26.201Z - normal: 
 --- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
 
-2022-04-17T06:39:11.296Z - normal: 
+2022-05-05T12:00:26.606Z - normal: 
 --- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
 
-2022-04-17T06:39:11.543Z - normal: Finish build-assets in worker
-2022-04-17T06:39:11.574Z - normal: Start building plugin scripts
-2022-04-17T06:39:17.385Z - normal: Built wechatgame successfully
-2022-04-17T06:39:29.661Z - error: - initialize
+2022-05-05T12:00:26.815Z - normal: Finish build-assets in worker
+2022-05-05T12:00:26.843Z - normal: Start building plugin scripts
+2022-05-05T12:00:30.717Z - normal: Built wechatgame successfully
+2022-05-05T12:00:38.458Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -206,7 +206,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:39:31.067Z - error: × IDE may already started at port 44817, trying to connect
+2022-05-05T12:00:39.804Z - error: × IDE may already started at port 11609, trying to connect
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -217,7 +217,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:39:41.202Z - error: √ IDE server started successfully, listening on http://127.0.0.1:20758
+2022-05-05T12:00:53.502Z - error: √ IDE server started successfully, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -227,18 +227,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:39:41.203Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:39:41.416Z - error: × open IDE
+2022-05-05T12:00:53.503Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -249,9 +238,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:39:41.418Z - normal: [error] Error: Fail to open IDE
-
-2022-04-17T06:41:00.283Z - error: - initialize
+2022-05-05T12:00:53.724Z - error: × open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -262,7 +249,9 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:41:01.550Z - error: × IDE may already started at port 20758, trying to connect
+2022-05-05T12:00:53.729Z - normal: [error] Error: Fail to open IDE
+
+2022-05-05T12:01:20.693Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -273,7 +262,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:41:11.349Z - error: √ IDE server started successfully, listening on http://127.0.0.1:35511
+2022-05-05T12:01:20.905Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -283,18 +272,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:41:11.350Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:41:11.473Z - error: × open IDE
+2022-05-05T12:01:20.906Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -305,9 +283,17 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T06:41:11.474Z - normal: [error] Error: Fail to open IDE
+2022-05-05T12:01:21.731Z - error: √ open IDE
 
-2022-04-17T07:32:03.015Z - normal: Start building with options : {
+    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-05-05T12:04:46.400Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -407,26 +393,26 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T07:32:03.016Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T07:32:03.016Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T07:32:03.017Z - normal: Start spawn build-worker
-2022-04-17T07:32:03.017Z - normal: Finish spawn build-worker
-2022-04-17T07:32:03.017Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T07:32:08.935Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T07:32:10.331Z - normal: Start build-assets in worker
-2022-04-17T07:32:10.332Z - normal: 
+2022-05-05T12:04:46.400Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T12:04:46.400Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T12:04:46.401Z - normal: Start spawn build-worker
+2022-05-05T12:04:46.401Z - normal: Finish spawn build-worker
+2022-05-05T12:04:46.401Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2022-05-05T12:04:48.875Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T12:04:50.659Z - normal: Start build-assets in worker
+2022-05-05T12:04:50.660Z - normal: 
 --- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
 
-2022-04-17T07:32:10.672Z - normal: 
+2022-05-05T12:04:50.885Z - normal: 
 --- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
 
-2022-04-17T07:32:11.263Z - normal: 
+2022-05-05T12:04:51.586Z - normal: 
 --- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
 
-2022-04-17T07:32:11.580Z - normal: Finish build-assets in worker
-2022-04-17T07:32:11.617Z - normal: Start building plugin scripts
-2022-04-17T07:32:16.063Z - normal: Built wechatgame successfully
-2022-04-17T07:32:39.421Z - error: - initialize
+2022-05-05T12:04:51.924Z - normal: Finish build-assets in worker
+2022-05-05T12:04:51.973Z - normal: Start building plugin scripts
+2022-05-05T12:04:56.894Z - normal: Built wechatgame successfully
+2022-05-05T12:04:58.672Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -437,7 +423,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T07:32:40.409Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T12:04:59.105Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -447,7 +433,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T07:32:40.410Z - error: - open IDE
+2022-05-05T12:04:59.106Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -458,7 +444,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T07:32:41.103Z - error: √ open IDE
+2022-05-05T12:04:59.831Z - error: √ open IDE
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -468,7 +454,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:00:10.555Z - normal: Start building with options : {
+2022-05-05T12:14:29.618Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -568,26 +554,26 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T08:00:10.555Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T08:00:10.555Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T08:00:10.558Z - normal: Start spawn build-worker
-2022-04-17T08:00:10.559Z - normal: Finish spawn build-worker
-2022-04-17T08:00:10.559Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T08:00:16.426Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T08:00:18.039Z - normal: Start build-assets in worker
-2022-04-17T08:00:18.039Z - normal: 
+2022-05-05T12:14:29.618Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T12:14:29.619Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T12:14:29.619Z - normal: Start spawn build-worker
+2022-05-05T12:14:29.619Z - normal: Finish spawn build-worker
+2022-05-05T12:14:29.620Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2022-05-05T12:14:36.297Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T12:14:39.887Z - normal: Start build-assets in worker
+2022-05-05T12:14:39.887Z - normal: 
 --- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
 
-2022-04-17T08:00:18.283Z - normal: 
+2022-05-05T12:14:40.290Z - normal: 
 --- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
 
-2022-04-17T08:00:18.947Z - normal: 
+2022-05-05T12:14:41.384Z - normal: 
 --- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
 
-2022-04-17T08:00:19.352Z - normal: Finish build-assets in worker
-2022-04-17T08:00:19.401Z - normal: Start building plugin scripts
-2022-04-17T08:00:24.680Z - normal: Built wechatgame successfully
-2022-04-17T08:00:42.312Z - error: - initialize
+2022-05-05T12:14:41.805Z - normal: Finish build-assets in worker
+2022-05-05T12:14:41.872Z - normal: Start building plugin scripts
+2022-05-05T12:14:48.986Z - normal: Built wechatgame successfully
+2022-05-05T12:14:52.183Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -598,7 +584,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:00:42.659Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T12:14:52.562Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -608,7 +594,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:00:42.660Z - error: - open IDE
+2022-05-05T12:14:52.563Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -619,7 +605,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:00:43.358Z - error: √ open IDE
+2022-05-05T12:14:53.337Z - error: √ open IDE
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -629,7 +615,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:06:19.787Z - normal: Start building with options : {
+2022-05-05T12:18:28.830Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -729,262 +715,26 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T08:06:19.788Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T08:06:19.788Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T08:06:19.789Z - normal: Start spawn build-worker
-2022-04-17T08:06:19.790Z - normal: Finish spawn build-worker
-2022-04-17T08:06:19.790Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T08:06:28.752Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T08:06:30.152Z - normal: Start build-assets in worker
-2022-04-17T08:06:30.153Z - normal: 
+2022-05-05T12:18:28.831Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T12:18:28.831Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T12:18:28.833Z - normal: Start spawn build-worker
+2022-05-05T12:18:28.833Z - normal: Finish spawn build-worker
+2022-05-05T12:18:28.833Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2022-05-05T12:19:13.634Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T12:19:15.289Z - normal: Start build-assets in worker
+2022-05-05T12:19:15.289Z - normal: 
 --- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
 
-2022-04-17T08:06:30.320Z - normal: 
+2022-05-05T12:19:15.498Z - normal: 
 --- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
 
-2022-04-17T08:06:30.817Z - normal: 
+2022-05-05T12:19:16.153Z - normal: 
 --- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
 
-2022-04-17T08:06:31.161Z - normal: Finish build-assets in worker
-2022-04-17T08:06:31.200Z - normal: Start building plugin scripts
-2022-04-17T08:06:36.797Z - normal: Built wechatgame successfully
-2022-04-17T08:07:42.068Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:07:42.324Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:07:42.325Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:07:43.003Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:09:07.004Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": false,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T08:09:07.005Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T08:09:07.005Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T08:09:07.005Z - normal: Start spawn build-worker
-2022-04-17T08:09:07.005Z - normal: Finish spawn build-worker
-2022-04-17T08:09:07.005Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T08:09:09.073Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T08:09:11.529Z - normal: Start build-assets in worker
-2022-04-17T08:09:11.530Z - normal: 
---- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
-
-2022-04-17T08:09:11.785Z - normal: 
---- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
-
-2022-04-17T08:09:12.424Z - normal: 
---- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
-
-2022-04-17T08:09:12.765Z - normal: Finish build-assets in worker
-2022-04-17T08:09:12.802Z - normal: Start building plugin scripts
-2022-04-17T08:09:17.810Z - normal: Built wechatgame successfully
-2022-04-17T08:09:19.744Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:09:20.354Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:09:20.355Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:09:21.173Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:09:45.754Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:09:45.980Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-- open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:09:46.558Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:10:36.218Z - normal: Start building with options : {
+2022-05-05T12:19:16.430Z - normal: Finish build-assets in worker
+2022-05-05T12:19:16.472Z - normal: Start building plugin scripts
+2022-05-05T12:19:21.367Z - normal: Built wechatgame successfully
+2022-05-05T12:19:22.674Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -1084,16 +834,16 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T08:10:36.218Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T08:10:36.218Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T08:10:36.219Z - normal: Start spawn build-worker
-2022-04-17T08:10:36.219Z - normal: Finish spawn build-worker
-2022-04-17T08:10:36.220Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T08:10:36.224Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T08:10:39.290Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T08:10:41.017Z - normal: Start building plugin scripts
-2022-04-17T08:10:46.535Z - normal: Built wechatgame successfully
-2022-04-17T08:10:48.169Z - error: - initialize
+2022-05-05T12:19:22.675Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T12:19:22.675Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T12:19:22.675Z - normal: Start spawn build-worker
+2022-05-05T12:19:22.675Z - normal: Finish spawn build-worker
+2022-05-05T12:19:22.676Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
+2022-05-05T12:19:22.680Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
+2022-05-05T12:19:24.516Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T12:19:25.744Z - normal: Start building plugin scripts
+2022-05-05T12:19:29.017Z - normal: Built wechatgame successfully
+2022-05-05T12:19:31.539Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -1104,7 +854,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:10:48.595Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T12:19:32.024Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -1114,7 +864,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:10:48.596Z - error: - open IDE
+2022-05-05T12:19:32.025Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -1125,7 +875,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:10:49.401Z - error: √ open IDE
+2022-05-05T12:19:32.646Z - error: √ open IDE
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -1135,7 +885,158 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:20:11.072Z - normal: Start building with options : {
+2022-05-05T12:20:00.482Z - normal: Start building with options : {
+  "title": "PushBox",
+  "packageName": "org.cocos2d.demo",
+  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
+  "excludeScenes": [],
+  "orientation": {
+    "landscapeRight": true,
+    "landscapeLeft": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "auto",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mainCompressionType": "default",
+  "mainIsRemote": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e39023af-7cc9-45",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": ""
+  },
+  "ios": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "ios_enable_jit": true
+  },
+  "mac": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "win32": {
+    "REMOTE_SERVER_ROOT": "",
+    "width": 1280,
+    "height": 720
+  },
+  "android-instant": {
+    "packageName": "org.cocos2d.demo",
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  },
+  "appBundle": false,
+  "agreements": {},
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
+  "template": "link",
+  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
+  "debug": false,
+  "sourceMaps": false,
+  "embedWebDebugger": false,
+  "previewWidth": "1280",
+  "previewHeight": "720",
+  "useDebugKeystore": true,
+  "apiLevel": "",
+  "appABIs": [],
+  "vsVersion": "auto",
+  "buildScriptsOnly": true,
+  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
+  "separateEngineMode": false,
+  "scenes": [
+    "db164588-eb1d-4e07-860f-0375a28d4d89",
+    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
+    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
+  ],
+  "excludedModules": [
+    "Audio",
+    "AudioSource",
+    "Action",
+    "Dynamic Atlas",
+    "Geom Utils",
+    "MotionStreak",
+    "Native Socket",
+    "PageView",
+    "PageViewIndicator",
+    "ProgressBar",
+    "ParticleSystem",
+    "RichText",
+    "Renderer Texture",
+    "Slider",
+    "VideoPlayer",
+    "3D",
+    "3D Primitive",
+    "3D Physics/cannon.js",
+    "3D Physics/Builtin",
+    "3D Particle"
+  ],
+  "project": "D:\\project\\wxProject\\pushbox",
+  "projectName": "PushBox",
+  "debugBuildWorker": false
+}
+2022-05-05T12:20:00.482Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T12:20:00.482Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T12:20:00.483Z - normal: Start spawn build-worker
+2022-05-05T12:20:00.483Z - normal: Finish spawn build-worker
+2022-05-05T12:20:00.483Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
+2022-05-05T12:20:00.487Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
+2022-05-05T12:20:36.362Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T12:20:37.773Z - normal: Start building plugin scripts
+2022-05-05T12:20:41.482Z - normal: Built wechatgame successfully
+2022-05-05T12:20:44.797Z - error: - initialize
+
+
+    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-05-05T12:20:45.231Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
+
+    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-05-05T12:20:45.232Z - error: - open IDE
+
+
+    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-05-05T12:20:46.034Z - error: √ open IDE
+
+    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-05-05T12:47:42.666Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -1235,26 +1136,26 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T08:20:11.072Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T08:20:11.072Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T08:20:11.073Z - normal: Start spawn build-worker
-2022-04-17T08:20:11.073Z - normal: Finish spawn build-worker
-2022-04-17T08:20:11.074Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T08:20:16.117Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T08:20:17.597Z - normal: Start build-assets in worker
-2022-04-17T08:20:17.598Z - normal: 
+2022-05-05T12:47:42.666Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T12:47:42.666Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T12:47:42.667Z - normal: Start spawn build-worker
+2022-05-05T12:47:42.667Z - normal: Finish spawn build-worker
+2022-05-05T12:47:42.667Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2022-05-05T12:47:44.615Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T12:47:46.504Z - normal: Start build-assets in worker
+2022-05-05T12:47:46.505Z - normal: 
 --- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
 
-2022-04-17T08:20:17.800Z - normal: 
+2022-05-05T12:47:46.744Z - normal: 
 --- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
 
-2022-04-17T08:20:18.379Z - normal: 
+2022-05-05T12:47:47.430Z - normal: 
 --- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
 
-2022-04-17T08:20:18.638Z - normal: Finish build-assets in worker
-2022-04-17T08:20:18.674Z - normal: Start building plugin scripts
-2022-04-17T08:20:23.882Z - normal: Built wechatgame successfully
-2022-04-17T08:20:31.714Z - error: - initialize
+2022-05-05T12:47:47.766Z - normal: Finish build-assets in worker
+2022-05-05T12:47:47.814Z - normal: Start building plugin scripts
+2022-05-05T12:47:51.819Z - normal: Built wechatgame successfully
+2022-05-05T12:47:57.954Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -1265,7 +1166,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:20:32.647Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T12:47:58.383Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -1275,7 +1176,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:20:32.648Z - error: - open IDE
+2022-05-05T12:47:58.383Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -1286,7 +1187,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:20:33.354Z - error: √ open IDE
+2022-05-05T12:47:59.037Z - error: √ open IDE
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -1296,7 +1197,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:46:14.325Z - normal: Start building with options : {
+2022-05-05T13:02:25.760Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -1396,1136 +1297,26 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T08:46:14.326Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T08:46:14.326Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T08:46:14.327Z - normal: Start spawn build-worker
-2022-04-17T08:46:14.327Z - normal: Finish spawn build-worker
-2022-04-17T08:46:14.327Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T08:46:22.614Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T08:46:24.157Z - normal: Start build-assets in worker
-2022-04-17T08:46:24.158Z - normal: 
+2022-05-05T13:02:25.760Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T13:02:25.760Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T13:02:25.761Z - normal: Start spawn build-worker
+2022-05-05T13:02:25.761Z - normal: Finish spawn build-worker
+2022-05-05T13:02:25.761Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2022-05-05T13:02:35.282Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T13:02:36.654Z - normal: Start build-assets in worker
+2022-05-05T13:02:36.655Z - normal: 
 --- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
 
-2022-04-17T08:46:24.344Z - normal: 
+2022-05-05T13:02:36.827Z - normal: 
 --- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
 
-2022-04-17T08:46:24.992Z - normal: 
+2022-05-05T13:02:37.382Z - normal: 
 --- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
 
-2022-04-17T08:46:25.291Z - normal: Finish build-assets in worker
-2022-04-17T08:46:25.330Z - normal: Start building plugin scripts
-2022-04-17T08:46:30.629Z - normal: Built wechatgame successfully
-2022-04-17T08:47:14.810Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:47:15.047Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:47:15.047Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:47:15.796Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:55:52.180Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": true,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T08:55:52.180Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T08:55:52.181Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T08:55:52.181Z - normal: Start spawn build-worker
-2022-04-17T08:55:52.181Z - normal: Finish spawn build-worker
-2022-04-17T08:55:52.181Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T08:55:52.185Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T08:56:00.885Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T08:56:02.140Z - normal: Start building plugin scripts
-2022-04-17T08:56:07.134Z - normal: Built wechatgame successfully
-2022-04-17T08:56:10.867Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:56:13.194Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:56:13.195Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T08:56:13.902Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:09:39.996Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": true,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T09:09:39.997Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T09:09:39.997Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T09:09:39.997Z - normal: Start spawn build-worker
-2022-04-17T09:09:39.997Z - normal: Finish spawn build-worker
-2022-04-17T09:09:39.998Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T09:09:40.002Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T09:09:45.175Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T09:09:46.580Z - normal: Start building plugin scripts
-2022-04-17T09:09:51.818Z - normal: Built wechatgame successfully
-2022-04-17T09:10:00.524Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:10:02.539Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:10:02.540Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:10:03.525Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:12:11.819Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": true,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T09:12:11.819Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T09:12:11.819Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T09:12:11.820Z - normal: Start spawn build-worker
-2022-04-17T09:12:11.820Z - normal: Finish spawn build-worker
-2022-04-17T09:12:11.820Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T09:12:11.824Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T09:12:14.025Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T09:12:15.635Z - normal: Start building plugin scripts
-2022-04-17T09:12:19.494Z - normal: Built wechatgame successfully
-2022-04-17T09:12:22.569Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:12:23.204Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:12:23.205Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:12:24.029Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:13:53.474Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": true,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T09:13:53.474Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T09:13:53.474Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T09:13:53.475Z - normal: Start spawn build-worker
-2022-04-17T09:13:53.475Z - normal: Finish spawn build-worker
-2022-04-17T09:13:53.475Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T09:13:53.479Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T09:13:55.903Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T09:13:58.059Z - normal: Start building plugin scripts
-2022-04-17T09:14:03.076Z - normal: Built wechatgame successfully
-2022-04-17T09:14:04.783Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:14:04.824Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:14:04.825Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:14:05.612Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:18:02.528Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": true,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T09:18:02.529Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T09:18:02.529Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T09:18:02.529Z - normal: Start spawn build-worker
-2022-04-17T09:18:02.529Z - normal: Finish spawn build-worker
-2022-04-17T09:18:02.530Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T09:18:02.534Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T09:18:11.267Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T09:18:12.395Z - normal: Start building plugin scripts
-2022-04-17T09:18:17.705Z - normal: Built wechatgame successfully
-2022-04-17T09:18:24.313Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:18:25.067Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:18:25.068Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:18:25.962Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:24:05.766Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": true,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T09:24:05.767Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T09:24:05.767Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T09:24:05.768Z - normal: Start spawn build-worker
-2022-04-17T09:24:05.768Z - normal: Finish spawn build-worker
-2022-04-17T09:24:05.768Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T09:24:05.772Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T09:24:13.179Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T09:24:15.071Z - normal: Start building plugin scripts
-2022-04-17T09:24:20.768Z - normal: Built wechatgame successfully
-2022-04-17T09:24:30.237Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:24:31.003Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:24:31.004Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:24:31.735Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:26:03.311Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": true,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T09:26:03.311Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T09:26:03.311Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T09:26:03.312Z - normal: Start spawn build-worker
-2022-04-17T09:26:03.312Z - normal: Finish spawn build-worker
-2022-04-17T09:26:03.312Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T09:26:03.317Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T09:26:07.878Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T09:26:09.263Z - normal: Start building plugin scripts
-2022-04-17T09:26:14.584Z - normal: Built wechatgame successfully
-2022-04-17T09:26:17.075Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:26:17.664Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:26:17.665Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T09:26:18.446Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:10:47.419Z - failed: [db-task][watch-off] Exception  TypeError: Cannot read property 'get' of undefined
-    at Object.diff (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\asset-db\core\fsnap.ccc:1:558)
-    at u.o (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\asset-db\core\watch.ccc:1:1736)
-    at D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\asset-db\index.ccc:1:2172
-    at D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\node_modules\async\dist\async.js:3205:13
-    at Object.process (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\node_modules\async\dist\async.js:1431:21)
-    at D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\node_modules\async\dist\async.js:1289:23
-    at Immediate._onImmediate (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\node_modules\async\dist\async.js:73:45)
-    at processImmediate (internal/timers.js:456:21)
-    at process.topLevelDomainCallback (domain.js:138:15)
-    at process.callbackTrampoline (internal/async_hooks.js:118:14)
-2022-04-17T10:11:31.016Z - normal: Start building with options : {
+2022-05-05T13:02:37.647Z - normal: Finish build-assets in worker
+2022-05-05T13:02:37.690Z - normal: Start building plugin scripts
+2022-05-05T13:02:42.219Z - normal: Built wechatgame successfully
+2022-05-05T13:03:03.607Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -2625,145 +1416,26 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T10:11:31.016Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T10:11:31.016Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T10:11:31.017Z - normal: Start spawn build-worker
-2022-04-17T10:11:31.017Z - normal: Finish spawn build-worker
-2022-04-17T10:11:31.017Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T10:11:40.997Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T10:11:44.377Z - normal: Start build-assets in worker
-2022-04-17T10:11:44.378Z - normal: 
+2022-05-05T13:03:03.608Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T13:03:03.608Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T13:03:03.609Z - normal: Start spawn build-worker
+2022-05-05T13:03:03.609Z - normal: Finish spawn build-worker
+2022-05-05T13:03:03.609Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2022-05-05T13:03:05.840Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T13:03:07.683Z - normal: Start build-assets in worker
+2022-05-05T13:03:07.684Z - normal: 
 --- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
 
-2022-04-17T10:11:44.896Z - normal: 
+2022-05-05T13:03:07.885Z - normal: 
 --- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
 
-2022-04-17T10:11:46.420Z - normal: 
+2022-05-05T13:03:08.394Z - normal: 
 --- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
 
-2022-04-17T10:11:46.805Z - normal: Finish build-assets in worker
-2022-04-17T10:11:46.859Z - normal: Start building plugin scripts
-2022-04-17T10:11:56.929Z - normal: Built wechatgame successfully
-2022-04-17T10:12:02.455Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": false,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T10:12:02.455Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T10:12:02.456Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T10:12:02.457Z - normal: Start spawn build-worker
-2022-04-17T10:12:02.457Z - normal: Finish spawn build-worker
-2022-04-17T10:12:02.458Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T10:12:08.607Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T10:12:11.072Z - normal: Start build-assets in worker
-2022-04-17T10:12:11.072Z - normal: 
---- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
-
-2022-04-17T10:12:11.265Z - normal: 
---- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
-
-2022-04-17T10:12:11.930Z - normal: 
---- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
-
-2022-04-17T10:12:12.245Z - normal: Finish build-assets in worker
-2022-04-17T10:12:12.283Z - normal: Start building plugin scripts
-2022-04-17T10:12:18.471Z - normal: Built wechatgame successfully
-2022-04-17T10:12:30.345Z - error: - initialize
+2022-05-05T13:03:08.614Z - normal: Finish build-assets in worker
+2022-05-05T13:03:08.648Z - normal: Start building plugin scripts
+2022-05-05T13:03:12.113Z - normal: Built wechatgame successfully
+2022-05-05T13:03:17.847Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -2774,7 +1446,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:12:30.884Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T13:03:18.215Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -2784,7 +1456,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:12:30.885Z - error: - open IDE
+2022-05-05T13:03:18.216Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -2795,7 +1467,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:12:31.726Z - error: √ open IDE
+2022-05-05T13:03:18.928Z - error: √ open IDE
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -2805,7 +1477,49 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:15:27.843Z - normal: Start building with options : {
+2022-05-05T13:03:21.964Z - error: - initialize
+
+
+    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-05-05T13:03:22.248Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
+
+    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-05-05T13:03:22.248Z - error: - open IDE
+
+
+    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-05-05T13:03:22.853Z - error: √ open IDE
+
+    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
+    at Socket.emit (events.js:315:20)
+    at Socket.emit (domain.js:483:12)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-05-05T13:03:59.225Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -2905,16 +1619,16 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T10:15:27.843Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T10:15:27.843Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T10:15:27.844Z - normal: Start spawn build-worker
-2022-04-17T10:15:27.844Z - normal: Finish spawn build-worker
-2022-04-17T10:15:27.844Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T10:15:27.848Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T10:15:29.985Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T10:15:32.780Z - normal: Start building plugin scripts
-2022-04-17T10:15:38.510Z - normal: Built wechatgame successfully
-2022-04-17T10:15:42.927Z - error: - initialize
+2022-05-05T13:03:59.226Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T13:03:59.226Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T13:03:59.226Z - normal: Start spawn build-worker
+2022-05-05T13:03:59.226Z - normal: Finish spawn build-worker
+2022-05-05T13:03:59.227Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
+2022-05-05T13:03:59.230Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
+2022-05-05T13:04:01.291Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T13:04:03.191Z - normal: Start building plugin scripts
+2022-05-05T13:04:07.044Z - normal: Built wechatgame successfully
+2022-05-05T13:04:08.424Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -2925,7 +1639,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:15:43.855Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T13:04:08.919Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -2935,7 +1649,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:15:43.856Z - error: - open IDE
+2022-05-05T13:04:08.920Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -2946,7 +1660,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:15:44.632Z - error: √ open IDE
+2022-05-05T13:04:09.636Z - error: √ open IDE
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -2956,7 +1670,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:16:48.737Z - normal: Start building with options : {
+2022-05-05T13:06:37.210Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -3056,16 +1770,16 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T10:16:48.737Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T10:16:48.737Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T10:16:48.737Z - normal: Start spawn build-worker
-2022-04-17T10:16:48.738Z - normal: Finish spawn build-worker
-2022-04-17T10:16:48.738Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T10:16:48.741Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T10:16:53.576Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T10:16:55.050Z - normal: Start building plugin scripts
-2022-04-17T10:17:00.328Z - normal: Built wechatgame successfully
-2022-04-17T10:17:03.304Z - error: - initialize
+2022-05-05T13:06:37.210Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T13:06:37.211Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T13:06:37.211Z - normal: Start spawn build-worker
+2022-05-05T13:06:37.211Z - normal: Finish spawn build-worker
+2022-05-05T13:06:37.211Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
+2022-05-05T13:06:37.216Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
+2022-05-05T13:06:38.917Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T13:06:40.370Z - normal: Start building plugin scripts
+2022-05-05T13:06:44.446Z - normal: Built wechatgame successfully
+2022-05-05T13:06:45.714Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -3076,7 +1790,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:17:03.784Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T13:06:46.261Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -3086,147 +1800,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:17:03.785Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:17:04.633Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:22:45.824Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": false,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T10:22:45.825Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T10:22:45.825Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T10:22:45.825Z - normal: Start spawn build-worker
-2022-04-17T10:22:45.825Z - normal: Finish spawn build-worker
-2022-04-17T10:22:45.825Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T10:22:50.615Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T10:22:52.431Z - normal: Start build-assets in worker
-2022-04-17T10:22:52.432Z - normal: 
---- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
-
-2022-04-17T10:22:52.640Z - normal: 
---- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
-
-2022-04-17T10:22:53.228Z - normal: 
---- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
-
-2022-04-17T10:22:54.177Z - normal: Finish build-assets in worker
-2022-04-17T10:22:54.215Z - normal: Start building plugin scripts
-2022-04-17T10:23:00.568Z - normal: Built wechatgame successfully
-2022-04-17T10:23:06.551Z - error: - initialize
+2022-05-05T13:06:46.262Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -3237,7 +1811,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:23:07.256Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T13:06:46.929Z - error: √ open IDE
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -3247,350 +1821,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:23:07.258Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:23:08.473Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:27:37.992Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": false,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T10:27:37.992Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T10:27:37.992Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T10:27:37.993Z - normal: Start spawn build-worker
-2022-04-17T10:27:37.993Z - normal: Finish spawn build-worker
-2022-04-17T10:27:37.993Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T10:27:39.833Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T10:27:42.868Z - normal: Start build-assets in worker
-2022-04-17T10:27:42.868Z - normal: 
---- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
-
-2022-04-17T10:27:43.197Z - normal: 
---- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
-
-2022-04-17T10:27:44.049Z - normal: 
---- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
-
-2022-04-17T10:27:44.398Z - normal: Finish build-assets in worker
-2022-04-17T10:27:44.435Z - normal: Start building plugin scripts
-2022-04-17T10:27:50.455Z - normal: Built wechatgame successfully
-2022-04-17T10:27:54.470Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:27:55.143Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:27:55.143Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:27:55.943Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:31:13.358Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": false,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-04-17T10:31:13.359Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T10:31:13.359Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T10:31:13.359Z - normal: Start spawn build-worker
-2022-04-17T10:31:13.359Z - normal: Finish spawn build-worker
-2022-04-17T10:31:13.359Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T10:31:22.554Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T10:31:23.831Z - normal: Start build-assets in worker
-2022-04-17T10:31:23.831Z - normal: 
---- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
-
-2022-04-17T10:31:23.992Z - normal: 
---- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
-
-2022-04-17T10:31:24.484Z - normal: 
---- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
-
-2022-04-17T10:31:24.767Z - normal: Finish build-assets in worker
-2022-04-17T10:31:24.811Z - normal: Start building plugin scripts
-2022-04-17T10:31:30.556Z - normal: Built wechatgame successfully
-2022-04-17T10:31:32.255Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:31:33.053Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:31:33.053Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:31:33.780Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:33:36.836Z - normal: Start building with options : {
+2022-05-05T13:07:36.783Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -3690,16 +1921,16 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T10:33:36.836Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T10:33:36.836Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T10:33:36.837Z - normal: Start spawn build-worker
-2022-04-17T10:33:36.837Z - normal: Finish spawn build-worker
-2022-04-17T10:33:36.837Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-04-17T10:33:36.841Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-04-17T10:33:38.795Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T10:33:40.497Z - normal: Start building plugin scripts
-2022-04-17T10:33:45.339Z - normal: Built wechatgame successfully
-2022-04-17T10:33:51.864Z - error: - initialize
+2022-05-05T13:07:36.783Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T13:07:36.783Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T13:07:36.784Z - normal: Start spawn build-worker
+2022-05-05T13:07:36.784Z - normal: Finish spawn build-worker
+2022-05-05T13:07:36.784Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
+2022-05-05T13:07:36.788Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
+2022-05-05T13:07:47.890Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T13:07:49.855Z - normal: Start building plugin scripts
+2022-05-05T13:07:54.177Z - normal: Built wechatgame successfully
+2022-05-05T13:08:02.660Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -3710,7 +1941,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:33:52.611Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T13:08:03.355Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -3720,7 +1951,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:33:52.612Z - error: - open IDE
+2022-05-05T13:08:03.356Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -3731,7 +1962,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:33:53.382Z - error: √ open IDE
+2022-05-05T13:08:04.171Z - error: √ open IDE
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -3741,7 +1972,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:35:40.273Z - normal: Start building with options : {
+2022-05-05T13:08:50.250Z - normal: Start building with options : {
   "title": "PushBox",
   "packageName": "org.cocos2d.demo",
   "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
@@ -3841,26 +2072,26 @@
   "projectName": "PushBox",
   "debugBuildWorker": false
 }
-2022-04-17T10:35:40.274Z - normal: Building D:\project\wxProject\pushbox
-2022-04-17T10:35:40.274Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-04-17T10:35:40.274Z - normal: Start spawn build-worker
-2022-04-17T10:35:40.274Z - normal: Finish spawn build-worker
-2022-04-17T10:35:40.274Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
-2022-04-17T10:35:42.440Z - normal: Compiling D:\project\wxProject\pushbox
-2022-04-17T10:35:44.256Z - normal: Start build-assets in worker
-2022-04-17T10:35:44.256Z - normal: 
+2022-05-05T13:08:50.250Z - normal: Building D:\project\wxProject\pushbox
+2022-05-05T13:08:50.250Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
+2022-05-05T13:08:50.251Z - normal: Start spawn build-worker
+2022-05-05T13:08:50.251Z - normal: Finish spawn build-worker
+2022-05-05T13:08:50.251Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json
+2022-05-05T13:08:52.908Z - normal: Compiling D:\project\wxProject\pushbox
+2022-05-05T13:08:54.571Z - normal: Start build-assets in worker
+2022-05-05T13:08:54.571Z - normal: 
 --- build-asset: {"root":"db://internal/resources","name":"internal","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
 
-2022-04-17T10:35:44.398Z - normal: 
+2022-05-05T13:08:54.757Z - normal: 
 --- build-asset: {"root":"db://assets/resources","name":"resources","dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\resources","priority":8,"scenes":[],"compressionType":"default"}
 
-2022-04-17T10:35:44.823Z - normal: 
+2022-05-05T13:08:55.380Z - normal: 
 --- build-asset: {"root":null,"priority":7,"dest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","scriptDest":"D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame\\assets\\main","name":"main","scenes":["a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1","152ad94e-7fe7-481d-af44-9bdcb7ba2b4a","db164588-eb1d-4e07-860f-0375a28d4d89"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
 
-2022-04-17T10:35:45.040Z - normal: Finish build-assets in worker
-2022-04-17T10:35:45.073Z - normal: Start building plugin scripts
-2022-04-17T10:35:50.146Z - normal: Built wechatgame successfully
-2022-04-17T10:35:51.697Z - error: - initialize
+2022-05-05T13:08:55.607Z - normal: Finish build-assets in worker
+2022-05-05T13:08:55.644Z - normal: Start building plugin scripts
+2022-05-05T13:08:59.769Z - normal: Built wechatgame successfully
+2022-05-05T13:09:05.170Z - error: - initialize
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -3871,7 +2102,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:35:52.426Z - error: √ IDE server has started, listening on http://127.0.0.1:55794
+2022-05-05T13:09:05.845Z - error: √ IDE server has started, listening on http://127.0.0.1:54167
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -3881,7 +2112,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:35:52.426Z - error: - open IDE
+2022-05-05T13:09:05.846Z - error: - open IDE
 
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
@@ -3892,7 +2123,7 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:35:53.583Z - error: √ open IDE
+2022-05-05T13:09:06.654Z - error: √ open IDE
 
     at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
     at Socket.emit (events.js:315:20)
@@ -3902,4 +2133,4 @@
     at Socket.Readable.push (_stream_readable.js:212:10)
     at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
     at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-04-17T10:42:24.915Z - info: shutdown preview server
+2022-05-05T13:11:35.716Z - info: shutdown preview server

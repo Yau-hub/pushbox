@@ -310,8 +310,12 @@ cc.Class({
                 key: 'reviewLevel',
                 data: data.content,
                 success: function success() {
+                  window.uploadInfo = {};
                   window.from = 'review';
                   window.reviewId = data._id;
+                  window.uploadInfo.appId = data.appId;
+                  window.uploadInfo.nickName = data.nickName;
+                  window.uploadInfo.portrait = data.portrait;
                   cc.director.loadScene("game");
                 }
               });
@@ -458,6 +462,7 @@ cc.Class({
               window.user.levelFinishNum = res.result.data[0].levelFinishNum;
               window.user.classicsLevelNum = res.result.data[0].classicsLevelNum;
               window.user.netLevelNum = res.result.data[0].netLevelNum;
+              window.user.roles = res.result.data[0].roles;
             }
           })["catch"](function (err) {
             console.error(err);
@@ -476,6 +481,7 @@ cc.Class({
               window.user.classicsLevelNum = 0;
               window.user.netLevelNum = 0;
               window.user.levelFinishNum = 0;
+              window.user.roles = '';
               wx.cloud.callFunction({
                 name: 'queryUser',
                 data: {
