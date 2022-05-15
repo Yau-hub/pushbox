@@ -15,11 +15,26 @@ var _common = require("./common");
 window.env = "cloud1-5gvbuiy3dd99f63c";
 window.bgMusic = null;
 window.moveMusic = null;
+window.createScenseUploadAd = null;
+window.skipLevelAd = null;
 
 if (cc.sys.platform === cc.sys.WECHAT_GAME) {
   wx.cloud.init({
     env: window.env
-  });
+  }); //广告初始化
+
+  if (wx.createInterstitialAd) {
+    window.skipLevelAd = wx.createRewardedVideoAd({
+      adUnitId: 'adunit-d408eadf9ac9c0a9'
+    });
+    window.skipLevelAd.onError(function (err) {});
+    window.createScenseUploadAd = wx.createInterstitialAd({
+      adUnitId: 'adunit-e7f23b52c9d59315'
+    });
+    window.createScenseUploadAd.onError(function (err) {
+      window.createScenseUploadAd = null;
+    });
+  }
 }
 
 window.user = {};

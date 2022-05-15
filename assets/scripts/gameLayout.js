@@ -75,7 +75,8 @@ cc.Class({
         lastStepNode: null,
         lastTimenode: null,
         rankItem:cc.Prefab,
-        buildArea:null
+        buildArea:null,
+        skipLevel:null
 
     },
 
@@ -469,8 +470,7 @@ cc.Class({
                     if(this.boxNum == coverBoxNum){
                         // console.log('挑战成功')
                         this.showResult();
-                        clearInterval(this.timeCounterTimer)
-                        this.timeCounterTimer = null;
+
                     }
                 }
             }
@@ -515,15 +515,19 @@ cc.Class({
 
         }, this);
     },
-    showResult(){
+    showResult(type){
         let that = this;
+        if(that.timeCounterTimer){
+            clearInterval(that.timeCounterTimer)
+            that.timeCounterTimer = null;
+        }
+
 
 
         if(window.from == "review"){
             Toast('挑战成功！',1500);
             return;
         }
-
         var CanvasNode = this.node;
         if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
         var onResourceLoaded = function(errorMessage, loadedResource )
@@ -561,39 +565,54 @@ cc.Class({
 
 
             if(window.from == 'build'){
-                cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '上传关卡'
-                Loading.show();
-                wx.cloud.callFunction({
-                    name: 'getReviewLevelNum'
-                }).then(res => {
-
+                cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '上传关卡';
+                cc.find('contentBg/next',newMyPrefab).on('click',function () {
+                    Loading.show();
                     wx.cloud.callFunction({
-                        name: 'addReviewLevel',
-                        data:{
-                            content: window.uploadLevel,
-                            useStepNum: that.stepCounterValue,
-                            levelIndex: res.result.total+1,
-                            appId: window.user.appId,
-                            nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
-                            portrait: window.loginInfo.avatarUrl,
-                        }
-                    }).then(result => {
-                        let levelUploadNum = parseInt(res.result.total)+1;
-                        Toast('关卡上传成功待管理员审核，即将跳回主界面',1500);
-                        setTimeout(function () {
-                            Loading.hide();
+                        name: 'getReviewLevelNum'
+                    }).then(res => {
+
+                        wx.cloud.callFunction({
+                            name: 'addReviewLevel',
+                            data:{
+                                content: window.uploadLevel,
+                                useStepNum: that.stepCounterValue,
+                                levelIndex: res.result.total+1,
+                                appId: window.user.appId,
+                                nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
+                                portrait: window.loginInfo.avatarUrl,
+                            }
+                        }).then(result => {
+                            let levelUploadNum = parseInt(res.result.total)+1;
                             window.from = 'game';
-                            cc.director.loadScene('main');
-                        },1500)
+                            Loading.hide();
+                            if (window.createScenseUploadAd) {
+                                Toast('关卡上传成功待审核，关闭广告后跳回主界面',2000);
+                                setTimeout(function () {
+                                    window.createScenseUploadAd.show().catch(()=>{
+                                        cc.director.loadScene('main');
+                                    });
+                                    window.createScenseUploadAd.onClose(res => {
+                                        cc.director.loadScene('main');
+                                    })
+                                },1500)
+                            }else{
+                                Toast('关卡上传成功待管理员审核，即将跳回主界面',1500);
+                                setTimeout(function () {
+                                    cc.director.loadScene('main');
+                                },1500)
+                            }
+                        }).catch(err => {
+                            Loading.hide();
+                            Toast('上传失败',1500);
+                            console.error(err)
+                        })
+
                     }).catch(err => {
-                        Loading.hide();
-                        Toast('上传失败',1500);
                         console.error(err)
                     })
+                },this)
 
-                }).catch(err => {
-                    console.error(err)
-                })
             }
 
             cc.find('contentBg/replay',newMyPrefab).on('click',function () {
@@ -634,6 +653,10 @@ cc.Class({
 
         if(window.from == "build") return;
 
+        if(type=='skip'){
+            that.stepCounterValue = '9999';
+            that.timeCounterValue = '9999';
+        }
         //上传分数
         if (cc.sys.platform === cc.sys.WECHAT_GAME) {
             if (that.lastScore == null) {
@@ -747,29 +770,29 @@ cc.Class({
         if(this.levelCounter == null){
             var levelNode = new cc.Node('levelCounter');
             levelNode.setAnchorPoint(0.5, 0.5);
-            levelNode.width =  756;
-            levelNode.height = 240;
-            levelNode.horizontalAlign = 'center'
+            levelNode.width =  cc.winSize.width*0.7;
+            levelNode.height = 180;
+            // levelNode.horizontalAlign = 'CENTER'
             var levelCounter = levelNode.addComponent(cc.Label);
-            levelCounter.node.setPosition(0,  (cc.winSize.height/2) - (cc.winSize.height*0.05))
+            levelCounter.node.setPosition(0,  (cc.winSize.height/2) - (cc.winSize.height*0.05));
+            levelCounter.fontSize = 60;
+            levelCounter.enableBold = true;
+            // levelCounter.overflow = cc.Label.Overflow.CLAMP;
+            levelCounter.lineHeight = 60;
             if(window.levelBy){
-                levelCounter.string = '第 '+ window.levelIndex + ' 关 - '+window.levelBy;
+                levelCounter.string = ('第 '+ window.levelIndex + ' 关 - '+window.levelBy).substring(0,16);
             }
             else{
                 levelCounter.string = '第 '+ window.levelIndex + ' 关';
             }
-            levelCounter.fontSize = 60;
-            levelCounter.enableBold = true;
-            // levelCounter.overflow = cc.Label.Overflow.RESIZE_HEIGHT;
-            levelCounter.lineHeight = 60;
-            levelCounter.horizontalAlign = 'center';
+
             this.levelCounter = levelNode.getComponent(cc.Label)
             this.node.addChild(levelNode);
         }else{
 
 
             if(window.levelBy){
-                this.levelCounter.string = '第 '+ window.levelIndex + ' 关 - '+window.levelBy;
+                this.levelCounter.string = ('第 '+ window.levelIndex + ' 关 - '+window.levelBy).substring(0,16);
             }
             else{
                 this.levelCounter.string = '第 '+ window.levelIndex + ' 关';
@@ -821,6 +844,9 @@ cc.Class({
                 }.bind(this),1000)
             }
         }
+
+
+
 
         // this.moveHistoryList = [];
 
@@ -1206,10 +1232,51 @@ cc.Class({
                     if(res && res.result.data.length>0){
                         that.lastScore = res.result.data[0];
                         that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
+
                     }else{
                         that.lastScore = null;
                         that.renderLastScore('无','无')
-                        if(window.levelIndex == 1) Toast('Tip: 可滑动屏幕控制人物',3000);
+                        if(window.levelIndex == 1) Toast('Tip: 可滑动屏幕控制人物',5000);
+                        //跳过关卡
+                        if(window.skipLevelAd){
+                            var skipNode = new cc.Node('skipNode');
+                            skipNode.setAnchorPoint(0, 1);
+                            var skipLevelLabel = skipNode.addComponent(cc.Label);
+                            skipLevelLabel.node.setPosition((cc.winSize.width/2) - (cc.winSize.width*0.2),  (cc.winSize.width/2) + 80);
+                            skipLevelLabel.string = '跳过此关？';
+                            that.skipLevel = skipNode.getComponent(cc.Label)
+                            that.node.addChild(skipNode);
+                            let enableSkip = true;
+                            that.skipLevel.node.on('touchend', function(){
+                                if(!enableSkip) return;
+                                enableSkip = false;
+                                if(window.skipLevelAd) Toast("观看广告至结束后跳过此关卡",2000);
+                                else {Toast("广告拉取失败",1500);return;}
+                                setTimeout(function(){
+                                    window.skipLevelAd.show()
+                                        .catch(err => {
+                                            window.skipLevelAd.load()
+                                                .then(() => window.skipLevelAd.show()).catch(()=>{
+                                                Toast("广告拉取失败",1500)
+                                            })
+                                        })
+                                    window.skipLevelAd.offClose();
+                                    window.skipLevelAd.onClose(res => {
+                                        // 用户点击了【关闭广告】按钮
+                                        // 小于 2.1.0 的基础库版本，res 是一个 undefined
+                                        if (res && res.isEnded || res === undefined) {
+                                            // 正常播放结束，可以下发游戏奖励
+                                            that.showResult('skip');
+                                        }
+                                        else {
+                                            // 播放中途退出，不下发游戏奖励
+
+                                        }
+                                    })
+                                    enableSkip = true;
+                                },1500)
+                            }, that);
+                        }
                     }
                 }).catch(err => {
                     console.error(err)

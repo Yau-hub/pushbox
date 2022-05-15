@@ -86,7 +86,6 @@ cc.Class({
                 }
             })
         }
-
         cc.find('btns',this.node).height =  (cc.winSize.height - cc.winSize.width)/2;
     },
 
