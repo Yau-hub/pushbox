@@ -76,7 +76,9 @@ cc.Class({
         lastTimenode: null,
         rankItem:cc.Prefab,
         buildArea:null,
-        skipLevel:null
+        solutionBtn:null,
+        noneSkipChange:false,
+        solutionStepIndex: 0
 
     },
 
@@ -90,6 +92,8 @@ cc.Class({
         //初始化当前关卡
         this.initLevel();
         cc.find('gameBtns',this.node).height =  (cc.winSize.height - cc.winSize.width)/2;
+
+
 
     },
 
@@ -443,7 +447,7 @@ cc.Class({
                 break;
         }
         //是否开启回退功能
-        if (window.setting.relast && cc.sys.platform === cc.sys.WECHAT_GAME) {
+        if (window.from == "uploadSolution"  || (window.setting.relast && cc.sys.platform === cc.sys.WECHAT_GAME)) {
             wx.setStorage({
                 key: "lastLayout",
                 data: window.currentLevel,
@@ -452,6 +456,7 @@ cc.Class({
                         key: "lastLayout",
                         success(res) {
                             that.moveHistoryList.push(res.data)
+
                         }
                     })
                 }
@@ -460,7 +465,7 @@ cc.Class({
 
         this.stepCounterValue ++;
         // this.gameOver = true;
-        this.stepCounter.string = "步数：" + this.stepCounterValue;
+        if(this.stepCounter)this.stepCounter.string = "步数：" + this.stepCounterValue;
         let coverBoxNum = 0;
         for(var i = 0; i<window.currentLevel.length ; i++){
             for(var n = 0; n<window.currentLevel[0].length ; n++){
@@ -479,10 +484,11 @@ cc.Class({
         if(window.moveMusic && !window.moveMusic.paused) window.moveMusic.stop();
         if(window.moveMusic && !window.moveMusic.paused) window.moveMusic.pause();
         if(window.moveMusic) window.moveMusic.play();
+
     },
 
     addTouchMove(){
-        if(!window.setting.touchMove) return;
+        if(!window.setting.touchMove || window.from == "checkSolution") return;
 
         let that = this;
         let figureLocation = null;
@@ -524,10 +530,12 @@ cc.Class({
 
 
 
-        if(window.from == "review"){
+        if(window.from == "review" || window.from == "checkSolution"){
             Toast('挑战成功！',1500);
             return;
         }
+
+
         var CanvasNode = this.node;
         if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
         var onResourceLoaded = function(errorMessage, loadedResource )
@@ -539,31 +547,6 @@ cc.Class({
 
             cc.find('contentBg/useTime',newMyPrefab).getComponent(cc.Label).string = "步数："+ that.stepCounterValue+'步';
             cc.find('contentBg/useStep',newMyPrefab).getComponent(cc.Label).string = "用时："+ that.timeCounterValue+'秒';
-            if(window.from != 'build'){
-                if(window.levelIndex >= window.classicsLevelNum){
-                    cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '回主界面'
-                    cc.find('contentBg/next',newMyPrefab).on('click',function(){
-                        clearInterval(that.timeCounterTimer)
-                        that.timeCounterTimer = null;
-                        cc.director.loadScene("main");
-                        window.from = 'game'
-                    },this)
-                }else{
-                    //下一关
-                    cc.find('contentBg/next',newMyPrefab).on('click',function () {
-                        newMyPrefab.removeFromParent();
-                        newMyPrefab.destroy();
-                        that.initPendant();
-                        window.levelIndex++;
-                        that.initLevel()
-                    },this)
-                }
-                // cc.find('contentBg/next',newMyPrefab).opacity = 0;
-
-
-            }
-
-
             if(window.from == 'build'){
                 cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '上传关卡';
                 cc.find('contentBg/next',newMyPrefab).on('click',function () {
@@ -613,13 +596,108 @@ cc.Class({
                     })
                 },this)
 
+            }else if(window.from == "uploadSolution"){
+                cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '上传攻略';
+                cc.find('contentBg/next',newMyPrefab).on('click',function () {
+
+
+                    Loading.show();
+                    if(window.lastSolutionStep != null){
+                        //更新攻略
+                        if(window.lastSolutionStep>that.stepCounterValue){
+                            wx.cloud.callFunction({
+                                name: 'updateClassicsLevelSolution',
+                                data: {
+                                    levelIndex: window.levelIndex,
+                                    appId: window.user.appId,
+                                    useStep: that.stepCounterValue,
+                                    useTime: that.timeCounterValue,
+                                    portrait: window.loginInfo.avatarUrl,
+                                    nickName: window.loginInfo.nickName,
+                                    content: that.moveHistoryList
+                                }
+                            }).then(res => {
+                                Toast('攻略上传成功',1500);
+                                Loading.hide();
+                                setTimeout(function () {
+                                    cc.director.loadScene("game");
+                                },1000)
+
+                            }).catch(err=>{
+                                Toast('上传失败,请稍后再试',1500);
+                                Loading.hide();
+                                console.log(err)
+                            });
+
+                        }else{
+                            Loading.hide();
+                            Toast('原有攻略步数更少，上传失败',3000);
+                        }
+                    }else{
+                        //上传攻略
+                        wx.cloud.callFunction({
+                            name: 'addClassicsLevelSolution',
+                            data: {
+                                levelIndex: window.levelIndex,
+                                appId: window.user.appId,
+                                useStep: that.stepCounterValue,
+                                useTime: that.timeCounterValue,
+                                portrait: window.loginInfo.avatarUrl,
+                                nickName: window.loginInfo.nickName,
+                                content: that.moveHistoryList
+                            }
+                        }).then(res => {
+                            Toast('攻略上传成功',1500);
+                            Loading.hide();
+                            setTimeout(function () {
+                                cc.director.loadScene("game");
+                            },1000)
+                        }).catch(err=>{
+                            Toast('上传失败,请稍后再试',1500);
+                            Loading.hide();
+                            console.log(err)
+                        });;
+
+                    }
+
+
+                },this)
+            }else if(window.from != 'build'){
+                if(window.levelIndex >= window.classicsLevelNum){
+                    cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '回主界面'
+                    cc.find('contentBg/next',newMyPrefab).on('click',function(){
+                        clearInterval(that.timeCounterTimer)
+                        that.timeCounterTimer = null;
+                        cc.director.loadScene("main");
+                        window.from = 'game'
+                    },this)
+                }else{
+                    //下一关
+                    cc.find('contentBg/next',newMyPrefab).on('click',function () {
+                        newMyPrefab.removeFromParent();
+                        newMyPrefab.destroy();
+                        that.initPendant();
+                        window.levelIndex++;
+                        that.initLevel()
+                    },this)
+                }
+                // cc.find('contentBg/next',newMyPrefab).opacity = 0;
+
+
             }
 
+
+
+
             cc.find('contentBg/replay',newMyPrefab).on('click',function () {
+                if(window.from == "uploadSolution"){
+                    cc.director.loadScene("game");
+                    return
+                }
                 newMyPrefab.removeFromParent();
                 newMyPrefab.destroy();
                 that.replayLayout();
-                that.initPendant();
+
             },this)
             cc.find('contentBg/rank',newMyPrefab).on('click',function () {
                 if(window.from == 'build'){
@@ -750,22 +828,25 @@ cc.Class({
     replayLayout(){
         var that = this;
         wx.getStorage({
-            key: 'initLevel',
+            key: "initLevel",
             success (res) {
                 window.currentLevel = res.data;
                 that.renderLayout(window.currentLevel);
                 that.initPosition(window.currentLevel);
+                that.initPendant();
             },
             fail(){
 
             }
         })
 
-
-
     },
     initPendant(){
+
         let that = this;
+
+
+
         //关卡
         if(this.levelCounter == null){
             var levelNode = new cc.Node('levelCounter');
@@ -789,8 +870,6 @@ cc.Class({
             this.levelCounter = levelNode.getComponent(cc.Label)
             this.node.addChild(levelNode);
         }else{
-
-
             if(window.levelBy){
                 this.levelCounter.string = ('第 '+ window.levelIndex + ' 关 - '+window.levelBy).substring(0,16);
             }
@@ -803,7 +882,46 @@ cc.Class({
         }
         if(window.from == 'review'){
             this.levelCounter.string = '审核关卡';
+
+
+            if(window.gameCircle) {
+                window.gameCircle.destroy();
+                window.gameCircle = null;
+            }
+            if(window.auditLevelAd) window.auditLevelAd.destroy();
+
+            if (cc.sys.platform === cc.sys.WECHAT_GAME && !window.gameCircle){
+                let sysInfo = wx.getSystemInfoSync();
+                let auditLevelAdWidth = sysInfo.windowWidth*0.6;
+                let auditLevelAdLeft = (sysInfo.windowWidth*0.4)/2;
+                if(auditLevelAdWidth<=300) auditLevelAdLeft = (sysInfo.windowWidth-300)/2;
+
+                //审核页面bnAd
+                window.auditLevelAd =  wx.createBannerAd({
+                    adUnitId: 'adunit-a1670c225334da27',
+                    style: {
+                        left: auditLevelAdLeft,
+                        top: sysInfo.windowHeight*0.08,
+                        width: auditLevelAdWidth
+                    }
+                });
+                window.auditLevelAd.onError(err => {})
+                window.auditLevelAd.onLoad(() => {
+                    window.auditLevelAd.show().catch(()=>{})
+                })
+
+            }
+
         }
+
+        if(window.from == 'uploadSolution'){
+            this.levelCounter.string = '第 '+ window.levelIndex + ' 关'+' - 上传攻略';
+        }
+        if(window.from == 'checkSolution'){
+            this.levelCounter.string = '第 '+ window.levelIndex + ' 关'+' - 攻略';
+            return
+        }
+
 
         //步数
         if(this.stepCounter == null){
@@ -816,7 +934,7 @@ cc.Class({
             this.node.addChild(node);
         }else{
             this.stepCounterValue  = 0;
-            this.stepCounter.string = "步数：" + this.stepCounterValue;
+            if(this.stepCounter) this.stepCounter.string = "步数：" + this.stepCounterValue;
         }
 
 
@@ -832,7 +950,7 @@ cc.Class({
 
             this.timeCounterTimer = setInterval(function () {
                 this.timeCounterValue  ++;
-                this.timeCounter.string = "用时：" + this.timeCounterValue;
+                if(this.timeCounter) this.timeCounter.string = "用时：" + this.timeCounterValue;
             }.bind(this),1000)
         }else{
             this.timeCounterValue = 0;
@@ -840,7 +958,7 @@ cc.Class({
             if(this.timeCounterTimer == null){
                 this.timeCounterTimer = setInterval(function () {
                     this.timeCounterValue  ++;
-                    this.timeCounter.string = "用时：" + this.timeCounterValue;
+                    if(this.timeCounter)this.timeCounter.string = "用时：" + this.timeCounterValue;
                 }.bind(this),1000)
             }
         }
@@ -864,7 +982,7 @@ cc.Class({
         let that = this;
         cc.find('back',this.node).on('click',this.back, this)
         //开启点击移动
-        if(window.setting.clickMove) {
+        if(window.setting.clickMove && window.from != "checkSolution") {
             cc.find('gameBtns/up',this.node).on("click",function () {
                 that.moveUp(window.currentLevel)
             },this)
@@ -878,17 +996,26 @@ cc.Class({
                 that.moveLeft(window.currentLevel)
             },this)
         }else{
-            cc.find('gameBtns/up',this.node).opacity = 0;
-            cc.find('gameBtns/right',this.node).opacity = 0;
-            cc.find('gameBtns/down',this.node).opacity = 0;
-            cc.find('gameBtns/left',this.node).opacity = 0;
+            cc.find('gameBtns/up',this.node).removeFromParent()
+            cc.find('gameBtns/right',this.node).removeFromParent()
+            cc.find('gameBtns/down',this.node).removeFromParent()
+            cc.find('gameBtns/left',this.node).removeFromParent()
         }
 
-
-        if(window.from == 'review') cc.find('gameBtns/backStep/Background/Label',this.node).getComponent(cc.Label).string = '通过';
-        else if(!window.setting.relast) cc.find('gameBtns/backStep/Background/Label',this.node).getComponent(cc.Label).string = '重玩';
-
+        var leftBtn = cc.find('gameBtns/backStep/Background/Label',this.node).getComponent(cc.Label);
+        if(window.from == 'review') leftBtn.string = '通过';
+        else if(window.from == 'checkSolution') leftBtn.string = 'next';
+        else if(!window.setting.relast) leftBtn.string = '重玩';
         cc.find('gameBtns/backStep',this.node).on('click',function () {
+
+            //攻略播放
+            if(window.from == 'checkSolution'){
+                that.solutionStepIndex ++ ;
+                if(that.solutionStepIndex>=window.levelSolution.content.length) that.solutionStepIndex=0;
+                window.currentLevel = window.levelSolution.content[that.solutionStepIndex];
+                that.renderLayout(window.currentLevel)
+                return;
+            }
             //审核关卡通过
             if(window.from == 'review'){
 
@@ -988,15 +1115,25 @@ cc.Class({
             }
             else{
                 that.replayLayout();
-                that.initPendant();
+
             }
 
         },this);
 
         if(window.from == 'review') cc.find('gameBtns/menu/Background/Label',this.node).getComponent(cc.Label).string = '驳回'
+        else if(window.from == "checkSolution") cc.find('gameBtns/menu/Background/Label',this.node).getComponent(cc.Label).string = 'prev'
         cc.find('gameBtns/menu',this.node).on("click",function () {
             clearInterval(that.timeCounterTimer);
             that.timeCounterTimer = null;
+            //攻略播放
+            if(window.from == 'checkSolution'){
+                that.solutionStepIndex --;
+                if(that.solutionStepIndex<=0) that.solutionStepIndex=0;
+                window.currentLevel = window.levelSolution.content[that.solutionStepIndex];
+                that.renderLayout(window.currentLevel)
+                return;
+            }
+
             //审核关卡驳回
             if(window.from == 'review'){
                 var CanvasNode = cc.find('Canvas');
@@ -1063,7 +1200,7 @@ cc.Class({
                     newMyPrefab.removeFromParent();
                     newMyPrefab.destroy();
                     that.replayLayout();
-                    that.initPendant();
+
                 },this)
 
                 cc.find('contain/levels',newMyPrefab).on('click',function () {
@@ -1114,6 +1251,13 @@ cc.Class({
             };
             cc.loader.loadRes('gameMenu', onResourceLoaded );
         },this)
+
+
+
+
+
+
+
     },
     initLevel(){
         let that = this;
@@ -1188,6 +1332,9 @@ cc.Class({
 
                 return ;
             }
+
+
+
             //经典关卡
             if(window.levelClassify == 'classicsLevel'){
                 wx.cloud.callFunction({
@@ -1208,14 +1355,11 @@ cc.Class({
                             key: "initLevel",
                             data:window.currentLevel,
                             success(result){
-                              wx.getStorage({
-                                  key:"initLevel",
-                                  success(res){
-                                      that.moveHistoryList.push(res.data)
-                                  }
-                              })
+                                that.moveHistoryList.push(window.currentLevel);
+                                that.replayLayout();
                             }
                         })
+
                     }
                     Loading.hide();
                 }).catch(err => {
@@ -1237,46 +1381,7 @@ cc.Class({
                         that.lastScore = null;
                         that.renderLastScore('无','无')
                         if(window.levelIndex == 1) Toast('Tip: 可滑动屏幕控制人物',5000);
-                        //跳过关卡
-                        if(window.skipLevelAd){
-                            var skipNode = new cc.Node('skipNode');
-                            skipNode.setAnchorPoint(0, 1);
-                            var skipLevelLabel = skipNode.addComponent(cc.Label);
-                            skipLevelLabel.node.setPosition((cc.winSize.width/2) - (cc.winSize.width*0.2),  (cc.winSize.width/2) + 80);
-                            skipLevelLabel.string = '跳过此关？';
-                            that.skipLevel = skipNode.getComponent(cc.Label)
-                            that.node.addChild(skipNode);
-                            let enableSkip = true;
-                            that.skipLevel.node.on('touchend', function(){
-                                if(!enableSkip) return;
-                                enableSkip = false;
-                                if(window.skipLevelAd) Toast("观看广告至结束后跳过此关卡",2000);
-                                else {Toast("广告拉取失败",1500);return;}
-                                setTimeout(function(){
-                                    window.skipLevelAd.show()
-                                        .catch(err => {
-                                            window.skipLevelAd.load()
-                                                .then(() => window.skipLevelAd.show()).catch(()=>{
-                                                Toast("广告拉取失败",1500)
-                                            })
-                                        })
-                                    window.skipLevelAd.offClose();
-                                    window.skipLevelAd.onClose(res => {
-                                        // 用户点击了【关闭广告】按钮
-                                        // 小于 2.1.0 的基础库版本，res 是一个 undefined
-                                        if (res && res.isEnded || res === undefined) {
-                                            // 正常播放结束，可以下发游戏奖励
-                                            that.showResult('skip');
-                                        }
-                                        else {
-                                            // 播放中途退出，不下发游戏奖励
 
-                                        }
-                                    })
-                                    enableSkip = true;
-                                },1500)
-                            }, that);
-                        }
                     }
                 }).catch(err => {
                     console.error(err)
@@ -1290,26 +1395,273 @@ cc.Class({
             }
 
 
+
+            //攻略
+            if(window.from != "uploadSolution" && window.from != "checkSolution"){
+                let date = new Date();
+                let today = date.toLocaleDateString();
+                var solutionBtnNode = new cc.Node('skipNode');
+                solutionBtnNode.setAnchorPoint(0, 1);
+                var solutionBtnLabel = solutionBtnNode.addComponent(cc.Label);
+                solutionBtnLabel.node.setPosition((cc.winSize.width/2) - (cc.winSize.width*0.2),  (cc.winSize.width/2) + 80);
+                solutionBtnLabel.string = '相关攻略';
+                that.solutionBtn = solutionBtnNode.getComponent(cc.Label)
+                that.node.addChild(solutionBtnNode);
+                let enableSkip = true;
+                wx.getStorage({
+                    key: 'skipAdInfo',
+                    success(res) {
+                        if(res.data.num>=5) that.noneSkipChange = true;
+                    }
+                })
+                that.solutionBtn.node.on('touchend', function(){
+
+                    if(!enableSkip) return;
+                    enableSkip = false;
+                    if(that.timeCounterTimer) clearInterval(that.timeCounterTimer);
+                    that.timeCounterTimer = null;
+
+
+                    var CanvasNode = cc.find('Canvas');
+                    if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
+                    var onResourceLoaded = function(errorMessage, loadedResource )
+                    {
+                        if( errorMessage ) { console.log( 'Prefab error:' + errorMessage ); return; }
+                        if( !( loadedResource instanceof cc.Prefab ) ) { console.log( 'Prefab error' ); return; }
+                        var newMyPrefab = cc.instantiate( loadedResource );
+                        cc.find('solutionContain/close',newMyPrefab).on('click',function () {
+
+                            if(that.timeCounterTimer == null){
+                                that.timeCounterTimer = setInterval(function () {
+                                    that.timeCounterValue  ++;
+                                    if(that.timeCounter) that.timeCounter.string = "用时：" + that.timeCounterValue;
+                                }.bind(that),1000)
+                            }
+                            newMyPrefab.removeFromParent();
+                            newMyPrefab.destroy();
+                        },this)
+
+
+                        cc.find('solutionContain/skipLevel',newMyPrefab).on('click',function () {
+                            if(that.lastScore){
+                                Toast("当前关卡已通过无需再跳过",1500);
+                                return;
+                            }
+
+                            if(that.noneSkipChange){
+                                Toast("每天最多跳过5个关卡",1500);
+                                return
+                            }
+                            if(!window.skipLevelAd){Toast("广告拉取失败",1500);return;}
+                            window.skipLevelAd.show()
+                                .catch(err => {
+                                    window.skipLevelAd.load()
+                                        .then(() => window.skipLevelAd.show()).catch(()=>{
+                                        Toast("广告拉取失败",1500)
+                                    })
+                                })
+                            window.skipLevelAd.offClose();
+                            window.skipLevelAd.onClose(res => {
+                                // 用户点击了【关闭广告】按钮
+                                // 小于 2.1.0 的基础库版本，res 是一个 undefined
+                                if (res && res.isEnded || res === undefined) {
+                                    // 正常播放结束，可以下发游戏奖励
+                                    if(that.timeCounterTimer == null){
+                                        that.timeCounterTimer = setInterval(function () {
+                                            that.timeCounterValue  ++;
+                                            if(that.timeCounter) that.timeCounter.string = "用时：" + that.timeCounterValue;
+                                        }.bind(that),1000)
+                                    }
+                                    newMyPrefab.removeFromParent();
+                                    newMyPrefab.destroy();
+
+                                    that.showResult('skip');
+
+                                    //限制跳过次数
+                                    wx.getStorage({
+                                        key: 'skipAdInfo',
+                                        success(res) {
+                                            if(res.data.date == today){
+                                                if(res.data.num>=5) that.noneSkipChange = true;
+                                                wx.setStorage({
+                                                    key: 'skipAdInfo',
+                                                    data: {
+                                                        date:today,
+                                                        num:res.data.num+1
+                                                    }
+                                                })
+                                            }else{
+                                                wx.setStorage({
+                                                    key: 'skipAdInfo',
+                                                    data: {
+                                                        date:today,
+                                                        num:1
+                                                    }
+                                                })
+                                            }
+                                        },
+                                        fail(err) {
+                                            wx.setStorage({
+                                                key: 'skipAdInfo',
+                                                data: {
+                                                    date:today,
+                                                    num:1
+                                                }
+                                            })
+                                        },
+
+                                    })
+
+                                }
+                                else {
+                                    // 播放中途退出，不下发游戏奖励
+                                }
+                            })
+
+                        },this);
+
+
+                        cc.find('solutionContain/checkSolution',newMyPrefab).on('click',function () {
+                            wx.cloud.callFunction({
+                                name: 'queryClassicsLevelSolution',
+                                data: {
+                                    levelIndex: window.levelIndex
+                                }
+                            }).then(res => {
+                                window.levelSolution = null;
+                                if(res && res.result.data.length>0){
+
+
+                                    if(!window.checkSolutionLevelAd){Toast("广告拉取失败",1500);return;}
+                                    window.checkSolutionLevelAd.show()
+                                        .catch(err => {
+                                            window.checkSolutionLevelAd.load()
+                                                .then(() => window.checkSolutionLevelAd.show()).catch(()=>{
+                                                Toast("广告拉取失败",1500)
+                                            })
+                                        })
+                                    window.checkSolutionLevelAd.offClose();
+                                    window.checkSolutionLevelAd.onClose(result => {
+                                        // 用户点击了【关闭广告】按钮
+                                        // 小于 2.1.0 的基础库版本，result 是一个 undefined
+                                        if (result && result.isEnded || result === undefined) {
+                                            // 正常播放结束，可以下发游戏奖励
+                                            window.from = "checkSolution";
+                                            window.levelSolution = res.result.data[0];
+                                            cc.director.loadScene("game");
+                                        }
+                                        else {
+                                            // 播放中途退出，不下发游戏奖励
+                                        }
+                                    })
+
+
+                                }else{
+                                    Toast('当前关卡暂无攻略',3000);
+                                }
+                            }).catch(err => {
+                                console.error(err)
+                            })
+
+                        },this);
+
+                        cc.find('solutionContain/uploadSolution',newMyPrefab).on('click',function () {
+                            window.from = 'uploadSolution';
+                            cc.director.loadScene("game");
+                        },this);
+
+                        CanvasNode.addChild( newMyPrefab );
+                    };
+                    cc.loader.loadRes('solutionDialog', onResourceLoaded );
+
+                    setTimeout(function(){
+                        enableSkip = true;
+                    },1500)
+                }, that);
+            }
+
+
         }
     },
     back(){
         this.initPendant();
         clearInterval(this.timeCounterTimer)
         this.timeCounterTimer = null;
+
         if(window.from == 'review'){
             cc.director.loadScene("main");
-        }else if(window.from){
-            cc.director.loadScene(window.from);
+        }else if(window.from == 'uploadSolution'){
+            window.from = 'game'
+            cc.director.loadScene("game");
+        }else if(window.from == 'checkSolution'){
+            window.from = 'game'
+            cc.director.loadScene("game");
+        }else if(window.from == 'build'){
+            window.from = 'game'
+            cc.director.loadScene('build');
         }else{
+            window.from = 'game'
             cc.director.loadScene("main");
         }
-        window.from = 'game'
+
     },
     renderLastScore(step,time){
+        let that = this;
         if(window.from == 'build' || window.from == "review"){
             return ;
         }
-        let that = this;
+
+        if(window.from == 'uploadSolution'){
+
+            wx.cloud.callFunction({
+                name: 'queryClassicsLevelSolution',
+                data: {
+                    levelIndex: window.levelIndex
+                }
+            }).then(res => {
+                let lastBestScore = '当前攻略：暂无';
+                window.lastSolutionStep = null;
+                if(res && res.result.data.length>0){
+                    window.lastSolutionStep = res.result.data[0].useStep;
+                    lastBestScore = '当前攻略：步数' + res.result.data[0].useStep + ' - 贡献者：'+ res.result.data[0].nickName.substring(0,16)
+                }
+
+                if(that.lastStepNode == null){
+                    var lastStepNode = new cc.Node('lastStepNode');
+                    lastStepNode.setAnchorPoint(0, 1);
+                    var stepCounter = lastStepNode.addComponent(cc.Label);
+                    stepCounter.node.setPosition(-(cc.winSize.width/2) + (cc.winSize.width*0.05),  (cc.winSize.width/2) + 160)
+                    stepCounter.string = lastBestScore;
+                    that.lastStepNode = lastStepNode.getComponent(cc.Label)
+                    that.node.addChild(lastStepNode);
+                }else{
+                    that.lastStepNode.string = lastBestScore;
+                }
+
+
+            }).catch(err => {
+                console.error(err)
+            })
+
+
+            return;
+        }
+        if(window.from == 'checkSolution'){
+            if(that.lastStepNode == null){
+                var lastStepNode = new cc.Node('lastStepNode');
+                lastStepNode.setAnchorPoint(0, 1);
+                var stepCounter = lastStepNode.addComponent(cc.Label);
+                stepCounter.node.setPosition(-(cc.winSize.width/2) + (cc.winSize.width*0.05),  (cc.winSize.width/2) + 160)
+                stepCounter.string = '当前攻略：步数' + window.levelSolution.useStep + ' - 贡献者：'+ window.levelSolution.nickName.substring(0,16);
+                that.lastStepNode = lastStepNode.getComponent(cc.Label)
+                that.node.addChild(lastStepNode);
+            }else{
+                that.lastStepNode.string = '当前攻略：步数' + window.levelSolution.useStep + ' - 贡献者：'+ window.levelSolution.nickName.substring(0,16);
+            }
+            return;
+        }
+
+
         //最佳步数
         if(that.lastStepNode == null){
             var lastStepNode = new cc.Node('lastStepNode');
@@ -1403,6 +1755,11 @@ cc.Class({
                 Loading.hide();
             })
         }
+
+    },
+    onDestroy(){
+
+        if(window.auditLevelAd) window.auditLevelAd.destroy();
 
     }
 

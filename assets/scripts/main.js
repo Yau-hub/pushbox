@@ -9,12 +9,19 @@ window.bgMusic=null;
 window.moveMusic=null;
 window.createScenseUploadAd = null;
 window.skipLevelAd = null;
+window.auditLevelAd = null;
+window.checkSolutionLevelAd = null;
+window.gameCircle = null;
+if(window.auditLevelAd) window.auditLevelAd.destroy();
 if (cc.sys.platform === cc.sys.WECHAT_GAME) {
     wx.cloud.init({env: window.env})
     //广告初始化
     if (wx.createInterstitialAd){
         window.skipLevelAd = wx.createRewardedVideoAd({
             adUnitId: 'adunit-d408eadf9ac9c0a9'
+        })
+        window.checkSolutionLevelAd = wx.createRewardedVideoAd({
+            adUnitId: 'adunit-110d097df5bc8eb0'
         })
         window.skipLevelAd.onError(err => {});
         window.createScenseUploadAd = wx.createInterstitialAd({
@@ -32,7 +39,8 @@ window.user.levelFinishNum = 0;
 window.loginInfo = {
     avatarUrl: null,
     nickName: null
-}
+};
+window.gameCircle = null;
 
 import {wxLogin,Toast,Loading,formateRankTime} from "./common";
 
@@ -88,6 +96,10 @@ cc.Class({
 
             }).catch(err => {
                 console.error(err)
+            })
+
+            wx.removeStorage({
+                key: "initLevel"
             })
 
         }
@@ -388,6 +400,7 @@ cc.Class({
             wx.getStorage({
                 key: 'appId',
                 success (res) {
+
                     window.user.appId = res.data;
                     wx.cloud.callFunction({
                         name: 'queryUser',
@@ -423,7 +436,6 @@ cc.Class({
                             window.user.netLevelNum = 0;
                             window.user.levelFinishNum = 0;
                             window.user.roles = '';
-
                             wx.cloud.callFunction({
                                 name: 'queryUser',
                                 data:{
@@ -446,6 +458,11 @@ cc.Class({
                                     }).catch(err => {
                                         console.error(err)
                                     })
+                                }else{
+                                    window.user.levelFinishNum = res.result.data[0].levelFinishNum;
+                                    window.user.classicsLevelNum = res.result.data[0].classicsLevelNum;
+                                    window.user.netLevelNum = res.result.data[0].netLevelNum;
+                                    window.user.roles = res.result.data[0].roles;
                                 }
 
                             }).catch(err => {
@@ -643,7 +660,24 @@ cc.Class({
                 CanvasNode.addChild( newMyPrefab );
             };
             cc.loader.loadRes('settingDialog', onResourceLoaded );
-        }, this)
+
+            }, this)
+
+
+        if (cc.sys.platform === cc.sys.WECHAT_GAME && !window.gameCircle){
+            let sysInfo = wx.getSystemInfoSync();
+            //游戏圈按钮
+            window.gameCircle =  wx.createGameClubButton({
+                icon: 'white',
+                style: {
+                    left: (sysInfo.windowWidth*0.9)-20,
+                    top: sysInfo.windowHeight*0.12,
+                    width: 40,
+                    height: 40
+                }
+            })
+        }
+
 
     },
     initSetting(){

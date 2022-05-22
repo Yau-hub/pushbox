@@ -8,18 +8,18 @@
       "x": 0,
       "y": 0,
       "width": 1536,
-      "height": 743,
+      "height": 744,
       "layout": {
         "type": "dock-h",
         "children": [
           {
             "width": 233.90000915527344,
-            "height": 628.6000366210938,
+            "height": 626.1000366210938,
             "type": "dock-v",
             "children": [
               {
                 "width": 233.90000915527344,
-                "height": 248.4499969482422,
+                "height": 247.4499969482422,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -28,7 +28,7 @@
               },
               {
                 "width": 233.90000915527344,
-                "height": 377.1499938964844,
+                "height": 375.6499938964844,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -39,7 +39,7 @@
           },
           {
             "width": 305.875,
-            "height": 628.6000366210938,
+            "height": 626.1000366210938,
             "type": "panel",
             "active": 0,
             "children": [
@@ -49,17 +49,17 @@
           },
           {
             "width": 976.6000366210938,
-            "height": 628.6000366210938,
+            "height": 626.1000366210938,
             "type": "dock-v",
             "children": [
               {
                 "width": 976.6000366210938,
-                "height": 359.7749938964844,
+                "height": 357.1000061035156,
                 "type": "dock-h",
                 "children": [
                   {
                     "width": 459.8125,
-                    "height": 359.7749938964844,
+                    "height": 357.1000061035156,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -68,7 +68,7 @@
                   },
                   {
                     "width": 513.7875366210938,
-                    "height": 359.7749938964844,
+                    "height": 357.1000061035156,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -79,7 +79,7 @@
               },
               {
                 "width": 976.6000366210938,
-                "height": 265.82501220703125,
+                "height": 266,
                 "type": "panel",
                 "active": 1,
                 "children": [
@@ -104,6 +104,7 @@
         "game-window"
       ]
     },
+    "window-1653191250835": {},
     " build-worker-worker": {}
   },
   "panels": {

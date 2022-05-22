@@ -17,6 +17,10 @@ window.bgMusic = null;
 window.moveMusic = null;
 window.createScenseUploadAd = null;
 window.skipLevelAd = null;
+window.auditLevelAd = null;
+window.checkSolutionLevelAd = null;
+window.gameCircle = null;
+if (window.auditLevelAd) window.auditLevelAd.destroy();
 
 if (cc.sys.platform === cc.sys.WECHAT_GAME) {
   wx.cloud.init({
@@ -26,6 +30,9 @@ if (cc.sys.platform === cc.sys.WECHAT_GAME) {
   if (wx.createInterstitialAd) {
     window.skipLevelAd = wx.createRewardedVideoAd({
       adUnitId: 'adunit-d408eadf9ac9c0a9'
+    });
+    window.checkSolutionLevelAd = wx.createRewardedVideoAd({
+      adUnitId: 'adunit-110d097df5bc8eb0'
     });
     window.skipLevelAd.onError(function (err) {});
     window.createScenseUploadAd = wx.createInterstitialAd({
@@ -47,6 +54,7 @@ window.loginInfo = {
   avatarUrl: null,
   nickName: null
 };
+window.gameCircle = null;
 cc.Class({
   "extends": cc.Component,
   properties: {
@@ -91,6 +99,9 @@ cc.Class({
         _common.Loading.hide();
       })["catch"](function (err) {
         console.error(err);
+      });
+      wx.removeStorage({
+        key: "initLevel"
       });
     }
 
@@ -517,6 +528,11 @@ cc.Class({
                   })["catch"](function (err) {
                     console.error(err);
                   });
+                } else {
+                  window.user.levelFinishNum = res.result.data[0].levelFinishNum;
+                  window.user.classicsLevelNum = res.result.data[0].classicsLevelNum;
+                  window.user.netLevelNum = res.result.data[0].netLevelNum;
+                  window.user.roles = res.result.data[0].roles;
                 }
               })["catch"](function (err) {
                 console.error(err);
@@ -703,6 +719,20 @@ cc.Class({
 
       cc.loader.loadRes('settingDialog', onResourceLoaded);
     }, this);
+
+    if (cc.sys.platform === cc.sys.WECHAT_GAME && !window.gameCircle) {
+      var sysInfo = wx.getSystemInfoSync(); //游戏圈按钮
+
+      window.gameCircle = wx.createGameClubButton({
+        icon: 'white',
+        style: {
+          left: sysInfo.windowWidth * 0.9 - 20,
+          top: sysInfo.windowHeight * 0.12,
+          width: 40,
+          height: 40
+        }
+      });
+    }
   },
   initSetting: function initSetting() {
     var that = this;

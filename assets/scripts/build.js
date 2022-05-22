@@ -412,5 +412,8 @@ cc.Class({
         }
 
     },
+    onDestroy(){
 
+
+    }
 });
