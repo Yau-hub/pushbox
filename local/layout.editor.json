@@ -7,8 +7,8 @@
       "windowType": "dockable",
       "x": 0,
       "y": 0,
-      "width": 1289,
-      "height": 807,
+      "width": 1536,
+      "height": 744,
       "layout": {
         "type": "dock-h",
         "children": [
@@ -19,7 +19,7 @@
             "children": [
               {
                 "width": 233.90000915527344,
-                "height": 247.6374969482422,
+                "height": 247.83750915527344,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -28,7 +28,7 @@
               },
               {
                 "width": 233.90000915527344,
-                "height": 377.9624938964844,
+                "height": 377.76251220703125,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -54,12 +54,12 @@
             "children": [
               {
                 "width": 976.6000366210938,
-                "height": 358.4875183105469,
+                "height": 358.3374938964844,
                 "type": "dock-h",
                 "children": [
                   {
                     "width": 459.8125,
-                    "height": 358.4875183105469,
+                    "height": 358.3374938964844,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -68,7 +68,7 @@
                   },
                   {
                     "width": 513.7875366210938,
-                    "height": 358.4875183105469,
+                    "height": 358.3374938964844,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -79,7 +79,7 @@
               },
               {
                 "width": 976.6000366210938,
-                "height": 267.1000061035156,
+                "height": 267.25,
                 "type": "panel",
                 "active": 1,
                 "children": [
@@ -104,9 +104,8 @@
         "game-window"
       ]
     },
-    "window-1653819600127": {},
-    " build-worker-worker": {},
-    " compile-worker-worker": {}
+    "window-1653826632284": {},
+    " build-worker-worker": {}
   },
   "panels": {
     "project-settings": {
@@ -123,9 +122,9 @@
     },
     "builder": {
       "x": 528,
-      "y": 274,
+      "y": 272,
       "width": 540,
-      "height": 448
+      "height": 451
     },
     "sprite-editor": {
       "x": 388,

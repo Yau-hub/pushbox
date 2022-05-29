@@ -18,12 +18,15 @@ if (cc.sys.platform === cc.sys.WECHAT_GAME) {
     //广告初始化
     if (wx.createInterstitialAd){
         window.skipLevelAd = wx.createRewardedVideoAd({
-            adUnitId: 'adunit-d408eadf9ac9c0a9'
-        })
-        window.checkSolutionLevelAd = wx.createRewardedVideoAd({
-            adUnitId: 'adunit-110d097df5bc8eb0'
+            adUnitId: 'adunit-d408eadf9ac9c0a9',
+            multiton: true
         })
         window.skipLevelAd.onError(err => {});
+        window.checkSolutionLevelAd = wx.createRewardedVideoAd({
+            adUnitId: 'adunit-110d097df5bc8eb0',
+            multiton: true
+        })
+        window.checkSolutionLevelAd.onError(err => {});
         window.createScenseUploadAd = wx.createInterstitialAd({
             adUnitId: 'adunit-e7f23b52c9d59315'
         })
