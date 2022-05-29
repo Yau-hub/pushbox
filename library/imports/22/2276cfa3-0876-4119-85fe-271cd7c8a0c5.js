@@ -291,8 +291,6 @@ cc.Class({
     cc.loader.loadRes('reviewLayout', onResourceLoaded);
   },
   renderReviewLevelList: function renderReviewLevelList(content, page, pageSize) {
-    var _this = this;
-
     var that = this;
     var currentItemNum = content.childrenCount;
 
@@ -311,48 +309,44 @@ cc.Class({
         var rankItem = null;
 
         if (res && res.result.data.length > 0) {
-          var _loop = function _loop() {
-            data = res.result.data[i - 1];
-            var node = cc.instantiate(that.rankItem);
-            if (rankItem == null) rankItem = node;
-            node.getChildByName('tdRank').getComponent(cc.Label).string = i + currentItemNum;
-            node.getChildByName('tdDate').getComponent(cc.Label).string = (0, _common.formateRankTime)(data.createTime);
-            node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStepNum;
-
-            if (data.portrait) {
-              cc.assetManager.loadRemote(data.portrait + '?aaa=aa.jpg', function (err, texture) {
-                var sprite = new cc.SpriteFrame(texture);
-                cc.find('mask/Image', node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
-              });
-            }
-
-            if (data.nickName) {
-              node.getChildByName('tdName').getComponent(cc.Label).string = " " + data.nickName + " ";
-            }
-
-            node.on('touchend', function (t) {
-              if (window.wxLoginBtn) window.wxLoginBtn.destroy();
-              wx.setStorage({
-                key: 'reviewLevel',
-                data: data.content,
-                success: function success() {
-                  window.uploadInfo = {};
-                  window.from = 'review';
-                  window.reviewId = data._id;
-                  window.uploadInfo.appId = data.appId;
-                  window.uploadInfo.nickName = data.nickName;
-                  window.uploadInfo.portrait = data.portrait;
-                  cc.director.loadScene("game");
-                }
-              });
-            }, _this);
-            content.addChild(node);
-          };
-
           for (var i = 1; i <= res.result.data.length; i++) {
-            var data;
+            (function (i) {
+              var data = res.result.data[i - 1];
+              var node = cc.instantiate(that.rankItem);
+              if (rankItem == null) rankItem = node;
+              node.getChildByName('tdRank').getComponent(cc.Label).string = i + currentItemNum;
+              node.getChildByName('tdDate').getComponent(cc.Label).string = (0, _common.formateRankTime)(data.createTime);
+              node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStepNum;
 
-            _loop();
+              if (data.portrait) {
+                cc.assetManager.loadRemote(data.portrait + '?aaa=aa.jpg', function (err, texture) {
+                  var sprite = new cc.SpriteFrame(texture);
+                  cc.find('mask/Image', node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+                });
+              }
+
+              if (data.nickName) {
+                node.getChildByName('tdName').getComponent(cc.Label).string = " " + data.nickName + " ";
+              }
+
+              node.on('touchend', function (t) {
+                if (window.wxLoginBtn) window.wxLoginBtn.destroy();
+                wx.setStorage({
+                  key: 'reviewLevel',
+                  data: data.content,
+                  success: function success() {
+                    window.uploadInfo = {};
+                    window.from = 'review';
+                    window.reviewId = data._id;
+                    window.uploadInfo.appId = data.appId;
+                    window.uploadInfo.nickName = data.nickName;
+                    window.uploadInfo.portrait = data.portrait;
+                    cc.director.loadScene("game");
+                  }
+                });
+              }, this);
+              content.addChild(node);
+            })(i);
           }
 
           content.height = content.childrenCount * rankItem.height;
@@ -432,7 +426,7 @@ cc.Class({
         var rankItem = null;
 
         if (res && res.result.data.length > 0) {
-          var _loop2 = function _loop2() {
+          var _loop = function _loop() {
             data = res.result.data[i - 1];
             var node = cc.instantiate(that.rankItem);
             if (rankItem == null) rankItem = node;
@@ -457,7 +451,7 @@ cc.Class({
           for (var i = 1; i <= res.result.data.length; i++) {
             var data;
 
-            _loop2();
+            _loop();
           }
 
           content.height = content.childrenCount * rankItem.height;

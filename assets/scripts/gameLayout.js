@@ -614,7 +614,7 @@ cc.Class({
                                     useTime: that.timeCounterValue,
                                     portrait: window.loginInfo.avatarUrl,
                                     nickName: window.loginInfo.nickName,
-                                    content: that.moveHistoryList
+                                    content: JSON.stringify(that.moveHistoryList)
                                 }
                             }).then(res => {
                                 Toast('攻略上传成功',1500);
@@ -624,7 +624,7 @@ cc.Class({
                                 },1000)
 
                             }).catch(err=>{
-                                Toast('上传失败,请稍后再试',1500);
+                                Toast('上传失败,请稍后再试',3000);
                                 Loading.hide();
                                 console.log(err)
                             });
@@ -644,7 +644,7 @@ cc.Class({
                                 useTime: that.timeCounterValue,
                                 portrait: window.loginInfo.avatarUrl,
                                 nickName: window.loginInfo.nickName,
-                                content: that.moveHistoryList
+                                content: JSON.stringify(that.moveHistoryList)
                             }
                         }).then(res => {
                             Toast('攻略上传成功',1500);
@@ -653,7 +653,7 @@ cc.Class({
                                 cc.director.loadScene("game");
                             },1000)
                         }).catch(err=>{
-                            Toast('上传失败,请稍后再试',1500);
+                            Toast('上传失败,请稍后再试',3000);
                             Loading.hide();
                             console.log(err)
                         });;
@@ -1530,8 +1530,6 @@ cc.Class({
                             }).then(res => {
                                 window.levelSolution = null;
                                 if(res && res.result.data.length>0){
-
-
                                     if(!window.checkSolutionLevelAd){Toast("广告拉取失败",1500);return;}
                                     window.checkSolutionLevelAd.show()
                                         .catch(err => {
@@ -1548,6 +1546,9 @@ cc.Class({
                                             // 正常播放结束，可以下发游戏奖励
                                             window.from = "checkSolution";
                                             window.levelSolution = res.result.data[0];
+                                            if(typeof res.result.data[0].content == 'string'){
+                                                window.levelSolution.content = JSON.parse(res.result.data[0].content);
+                                            }
                                             cc.director.loadScene("game");
                                         }
                                         else {

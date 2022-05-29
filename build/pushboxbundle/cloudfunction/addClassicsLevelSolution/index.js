@@ -9,6 +9,7 @@ exports.main = async (event, context) => {
   return await db.collection('classicsLevelSolution').add ({
     data: {
       content: event.content, 
+      contentFile: event.contentFile,
       levelIndex: event.levelIndex, 
       appId: event.appId, 
       useStep: event.useStep,

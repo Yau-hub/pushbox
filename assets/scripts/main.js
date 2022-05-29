@@ -265,42 +265,47 @@ cc.Class({
                 let rankItem = null;
                 if(res && res.result.data.length>0){
                     for(var i = 1; i<= res.result.data.length; i++){
-                        var data =  res.result.data[i-1];
-                        let node = cc.instantiate(that.rankItem);
-                        if(rankItem == null) rankItem = node;
-                        node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
-                        node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
-                        node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStepNum;
-                        if(data.portrait){
-                            cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
-                                var sprite  = new cc.SpriteFrame(texture);
-                                cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
-                            });
-                        }
-                        if(data.nickName){
-                            node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
-                        }
-                        node.on('touchend',
-                            function(t){
 
-                                if(window.wxLoginBtn ) window.wxLoginBtn.destroy();
-                                wx.setStorage({
-                                    key: 'reviewLevel',
-                                    data: data.content,
-                                    success(){
-                                        window.uploadInfo = {};
-                                        window.from = 'review';
-                                        window.reviewId = data._id;
-                                        window.uploadInfo.appId = data.appId;
-                                        window.uploadInfo.nickName = data.nickName;
-                                        window.uploadInfo.portrait = data.portrait;
+                        (function(i){
+                            var data =  res.result.data[i-1];
+                            let node = cc.instantiate(that.rankItem);
+                            if(rankItem == null) rankItem = node;
+                            node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
+                            node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
+                            node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStepNum;
+                            if(data.portrait){
+                                cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
+                                    var sprite  = new cc.SpriteFrame(texture);
+                                    cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+                                });
+                            }
+                            if(data.nickName){
+                                node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
+                            }
+                            node.on('touchend',
+                                function(t){
 
-                                        cc.director.loadScene("game");
-                                    }
-                                })
+                                    if(window.wxLoginBtn ) window.wxLoginBtn.destroy();
+                                    wx.setStorage({
+                                        key: 'reviewLevel',
+                                        data: data.content,
+                                        success(){
+                                            window.uploadInfo = {};
+                                            window.from = 'review';
+                                            window.reviewId = data._id;
+                                            window.uploadInfo.appId = data.appId;
+                                            window.uploadInfo.nickName = data.nickName;
+                                            window.uploadInfo.portrait = data.portrait;
 
-                            },this)
-                        content.addChild(node);
+                                            cc.director.loadScene("game");
+                                        }
+                                    })
+
+                                },this)
+                            content.addChild(node);
+                        })(i)
+
+
                     }
                     content.height = content.childrenCount * rankItem.height;
                 }else{
