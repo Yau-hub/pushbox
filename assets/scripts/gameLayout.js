@@ -78,7 +78,9 @@ cc.Class({
         buildArea:null,
         solutionBtn:null,
         noneSkipChange:false,
-        solutionStepIndex: 0
+        solutionStepIndex: -1,
+        recordSolutionStep:[]
+
 
     },
 
@@ -433,17 +435,21 @@ cc.Class({
         switch(direction){
             case 'up':
                 this.position.y -= 1;
+                if(window.from == "uploadSolution") that.recordSolutionStep.push('U');
                 break;
             case 'right':
                 this.position.x += 1;
+                if(window.from == "uploadSolution") that.recordSolutionStep.push('R');
                 break;
 
             case 'down':
                 this.position.y += 1;
+                if(window.from == "uploadSolution") that.recordSolutionStep.push('D');
                 break;
 
             case 'left':
                 this.position.x -= 1;
+                if(window.from == "uploadSolution") that.recordSolutionStep.push('L');
                 break;
         }
         //是否开启回退功能
@@ -614,7 +620,7 @@ cc.Class({
                                     useTime: that.timeCounterValue,
                                     portrait: window.loginInfo.avatarUrl,
                                     nickName: window.loginInfo.nickName,
-                                    content: JSON.stringify(that.moveHistoryList)
+                                    content: that.recordSolutionStep.join()
                                 }
                             }).then(res => {
                                 Toast('攻略上传成功',1500);
@@ -644,7 +650,7 @@ cc.Class({
                                 useTime: that.timeCounterValue,
                                 portrait: window.loginInfo.avatarUrl,
                                 nickName: window.loginInfo.nickName,
-                                content: JSON.stringify(that.moveHistoryList)
+                                content: that.recordSolutionStep.join()
                             }
                         }).then(res => {
                             Toast('攻略上传成功',1500);
@@ -656,7 +662,7 @@ cc.Class({
                             Toast('上传失败,请稍后再试',3000);
                             Loading.hide();
                             console.log(err)
-                        });;
+                        });
 
                     }
 
@@ -830,6 +836,7 @@ cc.Class({
         wx.getStorage({
             key: "initLevel",
             success (res) {
+                if(window.from == "uploadSolution") that.recordSolutionStep = [];
                 window.currentLevel = res.data;
                 that.renderLayout(window.currentLevel);
                 that.initPosition(window.currentLevel);
@@ -1004,16 +1011,14 @@ cc.Class({
 
         var leftBtn = cc.find('gameBtns/backStep/Background/Label',this.node).getComponent(cc.Label);
         if(window.from == 'review') leftBtn.string = '通过';
-        else if(window.from == 'checkSolution') leftBtn.string = 'next';
+        else if(window.from == 'checkSolution') leftBtn.string = 'Again';
         else if(!window.setting.relast) leftBtn.string = '重玩';
         cc.find('gameBtns/backStep',this.node).on('click',function () {
 
             //攻略播放
             if(window.from == 'checkSolution'){
-                that.solutionStepIndex ++ ;
-                if(that.solutionStepIndex>=window.levelSolution.content.length) that.solutionStepIndex=0;
-                window.currentLevel = window.levelSolution.content[that.solutionStepIndex];
-                that.renderLayout(window.currentLevel)
+                that.solutionStepIndex=-1
+                that.replayLayout();
                 return;
             }
             //审核关卡通过
@@ -1093,6 +1098,7 @@ cc.Class({
             if(window.setting.relast){
                 if(that.moveHistoryList.length > 1 && that.stepCounterValue >= 1){
                     that.moveHistoryList.pop();
+                    if(window.from == "uploadSolution") that.recordSolutionStep.pop();
                     if (cc.sys.platform === cc.sys.WECHAT_GAME) {
                         wx.setStorage({
                             key: "lastLayout",
@@ -1121,16 +1127,33 @@ cc.Class({
         },this);
 
         if(window.from == 'review') cc.find('gameBtns/menu/Background/Label',this.node).getComponent(cc.Label).string = '驳回'
-        else if(window.from == "checkSolution") cc.find('gameBtns/menu/Background/Label',this.node).getComponent(cc.Label).string = 'prev'
+        else if(window.from == "checkSolution") cc.find('gameBtns/menu/Background/Label',this.node).getComponent(cc.Label).string = 'Next'
         cc.find('gameBtns/menu',this.node).on("click",function () {
             clearInterval(that.timeCounterTimer);
             that.timeCounterTimer = null;
             //攻略播放
             if(window.from == 'checkSolution'){
-                that.solutionStepIndex --;
-                if(that.solutionStepIndex<=0) that.solutionStepIndex=0;
-                window.currentLevel = window.levelSolution.content[that.solutionStepIndex];
-                that.renderLayout(window.currentLevel)
+
+                that.solutionStepIndex ++ ;
+                if(that.solutionStepIndex>=window.levelSolution.content.length) that.solutionStepIndex=-1;
+                if(that.solutionStepIndex <= -1){
+                    that.replayLayout();
+                    return;
+                }
+                switch (window.levelSolution.content[that.solutionStepIndex]) {
+                    case 'U':
+                        that.moveUp(window.currentLevel)
+                        break;
+                    case 'R':
+                        that.moveRight(window.currentLevel)
+                        break;
+                    case 'D':
+                        that.moveDown(window.currentLevel)
+                        break;
+                    case 'L':
+                        that.moveLeft(window.currentLevel)
+                        break;
+                }
                 return;
             }
 
@@ -1447,11 +1470,11 @@ cc.Class({
                                 Toast("当前关卡已通过无需再跳过",1500);
                                 return;
                             }
-
                             if(that.noneSkipChange){
                                 Toast("每天最多跳过5个关卡",1500);
                                 return
                             }
+                            Toast("广告拉取中...",1500);
                             if(!window.skipLevelAd){Toast("广告拉取失败",1500);return;}
                             window.skipLevelAd.show()
                                 .catch(err => {
@@ -1530,6 +1553,7 @@ cc.Class({
                             }).then(res => {
                                 window.levelSolution = null;
                                 if(res && res.result.data.length>0){
+                                    Toast("广告拉取中...",1500);
                                     if(!window.checkSolutionLevelAd){Toast("广告拉取失败",1500);return;}
                                     window.checkSolutionLevelAd.show()
                                         .catch(err => {
@@ -1546,9 +1570,7 @@ cc.Class({
                                             // 正常播放结束，可以下发游戏奖励
                                             window.from = "checkSolution";
                                             window.levelSolution = res.result.data[0];
-                                            if(typeof res.result.data[0].content == 'string'){
-                                                window.levelSolution.content = JSON.parse(res.result.data[0].content);
-                                            }
+                                            window.levelSolution.content = res.result.data[0].content.split(',');
                                             cc.director.loadScene("game");
                                         }
                                         else {
