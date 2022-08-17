@@ -1045,39 +1045,48 @@ cc.Class({
                                 name: 'getClassicsLevelNum'
                             }).then(res => {
 
-                                wx.cloud.callFunction({
-                                    name: 'addClassicsLevel',
-                                    data:{
-                                        content: window.uploadLevel,
-                                        levelIndex: res.result.total+1,
-                                        appId: window.uploadInfo.appId,
-                                        nickName: window.uploadInfo.nickName?window.uploadInfo.nickName:'游客'+window.uploadInfo.appId.substring(window.uploadInfo.appId.length-5),
-                                        portrait: window.uploadInfo.avatarUrl,
-                                    }
-                                }).then(result => {
+                                wx.getStorage({
+                                    key: "initLevel",
+                                    success (result) {
 
-                                    wx.cloud.callFunction({
-                                        name: 'removeReviewLevel',
-                                        data:{
-                                            _id:window.reviewId
-                                        }
-                                    }).then(result => {
-                                        let levelUploadNum = parseInt(res.result.total)+1;
-                                        Toast('关卡'+levelUploadNum+'上传成功，即将跳回主界面',1500);
-                                        setTimeout(function () {
-                                            clearInterval(that.timeCounterTimer);
-                                            that.timeCounterTimer = null;
+                                        wx.cloud.callFunction({
+                                            name: 'addClassicsLevel',
+                                            data:{
+                                                content: result.data,
+                                                levelIndex: res.result.total+1,
+                                                appId: window.uploadInfo.appId,
+                                                nickName: window.uploadInfo.nickName?window.uploadInfo.nickName:'游客'+window.uploadInfo.appId.substring(window.uploadInfo.appId.length-5),
+                                                portrait: window.uploadInfo.avatarUrl,
+                                            }
+                                        }).then(result => {
+
+                                            wx.cloud.callFunction({
+                                                name: 'removeReviewLevel',
+                                                data:{
+                                                    _id:window.reviewId
+                                                }
+                                            }).then(result => {
+                                                let levelUploadNum = parseInt(res.result.total)+1;
+                                                Toast('关卡'+levelUploadNum+'上传成功，即将跳回主界面',1500);
+                                                setTimeout(function () {
+                                                    clearInterval(that.timeCounterTimer);
+                                                    that.timeCounterTimer = null;
+                                                    Loading.hide();
+                                                    window.from = 'game';
+                                                    cc.director.loadScene('main');
+                                                },1500)
+                                            });
+
+                                        }).catch(err => {
                                             Loading.hide();
-                                            window.from = 'game';
-                                            cc.director.loadScene('main');
-                                        },1500)
-                                    });
+                                            Toast('上传失败',1500);
+                                            console.error(err)
+                                        })
 
-                                }).catch(err => {
-                                    Loading.hide();
-                                    Toast('上传失败',1500);
-                                    console.error(err)
-                                })
+
+                                    }
+                                });
+
 
                             }).catch(err => {
                                 console.error(err)

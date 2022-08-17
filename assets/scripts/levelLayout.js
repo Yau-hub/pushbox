@@ -82,7 +82,7 @@ cc.Class({
                 levelH += node.height + 70;
             }
         }
-        this.levelListConten.height = levelH;
+        this.levelListConten.height = levelH+(cc.winSize.height*0.2);
 
     },
 
@@ -121,7 +121,7 @@ cc.Class({
                 levelH += node.height + 70;
             }
         }
-        this.levelListConten.height = levelH;
+        this.levelListConten.height = levelH+(cc.winSize.height*0.2);
     },
     closeLevelLayout(){
         this.node.removeFromParent();
