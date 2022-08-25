@@ -344,6 +344,7 @@ cc.Class({
                     window.uploadInfo.appId = data.appId;
                     window.uploadInfo.nickName = data.nickName;
                     window.uploadInfo.portrait = data.portrait;
+                    window.uploadInfo.createTime = data.createTime;
                     cc.director.loadScene("game");
                   }
                 });

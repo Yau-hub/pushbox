@@ -189,7 +189,6 @@ cc.Class({
     },
     //授权登录显示关卡列表
     loginLevelList(){
-
         window.loginType = 'wechat';
         var CanvasNode = cc.find('Canvas');
         if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
@@ -202,9 +201,9 @@ cc.Class({
         };
         cc.loader.loadRes('levelLayout', onResourceLoaded );
     },
+
     //不登录登录显示关卡列表
     visitorLevelList(){
-
         window.loginType = 'visitor';
         var CanvasNode = cc.find('Canvas');
         if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
@@ -299,6 +298,7 @@ cc.Class({
                                             window.uploadInfo.appId = data.appId;
                                             window.uploadInfo.nickName = data.nickName;
                                             window.uploadInfo.portrait = data.portrait;
+                                            window.uploadInfo.createTime = data.createTime;
 
                                             cc.director.loadScene("game");
                                         }

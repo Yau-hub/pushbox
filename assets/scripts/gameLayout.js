@@ -556,6 +556,15 @@ cc.Class({
             if(window.from == 'build'){
                 cc.find('contentBg/next/Background/Label',newMyPrefab).getComponent(cc.Label).string = '上传关卡';
                 cc.find('contentBg/next',newMyPrefab).on('click',function () {
+
+
+                    wx.requestSubscribeMessage({
+                        tmplIds: ['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA'],
+                        success (res) {
+
+                        }
+                    });
+
                     Loading.show();
                     wx.cloud.callFunction({
                         name: 'getReviewLevelNum'
@@ -1014,7 +1023,7 @@ cc.Class({
         else if(window.from == 'checkSolution') leftBtn.string = 'Again';
         else if(!window.setting.relast) leftBtn.string = '重玩';
         cc.find('gameBtns/backStep',this.node).on('click',function () {
-
+            let that = this;
             //攻略播放
             if(window.from == 'checkSolution'){
                 that.solutionStepIndex=-1
@@ -1023,7 +1032,6 @@ cc.Class({
             }
             //审核关卡通过
             if(window.from == 'review'){
-
                 var CanvasNode = cc.find('Canvas');
                 if( !CanvasNode ) { cc.console( 'find Canvas error' ); return; }
                 var onResourceLoaded = function(errorMessage, loadedResource )
@@ -1075,6 +1083,30 @@ cc.Class({
                                                     window.from = 'game';
                                                     cc.director.loadScene('main');
                                                 },1500)
+
+                                                //获取系统通知订阅情况
+                                                wx.getSetting({
+                                                    withSubscriptions: true,
+                                                    success (res) {
+                                                        //接收审核通知
+                                                        if(res.subscriptionsSetting.mainSwitch && (!res.subscriptionsSetting.itemSettings || res.subscriptionsSetting.itemSettings['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA']=='accept')){
+                                                            //下发审核通过通知
+                                                            wx.cloud.callFunction({
+                                                                name: 'sendAuditMsg',
+                                                                data:{
+                                                                    openId: window.uploadInfo.appId,
+                                                                    msgTitle:'您所上传的关卡已审核通过',
+                                                                    msgContent:'您上传的关卡为第'+levelUploadNum+'关',
+                                                                    uploadDate: that.timestampToTime(window.uploadInfo.createTime)
+                                                                }
+                                                            }).then(res => {
+
+                                                            })
+                                                        }
+                                                    }
+                                                })
+
+
                                             });
 
                                         }).catch(err => {
@@ -1197,6 +1229,28 @@ cc.Class({
                                     window.from = 'game';
                                     cc.director.loadScene('main');
                                 },1500)
+
+                                //获取系统通知订阅情况
+                                wx.getSetting({
+                                    withSubscriptions: true,
+                                    success (res) {
+                                        //接收审核通知
+                                        if(res.subscriptionsSetting.mainSwitch && (!res.subscriptionsSetting.itemSettings || res.subscriptionsSetting.itemSettings['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA']=='accept')){
+                                            //下发审核通过通知
+                                            wx.cloud.callFunction({
+                                                name: 'sendAuditMsg',
+                                                data:{
+                                                    openId: window.uploadInfo.appId,
+                                                    msgTitle:'您所上传的关卡已审核驳回',
+                                                    msgContent:'驳回原因：关卡过于简单',
+                                                    uploadDate: that.timestampToTime(window.uploadInfo.createTime)
+                                                }
+                                            }).then(res => {
+
+                                            })
+                                        }
+                                    }
+                                })
                             });
                         }else{
                             Toast('密码错误！',1500);
@@ -1788,6 +1842,17 @@ cc.Class({
             })
         }
 
+    },
+    timestampToTime(timestamp) {
+        var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var Y = date.getFullYear() + '年';
+        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '月';
+        var D = (date.getDate() < 10 ? '0'+date.getDate() : date.getDate()) + '日 ';
+        var h = (date.getHours() < 10 ? '0'+date.getHours() : date.getHours()) + ':';
+        var m = (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes()) + ':';
+        var s = (date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds());
+        let strDate = Y+M+D+h+m+s;
+        return strDate;
     },
     onDestroy(){
 
