@@ -23,7 +23,7 @@ exports.main = async (event, context) => {
           
         },
         "templateId": 'bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA',
-        "miniprogramState": 'developer'
+        "miniprogramState": 'formal'
       })
     return result
   } catch (err) {

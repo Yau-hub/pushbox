@@ -558,57 +558,107 @@ cc.Class({
                 cc.find('contentBg/next',newMyPrefab).on('click',function () {
 
 
-                    wx.requestSubscribeMessage({
-                        tmplIds: ['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA'],
-                        success (res) {
+                    // wx.requestSubscribeMessage({
+                    //     tmplIds: ['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA'],
+                    //     success (res) {
+                    //
+                    //     }
+                    // });
+
+                    Loading.show();
+
+                    wx.request({
+                        url: cloudFunctionBaseUrl+"/getReviewLevelNum",
+                        method: 'POST',
+                        data:{},
+                        success: (res) => {
+
+                            wx.request({
+                                url: cloudFunctionBaseUrl+"/addReviewLevel",
+                                method: 'POST',
+                                data:{
+                                    content: window.uploadLevel,
+                                    useStepNum: that.stepCounterValue,
+                                    levelIndex: res.data.total+1,
+                                    appId: window.user.appId,
+                                    nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
+                                    portrait: window.loginInfo.avatarUrl,
+                                },
+                                success: (result) => {
+                                    let levelUploadNum = parseInt(res.data.total)+1;
+                                    window.from = 'game';
+                                    Loading.hide();
+                                    if (window.createScenseUploadAd) {
+                                        Toast('关卡上传成功待审核，关闭广告后跳回主界面',2000);
+                                        setTimeout(function () {
+                                            window.createScenseUploadAd.show().catch(()=>{
+                                                cc.director.loadScene('main');
+                                            });
+                                            window.createScenseUploadAd.onClose(res => {
+                                                cc.director.loadScene('main');
+                                            })
+                                        },1500)
+                                    }else{
+                                        Toast('关卡上传成功待管理员审核，即将跳回主界面',1500);
+                                        setTimeout(function () {
+                                            cc.director.loadScene('main');
+                                        },1500)
+                                    }
+                                },
+                                error:(err)=>{
+                                    Loading.hide();
+                                    Toast('上传失败',1500);
+                                    console.error(err)
+                                }
+                            })
+
 
                         }
                     });
 
-                    Loading.show();
-                    wx.cloud.callFunction({
-                        name: 'getReviewLevelNum'
-                    }).then(res => {
-
-                        wx.cloud.callFunction({
-                            name: 'addReviewLevel',
-                            data:{
-                                content: window.uploadLevel,
-                                useStepNum: that.stepCounterValue,
-                                levelIndex: res.result.total+1,
-                                appId: window.user.appId,
-                                nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
-                                portrait: window.loginInfo.avatarUrl,
-                            }
-                        }).then(result => {
-                            let levelUploadNum = parseInt(res.result.total)+1;
-                            window.from = 'game';
-                            Loading.hide();
-                            if (window.createScenseUploadAd) {
-                                Toast('关卡上传成功待审核，关闭广告后跳回主界面',2000);
-                                setTimeout(function () {
-                                    window.createScenseUploadAd.show().catch(()=>{
-                                        cc.director.loadScene('main');
-                                    });
-                                    window.createScenseUploadAd.onClose(res => {
-                                        cc.director.loadScene('main');
-                                    })
-                                },1500)
-                            }else{
-                                Toast('关卡上传成功待管理员审核，即将跳回主界面',1500);
-                                setTimeout(function () {
-                                    cc.director.loadScene('main');
-                                },1500)
-                            }
-                        }).catch(err => {
-                            Loading.hide();
-                            Toast('上传失败',1500);
-                            console.error(err)
-                        })
-
-                    }).catch(err => {
-                        console.error(err)
-                    })
+                    // wx.cloud.callFunction({
+                    //     name: 'getReviewLevelNum'
+                    // }).then(res => {
+                    //
+                    //     wx.cloud.callFunction({
+                    //         name: 'addReviewLevel',
+                    //         data:{
+                    //             content: window.uploadLevel,
+                    //             useStepNum: that.stepCounterValue,
+                    //             levelIndex: res.result.total+1,
+                    //             appId: window.user.appId,
+                    //             nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
+                    //             portrait: window.loginInfo.avatarUrl,
+                    //         }
+                    //     }).then(result => {
+                    //         let levelUploadNum = parseInt(res.result.total)+1;
+                    //         window.from = 'game';
+                    //         Loading.hide();
+                    //         if (window.createScenseUploadAd) {
+                    //             Toast('关卡上传成功待审核，关闭广告后跳回主界面',2000);
+                    //             setTimeout(function () {
+                    //                 window.createScenseUploadAd.show().catch(()=>{
+                    //                     cc.director.loadScene('main');
+                    //                 });
+                    //                 window.createScenseUploadAd.onClose(res => {
+                    //                     cc.director.loadScene('main');
+                    //                 })
+                    //             },1500)
+                    //         }else{
+                    //             Toast('关卡上传成功待管理员审核，即将跳回主界面',1500);
+                    //             setTimeout(function () {
+                    //                 cc.director.loadScene('main');
+                    //             },1500)
+                    //         }
+                    //     }).catch(err => {
+                    //         Loading.hide();
+                    //         Toast('上传失败',1500);
+                    //         console.error(err)
+                    //     })
+                    //
+                    // }).catch(err => {
+                    //     console.error(err)
+                    // })
                 },this)
 
             }else if(window.from == "uploadSolution"){
@@ -620,9 +670,10 @@ cc.Class({
                     if(window.lastSolutionStep != null){
                         //更新攻略
                         if(window.lastSolutionStep>that.stepCounterValue){
-                            wx.cloud.callFunction({
-                                name: 'updateClassicsLevelSolution',
-                                data: {
+                            wx.request({
+                                url: cloudFunctionBaseUrl+"/updateClassicsLevelSolution",
+                                method: 'POST',
+                                data:{
                                     levelIndex: window.levelIndex,
                                     appId: window.user.appId,
                                     useStep: that.stepCounterValue,
@@ -630,19 +681,42 @@ cc.Class({
                                     portrait: window.loginInfo.avatarUrl,
                                     nickName: window.loginInfo.nickName,
                                     content: that.recordSolutionStep.join()
+                                },
+                                success: (res) => {
+                                    Toast('攻略上传成功',1500);
+                                    Loading.hide();
+                                    setTimeout(function () {
+                                        cc.director.loadScene("game");
+                                    },1000)
+                                },error:(err)=>{
+                                    Toast('上传失败,请稍后再试',3000);
+                                    Loading.hide();
                                 }
-                            }).then(res => {
-                                Toast('攻略上传成功',1500);
-                                Loading.hide();
-                                setTimeout(function () {
-                                    cc.director.loadScene("game");
-                                },1000)
-
-                            }).catch(err=>{
-                                Toast('上传失败,请稍后再试',3000);
-                                Loading.hide();
-                                console.log(err)
                             });
+
+                            // wx.cloud.callFunction({
+                            //     name: 'updateClassicsLevelSolution',
+                            //     data: {
+                            //         levelIndex: window.levelIndex,
+                            //         appId: window.user.appId,
+                            //         useStep: that.stepCounterValue,
+                            //         useTime: that.timeCounterValue,
+                            //         portrait: window.loginInfo.avatarUrl,
+                            //         nickName: window.loginInfo.nickName,
+                            //         content: that.recordSolutionStep.join()
+                            //     }
+                            // }).then(res => {
+                            //     Toast('攻略上传成功',1500);
+                            //     Loading.hide();
+                            //     setTimeout(function () {
+                            //         cc.director.loadScene("game");
+                            //     },1000)
+                            //
+                            // }).catch(err=>{
+                            //     Toast('上传失败,请稍后再试',3000);
+                            //     Loading.hide();
+                            //     console.log(err)
+                            // });
 
                         }else{
                             Loading.hide();
@@ -650,9 +724,10 @@ cc.Class({
                         }
                     }else{
                         //上传攻略
-                        wx.cloud.callFunction({
-                            name: 'addClassicsLevelSolution',
-                            data: {
+                        wx.request({
+                            url: cloudFunctionBaseUrl+"/addClassicsLevelSolution",
+                            method: 'POST',
+                            data:{
                                 levelIndex: window.levelIndex,
                                 appId: window.user.appId,
                                 useStep: that.stepCounterValue,
@@ -660,18 +735,40 @@ cc.Class({
                                 portrait: window.loginInfo.avatarUrl,
                                 nickName: window.loginInfo.nickName,
                                 content: that.recordSolutionStep.join()
+                            },
+                            success: (res) => {
+                                Toast('攻略上传成功',1500);
+                                Loading.hide();
+                                setTimeout(function () {
+                                    cc.director.loadScene("game");
+                                },1000)
+                            },error:(err)=>{
+                                Toast('上传失败,请稍后再试',3000);
+                                Loading.hide();
                             }
-                        }).then(res => {
-                            Toast('攻略上传成功',1500);
-                            Loading.hide();
-                            setTimeout(function () {
-                                cc.director.loadScene("game");
-                            },1000)
-                        }).catch(err=>{
-                            Toast('上传失败,请稍后再试',3000);
-                            Loading.hide();
-                            console.log(err)
                         });
+                        // wx.cloud.callFunction({
+                        //     name: 'addClassicsLevelSolution',
+                        //     data: {
+                        //         levelIndex: window.levelIndex,
+                        //         appId: window.user.appId,
+                        //         useStep: that.stepCounterValue,
+                        //         useTime: that.timeCounterValue,
+                        //         portrait: window.loginInfo.avatarUrl,
+                        //         nickName: window.loginInfo.nickName,
+                        //         content: that.recordSolutionStep.join()
+                        //     }
+                        // }).then(res => {
+                        //     Toast('攻略上传成功',1500);
+                        //     Loading.hide();
+                        //     setTimeout(function () {
+                        //         cc.director.loadScene("game");
+                        //     },1000)
+                        // }).catch(err=>{
+                        //     Toast('上传失败,请稍后再试',3000);
+                        //     Loading.hide();
+                        //     console.log(err)
+                        // });
 
                     }
 
@@ -755,22 +852,40 @@ cc.Class({
             if (that.lastScore == null) {
                 Loading.show();
                 Toast('上传分数中...',1500);
-                wx.cloud.callFunction({
-                    name: 'addClassicsLevelScore',
-                    data: {
+
+                wx.request({
+                    url: cloudFunctionBaseUrl+"/addClassicsLevelScore",
+                    method: 'POST',
+                    data:{
                         levelIndex: window.levelIndex,
                         appId: window.user.appId,
                         useStep: that.stepCounterValue,
                         useTime: that.timeCounterValue,
                         portrait: window.loginInfo.avatarUrl,
                         nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5)
+                    },
+                    success: (res) => {
+                        Loading.hide();
+                    },error:(err)=>{
+                        Loading.hide();
                     }
-                }).then(res => {
-                    Loading.hide();
-                }).catch(err => {
-                    Loading.hide();
-                    console.error(err)
-                })
+                });
+                // wx.cloud.callFunction({
+                //     name: 'addClassicsLevelScore',
+                //     data: {
+                //         levelIndex: window.levelIndex,
+                //         appId: window.user.appId,
+                //         useStep: that.stepCounterValue,
+                //         useTime: that.timeCounterValue,
+                //         portrait: window.loginInfo.avatarUrl,
+                //         nickName: window.loginInfo.nickName?window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5)
+                //     }
+                // }).then(res => {
+                //     Loading.hide();
+                // }).catch(err => {
+                //     Loading.hide();
+                //     console.error(err)
+                // })
                 that.lastScore = {
                     levelIndex: window.levelIndex,
                     appId: window.user.appId,
@@ -790,52 +905,97 @@ cc.Class({
                     that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime);
                     Loading.show();
                     Toast('上传分数中...',1500);
-                    wx.cloud.callFunction({
-                        name: 'updateClassicsLevelScore',
-                        data: {
+                    wx.request({
+                        url: cloudFunctionBaseUrl+"/updateClassicsLevelScore",
+                        method: 'POST',
+                        data:{
                             levelIndex: window.levelIndex,
                             appId: window.user.appId,
                             useStep: that.stepCounterValue,
                             useTime: that.timeCounterValue,
                             portrait: window.loginInfo.avatarUrl,
                             nickName: window.loginInfo.nickName
+                        },
+                        success: (res) => {
+                            Loading.hide();
+                        },error:(err)=>{
+                            Loading.hide();
                         }
-                    }).then(res => {
-                        Loading.hide();
-                    }).catch(err => {
-                        Loading.hide();
-                        console.error(err)
-                    })
+                    });
+                    // wx.cloud.callFunction({
+                    //     name: 'updateClassicsLevelScore',
+                    //     data: {
+                    //         levelIndex: window.levelIndex,
+                    //         appId: window.user.appId,
+                    //         useStep: that.stepCounterValue,
+                    //         useTime: that.timeCounterValue,
+                    //         portrait: window.loginInfo.avatarUrl,
+                    //         nickName: window.loginInfo.nickName
+                    //     }
+                    // }).then(res => {
+                    //     Loading.hide();
+                    // }).catch(err => {
+                    //     Loading.hide();
+                    //     console.error(err)
+                    // })
                 }
             }
 
             let curLevelNum = window.levelIndex;
-            wx.cloud.callFunction({
-                name: 'queryUser',
-                data: {
-                    appId: window.user.appId,
-                }
-            }).then(res => {
-                if(res && res.result.data.length>0 && res.result.data[0].levelFinishNum < curLevelNum){
-                    window.user.levelFinishNum = curLevelNum;
-                    let data = {};
-                    data.appId = window.user.appId;
-                    data.levelFinishNum = curLevelNum;
-                    if(window.loginInfo.nickName) data.nickName = window.loginInfo.nickName;
-                    if(window.loginInfo.avatarUrl) data.portrait = window.loginInfo.avatarUrl;
-                    wx.cloud.callFunction({
-                        name: 'updateUser',
-                        data: data
-                    }).then(res => {
+            wx.request({
+                url: cloudFunctionBaseUrl+"/queryUser",
+                method: 'POST',
+                data:{appId: window.user.appId},
+                success: (res) => {
+                    if(res && res.data.data.length>0 && res.data.data[0].levelFinishNum < curLevelNum){
+                        window.user.levelFinishNum = curLevelNum;
+                        let data = {};
+                        data.appId = window.user.appId;
+                        data.levelFinishNum = curLevelNum;
+                        if(window.loginInfo.nickName) data.nickName = window.loginInfo.nickName;
+                        if(window.loginInfo.avatarUrl) data.portrait = window.loginInfo.avatarUrl;
+                        wx.request({
+                            url: cloudFunctionBaseUrl+"/updateUser",
+                            method: 'POST',
+                            data:data,
+                            success: (res) => {
 
-                    }).catch(err => {
-                        console.error(err)
-                    })
+                            },error:(err)=>{
+
+                            }
+                        });
+
+                    }
+                },error:(err)=>{
 
                 }
-            }).catch(err => {
-                console.error(err)
-            })
+            });
+            // wx.cloud.callFunction({
+            //     name: 'queryUser',
+            //     data: {
+            //         appId: window.user.appId,
+            //     }
+            // }).then(res => {
+            //     if(res && res.result.data.length>0 && res.result.data[0].levelFinishNum < curLevelNum){
+            //         window.user.levelFinishNum = curLevelNum;
+            //         let data = {};
+            //         data.appId = window.user.appId;
+            //         data.levelFinishNum = curLevelNum;
+            //         if(window.loginInfo.nickName) data.nickName = window.loginInfo.nickName;
+            //         if(window.loginInfo.avatarUrl) data.portrait = window.loginInfo.avatarUrl;
+            //         wx.cloud.callFunction({
+            //             name: 'updateUser',
+            //             data: data
+            //         }).then(res => {
+            //
+            //         }).catch(err => {
+            //             console.error(err)
+            //         })
+            //
+            //     }
+            // }).catch(err => {
+            //     console.error(err)
+            // })
 
 
         }
@@ -1049,80 +1209,163 @@ cc.Class({
                     cc.find('verifyContain/confirm',newMyPrefab).on('click',function () {
                         if(password.textLabel.string == '19970720'){
                             Loading.show();
-                            wx.cloud.callFunction({
-                                name: 'getClassicsLevelNum'
-                            }).then(res => {
-
-                                wx.getStorage({
-                                    key: "initLevel",
-                                    success (result) {
-
-                                        wx.cloud.callFunction({
-                                            name: 'addClassicsLevel',
-                                            data:{
-                                                content: result.data,
-                                                levelIndex: res.result.total+1,
-                                                appId: window.uploadInfo.appId,
-                                                nickName: window.uploadInfo.nickName?window.uploadInfo.nickName:'游客'+window.uploadInfo.appId.substring(window.uploadInfo.appId.length-5),
-                                                portrait: window.uploadInfo.avatarUrl,
-                                            }
-                                        }).then(result => {
-
-                                            wx.cloud.callFunction({
-                                                name: 'removeReviewLevel',
+                            wx.request({
+                                url: cloudFunctionBaseUrl+"/getClassicsLevelNum",
+                                method: 'POST',
+                                data:{},
+                                success: (res) => {
+                                    wx.getStorage({
+                                        key: "initLevel",
+                                        success (result) {
+                                            wx.request({
+                                                url: cloudFunctionBaseUrl+"/addClassicsLevel",
+                                                method: 'POST',
                                                 data:{
-                                                    _id:window.reviewId
-                                                }
-                                            }).then(result => {
-                                                let levelUploadNum = parseInt(res.result.total)+1;
-                                                Toast('关卡'+levelUploadNum+'上传成功，即将跳回主界面',1500);
-                                                setTimeout(function () {
-                                                    clearInterval(that.timeCounterTimer);
-                                                    that.timeCounterTimer = null;
-                                                    Loading.hide();
-                                                    window.from = 'game';
-                                                    cc.director.loadScene('main');
-                                                },1500)
+                                                    content: result.data,
+                                                    levelIndex: res.data.total+1,
+                                                    appId: window.uploadInfo.appId,
+                                                    nickName: window.uploadInfo.nickName?window.uploadInfo.nickName:'游客'+window.uploadInfo.appId.substring(window.uploadInfo.appId.length-5),
+                                                    portrait: window.uploadInfo.avatarUrl,
+                                                },
+                                                success: (result) => {
 
-                                                //获取系统通知订阅情况
-                                                wx.getSetting({
-                                                    withSubscriptions: true,
-                                                    success (res) {
-                                                        //接收审核通知
-                                                        if(res.subscriptionsSetting.mainSwitch && (!res.subscriptionsSetting.itemSettings || res.subscriptionsSetting.itemSettings['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA']=='accept')){
-                                                            //下发审核通过通知
-                                                            wx.cloud.callFunction({
-                                                                name: 'sendAuditMsg',
-                                                                data:{
-                                                                    openId: window.uploadInfo.appId,
-                                                                    msgTitle:'您所上传的关卡已审核通过',
-                                                                    msgContent:'您上传的关卡为第'+levelUploadNum+'关',
-                                                                    uploadDate: that.timestampToTime(window.uploadInfo.createTime)
-                                                                }
-                                                            }).then(res => {
+                                                    wx.request({
+                                                        url: cloudFunctionBaseUrl+"/removeReviewLevel",
+                                                        method: 'POST',
+                                                        data:{_id:window.reviewId},
+                                                        success: (result) => {
+                                                            let levelUploadNum = parseInt(res.data.total)+1;
+                                                            Toast('关卡'+levelUploadNum+'上传成功，即将跳回主界面',1500);
+                                                            setTimeout(function () {
+                                                                clearInterval(that.timeCounterTimer);
+                                                                that.timeCounterTimer = null;
+                                                                Loading.hide();
+                                                                window.from = 'game';
+                                                                cc.director.loadScene('main');
+                                                            },1500)
 
-                                                            })
+                                                            //获取系统通知订阅情况
+                                                            // wx.getSetting({
+                                                            //     withSubscriptions: true,
+                                                            //     success (res) {
+                                                            //         //接收审核通知
+                                                            //         if(res.subscriptionsSetting.mainSwitch && (!res.subscriptionsSetting.itemSettings || res.subscriptionsSetting.itemSettings['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA']=='accept')){
+                                                            //             //下发审核通过通知
+                                                            //             wx.request({
+                                                            //                 url: cloudFunctionBaseUrl+"/sendAuditMsg",
+                                                            //                 method: 'POST',
+                                                            //                 data:{
+                                                            //                     openId: window.uploadInfo.appId,
+                                                            //                     msgTitle:'您所上传的关卡已审核通过',
+                                                            //                     msgContent:'您上传的关卡为第'+levelUploadNum+'关',
+                                                            //                     uploadDate: that.timestampToTime(window.uploadInfo.createTime)
+                                                            //                 },
+                                                            //                 success: (res) => {
+                                                            //
+                                                            //                 }
+                                                            //             });
+                                                            //
+                                                            //
+                                                            //         }
+                                                            //     }
+                                                            // })
+
+                                                        },error:(err)=>{
+
                                                         }
-                                                    }
-                                                })
+                                                    });
 
 
+                                                },error:(err)=>{
+                                                    Loading.hide();
+                                                    Toast('上传失败',1500);
+                                                }
                                             });
 
-                                        }).catch(err => {
-                                            Loading.hide();
-                                            Toast('上传失败',1500);
-                                            console.error(err)
-                                        })
+
+                                        }
+                                    });
+
+                                }
+                            });
 
 
-                                    }
-                                });
 
 
-                            }).catch(err => {
-                                console.error(err)
-                            })
+                            // wx.cloud.callFunction({
+                            //     name: 'getClassicsLevelNum'
+                            // }).then(res => {
+                            //
+                            //     wx.getStorage({
+                            //         key: "initLevel",
+                            //         success (result) {
+                            //
+                            //             wx.cloud.callFunction({
+                            //                 name: 'addClassicsLevel',
+                            //                 data:{
+                            //                     content: result.data,
+                            //                     levelIndex: res.result.total+1,
+                            //                     appId: window.uploadInfo.appId,
+                            //                     nickName: window.uploadInfo.nickName?window.uploadInfo.nickName:'游客'+window.uploadInfo.appId.substring(window.uploadInfo.appId.length-5),
+                            //                     portrait: window.uploadInfo.avatarUrl,
+                            //                 }
+                            //             }).then(result => {
+                            //
+                            //                 wx.cloud.callFunction({
+                            //                     name: 'removeReviewLevel',
+                            //                     data:{
+                            //                         _id:window.reviewId
+                            //                     }
+                            //                 }).then(result => {
+                            //                     let levelUploadNum = parseInt(res.result.total)+1;
+                            //                     Toast('关卡'+levelUploadNum+'上传成功，即将跳回主界面',1500);
+                            //                     setTimeout(function () {
+                            //                         clearInterval(that.timeCounterTimer);
+                            //                         that.timeCounterTimer = null;
+                            //                         Loading.hide();
+                            //                         window.from = 'game';
+                            //                         cc.director.loadScene('main');
+                            //                     },1500)
+                            //
+                            //                     //获取系统通知订阅情况
+                            //                     wx.getSetting({
+                            //                         withSubscriptions: true,
+                            //                         success (res) {
+                            //                             //接收审核通知
+                            //                             if(res.subscriptionsSetting.mainSwitch && (!res.subscriptionsSetting.itemSettings || res.subscriptionsSetting.itemSettings['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA']=='accept')){
+                            //                                 //下发审核通过通知
+                            //                                 wx.cloud.callFunction({
+                            //                                     name: 'sendAuditMsg',
+                            //                                     data:{
+                            //                                         openId: window.uploadInfo.appId,
+                            //                                         msgTitle:'您所上传的关卡已审核通过',
+                            //                                         msgContent:'您上传的关卡为第'+levelUploadNum+'关',
+                            //                                         uploadDate: that.timestampToTime(window.uploadInfo.createTime)
+                            //                                     }
+                            //                                 }).then(res => {
+                            //
+                            //                                 })
+                            //                             }
+                            //                         }
+                            //                     })
+                            //
+                            //
+                            //                 });
+                            //
+                            //             }).catch(err => {
+                            //                 Loading.hide();
+                            //                 Toast('上传失败',1500);
+                            //                 console.error(err)
+                            //             })
+                            //
+                            //
+                            //         }
+                            //     });
+                            //
+                            //
+                            // }).catch(err => {
+                            //     console.error(err)
+                            // })
                         }else{
                             Toast('密码错误！',1500);
                         }
@@ -1217,41 +1460,92 @@ cc.Class({
                     cc.find('verifyContain/confirm',newMyPrefab).on('click',function () {
                         if(password.textLabel.string == '19970720'){
                             Loading.show();
-                            wx.cloud.callFunction({
-                                name: 'removeReviewLevel',
-                                data:{
-                                    _id:window.reviewId
+
+                            wx.request({
+                                url: cloudFunctionBaseUrl+"/removeReviewLevel",
+                                method: 'POST',
+                                data:{_id:window.reviewId},
+                                success: (result) => {
+                                    Toast('关卡已驳回，即将跳回主界面',1500);
+                                    setTimeout(function () {
+                                        Loading.hide();
+                                        window.from = 'game';
+                                        cc.director.loadScene('main');
+                                    },1500)
+
+                                    //获取系统通知订阅情况
+                                    // wx.getSetting({
+                                    //     withSubscriptions: true,
+                                    //     success (res) {
+                                    //         //接收审核通知
+                                    //         if(res.subscriptionsSetting.mainSwitch && (!res.subscriptionsSetting.itemSettings || res.subscriptionsSetting.itemSettings['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA']=='accept')){
+                                    //             //下发审核通过通知
+                                    //             wx.request({
+                                    //                 url: cloudFunctionBaseUrl+"/sendAuditMsg",
+                                    //                 method: 'POST',
+                                    //                 data:{
+                                    //                     openId: window.uploadInfo.appId,
+                                    //                     msgTitle:'您所上传的关卡已审核驳回',
+                                    //                     msgContent:'驳回原因：关卡过于简单',
+                                    //                     uploadDate: that.timestampToTime(window.uploadInfo.createTime)
+                                    //                 },
+                                    //                 success: (res) => {
+                                    //
+                                    //                 }
+                                    //             });
+                                    //             // wx.cloud.callFunction({
+                                    //             //     name: 'sendAuditMsg',
+                                    //             //     data:{
+                                    //             //         openId: window.uploadInfo.appId,
+                                    //             //         msgTitle:'您所上传的关卡已审核驳回',
+                                    //             //         msgContent:'驳回原因：关卡过于简单',
+                                    //             //         uploadDate: that.timestampToTime(window.uploadInfo.createTime)
+                                    //             //     }
+                                    //             // }).then(res => {
+                                    //             //
+                                    //             // })
+                                    //         }
+                                    //     }
+                                    // })
+                                },error:(err)=>{
+
                                 }
-                            }).then(result => {
-                                Toast('关卡已驳回，即将跳回主界面',1500);
-                                setTimeout(function () {
-                                    Loading.hide();
-                                    window.from = 'game';
-                                    cc.director.loadScene('main');
-                                },1500)
-
-                                //获取系统通知订阅情况
-                                wx.getSetting({
-                                    withSubscriptions: true,
-                                    success (res) {
-                                        //接收审核通知
-                                        if(res.subscriptionsSetting.mainSwitch && (!res.subscriptionsSetting.itemSettings || res.subscriptionsSetting.itemSettings['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA']=='accept')){
-                                            //下发审核通过通知
-                                            wx.cloud.callFunction({
-                                                name: 'sendAuditMsg',
-                                                data:{
-                                                    openId: window.uploadInfo.appId,
-                                                    msgTitle:'您所上传的关卡已审核驳回',
-                                                    msgContent:'驳回原因：关卡过于简单',
-                                                    uploadDate: that.timestampToTime(window.uploadInfo.createTime)
-                                                }
-                                            }).then(res => {
-
-                                            })
-                                        }
-                                    }
-                                })
                             });
+                            // wx.cloud.callFunction({
+                            //     name: 'removeReviewLevel',
+                            //     data:{
+                            //         _id:window.reviewId
+                            //     }
+                            // }).then(result => {
+                            //     Toast('关卡已驳回，即将跳回主界面',1500);
+                            //     setTimeout(function () {
+                            //         Loading.hide();
+                            //         window.from = 'game';
+                            //         cc.director.loadScene('main');
+                            //     },1500)
+                            //
+                            //     //获取系统通知订阅情况
+                            //     wx.getSetting({
+                            //         withSubscriptions: true,
+                            //         success (res) {
+                            //             //接收审核通知
+                            //             if(res.subscriptionsSetting.mainSwitch && (!res.subscriptionsSetting.itemSettings || res.subscriptionsSetting.itemSettings['bQJbF0VLKfsMdYOaIplnfY0sErvIbZcK8sCzLgshILA']=='accept')){
+                            //                 //下发审核通过通知
+                            //                 wx.cloud.callFunction({
+                            //                     name: 'sendAuditMsg',
+                            //                     data:{
+                            //                         openId: window.uploadInfo.appId,
+                            //                         msgTitle:'您所上传的关卡已审核驳回',
+                            //                         msgContent:'驳回原因：关卡过于简单',
+                            //                         uploadDate: that.timestampToTime(window.uploadInfo.createTime)
+                            //                     }
+                            //                 }).then(res => {
+                            //
+                            //                 })
+                            //             }
+                            //         }
+                            //     })
+                            // });
                         }else{
                             Toast('密码错误！',1500);
                         }
@@ -1423,55 +1717,106 @@ cc.Class({
 
             //经典关卡
             if(window.levelClassify == 'classicsLevel'){
-                wx.cloud.callFunction({
-                    name: 'queryClassicsLevel',
-                    data: {
+                wx.request({
+                    url: cloudFunctionBaseUrl+"/queryClassicsLevel",
+                    method: 'POST',
+                    data:{
                         appId:window.user.appId,
                         levelIndex: window.levelIndex
-                    }
-                }).then(res => {
-                    if(res && res.result.data.length>0){
-                        window.currentLevel = res.result.data[0].content;
-                        that.renderLayout(window.currentLevel);
-                        that.initPosition(window.currentLevel);
-                        window.levelBy = res.result.data[0].nickName;
-                        // 初始化挂件
-                        that.initPendant();
-                        wx.setStorage({
-                            key: "initLevel",
-                            data:window.currentLevel,
-                            success(result){
-                                that.moveHistoryList.push(window.currentLevel);
-                                that.replayLayout();
-                            }
-                        })
+                    },
+                    success: (res) => {
+                        if(res && res.data.data.length>0){
+                            window.currentLevel = res.data.data[0].content;
+                            that.renderLayout(window.currentLevel);
+                            that.initPosition(window.currentLevel);
+                            window.levelBy = res.data.data[0].nickName;
+                            // 初始化挂件
+                            that.initPendant();
+                            wx.setStorage({
+                                key: "initLevel",
+                                data:window.currentLevel,
+                                success(result){
+                                    that.moveHistoryList.push(window.currentLevel);
+                                    that.replayLayout();
+                                }
+                            })
+
+                        }
+                        Loading.hide();
+                    },error:(err)=>{
 
                     }
-                    Loading.hide();
-                }).catch(err => {
-                    console.error(err)
-                })
-
-                wx.cloud.callFunction({
-                    name: 'queryClassicsLevelScore',
-                    data: {
+                });
+                // wx.cloud.callFunction({
+                //     name: 'queryClassicsLevel',
+                //     data: {
+                //         appId:window.user.appId,
+                //         levelIndex: window.levelIndex
+                //     }
+                // }).then(res => {
+                //     if(res && res.result.data.length>0){
+                //         window.currentLevel = res.result.data[0].content;
+                //         that.renderLayout(window.currentLevel);
+                //         that.initPosition(window.currentLevel);
+                //         window.levelBy = res.result.data[0].nickName;
+                //         // 初始化挂件
+                //         that.initPendant();
+                //         wx.setStorage({
+                //             key: "initLevel",
+                //             data:window.currentLevel,
+                //             success(result){
+                //                 that.moveHistoryList.push(window.currentLevel);
+                //                 that.replayLayout();
+                //             }
+                //         })
+                //
+                //     }
+                //     Loading.hide();
+                // }).catch(err => {
+                //     console.error(err)
+                // })
+                wx.request({
+                    url: cloudFunctionBaseUrl+"/queryClassicsLevelScore",
+                    method: 'POST',
+                    data:{
                         levelIndex: window.levelIndex,
                         appId:window.user.appId
-                    }
-                }).then(res => {
-                    if(res && res.result.data.length>0){
-                        that.lastScore = res.result.data[0];
-                        that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
+                    },
+                    success: (res) => {
+                        if(res && res.data.data.length>0){
+                            that.lastScore = res.data.data[0];
+                            that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
 
-                    }else{
-                        that.lastScore = null;
-                        that.renderLastScore('无','无')
-                        if(window.levelIndex == 1) Toast('Tip: 可滑动屏幕控制人物',5000);
+                        }else{
+                            that.lastScore = null;
+                            that.renderLastScore('无','无')
+                            if(window.levelIndex == 1) Toast('Tip: 可滑动屏幕控制人物',5000);
+
+                        }
+                    },error:(err)=>{
 
                     }
-                }).catch(err => {
-                    console.error(err)
-                })
+                });
+                // wx.cloud.callFunction({
+                //     name: 'queryClassicsLevelScore',
+                //     data: {
+                //         levelIndex: window.levelIndex,
+                //         appId:window.user.appId
+                //     }
+                // }).then(res => {
+                //     if(res && res.result.data.length>0){
+                //         that.lastScore = res.result.data[0];
+                //         that.renderLastScore(that.lastScore.useStep,that.lastScore.useTime)
+                //
+                //     }else{
+                //         that.lastScore = null;
+                //         that.renderLastScore('无','无')
+                //         if(window.levelIndex == 1) Toast('Tip: 可滑动屏幕控制人物',5000);
+                //
+                //     }
+                // }).catch(err => {
+                //     console.error(err)
+                // })
 
 
             }
@@ -1608,46 +1953,86 @@ cc.Class({
 
 
                         cc.find('solutionContain/checkSolution',newMyPrefab).on('click',function () {
-                            wx.cloud.callFunction({
-                                name: 'queryClassicsLevelSolution',
-                                data: {
-                                    levelIndex: window.levelIndex
-                                }
-                            }).then(res => {
-                                window.levelSolution = null;
-                                if(res && res.result.data.length>0){
-                                    Toast("广告拉取中...",1500);
-                                    if(!window.checkSolutionLevelAd){Toast("广告拉取失败",1500);return;}
-                                    window.checkSolutionLevelAd.show()
-                                        .catch(err => {
-                                            window.checkSolutionLevelAd.load()
-                                                .then(() => window.checkSolutionLevelAd.show()).catch(()=>{
-                                                Toast("广告拉取失败",1500)
+                            wx.request({
+                                url: cloudFunctionBaseUrl+"/queryClassicsLevelSolution",
+                                method: 'POST',
+                                data:{levelIndex: window.levelIndex},
+                                success: (res) => {
+                                    window.levelSolution = null;
+                                    if(res && res.data.data.length>0){
+                                        Toast("广告拉取中...",1500);
+                                        if(!window.checkSolutionLevelAd){Toast("广告拉取失败",1500);return;}
+                                        window.checkSolutionLevelAd.show()
+                                            .catch(err => {
+                                                window.checkSolutionLevelAd.load()
+                                                    .then(() => window.checkSolutionLevelAd.show()).catch(()=>{
+                                                    Toast("广告拉取失败",1500)
+                                                })
                                             })
+                                        window.checkSolutionLevelAd.offClose();
+                                        window.checkSolutionLevelAd.onClose(result => {
+                                            // 用户点击了【关闭广告】按钮
+                                            // 小于 2.1.0 的基础库版本，result 是一个 undefined
+                                            if (result && result.isEnded || result === undefined) {
+                                                // 正常播放结束，可以下发游戏奖励
+                                                window.from = "checkSolution";
+                                                window.levelSolution = res.data.data[0];
+                                                window.levelSolution.content = res.data.data[0].content.split(',');
+                                                cc.director.loadScene("game");
+                                            }
+                                            else {
+                                                // 播放中途退出，不下发游戏奖励
+                                            }
                                         })
-                                    window.checkSolutionLevelAd.offClose();
-                                    window.checkSolutionLevelAd.onClose(result => {
-                                        // 用户点击了【关闭广告】按钮
-                                        // 小于 2.1.0 的基础库版本，result 是一个 undefined
-                                        if (result && result.isEnded || result === undefined) {
-                                            // 正常播放结束，可以下发游戏奖励
-                                            window.from = "checkSolution";
-                                            window.levelSolution = res.result.data[0];
-                                            window.levelSolution.content = res.result.data[0].content.split(',');
-                                            cc.director.loadScene("game");
-                                        }
-                                        else {
-                                            // 播放中途退出，不下发游戏奖励
-                                        }
-                                    })
 
 
-                                }else{
-                                    Toast('当前关卡暂无攻略',3000);
+                                    }else{
+                                        Toast('当前关卡暂无攻略',3000);
+                                    }
+                                },error:(err)=>{
+
                                 }
-                            }).catch(err => {
-                                console.error(err)
-                            })
+                            });
+                            // wx.cloud.callFunction({
+                            //     name: 'queryClassicsLevelSolution',
+                            //     data: {
+                            //         levelIndex: window.levelIndex
+                            //     }
+                            // }).then(res => {
+                            //     window.levelSolution = null;
+                            //     if(res && res.result.data.length>0){
+                            //         Toast("广告拉取中...",1500);
+                            //         if(!window.checkSolutionLevelAd){Toast("广告拉取失败",1500);return;}
+                            //         window.checkSolutionLevelAd.show()
+                            //             .catch(err => {
+                            //                 window.checkSolutionLevelAd.load()
+                            //                     .then(() => window.checkSolutionLevelAd.show()).catch(()=>{
+                            //                     Toast("广告拉取失败",1500)
+                            //                 })
+                            //             })
+                            //         window.checkSolutionLevelAd.offClose();
+                            //         window.checkSolutionLevelAd.onClose(result => {
+                            //             // 用户点击了【关闭广告】按钮
+                            //             // 小于 2.1.0 的基础库版本，result 是一个 undefined
+                            //             if (result && result.isEnded || result === undefined) {
+                            //                 // 正常播放结束，可以下发游戏奖励
+                            //                 window.from = "checkSolution";
+                            //                 window.levelSolution = res.result.data[0];
+                            //                 window.levelSolution.content = res.result.data[0].content.split(',');
+                            //                 cc.director.loadScene("game");
+                            //             }
+                            //             else {
+                            //                 // 播放中途退出，不下发游戏奖励
+                            //             }
+                            //         })
+                            //
+                            //
+                            //     }else{
+                            //         Toast('当前关卡暂无攻略',3000);
+                            //     }
+                            // }).catch(err => {
+                            //     console.error(err)
+                            // })
 
                         },this);
 
@@ -1698,36 +2083,62 @@ cc.Class({
         }
 
         if(window.from == 'uploadSolution'){
+            wx.request({
+                url: cloudFunctionBaseUrl+"/queryClassicsLevelSolution",
+                method: 'POST',
+                data:{ levelIndex: window.levelIndex },
+                success: (res) => {
+                    let lastBestScore = '当前攻略：暂无';
+                    window.lastSolutionStep = null;
+                    if(res && res.data.data.length>0){
+                        window.lastSolutionStep = res.data.data[0].useStep;
+                        lastBestScore = '当前攻略：步数' + res.data.data[0].useStep + ' - 贡献者：'+ res.data.data[0].nickName.substring(0,16)
+                    }
 
-            wx.cloud.callFunction({
-                name: 'queryClassicsLevelSolution',
-                data: {
-                    levelIndex: window.levelIndex
+                    if(that.lastStepNode == null){
+                        var lastStepNode = new cc.Node('lastStepNode');
+                        lastStepNode.setAnchorPoint(0, 1);
+                        var stepCounter = lastStepNode.addComponent(cc.Label);
+                        stepCounter.node.setPosition(-(cc.winSize.width/2) + (cc.winSize.width*0.05),  (cc.winSize.width/2) + 160)
+                        stepCounter.string = lastBestScore;
+                        that.lastStepNode = lastStepNode.getComponent(cc.Label)
+                        that.node.addChild(lastStepNode);
+                    }else{
+                        that.lastStepNode.string = lastBestScore;
+                    }
+                },error:(err)=>{
+
                 }
-            }).then(res => {
-                let lastBestScore = '当前攻略：暂无';
-                window.lastSolutionStep = null;
-                if(res && res.result.data.length>0){
-                    window.lastSolutionStep = res.result.data[0].useStep;
-                    lastBestScore = '当前攻略：步数' + res.result.data[0].useStep + ' - 贡献者：'+ res.result.data[0].nickName.substring(0,16)
-                }
-
-                if(that.lastStepNode == null){
-                    var lastStepNode = new cc.Node('lastStepNode');
-                    lastStepNode.setAnchorPoint(0, 1);
-                    var stepCounter = lastStepNode.addComponent(cc.Label);
-                    stepCounter.node.setPosition(-(cc.winSize.width/2) + (cc.winSize.width*0.05),  (cc.winSize.width/2) + 160)
-                    stepCounter.string = lastBestScore;
-                    that.lastStepNode = lastStepNode.getComponent(cc.Label)
-                    that.node.addChild(lastStepNode);
-                }else{
-                    that.lastStepNode.string = lastBestScore;
-                }
-
-
-            }).catch(err => {
-                console.error(err)
-            })
+            });
+            // wx.cloud.callFunction({
+            //     name: 'queryClassicsLevelSolution',
+            //     data: {
+            //         levelIndex: window.levelIndex
+            //     }
+            // }).then(res => {
+            //     let lastBestScore = '当前攻略：暂无';
+            //     window.lastSolutionStep = null;
+            //     if(res && res.result.data.length>0){
+            //         window.lastSolutionStep = res.result.data[0].useStep;
+            //         lastBestScore = '当前攻略：步数' + res.result.data[0].useStep + ' - 贡献者：'+ res.result.data[0].nickName.substring(0,16)
+            //     }
+            //
+            //     if(that.lastStepNode == null){
+            //         var lastStepNode = new cc.Node('lastStepNode');
+            //         lastStepNode.setAnchorPoint(0, 1);
+            //         var stepCounter = lastStepNode.addComponent(cc.Label);
+            //         stepCounter.node.setPosition(-(cc.winSize.width/2) + (cc.winSize.width*0.05),  (cc.winSize.width/2) + 160)
+            //         stepCounter.string = lastBestScore;
+            //         that.lastStepNode = lastStepNode.getComponent(cc.Label)
+            //         that.node.addChild(lastStepNode);
+            //     }else{
+            //         that.lastStepNode.string = lastBestScore;
+            //     }
+            //
+            //
+            // }).catch(err => {
+            //     console.error(err)
+            // })
 
 
             return;
@@ -1801,45 +2212,84 @@ cc.Class({
         let currentItemNum = content.childrenCount;
         if (cc.sys.platform === cc.sys.WECHAT_GAME){
             Loading.show();
-            wx.cloud.callFunction({
-                name: 'queryClassicsLevelScore',
+            wx.request({
+                url: cloudFunctionBaseUrl+"/queryClassicsLevelScore",
+                method: 'POST',
                 data:{
                     levelIndex:window.levelIndex,
                     page,
-                    pageSize
-                }
-            }).then(res => {
-                Loading.hide();
-                let rankItem = null;
-                if(res && res.result.data.length>0){
-                    for(var i = 1; i<= res.result.data.length; i++){
-                        var data =  res.result.data[i-1];
-                        let node = cc.instantiate(that.rankItem);
-                        if(rankItem == null) rankItem = node;
-                        node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
-                        node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
-                        node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStep;
-                        if(data.portrait){
-                            cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
-                                var sprite  = new cc.SpriteFrame(texture);
-                                cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
-                            });
+                    pageSize,
+                    appId:window.user.appId
+                },
+                success: (res) => {
+                    Loading.hide();
+                    let rankItem = null;
+                    if(res && res.data.data.length>0){
+                        for(var i = 1; i<= res.data.data.length; i++){
+                            var data =  res.data.data[i-1];
+                            let node = cc.instantiate(that.rankItem);
+                            if(rankItem == null) rankItem = node;
+                            node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
+                            node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
+                            node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStep;
+                            if(data.portrait){
+                                cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
+                                    var sprite  = new cc.SpriteFrame(texture);
+                                    cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+                                });
+                            }
+                            if(data.nickName){
+                                node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
+                            }
+                            content.addChild(node);
                         }
-                        if(data.nickName){
-                            node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
-                        }
-                        content.addChild(node);
+                        content.height = content.childrenCount * rankItem.height;
+                    }else{
+                        Toast("没有更多数据了",1500)
                     }
-                    content.height = content.childrenCount * rankItem.height;
-                }else{
-                    Toast("没有更多数据了",1500)
+                },error:(err)=>{
+                    Loading.hide();
                 }
-
-
-            }).catch(err => {
-                console.error(err)
-                Loading.hide();
-            })
+            });
+            // wx.cloud.callFunction({
+            //     name: 'queryClassicsLevelScore',
+            //     data:{
+            //         levelIndex:window.levelIndex,
+            //         page,
+            //         pageSize
+            //     }
+            // }).then(res => {
+            //     Loading.hide();
+            //     let rankItem = null;
+            //     if(res && res.result.data.length>0){
+            //         for(var i = 1; i<= res.result.data.length; i++){
+            //             var data =  res.result.data[i-1];
+            //             let node = cc.instantiate(that.rankItem);
+            //             if(rankItem == null) rankItem = node;
+            //             node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
+            //             node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
+            //             node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStep;
+            //             if(data.portrait){
+            //                 cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
+            //                     var sprite  = new cc.SpriteFrame(texture);
+            //                     cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+            //                 });
+            //             }
+            //             if(data.nickName){
+            //                 node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
+            //             }
+            //             content.addChild(node);
+            //         }
+            //         content.height = content.childrenCount * rankItem.height;
+            //     }else{
+            //         Toast("没有更多数据了",1500)
+            //     }
+            //
+            //
+            // }).catch(err => {
+            //     console.error(err)
+            //     Loading.hide();
+            // })
         }
 
     },

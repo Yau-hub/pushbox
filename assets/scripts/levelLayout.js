@@ -64,7 +64,7 @@ cc.Class({
         for(let i=0; i<levelTotal ; i++){
             let node = cc.instantiate(this.levelItem);
             let indexLevel = i+1;
-            if(indexLevel <=  window.user.levelFinishNum+1 || window.user.roles && window.user.roles.includes('admin')){
+            if(indexLevel <=  window.user.levelFinishNum+1 || (window.user.roles && window.user.roles.includes('admin'))){
                 node.getChildByName('levelNum').getComponent(cc.Label).string = indexLevel;
                 node.getChildByName('levelLock').opacity = 0;
                 node.on('touchend',

@@ -12,6 +12,7 @@ window.skipLevelAd = null;
 window.auditLevelAd = null;
 window.checkSolutionLevelAd = null;
 window.gameCircle = null;
+window.cloudFunctionBaseUrl = 'https://ac327917-ed0d-4195-8290-65fac58e2bf9.bspapp.com';
 if(window.auditLevelAd) window.auditLevelAd.destroy();
 if (cc.sys.platform === cc.sys.WECHAT_GAME) {
     wx.cloud.init({env: window.env})
@@ -83,6 +84,10 @@ cc.Class({
              if(window.bgMusic && !window.bgMusic.paused) window.bgMusic.pause();
              if(window.bgMusic && window.bgMusic.paused) window.bgMusic.play();
          },this);
+		 
+		 
+		 
+		 
      },
 
     start () {
@@ -91,15 +96,27 @@ cc.Class({
         if (cc.sys.platform === cc.sys.WECHAT_GAME){
 
             Loading.show();
-            wx.cloud.callFunction({
-                name: 'getClassicsLevelNum'
-            }).then(res => {
-                window.classicsLevelNum = res.result.total;
-                Loading.hide();
+            wx.request({
+                url: cloudFunctionBaseUrl+"/getClassicsLevelNum",
+                method: 'POST',
+                data:{},
+                success: (res) => {
+                    window.classicsLevelNum = res.data.total;
+                    Loading.hide();
+                },error:(err)=>{
+                    Loading.hide();
+                }
+            });
 
-            }).catch(err => {
-                console.error(err)
-            })
+            // wx.cloud.callFunction({
+            //     name: 'getClassicsLevelNum'
+            // }).then(res => {
+            //     window.classicsLevelNum = res.result.total;
+            //     Loading.hide();
+            //
+            // }).catch(err => {
+            //     console.error(err)
+            // })
 
             wx.removeStorage({
                 key: "initLevel"
@@ -113,6 +130,7 @@ cc.Class({
 
         this.getUserInfo();
         this.initSetting();
+
 
 
     },
@@ -256,70 +274,134 @@ cc.Class({
         let currentItemNum = content.childrenCount;
         if (cc.sys.platform === cc.sys.WECHAT_GAME){
             Loading.show();
-            wx.cloud.callFunction({
-                name: 'queryReviewLevel',
+            wx.request({
+                url: cloudFunctionBaseUrl+"/queryReviewLevel",
+                method: 'POST',
                 data:{
                     page,
                     pageSize
-                }
-            }).then(res => {
-                Loading.hide();
-                let rankItem = null;
-                if(res && res.result.data.length>0){
-                    for(var i = 1; i<= res.result.data.length; i++){
+                },
+                success: (res) => {
+                    Loading.hide();
+                    let rankItem = null;
+                    if(res && res.data.data.length>0){
+                        for(var i = 1; i<= res.data.data.length; i++){
 
-                        (function(i){
-                            var data =  res.result.data[i-1];
-                            let node = cc.instantiate(that.rankItem);
-                            if(rankItem == null) rankItem = node;
-                            node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
-                            node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
-                            node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStepNum;
-                            if(data.portrait){
-                                cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
-                                    var sprite  = new cc.SpriteFrame(texture);
-                                    cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
-                                });
-                            }
-                            if(data.nickName){
-                                node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
-                            }
-                            node.on('touchend',
-                                function(t){
+                            (function(i){
+                                var data =  res.data.data[i-1];
+                                let node = cc.instantiate(that.rankItem);
+                                if(rankItem == null) rankItem = node;
+                                node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
+                                node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
+                                node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStepNum;
+                                if(data.portrait){
+                                    cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
+                                        var sprite  = new cc.SpriteFrame(texture);
+                                        cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+                                    });
+                                }
+                                if(data.nickName){
+                                    node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
+                                }
+                                node.on('touchend',
+                                    function(t){
 
-                                    if(window.wxLoginBtn ) window.wxLoginBtn.destroy();
-                                    wx.setStorage({
-                                        key: 'reviewLevel',
-                                        data: data.content,
-                                        success(){
-                                            window.uploadInfo = {};
-                                            window.from = 'review';
-                                            window.reviewId = data._id;
-                                            window.uploadInfo.appId = data.appId;
-                                            window.uploadInfo.nickName = data.nickName;
-                                            window.uploadInfo.portrait = data.portrait;
-                                            window.uploadInfo.createTime = data.createTime;
+                                        if(window.wxLoginBtn ) window.wxLoginBtn.destroy();
+                                        wx.setStorage({
+                                            key: 'reviewLevel',
+                                            data: data.content,
+                                            success(){
+                                                window.uploadInfo = {};
+                                                window.from = 'review';
+                                                window.reviewId = data._id;
+                                                window.uploadInfo.appId = data.appId;
+                                                window.uploadInfo.nickName = data.nickName;
+                                                window.uploadInfo.portrait = data.portrait;
+                                                window.uploadInfo.createTime = data.createTime;
 
-                                            cc.director.loadScene("game");
-                                        }
-                                    })
+                                                cc.director.loadScene("game");
+                                            }
+                                        })
 
-                                },this)
-                            content.addChild(node);
-                        })(i)
+                                    },this)
+                                content.addChild(node);
+                            })(i)
 
 
+                        }
+                        content.height = content.childrenCount * rankItem.height;
+                    }else{
+                        Toast("没有更多数据了",1500)
                     }
-                    content.height = content.childrenCount * rankItem.height;
-                }else{
-                    Toast("没有更多数据了",1500)
+                },
+                error: ()=>{
+                    Loading.hide();
                 }
-
-
-            }).catch(err => {
-                console.error(err)
-                Loading.hide();
-            })
+            });
+            // wx.cloud.callFunction({
+            //     name: 'queryReviewLevel',
+            //     data:{
+            //         page,
+            //         pageSize
+            //     }
+            // }).then(res => {
+            //     Loading.hide();
+            //     let rankItem = null;
+            //     if(res && res.result.data.length>0){
+            //         for(var i = 1; i<= res.result.data.length; i++){
+            //
+            //             (function(i){
+            //                 var data =  res.result.data[i-1];
+            //                 let node = cc.instantiate(that.rankItem);
+            //                 if(rankItem == null) rankItem = node;
+            //                 node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
+            //                 node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
+            //                 node.getChildByName('tdLevel').getComponent(cc.Label).string = data.useStepNum;
+            //                 if(data.portrait){
+            //                     cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
+            //                         var sprite  = new cc.SpriteFrame(texture);
+            //                         cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+            //                     });
+            //                 }
+            //                 if(data.nickName){
+            //                     node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
+            //                 }
+            //                 node.on('touchend',
+            //                     function(t){
+            //
+            //                         if(window.wxLoginBtn ) window.wxLoginBtn.destroy();
+            //                         wx.setStorage({
+            //                             key: 'reviewLevel',
+            //                             data: data.content,
+            //                             success(){
+            //                                 window.uploadInfo = {};
+            //                                 window.from = 'review';
+            //                                 window.reviewId = data._id;
+            //                                 window.uploadInfo.appId = data.appId;
+            //                                 window.uploadInfo.nickName = data.nickName;
+            //                                 window.uploadInfo.portrait = data.portrait;
+            //                                 window.uploadInfo.createTime = data.createTime;
+            //
+            //                                 cc.director.loadScene("game");
+            //                             }
+            //                         })
+            //
+            //                     },this)
+            //                 content.addChild(node);
+            //             })(i)
+            //
+            //
+            //         }
+            //         content.height = content.childrenCount * rankItem.height;
+            //     }else{
+            //         Toast("没有更多数据了",1500)
+            //     }
+            //
+            //
+            // }).catch(err => {
+            //     console.error(err)
+            //     Loading.hide();
+            // })
         }
 
     },
@@ -359,45 +441,84 @@ cc.Class({
         let that = this;
         let currentItemNum = content.childrenCount;
         if (cc.sys.platform === cc.sys.WECHAT_GAME){
+
             Loading.show();
-            wx.cloud.callFunction({
-                name: 'queryUser',
+            wx.request({
+                url: cloudFunctionBaseUrl+"/queryUser",
+                method: 'POST',
                 data:{
                     page,
                     pageSize
-                }
-            }).then(res => {
-                Loading.hide();
-                let rankItem = null;
-                if(res && res.result.data.length>0){
-                    for(var i = 1; i<= res.result.data.length; i++){
-                        var data =  res.result.data[i-1];
-                        let node = cc.instantiate(that.rankItem);
-                        if(rankItem == null) rankItem = node;
-                        node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
-                        node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
-                        node.getChildByName('tdLevel').getComponent(cc.Label).string = data.levelFinishNum;
-                        if(data.portrait){
-                            cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
-                                var sprite  = new cc.SpriteFrame(texture);
-                                cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
-                            });
+                },
+                success: (res) => {
+                    Loading.hide();
+                    let rankItem = null;
+                    if(res && res.data.data.length>0){
+                        for(var i = 1; i<= res.data.data.length; i++){
+                            var data =  res.data.data[i-1];
+                            let node = cc.instantiate(that.rankItem);
+                            if(rankItem == null) rankItem = node;
+                            node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
+                            node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
+                            node.getChildByName('tdLevel').getComponent(cc.Label).string = data.levelFinishNum;
+                            if(data.portrait){
+                                cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
+                                    var sprite  = new cc.SpriteFrame(texture);
+                                    cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+                                });
+                            }
+                            if(data.nickName){
+                                node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
+                            }
+                            content.addChild(node);
                         }
-                        if(data.nickName){
-                            node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
-                        }
-                        content.addChild(node);
+                        content.height = content.childrenCount * rankItem.height;
+                    }else{
+                        Toast("没有更多数据了",1500)
                     }
-                    content.height = content.childrenCount * rankItem.height;
-                }else{
-                    Toast("没有更多数据了",1500)
+                },
+                error(){
+                    Loading.hide();
                 }
-
-
-            }).catch(err => {
-                console.error(err)
-                Loading.hide();
-            })
+            });
+            // wx.cloud.callFunction({
+            //     name: 'queryUser',
+            //     data:{
+            //         page,
+            //         pageSize
+            //     }
+            // }).then(res => {
+            //     Loading.hide();
+            //     let rankItem = null;
+            //     if(res && res.result.data.length>0){
+            //         for(var i = 1; i<= res.result.data.length; i++){
+            //             var data =  res.result.data[i-1];
+            //             let node = cc.instantiate(that.rankItem);
+            //             if(rankItem == null) rankItem = node;
+            //             node.getChildByName('tdRank').getComponent(cc.Label).string = i+currentItemNum;
+            //             node.getChildByName('tdDate').getComponent(cc.Label).string = formateRankTime(data.createTime);
+            //             node.getChildByName('tdLevel').getComponent(cc.Label).string = data.levelFinishNum;
+            //             if(data.portrait){
+            //                 cc.assetManager.loadRemote(data.portrait+'?aaa=aa.jpg',  function (err, texture) {
+            //                     var sprite  = new cc.SpriteFrame(texture);
+            //                     cc.find('mask/Image',node.getChildByName('tdPortrait')).getComponent(cc.Sprite).spriteFrame = sprite;
+            //                 });
+            //             }
+            //             if(data.nickName){
+            //                 node.getChildByName('tdName').getComponent(cc.Label).string = " "+data.nickName+" ";
+            //             }
+            //             content.addChild(node);
+            //         }
+            //         content.height = content.childrenCount * rankItem.height;
+            //     }else{
+            //         Toast("没有更多数据了",1500)
+            //     }
+            //
+            //
+            // }).catch(err => {
+            //     console.error(err)
+            //     Loading.hide();
+            // })
         }
 
     },
@@ -408,79 +529,177 @@ cc.Class({
             wx.getStorage({
                 key: 'appId',
                 success (res) {
-
                     window.user.appId = res.data;
-                    wx.cloud.callFunction({
-                        name: 'queryUser',
-                        data:{
-                            appId: window.user.appId
-                        }
-                    }).then(res => {
-                        if(res && res.result.data.length>0){
-                            window.user.levelFinishNum = res.result.data[0].levelFinishNum;
-                            window.user.classicsLevelNum = res.result.data[0].classicsLevelNum;
-                            window.user.netLevelNum = res.result.data[0].netLevelNum;
-                            window.user.roles = res.result.data[0].roles;
+					wx.request({
+					      url: cloudFunctionBaseUrl+"/queryUser",
+                          method: 'POST',
+						  data:{
+						      appId: window.user.appId
+						  },
+					      success: (res) => {
+                              if(res && res.data.data.length>0){
+                                  window.user.levelFinishNum = res.data.data[0].levelFinishNum;
+                                  window.user.classicsLevelNum = res.data.data[0].classicsLevelNum;
+                                  window.user.netLevelNum = res.data.data[0].netLevelNum;
+                                  window.user.roles = res.data.data[0].roles;
 
-                        }
+                              }
+					      }
+					    });
 
-                    }).catch(err => {
-                        console.error(err)
-                    })
+
+                    // wx.cloud.callFunction({
+                    //     name: 'queryUser',
+                    //     data:{
+                    //         appId: window.user.appId
+                    //     }
+                    // }).then(res => {
+                    //     console.log('wxcloud-success')
+                    //     console.log(res)
+                    //     if(res && res.result.data.length>0){
+                    //         window.user.levelFinishNum = res.result.data[0].levelFinishNum;
+                    //         window.user.classicsLevelNum = res.result.data[0].classicsLevelNum;
+                    //         window.user.netLevelNum = res.result.data[0].netLevelNum;
+                    //         window.user.roles = res.result.data[0].roles;
+                    //
+                    //     }
+                    //
+                    // }).catch(err => {
+                    //     console.error(err)
+                    // })
                 },
                 fail(err){
-
-
-                    wx.cloud.callFunction({
-                        name: 'login'
-                    }).then(res => {
-                        if(res && res.result){
-                            wx.setStorage({
-                                key: "appId",
-                                data:res.result.openid
-                            })
-                            window.user.appId = res.result.openid;
-                            window.user.classicsLevelNum = 0;
-                            window.user.netLevelNum = 0;
-                            window.user.levelFinishNum = 0;
-                            window.user.roles = '';
-                            wx.cloud.callFunction({
-                                name: 'queryUser',
-                                data:{
-                                    appId: window.user.appId
-                                }
-                            }).then(res => {
-
-                                if(res && res.result.data.length<=0){
-                                    //注册用户信息
-                                    wx.cloud.callFunction({
-                                        name: 'addUser',
-                                        data: {
-                                            appId: window.user.appId,
-                                            nickName: window.loginInfo.nickName? window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
-                                            portrait: window.loginInfo.avatarUrl
-                                        }
-
-                                    }).then(res => {
+                    wx.login({
+                        success: res => {
+                            if (res.code) {
+                                wx.request({
+                                    url: cloudFunctionBaseUrl+"/login",
+                                    method: 'POST',
+                                    data:{
+                                        code:res.code
+                                    },
+                                    success: (res) => {
                                         console.log(res)
-                                    }).catch(err => {
-                                        console.error(err)
-                                    })
-                                }else{
-                                    window.user.levelFinishNum = res.result.data[0].levelFinishNum;
-                                    window.user.classicsLevelNum = res.result.data[0].classicsLevelNum;
-                                    window.user.netLevelNum = res.result.data[0].netLevelNum;
-                                    window.user.roles = res.result.data[0].roles;
-                                }
+                                        if(res && res.data){
+                                            wx.setStorage({
+                                                key: "appId",
+                                                data:res.data
+                                            })
+                                            window.user.appId = res.data;
+                                            window.user.classicsLevelNum = 0;
+                                            window.user.netLevelNum = 0;
+                                            window.user.levelFinishNum = 0;
+                                            window.user.roles = '';
+                                            wx.request({
+                                                url: cloudFunctionBaseUrl+"/queryUser",
+                                                method: 'POST',
+                                                data:{
+                                                    appId: window.user.appId
+                                                },
+                                                success: (res) => {
+                                                    if(res && res.data.data.length<=0){
+                                                        //注册用户信息
+                                                        wx.request({
+                                                            url: cloudFunctionBaseUrl+"/addUser",
+                                                            method: 'POST',
+                                                            data:{
+                                                                appId: window.user.appId,
+                                                                nickName: window.loginInfo.nickName? window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
+                                                                portrait: window.loginInfo.avatarUrl
+                                                            },
+                                                            success: (res) => {
 
-                            }).catch(err => {
-                                console.error(err)
-                            })
+                                                            }
+                                                        });
 
-                        }
-                    }).catch(err => {
-                        console.error(err)
+                                                    }else{
+                                                        window.user.levelFinishNum = res.data.data[0].levelFinishNum;
+                                                        window.user.classicsLevelNum = res.data.data[0].classicsLevelNum;
+                                                        window.user.netLevelNum = res.data.data[0].netLevelNum;
+                                                        window.user.roles = res.data.data[0].roles;
+                                                    }
+                                                }
+                                            });
+
+
+                                        }
+                                    }
+                                });
+
+                            }}
                     })
+
+                    // wx.cloud.callFunction({
+                    //     name: 'login'
+                    // }).then(res => {
+                    //
+                    //     if(res && res.result){
+                    //         wx.setStorage({
+                    //             key: "appId",
+                    //             data:res.result.openid
+                    //         })
+                    //         window.user.appId = res.result.openid;
+                    //         window.user.classicsLevelNum = 0;
+                    //         window.user.netLevelNum = 0;
+                    //         window.user.levelFinishNum = 0;
+                    //         window.user.roles = '';
+                    //         // wx.request({
+                    //         //     url: cloudFunctionBaseUrl+"/queryUser",
+                    //         //     method: 'POST',
+                    //         //     data:{
+                    //         //
+                    //         //     },
+                    //         //     success: (res) => {
+                    //         //
+                    //         //     }
+                    //         // });
+                    //         wx.cloud.callFunction({
+                    //             name: 'queryUser',
+                    //             data:{
+                    //                 appId: window.user.appId
+                    //             }
+                    //         }).then(res => {
+                    //
+                    //             if(res && res.result.data.length<=0){
+                    //                 //注册用户信息
+                    //                 // wx.request({
+                    //                 //     url: cloudFunctionBaseUrl+"/queryUser",
+                    //                 //     method: 'POST',
+                    //                 //     data:{
+                    //                 //
+                    //                 //     },
+                    //                 //     success: (res) => {
+                    //                 //
+                    //                 //     }
+                    //                 // });
+                    //                 wx.cloud.callFunction({
+                    //                     name: 'addUser',
+                    //                     data: {
+                    //                         appId: window.user.appId,
+                    //                         nickName: window.loginInfo.nickName? window.loginInfo.nickName:'游客'+window.user.appId.substring(window.user.appId.length-5),
+                    //                         portrait: window.loginInfo.avatarUrl
+                    //                     }
+                    //
+                    //                 }).then(res => {
+                    //                     console.log(res)
+                    //                 }).catch(err => {
+                    //                     console.error(err)
+                    //                 })
+                    //             }else{
+                    //                 window.user.levelFinishNum = res.result.data[0].levelFinishNum;
+                    //                 window.user.classicsLevelNum = res.result.data[0].classicsLevelNum;
+                    //                 window.user.netLevelNum = res.result.data[0].netLevelNum;
+                    //                 window.user.roles = res.result.data[0].roles;
+                    //             }
+                    //
+                    //         }).catch(err => {
+                    //             console.error(err)
+                    //         })
+                    //
+                    //     }
+                    // }).catch(err => {
+                    //     console.error(err)
+                    // })
 
                 }
             })
