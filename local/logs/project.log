@@ -1,407 +1,76 @@
-2022-12-22T18:59:40.254Z - success: protocol editor-framework registered
-2022-12-22T18:59:40.255Z - success: protocol app registered
-2022-12-22T18:59:40.255Z - success: protocol theme registered
-2022-12-22T18:59:40.255Z - success: protocol packages registered
-2022-12-22T18:59:40.286Z - normal: Load ~/.CocosCreator/settings.json
-2022-12-22T18:59:40.322Z - success: protocol uuid registerred
-2022-12-22T18:59:40.323Z - success: protocol db registerred
-2022-12-22T18:59:40.323Z - success: protocol thumbnail registerred
-2022-12-22T18:59:40.489Z - normal: Initializing Asset Database
-2022-12-22T18:59:40.494Z - normal: checking language setting...
-2022-12-22T18:59:40.494Z - normal: Language: zh
-2022-12-22T18:59:40.501Z - success: protocol unpack registerred
-2022-12-22T18:59:40.501Z - success: protocol disable-commonjs registerred
-2022-12-22T18:59:41.159Z - normal: connected!
-2022-12-22T18:59:41.422Z - normal: Check project D:\project\wxProject\pushbox
-2022-12-22T18:59:41.423Z - normal: Initializing project D:\project\wxProject\pushbox
-2022-12-22T18:59:41.797Z - success: adapters loaded
-2022-12-22T18:59:41.800Z - success: asset-db-debugger loaded
-2022-12-22T18:59:41.901Z - success: fb-audience-network loaded
-2022-12-22T18:59:41.969Z - success: fb-live-stream loaded
-2022-12-22T18:59:41.976Z - success: google-play-instant loaded
-2022-12-22T18:59:41.976Z - success: jsb-adapter loaded
-2022-12-22T18:59:41.979Z - success: package-manager loaded
-2022-12-22T18:59:41.979Z - success: runtime-adapters loaded
-2022-12-22T18:59:41.982Z - success: runtime-dev-tools loaded
-2022-12-22T18:59:41.984Z - success: ui-kit-preview-extra loaded
-2022-12-22T18:59:41.986Z - success: ui-kit-preview loaded
-2022-12-22T18:59:43.164Z - success: alipay-minigame loaded
-2022-12-22T18:59:43.174Z - success: assets loaded
-2022-12-22T18:59:43.178Z - success: baidugame-opendata loaded
-2022-12-22T18:59:43.181Z - success: baidugame loaded
-2022-12-22T18:59:43.184Z - success: builder loaded
-2022-12-22T18:59:43.190Z - success: bytedance-opendata loaded
-2022-12-22T18:59:43.194Z - success: bytedance loaded
-2022-12-22T18:59:43.200Z - success: channel-upload-tools loaded
-2022-12-22T18:59:43.423Z - success: cloud-function loaded
-2022-12-22T18:59:43.738Z - success: cocos-services loaded
-2022-12-22T18:59:43.743Z - success: console loaded
-2022-12-22T18:59:43.749Z - success: curve-editor loaded
-2022-12-22T18:59:43.764Z - success: fb-instant-games loaded
-2022-12-22T18:59:43.767Z - success: game-window loaded
-2022-12-22T18:59:43.768Z - success: google-instant-games loaded
-2022-12-22T18:59:43.774Z - success: hierarchy loaded
-2022-12-22T18:59:43.780Z - success: huawei-agc loaded
-2022-12-22T18:59:43.789Z - success: huawei-runtime loaded
-2022-12-22T18:59:43.794Z - success: inspector loaded
-2022-12-22T18:59:43.820Z - success: cpk-publish loaded
-2022-12-22T18:59:43.821Z - success: keystore loaded
-2022-12-22T18:59:43.848Z - success: link-sure-runtime loaded
-2022-12-22T18:59:43.859Z - success: node-library loaded
-2022-12-22T18:59:43.861Z - success: open-recent-items loaded
-2022-12-22T18:59:43.865Z - success: oppo-runtime loaded
-2022-12-22T18:59:43.867Z - success: package-asset loaded
-2022-12-22T18:59:43.868Z - success: preferences loaded
-2022-12-22T18:59:43.870Z - success: project-importer loaded
-2022-12-22T18:59:43.873Z - success: project-settings loaded
-2022-12-22T18:59:43.896Z - success: qtt-runtime loaded
-2022-12-22T18:59:43.902Z - success: scene loaded
-2022-12-22T18:59:43.904Z - success: simulator-debugger loaded
-2022-12-22T18:59:43.905Z - success: sprite-editor loaded
-2022-12-22T18:59:44.005Z - success: store loaded
-2022-12-22T18:59:44.008Z - success: taobao-creativeapp loaded
-2022-12-22T18:59:44.011Z - success: timeline loaded
-2022-12-22T18:59:44.025Z - success: vivo-runtime loaded
-2022-12-22T18:59:44.030Z - success: wechatgame-opendata loaded
-2022-12-22T18:59:44.036Z - success: wechatgame loaded
-2022-12-22T18:59:44.042Z - success: xiaomi-runtime loaded
-2022-12-22T18:59:44.122Z - success: im-plugin loaded
-2022-12-22T18:59:44.123Z - success: preview server running at http://localhost:7456
-2022-12-22T18:59:45.659Z - normal: Initializing Cocos2d
-2022-12-22T18:59:46.235Z - normal: Initializing engine extends
-2022-12-22T18:59:46.948Z - info: Cocos Service load base data!
-2022-12-22T18:59:48.237Z - normal: Loading packages
-2022-12-22T18:59:48.249Z - normal: Watching packages
-2022-12-22T18:59:48.309Z - normal: Run Application
-2022-12-22T18:59:55.865Z - success: cloud-function unloaded
-2022-12-22T19:00:02.303Z - normal: Start building with options : {
-  "title": "PushBox",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "db164588-eb1d-4e07-860f-0375a28d4d89",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "e39023af-7cc9-45",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "mini-game",
-  "actualPlatform": "wechatgame",
-  "template": "link",
-  "buildPath": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": true,
-  "dest": "D:\\project\\wxProject\\pushbox\\build\\pushboxbundle\\wechatgame",
-  "separateEngineMode": false,
-  "scenes": [
-    "db164588-eb1d-4e07-860f-0375a28d4d89",
-    "152ad94e-7fe7-481d-af44-9bdcb7ba2b4a",
-    "a6a047dd-24b1-4b5b-8cc7-00c82b0f66d1"
-  ],
-  "excludedModules": [
-    "Audio",
-    "AudioSource",
-    "Action",
-    "Dynamic Atlas",
-    "Geom Utils",
-    "MotionStreak",
-    "Native Socket",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Renderer Texture",
-    "Slider",
-    "VideoPlayer",
-    "3D",
-    "3D Primitive",
-    "3D Physics/cannon.js",
-    "3D Physics/Builtin",
-    "3D Particle"
-  ],
-  "project": "D:\\project\\wxProject\\pushbox",
-  "projectName": "PushBox",
-  "debugBuildWorker": false
-}
-2022-12-22T19:00:02.539Z - normal: Building D:\project\wxProject\pushbox
-2022-12-22T19:00:02.539Z - normal: Destination D:\project\wxProject\pushbox\build\pushboxbundle\wechatgame
-2022-12-22T19:00:02.710Z - normal: Start spawn build-worker
-2022-12-22T19:00:05.801Z - normal: Finish spawn build-worker
-2022-12-22T19:00:05.801Z - warn: 你在构建时启用了“只构建脚本”，只会重新构建脚本文件。请确保其他构建配置没有更改。
-2022-12-22T19:00:05.808Z - normal: Delete D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/game.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/project.config.json,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/remote,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/internal/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/main/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/config.*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/import/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/native/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/assets/resources/*.zip,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/subpackages/**/*,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.js,!D:/project/wxProject/pushbox/build/pushboxbundle/wechatgame/src/settings.*.js
-2022-12-22T19:00:08.145Z - normal: Compiling D:\project\wxProject\pushbox
-2022-12-22T19:00:10.043Z - normal: Start building plugin scripts
-2022-12-22T19:00:14.707Z - normal: Built wechatgame successfully
-2022-12-22T19:00:17.863Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:00:18.170Z - error: √ IDE server has started, listening on http://127.0.0.1:55059
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:00:18.171Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:00:19.023Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:00:40.962Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:00:41.254Z - error: √ IDE server has started, listening on http://127.0.0.1:55059
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:00:41.255Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:00:41.973Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:01:21.332Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:01:22.575Z - error: × IDE may already started at port 55059, trying to connect
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:01:39.252Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:01:40.500Z - error: × IDE may already started at port 55059, trying to connect
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:01:48.085Z - error: √ IDE server started successfully, listening on http://127.0.0.1:13037
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:01:48.086Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:01:48.926Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:01:53.555Z - error: × #initialize-error: wait IDE port timeout
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:03:13.764Z - error: - initialize
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:03:14.914Z - error: × IDE may already started at port 13037, trying to connect
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:03:22.022Z - error: √ IDE server started successfully, listening on http://127.0.0.1:20022
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:03:22.023Z - error: - open IDE
-
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
-2022-12-22T19:03:22.914Z - error: √ open IDE
-
-    at Socket.<anonymous> (D:\Software\Cocos\resources\.editors\Creator\2.4.6\resources\app.asar\editor\builtin\wechatgame\utils\wechat-game.ccc:1:821)
-    at Socket.emit (events.js:315:20)
-    at Socket.emit (domain.js:483:12)
-    at addChunk (_stream_readable.js:295:12)
-    at readableAddChunk (_stream_readable.js:271:9)
-    at Socket.Readable.push (_stream_readable.js:212:10)
-    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
-    at Pipe.callbackTrampoline (internal/async_hooks.js:120:14)
+2022-12-23T03:05:17.139Z - success: protocol editor-framework registered
+2022-12-23T03:05:17.140Z - success: protocol app registered
+2022-12-23T03:05:17.141Z - success: protocol theme registered
+2022-12-23T03:05:17.141Z - success: protocol packages registered
+2022-12-23T03:05:17.176Z - normal: Load ~/.CocosCreator/settings.json
+2022-12-23T03:05:17.220Z - success: protocol uuid registerred
+2022-12-23T03:05:17.220Z - success: protocol db registerred
+2022-12-23T03:05:17.221Z - success: protocol thumbnail registerred
+2022-12-23T03:05:17.401Z - normal: Initializing Asset Database
+2022-12-23T03:05:17.407Z - normal: checking language setting...
+2022-12-23T03:05:17.407Z - normal: Language: zh
+2022-12-23T03:05:17.415Z - success: protocol unpack registerred
+2022-12-23T03:05:17.416Z - success: protocol disable-commonjs registerred
+2022-12-23T03:05:19.495Z - normal: connected!
+2022-12-23T03:05:19.768Z - normal: Check project D:\project\wxProject\pushbox
+2022-12-23T03:05:19.769Z - normal: Initializing project D:\project\wxProject\pushbox
+2022-12-23T03:05:20.129Z - success: adapters loaded
+2022-12-23T03:05:20.133Z - success: asset-db-debugger loaded
+2022-12-23T03:05:20.236Z - success: fb-audience-network loaded
+2022-12-23T03:05:20.325Z - success: fb-live-stream loaded
+2022-12-23T03:05:20.332Z - success: google-play-instant loaded
+2022-12-23T03:05:20.332Z - success: jsb-adapter loaded
+2022-12-23T03:05:20.336Z - success: package-manager loaded
+2022-12-23T03:05:20.336Z - success: runtime-adapters loaded
+2022-12-23T03:05:20.341Z - success: runtime-dev-tools loaded
+2022-12-23T03:05:20.346Z - success: ui-kit-preview-extra loaded
+2022-12-23T03:05:20.350Z - success: ui-kit-preview loaded
+2022-12-23T03:05:21.745Z - success: alipay-minigame loaded
+2022-12-23T03:05:21.758Z - success: assets loaded
+2022-12-23T03:05:21.764Z - success: baidugame-opendata loaded
+2022-12-23T03:05:21.768Z - success: baidugame loaded
+2022-12-23T03:05:21.774Z - success: builder loaded
+2022-12-23T03:05:21.778Z - success: bytedance-opendata loaded
+2022-12-23T03:05:21.783Z - success: bytedance loaded
+2022-12-23T03:05:21.790Z - success: channel-upload-tools loaded
+2022-12-23T03:05:22.035Z - success: cloud-function loaded
+2022-12-23T03:05:22.389Z - success: cocos-services loaded
+2022-12-23T03:05:22.394Z - success: console loaded
+2022-12-23T03:05:22.400Z - success: curve-editor loaded
+2022-12-23T03:05:22.427Z - success: fb-instant-games loaded
+2022-12-23T03:05:22.431Z - success: game-window loaded
+2022-12-23T03:05:22.433Z - success: google-instant-games loaded
+2022-12-23T03:05:22.447Z - success: hierarchy loaded
+2022-12-23T03:05:22.453Z - success: huawei-agc loaded
+2022-12-23T03:05:22.458Z - success: huawei-runtime loaded
+2022-12-23T03:05:22.465Z - success: inspector loaded
+2022-12-23T03:05:22.502Z - success: cpk-publish loaded
+2022-12-23T03:05:22.504Z - success: keystore loaded
+2022-12-23T03:05:22.538Z - success: link-sure-runtime loaded
+2022-12-23T03:05:22.553Z - success: node-library loaded
+2022-12-23T03:05:22.556Z - success: open-recent-items loaded
+2022-12-23T03:05:22.563Z - success: oppo-runtime loaded
+2022-12-23T03:05:22.565Z - success: package-asset loaded
+2022-12-23T03:05:22.567Z - success: preferences loaded
+2022-12-23T03:05:22.569Z - success: project-importer loaded
+2022-12-23T03:05:22.572Z - success: project-settings loaded
+2022-12-23T03:05:22.597Z - success: qtt-runtime loaded
+2022-12-23T03:05:22.603Z - success: scene loaded
+2022-12-23T03:05:22.605Z - success: simulator-debugger loaded
+2022-12-23T03:05:22.607Z - success: sprite-editor loaded
+2022-12-23T03:05:22.718Z - success: store loaded
+2022-12-23T03:05:22.721Z - success: taobao-creativeapp loaded
+2022-12-23T03:05:22.725Z - success: timeline loaded
+2022-12-23T03:05:22.738Z - success: vivo-runtime loaded
+2022-12-23T03:05:22.743Z - success: wechatgame-opendata loaded
+2022-12-23T03:05:22.751Z - success: wechatgame loaded
+2022-12-23T03:05:22.758Z - success: xiaomi-runtime loaded
+2022-12-23T03:05:22.859Z - success: im-plugin loaded
+2022-12-23T03:05:22.861Z - success: preview server running at http://localhost:7456
+2022-12-23T03:05:24.640Z - normal: Initializing Cocos2d
+2022-12-23T03:05:25.517Z - normal: Initializing engine extends
+2022-12-23T03:05:26.795Z - info: Cocos Service load base data!
+2022-12-23T03:05:27.957Z - normal: Loading packages
+2022-12-23T03:05:27.964Z - normal: Watching packages
+2022-12-23T03:05:28.018Z - normal: Run Application
+2022-12-23T03:05:36.208Z - success: cloud-function unloaded

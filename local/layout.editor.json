@@ -14,12 +14,12 @@
         "children": [
           {
             "width": 204,
-            "height": 705.5,
+            "height": 708,
             "type": "dock-v",
             "children": [
               {
                 "width": 204,
-                "height": 277.015625,
+                "height": 278.171875,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -28,7 +28,7 @@
               },
               {
                 "width": 204,
-                "height": 425.46875,
+                "height": 426.8125,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -39,7 +39,7 @@
           },
           {
             "width": 309,
-            "height": 705.5,
+            "height": 708,
             "type": "panel",
             "active": 0,
             "children": [
@@ -49,17 +49,17 @@
           },
           {
             "width": 1001,
-            "height": 705.5,
+            "height": 708,
             "type": "dock-v",
             "children": [
               {
                 "width": 1001,
-                "height": 403.5625,
+                "height": 405.15625,
                 "type": "dock-h",
                 "children": [
                   {
                     "width": 471,
-                    "height": 403.5625,
+                    "height": 405.15625,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -68,7 +68,7 @@
                   },
                   {
                     "width": 526.984375,
-                    "height": 403.5625,
+                    "height": 405.15625,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -79,7 +79,7 @@
               },
               {
                 "width": 1001,
-                "height": 298.9375,
+                "height": 299.84375,
                 "type": "panel",
                 "active": 1,
                 "children": [
@@ -104,7 +104,7 @@
         "game-window"
       ]
     },
-    "window-1671735599273": {},
+    "window-1671765247272": {},
     " build-worker-worker": {},
     " compile-worker-worker": {}
   },

@@ -2218,8 +2218,7 @@ cc.Class({
                 data:{
                     levelIndex:window.levelIndex,
                     page,
-                    pageSize,
-                    appId:window.user.appId
+                    pageSize
                 },
                 success: (res) => {
                     Loading.hide();
